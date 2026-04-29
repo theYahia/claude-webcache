@@ -16,11 +16,7 @@ If you do research sprints in Claude Code, you re-fetch the same docs across ses
 
 ## Install
 
-```bash
-npm install -g @theyahia/claude-webcache
-```
-
-Or clone and install locally:
+> **Note:** npm package not yet published. For now: clone + register paths manually.
 
 ```bash
 git clone https://github.com/theYahia/claude-webcache.git
@@ -28,7 +24,9 @@ cd claude-webcache
 npm install
 ```
 
-Then register the MCP server and hook by adding to your `~/.claude/settings.json` (or project `.mcp.json` + `hooks/hooks.json`):
+Requires Node.js **22.5+** (uses built-in `node:sqlite` — no native deps).
+
+Then register the MCP server and hook by adding to your `~/.claude/settings.json` (replace `/absolute/path/to/claude-webcache` with the directory you cloned into):
 
 ```json
 {
@@ -50,6 +48,8 @@ Then register the MCP server and hook by adding to your `~/.claude/settings.json
   }
 }
 ```
+
+Restart Claude Code after editing settings.
 
 ## Usage pattern
 
