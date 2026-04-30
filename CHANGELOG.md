@@ -2,14 +2,16 @@
 
 ## 0.1.2 — 2026-04-30
 
-- restructure: move plugin metadata + scripts + src into `./plugin/` subdir, keep `marketplace.json` in repo root. Fixes "source type your Claude Code version does not support" on `/plugin install` for Claude Code 2.1.x — only relative-path string sources (must start with `./`) are reliably supported there for the plugin-source field.
-- `marketplace.json` plugin source is now `"./plugin"` (matching the canonical relative-path form used by Anthropic's own claude-plugins-official marketplace).
+- Restructured plugin into `./plugin/` subdir to match the canonical relative-path layout used by Anthropic's claude-plugins-official and thedotmack/claude-mem marketplaces.
+- `marketplace.json` plugin source is now `"./plugin"`.
 - npm `main` updated to `plugin/src/cache.js`; `files` reduced to `plugin/`, `README.md`, `LICENSE`. Transparent to `require('@theyahia/claude-webcache')` consumers.
+
+> Note on TUI install: at time of release, `/plugin install` in the Claude Code TUI fails for all third-party plugins on Windows due to an upstream Anthropic backend bug ([anthropics/claude-code#41653](https://github.com/anthropics/claude-code/issues/41653)) — independent of source format. CLI subcommands (`claude plugin marketplace add` + `claude plugin install`) bypass this and work; see README.
 
 ## 0.1.1 — 2026-04-30
 
-- fix: MCP server path in `.mcp.json` — replace unresolved `${CLAUDE_PLUGIN_ROOT}/scripts/mcp-server.cjs` with relative `./scripts/mcp-server.cjs`
-- fix: `marketplace.json` plugin `source` to canonical `{"source":"github","repo":"theYahia/claude-webcache"}` object form (was bare string `"."`, which Claude Code doesn't parse for plugins outside relative paths starting with `./`)
+- fix: MCP server path in `.mcp.json` — replace unresolved `${CLAUDE_PLUGIN_ROOT}/scripts/mcp-server.cjs` with relative `./scripts/mcp-server.cjs`. Resolves "Failed to reconnect to claude-webcache" on plugin install.
+- Switched `marketplace.json` plugin source to canonical `{"source":"github","repo":"theYahia/claude-webcache"}` object form per Claude Code marketplace docs.
 
 ## 0.1.0 — 2026-04-30
 

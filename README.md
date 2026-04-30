@@ -1,5 +1,9 @@
 # claude-webcache
 
+![npm](https://img.shields.io/npm/v/@theyahia/claude-webcache.svg)
+![license](https://img.shields.io/npm/l/@theyahia/claude-webcache.svg)
+![downloads](https://img.shields.io/npm/dm/@theyahia/claude-webcache.svg)
+
 **Cross-session WebFetch cache for Claude Code.**
 
 Claude Code's built-in `WebFetch` caches results for 15 minutes within a single session. `claude-webcache` extends that across sessions, indefinitely (TTL 7 days, configurable).
