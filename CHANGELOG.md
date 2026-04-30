@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3 — 2026-04-30
+
+- Add `mcpName` field to package.json (`io.github.theYahia/claude-webcache`) — required by the Official MCP Registry (registry.modelcontextprotocol.io) for ownership verification when publishing the corresponding `server.json`. No code changes; metadata-only.
+
 ## 0.1.2 — 2026-04-30
 
 - Restructured plugin into `./plugin/` subdir to match the canonical relative-path layout used by Anthropic's claude-plugins-official and thedotmack/claude-mem marketplaces.
