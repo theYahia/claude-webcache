@@ -5,37 +5,38 @@
 Claude Code's built-in `WebFetch` caches results for 15 minutes within a single session. `claude-webcache` extends that across sessions, indefinitely (TTL 7 days, configurable).
 
 ```
-Open new session  →  your past fetches are still there.
-Cache hit         →  instant.
-Cache miss        →  same as built-in WebFetch.
+Open new session  ->  your past fetches are still there.
+Cache hit         ->  instant.
+Cache miss        ->  same as built-in WebFetch.
 ```
 
 ## Why
 
-Any time you re-fetch the same URLs across sessions — docs, API references, research pages — you're paying the full fetch cost every time. The 15-minute in-session cache evicts before your next sprint. `claude-webcache` keeps fetches around so the second session hits cache instead.
+Any time you re-fetch the same URLs across sessions -- docs, API references, research pages -- you're paying the full fetch cost every time. The 15-minute in-session cache evicts before your next sprint. `claude-webcache` keeps fetches around so the second session hits cache instead.
 
 ![CACHE_MISS flow: WebFetch + cache_store in first session](docs/screenshots/cache-miss.png)
 ![CACHE_HIT flow: instant hit, no WebFetch in second session](docs/screenshots/cache-hit.png)
 
 ## Install
 
-### Option 1 — Claude Code plugin (recommended)
+### Option 1 -- Claude Code plugin (recommended)
 
 In any Claude Code session:
 
 ```
-/plugin install theYahia/claude-webcache
+/plugin marketplace add theYahia/claude-webcache
+/plugin install claude-webcache@theyahia
 ```
 
 Then add the usage pattern to your `~/.claude/CLAUDE.md` (see [Usage pattern](#usage-pattern)).
 
-### Option 2 — npm global
+### Option 2 -- npm global
 
 ```bash
 npm i -g @theyahia/claude-webcache
 ```
 
-Requires Node.js **22.5+** (uses built-in `node:sqlite` — no native deps).
+Requires Node.js **22.5+** (uses built-in `node:sqlite` -- no native deps).
 
 Then register manually in `~/.claude/settings.json` (replace the path with the result of `npm root -g`):
 
@@ -60,7 +61,7 @@ Then register manually in `~/.claude/settings.json` (replace the path with the r
 }
 ```
 
-### Option 3 — clone (contributors)
+### Option 3 -- clone (contributors)
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -72,8 +73,8 @@ Add to your `~/.claude/CLAUDE.md` so Claude routes web fetches through the cache
 ## WebFetch caching (claude-webcache)
 
 Before calling WebFetch, call `cached_fetch(url, prompt)` first.
-- If it returns text → use that, do NOT call WebFetch.
-- If it returns `[CACHE_MISS] <url>` → call WebFetch as normal, then call `cache_store(url, prompt, output)` with the result.
+- If it returns text -> use that, do NOT call WebFetch.
+- If it returns `[CACHE_MISS] <url>` -> call WebFetch as normal, then call `cache_store(url, prompt, output)` with the result.
 ```
 
 That's it. Same URL + same prompt in any future session = instant cache hit.
@@ -84,7 +85,7 @@ That's it. Same URL + same prompt in any future session = instant cache hit.
 |---|---|---|
 | `cached_fetch` | `url`, `prompt` | cached text, or `[CACHE_MISS] <url>` |
 | `cache_store` | `url`, `prompt`, `output` | `stored` |
-| `cache_stats` | — | `{ total, hits, last }` |
+| `cache_stats` | -- | `{ total, hits, last }` |
 | `cache_list` | `limit?` | recent URLs (most recent first) |
 
 ## Storage
@@ -117,10 +118,10 @@ Default 7 days. Expired entries are deleted on next read of the same key. Run a 
 
 ## Limits
 
-- Cache key includes the prompt → different prompts on the same URL are separate entries. Pick consistent prompts (e.g. always `"extract title and main content"`) to maximize hit rate.
+- Cache key includes the prompt -> different prompts on the same URL are separate entries. Pick consistent prompts (e.g. always `"extract title and main content"`) to maximize hit rate.
 - Output is whatever WebFetch returns (already summarized by the model). The cache doesn't re-process it.
 - No semantic search, no embeddings. Exact `(url, prompt)` match only.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT -- see [LICENSE](LICENSE).
