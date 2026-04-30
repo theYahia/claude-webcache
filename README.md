@@ -12,28 +12,39 @@ Cache miss        →  same as built-in WebFetch.
 
 ## Why
 
-If you do research sprints in Claude Code, you re-fetch the same docs across sessions all the time. The 15-minute in-session cache evicts before your next sprint. `claude-webcache` keeps fetches around so the second sprint hits cache.
+Any time you re-fetch the same URLs across sessions — docs, API references, research pages — you're paying the full fetch cost every time. The 15-minute in-session cache evicts before your next sprint. `claude-webcache` keeps fetches around so the second session hits cache instead.
+
+![CACHE_MISS flow: WebFetch + cache_store in first session](docs/screenshots/cache-miss.png)
+![CACHE_HIT flow: instant hit, no WebFetch in second session](docs/screenshots/cache-hit.png)
 
 ## Install
 
-> **Note:** npm package not yet published. For now: clone + register paths manually.
+### Option 1 — Claude Code plugin (recommended)
+
+In any Claude Code session:
+
+```
+/plugin install theYahia/claude-webcache
+```
+
+Then add the usage pattern to your `~/.claude/CLAUDE.md` (see [Usage pattern](#usage-pattern)).
+
+### Option 2 — npm global
 
 ```bash
-git clone https://github.com/theYahia/claude-webcache.git
-cd claude-webcache
-npm install
+npm i -g @theyahia/claude-webcache
 ```
 
 Requires Node.js **22.5+** (uses built-in `node:sqlite` — no native deps).
 
-Then register the MCP server and hook by adding to your `~/.claude/settings.json` (replace `/absolute/path/to/claude-webcache` with the directory you cloned into):
+Then register manually in `~/.claude/settings.json` (replace the path with the result of `npm root -g`):
 
 ```json
 {
   "mcpServers": {
     "claude-webcache": {
       "command": "node",
-      "args": ["/absolute/path/to/claude-webcache/scripts/mcp-server.cjs"]
+      "args": ["/path/from/npm-root-g/claude-webcache/scripts/mcp-server.cjs"]
     }
   },
   "hooks": {
@@ -41,7 +52,7 @@ Then register the MCP server and hook by adding to your `~/.claude/settings.json
       {
         "matcher": "startup|clear|compact",
         "hooks": [
-          { "type": "command", "command": "node /absolute/path/to/claude-webcache/scripts/hook-stats.cjs" }
+          { "type": "command", "command": "node /path/from/npm-root-g/claude-webcache/scripts/hook-stats.cjs" }
         ]
       }
     ]
@@ -49,7 +60,9 @@ Then register the MCP server and hook by adding to your `~/.claude/settings.json
 }
 ```
 
-Restart Claude Code after editing settings.
+### Option 3 — clone (contributors)
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Usage pattern
 
@@ -96,7 +109,7 @@ On every new session, the hook injects a one-line stat:
 webcache: 142 pages cached, 38 hits, last fetch 3h ago
 ```
 
-Skip injection if cache is empty.
+Skips injection if cache is empty.
 
 ## TTL
 
@@ -104,7 +117,7 @@ Default 7 days. Expired entries are deleted on next read of the same key. Run a 
 
 ## Limits
 
-- Cache key includes the prompt → different prompts on the same URL are separate entries. Pick consistent prompts (e.g. always "extract title and main content") to maximize hit rate.
+- Cache key includes the prompt → different prompts on the same URL are separate entries. Pick consistent prompts (e.g. always `"extract title and main content"`) to maximize hit rate.
 - Output is whatever WebFetch returns (already summarized by the model). The cache doesn't re-process it.
 - No semantic search, no embeddings. Exact `(url, prompt)` match only.
 
