@@ -1,6 +1,6 @@
 {
   "name": "claude-webcache",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cross-session WebFetch cache for Claude Code. WebFetches disappear after 15 minutes — claude-webcache makes them persist.",
   "author": { "name": "theYahia" },
   "repository": "https://github.com/theYahia/claude-webcache",

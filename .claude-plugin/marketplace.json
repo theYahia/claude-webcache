@@ -8,8 +8,11 @@
   "plugins": [
     {
       "name": "claude-webcache",
-      "version": "0.1.0",
-      "source": ".",
+      "version": "0.1.1",
+      "source": {
+        "source": "github",
+        "repo": "theYahia/claude-webcache"
+      },
       "description": "Cross-session WebFetch cache for Claude Code"
     }
   ]
