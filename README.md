@@ -21,29 +21,23 @@ Any time you re-fetch the same URLs across sessions -- docs, API references, res
 
 ### Option 1 -- Claude Code plugin (recommended)
 
-In any Claude Code session:
+One line, in your terminal:
 
-```
-/plugin marketplace add theYahia/claude-webcache
-/plugin install claude-webcache@theyahia
+```bash
+claude plugin marketplace add theYahia/claude-webcache && claude plugin install claude-webcache@theyahia
 ```
 
 Then add the usage pattern to your `~/.claude/CLAUDE.md` (see [Usage pattern](#usage-pattern)).
 
-> ⚠️ **Known issue (April 2026, Claude Code 2.1.x):** the `/plugin install` UI may fail with `Failed to install: This plugin uses a source type your Claude Code version does not support.` This is a server-side bug in Claude Code's `remoteMarketplaceClient` backend that rejects all third-party plugin sources — see [anthropics/claude-code#41653](https://github.com/anthropics/claude-code/issues/41653) and ~20 related open issues. It is **not** an issue with this plugin's configuration.
+> 💡 **Why CLI subcommands and not the TUI `/plugin install`?** The TUI flow currently routes through Claude Code's `remoteMarketplaceClient` backend, which has an open server-side bug rejecting all third-party plugin sources with `Failed to install: This plugin uses a source type your Claude Code version does not support.` See [anthropics/claude-code#41653](https://github.com/anthropics/claude-code/issues/41653) and ~20 related open issues. The CLI subcommands above use `NativeMarketplaceReader` locally and are unaffected.
 >
-> **Workarounds while the bug is open:**
+> **Fallback (if even CLI subcommands fail on your setup):**
 >
-> 1. **CLI subcommands** (bypasses the broken remote backend, uses local `NativeMarketplaceReader`):
->    ```bash
->    claude plugin marketplace add theYahia/claude-webcache
->    claude plugin install claude-webcache@theyahia
->    ```
-> 2. **Local `--plugin-dir`** (bypasses the marketplace pipeline entirely):
->    ```bash
->    git clone https://github.com/theYahia/claude-webcache
->    claude --plugin-dir ./claude-webcache/plugin
->    ```
+> ```bash
+> git clone https://github.com/theYahia/claude-webcache && claude --plugin-dir ./claude-webcache/plugin
+> ```
+>
+> This bypasses the marketplace pipeline entirely.
 
 ### Option 2 -- npm global
 
