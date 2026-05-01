@@ -6,8 +6,11 @@ const os = require('node:os');
 
 const CACHE_DIR = path.join(os.homedir(), '.webcache');
 const DB_PATH = path.join(CACHE_DIR, 'cache.db');
-const TTL_DAYS = 7;
-const TTL_MS = TTL_DAYS * 24 * 60 * 60 * 1000;
+// WEBCACHE_TTL_DAYS=0 or unset → unlimited; positive number → days
+const _ttlRaw = process.env.WEBCACHE_TTL_DAYS;
+const TTL_MS = (!_ttlRaw || _ttlRaw === '0')
+  ? Infinity
+  : Number(_ttlRaw) * 24 * 60 * 60 * 1000;
 
 let db = null;
 
