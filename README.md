@@ -9,10 +9,12 @@
 Claude Code's built-in cache lasts 15 minutes, within one session. Every new session re-fetches from scratch. `claude-webcache` persists results across sessions in a local SQLite database — instant cache hits, zero network cost.
 
 ```
-Session 1  →  WebFetch("docs.example.com")  →  fetched, stored
+Session 1  →  WebFetch("docs.example.com")  →  fetched, auto-cached ✓
 Session 2  →  cached_fetch("docs.example.com")  →  instant hit, no network call
-Session 7  →  cached_fetch("docs.example.com")  →  still instant, 7-day TTL
+Session 7  →  cached_fetch("docs.example.com")  →  still instant, unlimited TTL
 ```
+
+**v0.1.5+:** every `WebFetch` is automatically saved via `PostToolUse` hook — nothing to configure.
 
 ![CACHE_MISS flow: WebFetch + cache_store in first session](docs/screenshots/cache-miss.png)
 ![CACHE_HIT flow: instant hit, no WebFetch in second session](docs/screenshots/cache-hit.png)
@@ -25,7 +27,9 @@ claude plugin marketplace add theYahia/claude-webcache && claude plugin install 
 
 Works in: **Claude Code CLI · Desktop (Mac/Windows) · VS Code extension · JetBrains plugin** — same command everywhere.
 
-Then add the [usage pattern](#usage-pattern) to `~/.claude/CLAUDE.md` (20 seconds).
+Done. Every `WebFetch` is auto-cached from now on.
+
+Optionally add the [usage pattern](#usage-pattern) to `~/.claude/CLAUDE.md` to also check the cache *before* fetching (saves the WebFetch call entirely on repeat URLs).
 
 > **Plugin TUI not working?** There's an open Claude Code bug ([#41653](https://github.com/anthropics/claude-code/issues/41653)) where `/plugin install` rejects third-party sources with "source type not supported." Use the CLI command above — it bypasses the TUI and works fine.
 >
@@ -69,19 +73,19 @@ Then register in `~/.claude/settings.json` (replace path with output of `npm roo
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Usage pattern
+## Usage pattern (optional — for pre-fetch cache checks)
 
-Add this to `~/.claude/CLAUDE.md`:
+**v0.1.5+ auto-caches every WebFetch automatically.** The pattern below is optional: add it to `~/.claude/CLAUDE.md` to also check the cache *before* making a WebFetch — this saves the WebFetch call entirely on repeat URLs.
 
 ```markdown
 ## WebFetch caching (claude-webcache)
 
 Before calling WebFetch, call `cached_fetch(url, prompt)` first.
 - If it returns text → use that, do NOT call WebFetch.
-- If it returns `[CACHE_MISS] <url>` → call WebFetch as normal, then call `cache_store(url, prompt, output)` with the result.
+- If it returns `[CACHE_MISS] <url>` → call WebFetch as normal (it will be auto-cached for next time).
 ```
 
-That's it. Same URL + same prompt in any future session = instant hit.
+Same URL + same prompt in any future session = instant hit, zero network cost.
 
 ## Tools (MCP)
 
