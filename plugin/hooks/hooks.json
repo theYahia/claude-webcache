@@ -1,11 +1,19 @@
 {
-  "description": "claude-webcache SessionStart hook — print cache stats line",
+  "description": "claude-webcache hooks — session stats + auto-cache every WebFetch",
   "hooks": {
     "SessionStart": [
       {
         "matcher": "startup|clear|compact",
         "hooks": [
           { "type": "command", "command": "node ${CLAUDE_PLUGIN_ROOT}/scripts/hook-stats.cjs" }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "WebFetch",
+        "hooks": [
+          { "type": "command", "command": "node ${CLAUDE_PLUGIN_ROOT}/scripts/hook-webfetch-cache.cjs" }
         ]
       }
     ]
