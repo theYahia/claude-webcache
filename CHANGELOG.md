@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.2.0 — 2026-05-01
+
+- Add `node:test` unit suite (`plugin/test/cache.test.js`, 8 tests, ~400ms) covering `makeKey` determinism, `set`/`get` round-trip, hit-count update, TTL expiry, upsert, `purgeExpired` Infinity no-op behavior, and `stats` aggregation. Zero new devDeps — uses Node 22.5+ built-in test runner.
+- Add `bench/run.js` — single-process latency + storage benchmark (`npm run bench`). Measures p50/p95/p99 for write / read hit / read miss / list operations and bytes-per-entry. Saves JSON results with full machine metadata (CPU, RAM, OS, Node version, commit) for reproducible before/after comparisons.
+- Add `bench/README.md` documenting methodology and expected numbers.
+- Extend `.github/workflows/test.yml`: real `npm test` job now runs on every push/PR. The existing `npm publish --dry-run` job now depends on tests passing.
+- Replace unmeasured "5-15× fewer WebFetch calls" headline in README with measured latency claim from the benchmark suite. Add `Benchmarks` section with the actual numbers and a reproduce command.
+- Bump version in `package.json`, `plugin/.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`.
+
+## 0.1.5 — 2026-04-30
+
+- Auto-cache every WebFetch via a `PostToolUse` hook (`plugin/scripts/hook-webfetch-cache.cjs`). The "before WebFetch, call `cached_fetch` first" pattern in CLAUDE.md becomes optional — caching now happens transparently after each WebFetch returns.
+- README updated: usage pattern moved under "optional" for pre-fetch checks.
+
+## 0.1.4 — 2026-04-30
+
+- Default cache TTL changed to **unlimited** (was 7 days). Set `WEBCACHE_TTL_DAYS=N` to opt back into N-day expiry. Rationale: cached docs/arxiv pages rarely become stale within research-sprint horizons; explicit user choice beats silent expiry.
+
 ## 0.1.3 — 2026-04-30
 
 - Add `mcpName` field to package.json (`io.github.theYahia/claude-webcache`) — required by the Official MCP Registry (registry.modelcontextprotocol.io) for ownership verification when publishing the corresponding `server.json`. No code changes; metadata-only.

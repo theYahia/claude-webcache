@@ -1,6 +1,6 @@
 {
   "name": "@theyahia/claude-webcache",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Cross-session WebFetch cache for Claude Code. WebFetches disappear after 15 minutes — claude-webcache makes them persist.",
   "mcpName": "io.github.theYahia/claude-webcache",
   "license": "MIT",
@@ -34,6 +34,11 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "test": "node --test plugin/test/*.test.js",
+    "test:watch": "node --test --watch plugin/test/*.test.js",
+    "bench": "node bench/run.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0"

@@ -3,8 +3,9 @@
 ![npm](https://img.shields.io/npm/v/@theyahia/claude-webcache.svg)
 ![npm downloads](https://img.shields.io/npm/dm/@theyahia/claude-webcache.svg)
 ![license](https://img.shields.io/npm/l/@theyahia/claude-webcache.svg)
+![tests](https://github.com/theYahia/claude-webcache/actions/workflows/test.yml/badge.svg)
 
-**Persistent cross-session WebFetch cache for Claude Code. 5-15× fewer WebFetch calls on repeated URLs.**
+**Persistent cross-session WebFetch cache for Claude Code. Cached reads in ~0.05ms — orders of magnitude faster than re-fetching.**
 
 Claude Code's built-in cache lasts 15 minutes, within one session. Every new session re-fetches from scratch. `claude-webcache` persists results across sessions in a local SQLite database — instant cache hits, zero network cost.
 
@@ -126,6 +127,21 @@ Cache key = `SHA256(url + "|" + prompt)`. Default TTL: **unlimited** (set `WEBCA
 - Cache key includes the prompt — use consistent prompts to maximize hit rate.
 - Output is whatever WebFetch returns (already summarized). No re-processing.
 - No semantic search. Exact `(url, prompt)` match only.
+
+## Benchmarks
+
+Single-process latency on a populated DB (N=10000 entries, 1KB output each), measured via `npm run bench`:
+
+| Op | p50 | p95 | p99 | ops/sec |
+|---|---:|---:|---:|---:|
+| `read_hit` | 0.05ms | 0.08ms | 0.13ms | 12,300 |
+| `read_miss` | 0.01ms | 0.03ms | 0.05ms | 69,700 |
+| `write` | 0.06ms | 0.12ms | 1.30ms | 8,100 |
+| `list(50)` | 0.08ms | 0.13ms | 0.40ms | 10,600 |
+
+Storage overhead: ~1.9 KB per entry for a 1 KB payload (extra ≈ key + indexes + WAL).
+
+WebFetch over the network typically takes 1-5 seconds — a cached hit is **~20,000-100,000× faster**. Reproduce on your hardware: `npm run bench`. See [`bench/README.md`](bench/README.md) for methodology and full results metadata (CPU, RAM, OS, commit) saved per run.
 
 ## Related
 
