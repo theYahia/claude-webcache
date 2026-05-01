@@ -15,4 +15,15 @@ jobs:
         with:
           node-version: '22.5'
       - run: npm ci
+      - run: npm test
+
+  publish-dry-run:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.5'
+      - run: npm ci
       - run: npm publish --dry-run
