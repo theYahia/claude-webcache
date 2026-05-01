@@ -143,6 +143,23 @@ Storage overhead: ~1.9 KB per entry for a 1 KB payload (extra ≈ key + indexes 
 
 WebFetch over the network typically takes 1-5 seconds — a cached hit is **~20,000-100,000× faster**. Reproduce on your hardware: `npm run bench`. See [`bench/README.md`](bench/README.md) for methodology and full results metadata (CPU, RAM, OS, commit) saved per run.
 
+## How this differs from Anthropic prompt caching
+
+Anthropic's [prompt caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching) caches prompt-prefix tokens server-side with a 5-minute (or 1-hour) TTL. `claude-webcache` caches WebFetch tool outputs locally in SQLite with no expiry by default. Different layers — they compose, not compete:
+
+| | Anthropic prompt cache | claude-webcache |
+|---|---|---|
+| What's cached | Input prompt tokens (tools + system + messages prefix) | WebFetch output text |
+| Where it lives | Anthropic servers | Local `~/.webcache/cache.db` |
+| Lifetime | 5 minutes (or 1 hour) | Unlimited by default |
+| Cross-session | No — resets ~hourly at most | Yes — survives restarts, survives weeks |
+| Triggers on | Same prompt prefix repeats within TTL | Same `(url, prompt)` ever repeats |
+| What it saves | LLM input token billing (cache reads = 0.1× base price) | The WebFetch network round-trip itself |
+
+A cached WebFetch hit returns the exact same bytes every time. Those bytes can then participate in Anthropic's prompt cache normally on the next API call within the same session — the two caches stack: webcache skips the fetch entirely, Anthropic's cache discounts the read of the resulting `tool_result` block.
+
+For Claude Code subscription users (flat-rate, not metered per token), Anthropic prompt caching is mostly invisible to your bill — but `claude-webcache` still saves real wall-clock time and message-turn budget by avoiding the WebFetch round-trip and the inference round needed to summarize the page.
+
 ## Related
 
 - [claude-mem](https://github.com/thedotmack/claude-mem) — persistent memory across sessions (complements claude-webcache: memory vs. web cache)
