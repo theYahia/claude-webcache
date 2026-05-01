@@ -105,7 +105,7 @@ No output if cache is empty.
 ## Storage
 
 SQLite at `~/.webcache/cache.db` (WAL mode, concurrent-safe).  
-Cache key = `SHA256(url + "|" + prompt)`. Default TTL: 7 days (configurable).
+Cache key = `SHA256(url + "|" + prompt)`. Default TTL: **unlimited** (set `WEBCACHE_TTL_DAYS=N` for N-day expiry).
 
 | Field | Type |
 |---|---|

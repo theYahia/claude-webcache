@@ -1,6 +1,8 @@
 {
   "name": "theyahia",
-  "owner": { "name": "theYahia" },
+  "owner": {
+    "name": "theYahia"
+  },
   "metadata": {
     "description": "Plugins by theYahia",
     "homepage": "https://github.com/theYahia/claude-webcache"
@@ -8,7 +10,7 @@
   "plugins": [
     {
       "name": "claude-webcache",
-      "version": "0.1.3",
+      "version": "0.1.4",
       "source": "./plugin",
       "description": "Cross-session WebFetch cache for Claude Code"
     }
