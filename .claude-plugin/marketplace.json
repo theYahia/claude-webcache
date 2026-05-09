@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "claude-webcache",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "source": "./plugin",
       "description": "Cross-session WebFetch cache for Claude Code"
     }

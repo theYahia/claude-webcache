@@ -84,6 +84,38 @@ Expected flow:
 - [ ] HIT returned cached text without calling WebFetch
 - [ ] Hit was actually fast (<1 second)
 
+## 6b. Test C — invalidation + clear (v0.3.0+)
+
+After Test B, exercise the v0.3.0 admin tools:
+
+> Call `cache_invalidate` with url=`https://example.com`. Then call `cached_fetch` with the same url+prompt — it should return `[CACHE_MISS]`.
+
+Expected:
+1. `cache_invalidate({ url: "https://example.com" })` → `{ deleted: 1 }`
+2. `cached_fetch(...)` → `[CACHE_MISS] https://example.com`
+
+> Now seed two URLs and run `cache_clear` with `older_than_days: 0.0001`. Then call `cache_stats` — `total` should be 0.
+
+Expected: `cache_clear` returns `{ deleted: N }` matching seed count. Subsequent `cache_stats` shows `total: 0`, but `hits` and `misses` counters survive (they live in the separate `meta` table).
+
+> Verify safety: call `cache_clear` with NO arguments — it should error.
+
+Expected: error message about needing `confirm:"YES"` for full wipe.
+
+## 6c. Test D — CLI dashboard (v0.3.0+)
+
+In a terminal (outside Claude Code):
+
+```bash
+claude-webcache stats           # JSON dump
+claude-webcache list 10         # 10 most-recent URLs
+claude-webcache dashboard --port 37789
+```
+
+Open `http://localhost:37789/` in a browser. Expected: stats cards (entries, hits, misses, hit rate, db size, evicted, last write), top URLs table, top domains table, recent entries with invalidate buttons. Type a substring in the search box → entries filter.
+
+Click an invalidate × button → confirm dialog → row disappears after reload.
+
 ## 7. Troubleshooting
 
 | Symptom | Where to look |

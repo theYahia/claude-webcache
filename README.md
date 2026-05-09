@@ -94,8 +94,35 @@ Same URL + same prompt in any future session = instant hit, zero network cost.
 |---|---|---|
 | `cached_fetch` | `url`, `prompt` | cached text, or `[CACHE_MISS] <url>` |
 | `cache_store` | `url`, `prompt`, `output` | `stored` |
-| `cache_stats` | — | `{ total, hits, last }` |
+| `cache_stats` | — | `{ total, hits, misses, hit_rate, last, db_size_bytes, evicted, top_urls }` |
 | `cache_list` | `limit?` | recent URLs (most recent first) |
+| `cache_invalidate` | `url` | `{ deleted: N }` — drops every entry for that URL |
+| `cache_clear` | `older_than_days?`, `confirm?` | `{ deleted: N }` — partial wipe by age, or full wipe with `confirm:"YES"` |
+
+## CLI
+
+The npm package ships a `claude-webcache` binary for ad-hoc inspection and a local web dashboard:
+
+```bash
+claude-webcache stats                            # JSON stats
+claude-webcache list 20                          # 20 most-recent URLs
+claude-webcache invalidate https://news.com/123  # drop one URL
+claude-webcache clear --older-than-days 30       # partial wipe
+claude-webcache clear --confirm YES              # full wipe (requires explicit confirm)
+claude-webcache dashboard                        # open http://localhost:37778
+claude-webcache dashboard --port 8080            # custom port
+```
+
+The dashboard renders top URLs by hits, top domains, full search-able list with one-click invalidate buttons. Pure stdlib — no extra deps to install.
+
+## Configuration (env vars)
+
+| Variable | Default | Effect |
+|---|---|---|
+| `WEBCACHE_TTL_DAYS` | unlimited | Global TTL in days. `0` or unset = unlimited. |
+| `WEBCACHE_MAX_SIZE_MB` | unlimited | Above this size, LRU eviction drops ~20% of oldest-by-`last_hit_at` entries on next write (debounced every 100 writes). |
+| `WEBCACHE_DOMAIN_TTL` | none | Per-domain TTL JSON: `{"news.com":1,"reuters.com":1,"arxiv.org":0}`. Days; `0` = unlimited. Suffix-matches subdomains. Overrides global TTL when matched. |
+| `WEBCACHE_DEBUG` | off | `1` enables stderr trace from the auto-cache hook on errors. |
 
 ## SessionStart hook
 
@@ -130,14 +157,14 @@ Cache key = `SHA256(url + "|" + prompt)`. Default TTL: **unlimited** (set `WEBCA
 
 ## Benchmarks
 
-Single-process latency on a populated DB (N=10000 entries, 1KB output each), measured via `npm run bench`:
+Single-process latency on a populated DB (N=10000 entries, 1KB output each), measured via `npm run bench` on AMD Ryzen 9 3900X / Node 24:
 
 | Op | p50 | p95 | p99 | ops/sec |
 |---|---:|---:|---:|---:|
-| `read_hit` | 0.05ms | 0.08ms | 0.13ms | 12,300 |
-| `read_miss` | 0.01ms | 0.03ms | 0.05ms | 69,700 |
-| `write` | 0.06ms | 0.12ms | 1.30ms | 8,100 |
-| `list(50)` | 0.08ms | 0.13ms | 0.40ms | 10,600 |
+| `read_hit` | 0.10ms | 0.19ms | 0.51ms | 5,200 |
+| `read_miss` | 0.05ms | 0.13ms | 0.34ms | 10,900 |
+| `write` | 0.07ms | 0.16ms | 1.85ms | 6,400 |
+| `list(50)` | 0.15ms | 0.38ms | 1.47ms | 4,500 |
 
 Storage overhead: ~1.9 KB per entry for a 1 KB payload (extra ≈ key + indexes + WAL).
 

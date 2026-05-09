@@ -1,5 +1,42 @@
 # Changelog
 
+## 0.3.0 — 2026-05-09
+
+**New MCP tools (cache management):**
+
+- `cache_invalidate({ url })` — drops every entry for one URL across all prompts. Returns deleted count.
+- `cache_clear({ older_than_days?, confirm? })` — bulk wipe. Pass `older_than_days: N` for age-based partial clear (no confirmation needed). For full wipe, `confirm: "YES"` is required as a safety guard.
+
+**Honest hit rate (`cache_stats` enrichment):**
+
+- New `meta` table tracks `miss_count` globally so `cache_stats` reports a real `hit_rate = hits / (hits + misses)` instead of an unmeasurable proxy.
+- `cache_stats` now also returns `db_size_bytes`, `evicted` (eviction counter), and `top_urls` (top 5 by `hit_count`). Existing fields (`total`, `hits`, `last`) preserved.
+- New index `idx_last_hit_at` supports faster LRU eviction queries.
+
+**LRU eviction (`WEBCACHE_MAX_SIZE_MB`):**
+
+- New env var. When the SQLite file exceeds the cap, drops ~20% of oldest-by-`last_hit_at` entries (`COALESCE(last_hit_at, cached_at)` for never-hit rows) and runs `VACUUM` to reclaim space. Auto-eviction never wipes the entire cache (clamped to `total - 1`).
+- Trigger: debounced every 100 writes, plus an explicit `cache.evictIfNeeded()` API.
+
+**Per-domain TTL (`WEBCACHE_DOMAIN_TTL`):**
+
+- New env var accepting JSON like `{"news.com":1,"reuters.com":1,"arxiv.org":0}`. Days (0 = unlimited). Suffix-matches subdomains (`example.com` matches `api.example.com`). Overrides global `WEBCACHE_TTL_DAYS` per matched domain. Solves the "cache stale on news/market data, infinite on docs" use case without per-fetch HTTP probes.
+
+**Standalone CLI + web dashboard:**
+
+- New `claude-webcache` binary in `bin`. Subcommands: `stats`, `list [N]`, `invalidate <url>`, `clear [--older-than-days N | --confirm YES]`, `dashboard [--port N]`, `help`.
+- `claude-webcache dashboard` launches a local HTTP server on `:37778` (configurable). Pure-stdlib HTML page rendering: stats tiles, top URLs by hits, top domains breakdown, search-able recent list, one-click invalidate buttons. Not embedded in the MCP server — the MCP plugin stays stdio-pure.
+
+**Hook visibility (`WEBCACHE_DEBUG`):**
+
+- `WEBCACHE_DEBUG=1` enables stderr logging from `hook-webfetch-cache.cjs` on errors. Default off — silent as before.
+
+**Other:**
+
+- `mcp-server.cjs` now reads version from `plugin.json` at runtime — no more hardcoded version strings drifting from the manifest.
+- New `ARCHITECTURE.md` (one-page system map) and `MIGRATION.md` (upgrade notes per release).
+- 9 new unit tests covering invalidate, clear (full + age-based), miss tracking, hit_rate accuracy, eviction LRU correctness, domain TTL exact + suffix matching, zero-day means unlimited. 17 tests total, all green.
+
 ## 0.2.0 — 2026-05-01
 
 - Add `node:test` unit suite (`plugin/test/cache.test.js`, 8 tests, ~400ms) covering `makeKey` determinism, `set`/`get` round-trip, hit-count update, TTL expiry, upsert, `purgeExpired` Infinity no-op behavior, and `stats` aggregation. Zero new devDeps — uses Node 22.5+ built-in test runner.

@@ -9,23 +9,48 @@ const crypto = require('node:crypto');
 
 const CACHE_MODULE = require.resolve('../src/cache.js');
 
+const ENV_KEYS = ['WEBCACHE_TTL_DAYS', 'WEBCACHE_MAX_SIZE_MB', 'WEBCACHE_DOMAIN_TTL'];
+
+function snapshotEnv() {
+  const snap = {};
+  for (const k of ENV_KEYS) {
+    snap[k] = Object.prototype.hasOwnProperty.call(process.env, k)
+      ? { had: true, val: process.env[k] }
+      : { had: false };
+  }
+  return snap;
+}
+
+function restoreEnv(snap) {
+  for (const k of ENV_KEYS) {
+    if (snap[k].had) process.env[k] = snap[k].val;
+    else delete process.env[k];
+  }
+}
+
+function applyEnv({ ttlDays, maxSizeMb, domainTtl }) {
+  if (ttlDays === undefined) delete process.env.WEBCACHE_TTL_DAYS;
+  else process.env.WEBCACHE_TTL_DAYS = String(ttlDays);
+
+  if (maxSizeMb === undefined) delete process.env.WEBCACHE_MAX_SIZE_MB;
+  else process.env.WEBCACHE_MAX_SIZE_MB = String(maxSizeMb);
+
+  if (domainTtl === undefined) delete process.env.WEBCACHE_DOMAIN_TTL;
+  else process.env.WEBCACHE_DOMAIN_TTL = typeof domainTtl === 'string' ? domainTtl : JSON.stringify(domainTtl);
+}
+
 // cache.js bakes CACHE_DIR/DB_PATH/TTL_MS at module load from os.homedir() + env.
 // To run tests against an isolated SQLite file, we monkey-patch os.homedir before
 // freshly requiring cache.js, then restore afterwards.
-function freshCache({ ttlDays } = {}) {
+function freshCache(opts = {}) {
   const tmpRoot = path.join(os.tmpdir(), `webcache-test-${crypto.randomUUID()}`);
   fs.mkdirSync(tmpRoot, { recursive: true });
 
   const origHome = os.homedir;
-  const hadTtl = Object.prototype.hasOwnProperty.call(process.env, 'WEBCACHE_TTL_DAYS');
-  const origTtl = process.env.WEBCACHE_TTL_DAYS;
+  const envSnap = snapshotEnv();
 
   os.homedir = () => tmpRoot;
-  if (ttlDays === undefined) {
-    delete process.env.WEBCACHE_TTL_DAYS;
-  } else {
-    process.env.WEBCACHE_TTL_DAYS = String(ttlDays);
-  }
+  applyEnv(opts);
 
   delete require.cache[CACHE_MODULE];
   const cache = require(CACHE_MODULE);
@@ -35,8 +60,7 @@ function freshCache({ ttlDays } = {}) {
     tmpRoot,
     cleanup() {
       os.homedir = origHome;
-      if (hadTtl) process.env.WEBCACHE_TTL_DAYS = origTtl;
-      else delete process.env.WEBCACHE_TTL_DAYS;
+      restoreEnv(envSnap);
       delete require.cache[CACHE_MODULE];
       // SQLite handle on Windows may keep the file locked briefly. force:true tries hard;
       // any residual leak ends up in os.tmpdir() which the OS sweeps periodically.

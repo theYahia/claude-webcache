@@ -22,7 +22,9 @@ process.stdin.on('end', () => {
     if (url && output) {
       cache.set(url, prompt, output);
     }
-  } catch (_) {
-    // never crash the hook
+  } catch (e) {
+    if (process.env.WEBCACHE_DEBUG === '1') {
+      try { process.stderr.write(`[claude-webcache] hook error: ${e && e.message}\n`); } catch (_) {}
+    }
   }
 });

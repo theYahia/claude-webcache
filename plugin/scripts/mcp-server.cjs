@@ -8,9 +8,10 @@ const {
 } = require('@modelcontextprotocol/sdk/types.js');
 
 const cache = require('../src/cache.js');
+const PLUGIN_MANIFEST = require('../.claude-plugin/plugin.json');
 
 const server = new Server(
-  { name: 'claude-webcache', version: '0.1.0' },
+  { name: 'claude-webcache', version: PLUGIN_MANIFEST.version },
   { capabilities: { tools: {} } }
 );
 
@@ -44,7 +45,8 @@ const TOOLS = [
   },
   {
     name: 'cache_stats',
-    description: 'Return cache statistics: total entries, total hits, last cached timestamp.',
+    description:
+      'Return cache statistics: total entries, total hits, miss count, hit rate, db size in bytes, evicted count, top 5 URLs by hit count, last cached timestamp.',
     inputSchema: { type: 'object', properties: {} },
   },
   {
@@ -54,6 +56,36 @@ const TOOLS = [
       type: 'object',
       properties: {
         limit: { type: 'number', description: 'Max entries to return (default 50)' },
+      },
+    },
+  },
+  {
+    name: 'cache_invalidate',
+    description:
+      'Delete all cache entries for a specific URL (across all prompts). Returns the number of entries deleted.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        url: { type: 'string', description: 'The URL to invalidate' },
+      },
+      required: ['url'],
+    },
+  },
+  {
+    name: 'cache_clear',
+    description:
+      'Bulk-delete cache entries. Provide either older_than_days (safe, partial) OR confirm:"YES" (full wipe, dangerous). Returns number of entries deleted.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        older_than_days: {
+          type: 'number',
+          description: 'Delete entries older than N days. Safe, no confirm needed.',
+        },
+        confirm: {
+          type: 'string',
+          description: 'Set to "YES" to confirm full cache wipe when older_than_days is not provided.',
+        },
       },
     },
   },
@@ -95,6 +127,31 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
       const limit = (args && typeof args.limit === 'number') ? args.limit : 50;
       const rows = cache.list(limit);
       return { content: [{ type: 'text', text: JSON.stringify(rows, null, 2) }] };
+    }
+
+    if (name === 'cache_invalidate') {
+      const { url } = args || {};
+      if (!url) {
+        return { content: [{ type: 'text', text: 'Error: url is required' }], isError: true };
+      }
+      const deleted = cache.invalidate(url);
+      return { content: [{ type: 'text', text: JSON.stringify({ deleted }) }] };
+    }
+
+    if (name === 'cache_clear') {
+      const { older_than_days, confirm } = args || {};
+      const hasOlder = typeof older_than_days === 'number' && older_than_days > 0;
+      if (!hasOlder && confirm !== 'YES') {
+        return {
+          content: [{
+            type: 'text',
+            text: 'Error: full cache wipe requires confirm:"YES". For safer partial clear, pass older_than_days:N.',
+          }],
+          isError: true,
+        };
+      }
+      const deleted = cache.clear(hasOlder ? older_than_days : undefined);
+      return { content: [{ type: 'text', text: JSON.stringify({ deleted }) }] };
     }
 
     return { content: [{ type: 'text', text: `Unknown tool: ${name}` }], isError: true };
