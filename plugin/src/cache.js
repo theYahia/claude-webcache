@@ -125,15 +125,34 @@ function tableHasColumn(d, table, col) {
   return false;
 }
 
+function _initPragmas(handle) {
+  // busy_timeout MUST be first — once set, subsequent PRAGMAs/DDL contending with another
+  // opener will wait up to 5s instead of failing immediately with "disk I/O error" / SQLITE_BUSY.
+  // The journal_mode=WAL switch in particular can fail on a fresh DB when two processes
+  // race to enable WAL before either has busy_timeout active.
+  handle.exec('PRAGMA busy_timeout = 5000');
+  // Retry the WAL switch — first opener wins, second sees the journal in transition.
+  // 5 attempts × 50ms = 250ms total worst case.
+  let lastErr;
+  for (let i = 0; i < 5; i++) {
+    try { handle.exec('PRAGMA journal_mode = WAL'); lastErr = null; break; }
+    catch (e) {
+      lastErr = e;
+      const wait = 50 * (i + 1);
+      const t = Date.now(); while (Date.now() - t < wait) { /* sync sleep */ }
+    }
+  }
+  if (lastErr) throw lastErr;
+  handle.exec('PRAGMA synchronous = NORMAL');
+}
+
 function getDb() {
   if (db) return db;
   if (!fs.existsSync(CACHE_DIR)) {
     fs.mkdirSync(CACHE_DIR, { recursive: true });
   }
   db = new DatabaseSync(DB_PATH);
-  db.exec('PRAGMA journal_mode = WAL');
-  db.exec('PRAGMA synchronous = NORMAL');
-  db.exec('PRAGMA busy_timeout = 5000');
+  _initPragmas(db);
   db.exec(`
     CREATE TABLE IF NOT EXISTS cache (
       key TEXT PRIMARY KEY,
@@ -159,13 +178,21 @@ function getDb() {
     );
   `);
 
-  // v0.4 schema migration: namespace + compressed columns (idempotent via PRAGMA check)
-  if (!tableHasColumn(db, 'cache', 'namespace')) {
-    db.exec("ALTER TABLE cache ADD COLUMN namespace TEXT NOT NULL DEFAULT ''");
+  // v0.4 schema migration: namespace + compressed columns. Idempotent two ways —
+  // (a) PRAGMA check covers the single-process case, (b) try/catch on "duplicate column"
+  // covers the cross-process race where two openers both see the column missing and
+  // both try to ALTER. SQLite's error message includes "duplicate column" — we swallow
+  // exactly that error and re-throw anything else.
+  function safeAddColumn(col, ddl) {
+    if (tableHasColumn(db, 'cache', col)) return;
+    try { db.exec(ddl); }
+    catch (e) {
+      if (e && /duplicate column/i.test(String(e.message))) return; // race winner already added it
+      throw e;
+    }
   }
-  if (!tableHasColumn(db, 'cache', 'compressed')) {
-    db.exec('ALTER TABLE cache ADD COLUMN compressed INTEGER NOT NULL DEFAULT 0');
-  }
+  safeAddColumn('namespace', "ALTER TABLE cache ADD COLUMN namespace TEXT NOT NULL DEFAULT ''");
+  safeAddColumn('compressed', 'ALTER TABLE cache ADD COLUMN compressed INTEGER NOT NULL DEFAULT 0');
   db.exec('CREATE INDEX IF NOT EXISTS idx_namespace ON cache(namespace)');
   // Composite index lets `SELECT ... WHERE namespace=? ORDER BY cached_at DESC LIMIT N`
   // walk the index directly without sort. Critical for list() perf on large caches.
