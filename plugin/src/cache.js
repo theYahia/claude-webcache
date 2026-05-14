@@ -1,11 +1,14 @@
+'use strict';
 const { DatabaseSync } = require('node:sqlite');
 const crypto = require('node:crypto');
+const zlib = require('node:zlib');
 const fs = require('node:fs');
 const path = require('node:path');
 const os = require('node:os');
 
 const CACHE_DIR = path.join(os.homedir(), '.webcache');
 const DB_PATH = path.join(CACHE_DIR, 'cache.db');
+const HOOK_LOG_PATH = path.join(CACHE_DIR, 'hook.log');
 
 const _ttlRaw = process.env.WEBCACHE_TTL_DAYS;
 const TTL_MS = (!_ttlRaw || _ttlRaw === '0')
@@ -17,7 +20,22 @@ const MAX_SIZE_BYTES = (!_maxSizeRaw || _maxSizeRaw === '0')
   ? Infinity
   : Number(_maxSizeRaw) * 1024 * 1024;
 
+const _maxOutRaw = process.env.WEBCACHE_MAX_OUTPUT_MB;
+const MAX_OUTPUT_BYTES = (!_maxOutRaw || _maxOutRaw === '0')
+  ? 10 * 1024 * 1024
+  : Number(_maxOutRaw) * 1024 * 1024;
+
+const NAMESPACE = process.env.WEBCACHE_NAMESPACE || '';
+const COMPRESS = process.env.WEBCACHE_COMPRESS === '1';
+const STRICT_REDACT = process.env.WEBCACHE_STRICT_REDACT === '1';
+const COMPRESS_MIN_BYTES = 4096;
+
 const DOMAIN_TTL_MS = parseDomainTtl(process.env.WEBCACHE_DOMAIN_TTL);
+
+const CREDENTIAL_PARAM_NAMES = new Set([
+  'token', 'api_key', 'apikey', 'access_token', 'auth', 'secret',
+  'password', 'passwd', 'key', 'signature', 'sig', 'sessionid',
+]);
 
 const EVICT_CHECK_EVERY = 100;
 let _writeCount = 0;
@@ -49,6 +67,64 @@ function getEffectiveTtl(url) {
   return TTL_MS;
 }
 
+function canonUrl(raw) {
+  const s = (raw || '').trim();
+  if (!s) return '';
+  let u;
+  try { u = new URL(s); } catch { return s; }
+  // Lowercase host
+  u.hostname = u.hostname.toLowerCase();
+  // Strip default ports
+  if ((u.protocol === 'http:' && u.port === '80') ||
+      (u.protocol === 'https:' && u.port === '443')) {
+    u.port = '';
+  }
+  // Strip fragment
+  u.hash = '';
+  // Sort query params (stable order across permutations)
+  if (u.search) {
+    const params = Array.from(u.searchParams.entries());
+    params.sort((a, b) => (a[0] === b[0] ? 0 : a[0] < b[0] ? -1 : 1));
+    u.search = '';
+    for (const [k, v] of params) u.searchParams.append(k, v);
+  }
+  return u.toString();
+}
+
+function validateUrl(raw) {
+  const s = (raw || '').trim();
+  if (!s) return { ok: false, reason: 'empty url' };
+  let u;
+  try { u = new URL(s); } catch { return { ok: false, reason: 'malformed url' }; }
+  if (u.protocol !== 'http:' && u.protocol !== 'https:') {
+    return { ok: false, reason: `unsupported scheme: ${u.protocol}` };
+  }
+  return { ok: true };
+}
+
+function redactUrl(raw) {
+  const s = (raw || '').trim();
+  if (!s) return s;
+  let u;
+  try { u = new URL(s); } catch { return s; }
+  if (u.username) u.username = '';
+  if (u.password) u.password = '';
+  if (u.search) {
+    for (const k of Array.from(u.searchParams.keys())) {
+      if (CREDENTIAL_PARAM_NAMES.has(k.toLowerCase())) {
+        u.searchParams.set(k, '***');
+      }
+    }
+  }
+  return u.toString();
+}
+
+function tableHasColumn(d, table, col) {
+  const rows = d.prepare(`PRAGMA table_info(${table})`).all();
+  for (const r of rows) if (r.name === col) return true;
+  return false;
+}
+
 function getDb() {
   if (db) return db;
   if (!fs.existsSync(CACHE_DIR)) {
@@ -57,6 +133,7 @@ function getDb() {
   db = new DatabaseSync(DB_PATH);
   db.exec('PRAGMA journal_mode = WAL');
   db.exec('PRAGMA synchronous = NORMAL');
+  db.exec('PRAGMA busy_timeout = 5000');
   db.exec(`
     CREATE TABLE IF NOT EXISTS cache (
       key TEXT PRIMARY KEY,
@@ -75,66 +152,142 @@ function getDb() {
       key TEXT PRIMARY KEY,
       value INTEGER NOT NULL DEFAULT 0
     );
+
+    CREATE TABLE IF NOT EXISTS meta_str (
+      key TEXT PRIMARY KEY,
+      value TEXT NOT NULL
+    );
   `);
+
+  // v0.4 schema migration: namespace + compressed columns (idempotent via PRAGMA check)
+  if (!tableHasColumn(db, 'cache', 'namespace')) {
+    db.exec("ALTER TABLE cache ADD COLUMN namespace TEXT NOT NULL DEFAULT ''");
+  }
+  if (!tableHasColumn(db, 'cache', 'compressed')) {
+    db.exec('ALTER TABLE cache ADD COLUMN compressed INTEGER NOT NULL DEFAULT 0');
+  }
+  db.exec('CREATE INDEX IF NOT EXISTS idx_namespace ON cache(namespace)');
+  // Composite index lets `SELECT ... WHERE namespace=? ORDER BY cached_at DESC LIMIT N`
+  // walk the index directly without sort. Critical for list() perf on large caches.
+  db.exec('CREATE INDEX IF NOT EXISTS idx_namespace_cached_at ON cache(namespace, cached_at DESC)');
+
   db.prepare("INSERT OR IGNORE INTO meta (key, value) VALUES ('miss_count', 0)").run();
   db.prepare("INSERT OR IGNORE INTO meta (key, value) VALUES ('evict_count', 0)").run();
+  db.prepare("INSERT OR IGNORE INTO meta (key, value) VALUES ('oversize_skipped', 0)").run();
+  db.prepare("INSERT OR IGNORE INTO meta (key, value) VALUES ('last_hook_error_at', 0)").run();
   return db;
 }
 
 function makeKey(url, prompt) {
-  const norm = (url || '').trim() + '|' + (prompt || '').trim();
+  const canon = canonUrl(url);
+  const keyUrl = STRICT_REDACT ? redactUrl(canon) : canon;
+  const norm = NAMESPACE + '|' + keyUrl + '|' + (prompt || '').trim();
   return crypto.createHash('sha256').update(norm).digest('hex');
 }
 
-function get(url, prompt) {
+function _ns(opts) {
+  if (opts && typeof opts.namespace === 'string') return opts.namespace;
+  return NAMESPACE;
+}
+
+function _decodeOutput(row) {
+  if (!row) return null;
+  if (!row.compressed) return row.output;
+  try {
+    const buf = Buffer.from(row.output, 'base64');
+    return zlib.gunzipSync(buf).toString('utf8');
+  } catch (e) {
+    return null;
+  }
+}
+
+function get(url, prompt, opts) {
   const d = getDb();
+  const ns = _ns(opts);
   const key = makeKey(url, prompt);
-  const row = d.prepare('SELECT output, cached_at FROM cache WHERE key = ?').get(key);
+  const row = d.prepare(
+    'SELECT output, cached_at, compressed FROM cache WHERE key = ? AND namespace = ?'
+  ).get(key, ns);
   if (!row) {
     d.prepare("UPDATE meta SET value = value + 1 WHERE key = 'miss_count'").run();
     return null;
   }
   const ttl = getEffectiveTtl(url);
   if (Date.now() - Number(row.cached_at) > ttl) {
-    d.prepare('DELETE FROM cache WHERE key = ?').run(key);
+    d.prepare('DELETE FROM cache WHERE key = ? AND namespace = ?').run(key, ns);
     d.prepare("UPDATE meta SET value = value + 1 WHERE key = 'miss_count'").run();
     return null;
   }
-  d.prepare('UPDATE cache SET hit_count = hit_count + 1, last_hit_at = ? WHERE key = ?')
-    .run(Date.now(), key);
-  return row.output;
+  d.prepare('UPDATE cache SET hit_count = hit_count + 1, last_hit_at = ? WHERE key = ? AND namespace = ?')
+    .run(Date.now(), key, ns);
+  return _decodeOutput(row);
 }
 
-function set(url, prompt, output) {
+function set(url, prompt, output, opts) {
+  const v = validateUrl(url);
+  if (!v.ok) return { ok: false, reason: v.reason };
+
   const d = getDb();
+  const ns = _ns(opts);
+  const out = String(output == null ? '' : output);
+  const byteLen = Buffer.byteLength(out, 'utf8');
+  if (byteLen > MAX_OUTPUT_BYTES) {
+    d.prepare("UPDATE meta SET value = value + 1 WHERE key = 'oversize_skipped'").run();
+    d.prepare("INSERT INTO meta_str (key, value) VALUES ('last_oversize_url', ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value")
+      .run(redactUrl(url));
+    return { ok: false, reason: `payload ${byteLen} bytes exceeds cap ${MAX_OUTPUT_BYTES}` };
+  }
+
   const key = makeKey(url, prompt);
   const promptHash = crypto.createHash('sha256').update(prompt || '').digest('hex').slice(0, 16);
+  const storedUrl = redactUrl(canonUrl(url));
+
+  let storedOutput = out;
+  let compressed = 0;
+  if (COMPRESS && byteLen >= COMPRESS_MIN_BYTES) {
+    try {
+      storedOutput = zlib.gzipSync(out).toString('base64');
+      compressed = 1;
+    } catch {
+      storedOutput = out;
+      compressed = 0;
+    }
+  }
+
   d.prepare(`
-    INSERT INTO cache (key, url, prompt_hash, output, cached_at, hit_count)
-    VALUES (?, ?, ?, ?, ?, 0)
+    INSERT INTO cache (key, url, prompt_hash, output, cached_at, hit_count, namespace, compressed)
+    VALUES (?, ?, ?, ?, ?, 0, ?, ?)
     ON CONFLICT(key) DO UPDATE SET
       output = excluded.output,
-      cached_at = excluded.cached_at
-  `).run(key, url, promptHash, output, Date.now());
+      cached_at = excluded.cached_at,
+      compressed = excluded.compressed
+  `).run(key, storedUrl, promptHash, storedOutput, Date.now(), ns, compressed);
 
   _writeCount++;
   if (_writeCount % EVICT_CHECK_EVERY === 0) {
     try { evictIfNeeded(); } catch { /* never crash on eviction */ }
   }
+  return { ok: true };
 }
 
-function invalidate(url) {
+function invalidate(url, opts) {
   const d = getDb();
-  return d.prepare('DELETE FROM cache WHERE url = ?').run(url).changes;
+  const ns = _ns(opts);
+  const canon = redactUrl(canonUrl(url));
+  // Match both raw url (legacy v0.3 rows) and canonical/redacted form (v0.4 rows)
+  return d.prepare('DELETE FROM cache WHERE namespace = ? AND (url = ? OR url = ?)')
+    .run(ns, url, canon).changes;
 }
 
-function clear(olderThanDays) {
+function clear(olderThanDays, opts) {
   const d = getDb();
+  const ns = _ns(opts);
   if (olderThanDays && olderThanDays > 0) {
     const cutoff = Date.now() - olderThanDays * 24 * 60 * 60 * 1000;
-    return d.prepare('DELETE FROM cache WHERE cached_at < ?').run(cutoff).changes;
+    return d.prepare('DELETE FROM cache WHERE namespace = ? AND cached_at < ?')
+      .run(ns, cutoff).changes;
   }
-  return d.prepare('DELETE FROM cache').run().changes;
+  return d.prepare('DELETE FROM cache WHERE namespace = ?').run(ns).changes;
 }
 
 function evictIfNeeded() {
@@ -147,6 +300,7 @@ function evictIfNeeded() {
   if (total === 0) return 0;
   // Drop ~20% of rows, oldest by last access. Floor at 1 (always make progress),
   // ceiling at total-1 (never wipe the whole cache via auto-eviction).
+  // Eviction is global across namespaces — fairness via age, not isolation.
   const evictCount = Math.max(1, Math.min(total - 1, Math.ceil(total * 0.20)));
   const changes = d.prepare(`
     DELETE FROM cache WHERE key IN (
@@ -160,50 +314,148 @@ function evictIfNeeded() {
   return changes;
 }
 
-function stats() {
+function _metaStr(d, key) {
+  const r = d.prepare('SELECT value FROM meta_str WHERE key = ?').get(key);
+  return r ? r.value : null;
+}
+
+function stats(opts) {
   const d = getDb();
-  const total = Number(d.prepare('SELECT COUNT(*) AS n FROM cache').get().n);
-  const hits = Number(d.prepare('SELECT COALESCE(SUM(hit_count), 0) AS n FROM cache').get().n);
-  const lastRow = d.prepare('SELECT MAX(cached_at) AS t FROM cache').get();
-  const last = lastRow.t == null ? null : Number(lastRow.t);
+  const ns = _ns(opts);
+  const scopeAll = opts && opts.global === true;
+
+  const totalQ = scopeAll
+    ? d.prepare('SELECT COUNT(*) AS n FROM cache').get()
+    : d.prepare('SELECT COUNT(*) AS n FROM cache WHERE namespace = ?').get(ns);
+  const total = Number(totalQ.n);
+
+  const hitsQ = scopeAll
+    ? d.prepare('SELECT COALESCE(SUM(hit_count), 0) AS n FROM cache').get()
+    : d.prepare('SELECT COALESCE(SUM(hit_count), 0) AS n FROM cache WHERE namespace = ?').get(ns);
+  const hits = Number(hitsQ.n);
+
+  const lastQ = scopeAll
+    ? d.prepare('SELECT MAX(cached_at) AS t FROM cache').get()
+    : d.prepare('SELECT MAX(cached_at) AS t FROM cache WHERE namespace = ?').get(ns);
+  const last = lastQ.t == null ? null : Number(lastQ.t);
+
   const missesRow = d.prepare("SELECT value FROM meta WHERE key = 'miss_count'").get();
   const misses = missesRow ? Number(missesRow.value) : 0;
   const evictedRow = d.prepare("SELECT value FROM meta WHERE key = 'evict_count'").get();
   const evicted = evictedRow ? Number(evictedRow.value) : 0;
+  const oversizeRow = d.prepare("SELECT value FROM meta WHERE key = 'oversize_skipped'").get();
+  const oversize = oversizeRow ? Number(oversizeRow.value) : 0;
+  const lastHookErrRow = d.prepare("SELECT value FROM meta WHERE key = 'last_hook_error_at'").get();
+  const lastHookErrAt = lastHookErrRow && Number(lastHookErrRow.value) > 0 ? Number(lastHookErrRow.value) : null;
+
   const denom = hits + misses;
   const hit_rate = denom > 0 ? hits / denom : 0;
   const dbSize = fs.existsSync(DB_PATH) ? fs.statSync(DB_PATH).size : 0;
-  const topRows = d.prepare(`
-    SELECT url, hit_count FROM cache
-    WHERE hit_count > 0
-    ORDER BY hit_count DESC
-    LIMIT 5
-  `).all().map((r) => ({ url: r.url, hit_count: Number(r.hit_count) }));
+
+  const topRows = scopeAll
+    ? d.prepare('SELECT url, hit_count FROM cache WHERE hit_count > 0 ORDER BY hit_count DESC LIMIT 5').all()
+    : d.prepare('SELECT url, hit_count FROM cache WHERE namespace = ? AND hit_count > 0 ORDER BY hit_count DESC LIMIT 5').all(ns);
+
+  let compressedRows = 0;
+  let uncompressedEstBytes = 0;
+  if (COMPRESS) {
+    const cRow = scopeAll
+      ? d.prepare('SELECT COUNT(*) AS n FROM cache WHERE compressed = 1').get()
+      : d.prepare('SELECT COUNT(*) AS n FROM cache WHERE namespace = ? AND compressed = 1').get(ns);
+    compressedRows = Number(cRow.n);
+    // estimate uncompressed: gzip typical ratio ~4×; rough upper bound for dashboard display
+    const sumQ = scopeAll
+      ? d.prepare('SELECT COALESCE(SUM(LENGTH(output)), 0) AS n FROM cache WHERE compressed = 1').get()
+      : d.prepare('SELECT COALESCE(SUM(LENGTH(output)), 0) AS n FROM cache WHERE namespace = ? AND compressed = 1').get(ns);
+    uncompressedEstBytes = Number(sumQ.n) * 4;
+  }
+
   return {
+    namespace: ns,
     total,
     hits,
     misses,
     hit_rate: Number(hit_rate.toFixed(4)),
     last,
     db_size_bytes: dbSize,
+    db_size_uncompressed_est: COMPRESS ? dbSize + uncompressedEstBytes : null,
+    compressed_rows: COMPRESS ? compressedRows : null,
     evicted,
-    top_urls: topRows,
+    oversize_skipped: oversize,
+    last_oversize_url: _metaStr(d, 'last_oversize_url'),
+    last_hook_error_at: lastHookErrAt,
+    last_hook_error_msg: _metaStr(d, 'last_hook_error_msg'),
+    hook_log_path: HOOK_LOG_PATH,
+    top_urls: topRows.map((r) => ({ url: r.url, hit_count: Number(r.hit_count) })),
   };
 }
 
-function list(limit = 50) {
+function statsByDomain(limit = 20, opts) {
   const d = getDb();
-  return d.prepare(`
-    SELECT url, cached_at, hit_count, last_hit_at
-    FROM cache
-    ORDER BY cached_at DESC
-    LIMIT ?
-  `).all(limit).map((r) => ({
+  const ns = _ns(opts);
+  const scopeAll = opts && opts.global === true;
+  const rows = scopeAll
+    ? d.prepare(`
+        SELECT url, hit_count, cached_at, last_hit_at FROM cache
+      `).all()
+    : d.prepare(`
+        SELECT url, hit_count, cached_at, last_hit_at FROM cache WHERE namespace = ?
+      `).all(ns);
+
+  const agg = {};
+  for (const r of rows) {
+    let host;
+    try { host = new URL(r.url).hostname.toLowerCase(); } catch { host = '—'; }
+    if (!agg[host]) agg[host] = { entries: 0, hits: 0, last_fetched_at: 0 };
+    agg[host].entries++;
+    agg[host].hits += Number(r.hit_count);
+    const cached = Number(r.cached_at);
+    if (cached > agg[host].last_fetched_at) agg[host].last_fetched_at = cached;
+  }
+  return Object.entries(agg)
+    .map(([domain, v]) => ({
+      domain,
+      entries: v.entries,
+      total_hits: v.hits,
+      avg_hits_per_entry: v.entries > 0 ? Number((v.hits / v.entries).toFixed(2)) : 0,
+      last_fetched_at: v.last_fetched_at || null,
+    }))
+    .sort((a, b) => b.entries - a.entries || b.total_hits - a.total_hits)
+    .slice(0, limit);
+}
+
+function list(limit = 50, offset = 0, opts) {
+  const d = getDb();
+  const ns = _ns(opts);
+  const scopeAll = opts && opts.global === true;
+  const rows = scopeAll
+    ? d.prepare(`
+        SELECT url, cached_at, hit_count, last_hit_at, namespace, compressed
+        FROM cache
+        ORDER BY cached_at DESC
+        LIMIT ? OFFSET ?
+      `).all(limit, offset)
+    : d.prepare(`
+        SELECT url, cached_at, hit_count, last_hit_at, namespace, compressed
+        FROM cache
+        WHERE namespace = ?
+        ORDER BY cached_at DESC
+        LIMIT ? OFFSET ?
+      `).all(ns, limit, offset);
+  return rows.map((r) => ({
     url: r.url,
     cached_at: Number(r.cached_at),
     hit_count: Number(r.hit_count),
     last_hit_at: r.last_hit_at == null ? null : Number(r.last_hit_at),
+    namespace: r.namespace || '',
+    compressed: r.compressed ? 1 : 0,
   }));
+}
+
+function listNamespaces() {
+  const d = getDb();
+  const rows = d.prepare('SELECT DISTINCT namespace FROM cache ORDER BY namespace').all();
+  return rows.map((r) => r.namespace || '');
 }
 
 function purgeExpired() {
@@ -213,10 +465,21 @@ function purgeExpired() {
   return d.prepare('DELETE FROM cache WHERE cached_at < ?').run(cutoff).changes;
 }
 
+function recordHookError(msg) {
+  try {
+    const d = getDb();
+    d.prepare("UPDATE meta SET value = ? WHERE key = 'last_hook_error_at'").run(Date.now());
+    d.prepare("INSERT INTO meta_str (key, value) VALUES ('last_hook_error_msg', ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value")
+      .run(String(msg).slice(0, 500));
+  } catch { /* swallow — DB itself may be the source of error */ }
+}
+
 module.exports = {
-  get, set, stats, list,
+  get, set, stats, statsByDomain, list, listNamespaces,
   invalidate, clear,
   purgeExpired, evictIfNeeded,
-  makeKey, getEffectiveTtl,
-  DB_PATH, CACHE_DIR,
+  makeKey, canonUrl, redactUrl, validateUrl, getEffectiveTtl,
+  recordHookError,
+  DB_PATH, CACHE_DIR, HOOK_LOG_PATH,
+  NAMESPACE, MAX_OUTPUT_BYTES, COMPRESS, STRICT_REDACT,
 };

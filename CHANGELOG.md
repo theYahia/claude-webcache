@@ -1,5 +1,54 @@
 # Changelog
 
+## 0.4.0 — 2026-05-14
+
+**Production-grade polish — correctness, security, observability, scale.**
+
+### Added
+
+- **URL canonicalization** before hashing — lowercase hostname, strip default ports, strip fragment, sort query params alphabetically. `https://EXAMPLE.com/p?b=2&a=1#frag` and `https://example.com/p?a=1&b=2` now share one cache slot. Eliminates silent cache misses from URL formatting variance.
+- **Namespace isolation** via `WEBCACHE_NAMESPACE` env var. Multiple projects on one machine can have separate caches without cross-contamination. Default `""` preserves v0.3 single-shared-cache behavior.
+- **Gzip compression** via `WEBCACHE_COMPRESS=1` — responses ≥4KB gzipped, stored as base64 in TEXT column. Typical 3-7× storage reduction on HTML/JSON. Existing uncompressed rows read fine (BC).
+- **Two new MCP tools:** `cache_warm({entries: [{url, prompt}], ...})` for batch pre-flight check (returns hits/misses/invalid in one call — saves N round-trips); `cache_refresh({url, prompt})` for forced re-fetch.
+- **`statsByDomain()`** API + dashboard section — per-host entry count, total hits, avg hits per entry, last fetch age.
+- **Dashboard** gains pagination (offset-based, no full-1000-row load), `/api/refresh` POST endpoint, per-row refresh + invalidate buttons, namespace switcher (when DB has >1 namespace), oversize/error banners.
+- **CLI** gains `warm`, `refresh`, `clear-logs`, `export --all`, `namespaces`, `stats --by-domain`, `list --offset N`, global `--namespace X` flag.
+- New env vars: `WEBCACHE_NAMESPACE`, `WEBCACHE_MAX_OUTPUT_MB` (default 10), `WEBCACHE_COMPRESS`, `WEBCACHE_STRICT_REDACT`, `WEBCACHE_QUIET`.
+
+### Changed (correctness)
+
+- **`PRAGMA busy_timeout = 5000`** at connection open — concurrent multi-session writes no longer hit `SQLITE_BUSY` during normal operation.
+- **URL credential redaction on store** — `user:pass@` and credential-like query params (`token`, `api_key`, `apikey`, `access_token`, `auth`, `secret`, `password`, `key`, `signature`, `sig`, `sessionid`) are replaced with `***` in the stored URL column. Hash key still uses unredacted canonical URL by default — opt into hash-level redaction via `WEBCACHE_STRICT_REDACT=1` (with caveat about personalized endpoints documented in README).
+- **Scheme validation** — `set` rejects `data:`, `file:`, `javascript:`, `ftp:`. Only `http://` and `https://` are cached.
+- **Payload size cap** — outputs >`WEBCACHE_MAX_OUTPUT_MB` (default 10) are rejected instead of bloating the DB. Counter `oversize_skipped` + `last_oversize_url` exposed in stats.
+- **Hook error visibility** — `hook-webfetch-cache.cjs` logs to stderr by default (was opt-in via `WEBCACHE_DEBUG=1` in v0.3). Errors also append to `~/.webcache/hook.log` and are recorded as `last_hook_error_msg` / `last_hook_error_at` in stats. Opt out via `WEBCACHE_QUIET=1`.
+- **Composite index `idx_namespace_cached_at`** — lets `cache_list` walk the index in DESC order without sort. Restores v0.3 list_50 latency (~0.11ms p50) after WHERE-namespace was added.
+
+### Schema
+
+- New columns on `cache`: `namespace TEXT NOT NULL DEFAULT ''`, `compressed INTEGER NOT NULL DEFAULT 0`. Added via `PRAGMA table_info` check + `ALTER TABLE ADD COLUMN` (SQLite doesn't support `IF NOT EXISTS` on ADD COLUMN).
+- New table `meta_str(key TEXT PRIMARY KEY, value TEXT NOT NULL)` for string-valued metadata.
+- New indexes: `idx_namespace`, `idx_namespace_cached_at`.
+- Automatic migration on first DB open under v0.4. No manual steps. See `MIGRATION.md`.
+
+### Tests
+
+- 53 tests total (up from 17), ~7s runtime. Three files:
+  - `cache.test.js` — 38 unit tests covering canonicalization, validation, redaction (incl. strict mode), payload cap, namespace isolation, gzip round-trip, busy_timeout, statsByDomain, pagination, BC, recordHookError.
+  - `integration.test.js` — 11 tests spawning `mcp-server.cjs` as a child process, full JSON-RPC stdio round-trip on all 8 tools.
+  - `concurrent.test.js` — 4 stress tests via `child_process.spawn` with 5-10 parallel Node workers: parallel writers (250 entries), writer + vacuum, writer + 5 readers (no partial output), schema migration idempotency under race.
+
+### Benchmarks (v0.4.0 baseline)
+
+| Op | p50 | p95 | p99 | ops/sec |
+|---:|---:|---:|---:|---:|
+| `write` | 0.09ms | 0.15ms | 2.66ms | 5,800 |
+| `read_hit` | 0.07ms | 0.12ms | 0.23ms | 7,600 |
+| `read_miss` | 0.04ms | 0.07ms | 0.13ms | 17,600 |
+| `list_50` | 0.11ms | 0.16ms | 0.53ms | 7,400 |
+
+Read paths slightly faster than v0.3 baseline (better miss accounting + index). Write +20% from added validation/redaction; absolute latency still well under 0.1ms p50. Storage overhead ~5% from new columns.
+
 ## 0.3.0 — 2026-05-09
 
 **New MCP tools (cache management):**

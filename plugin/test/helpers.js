@@ -9,7 +9,17 @@ const crypto = require('node:crypto');
 
 const CACHE_MODULE = require.resolve('../src/cache.js');
 
-const ENV_KEYS = ['WEBCACHE_TTL_DAYS', 'WEBCACHE_MAX_SIZE_MB', 'WEBCACHE_DOMAIN_TTL'];
+const ENV_KEYS = [
+  'WEBCACHE_TTL_DAYS',
+  'WEBCACHE_MAX_SIZE_MB',
+  'WEBCACHE_DOMAIN_TTL',
+  'WEBCACHE_NAMESPACE',
+  'WEBCACHE_MAX_OUTPUT_MB',
+  'WEBCACHE_COMPRESS',
+  'WEBCACHE_STRICT_REDACT',
+  'WEBCACHE_QUIET',
+  'WEBCACHE_DEBUG',
+];
 
 function snapshotEnv() {
   const snap = {};
@@ -28,15 +38,22 @@ function restoreEnv(snap) {
   }
 }
 
-function applyEnv({ ttlDays, maxSizeMb, domainTtl }) {
-  if (ttlDays === undefined) delete process.env.WEBCACHE_TTL_DAYS;
-  else process.env.WEBCACHE_TTL_DAYS = String(ttlDays);
+function setOrDelete(key, value) {
+  if (value === undefined) delete process.env[key];
+  else process.env[key] = String(value);
+}
 
-  if (maxSizeMb === undefined) delete process.env.WEBCACHE_MAX_SIZE_MB;
-  else process.env.WEBCACHE_MAX_SIZE_MB = String(maxSizeMb);
-
-  if (domainTtl === undefined) delete process.env.WEBCACHE_DOMAIN_TTL;
-  else process.env.WEBCACHE_DOMAIN_TTL = typeof domainTtl === 'string' ? domainTtl : JSON.stringify(domainTtl);
+function applyEnv(opts) {
+  setOrDelete('WEBCACHE_TTL_DAYS', opts.ttlDays);
+  setOrDelete('WEBCACHE_MAX_SIZE_MB', opts.maxSizeMb);
+  if (opts.domainTtl === undefined) delete process.env.WEBCACHE_DOMAIN_TTL;
+  else process.env.WEBCACHE_DOMAIN_TTL = typeof opts.domainTtl === 'string' ? opts.domainTtl : JSON.stringify(opts.domainTtl);
+  setOrDelete('WEBCACHE_NAMESPACE', opts.namespace);
+  setOrDelete('WEBCACHE_MAX_OUTPUT_MB', opts.maxOutputMb);
+  setOrDelete('WEBCACHE_COMPRESS', opts.compress === true ? '1' : opts.compress);
+  setOrDelete('WEBCACHE_STRICT_REDACT', opts.strictRedact === true ? '1' : opts.strictRedact);
+  setOrDelete('WEBCACHE_QUIET', opts.quiet === true ? '1' : opts.quiet);
+  setOrDelete('WEBCACHE_DEBUG', opts.debug === true ? '1' : opts.debug);
 }
 
 // cache.js bakes CACHE_DIR/DB_PATH/TTL_MS at module load from os.homedir() + env.
@@ -73,4 +90,4 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-module.exports = { freshCache, sleep };
+module.exports = { freshCache, sleep, ENV_KEYS };

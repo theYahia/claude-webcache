@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+'use strict';
 process.removeAllListeners('warning');
 const cache = require('../src/cache.js');
 
@@ -17,7 +18,11 @@ try {
     process.stdout.write(JSON.stringify({ continue: true, suppressOutput: true }));
     process.exit(0);
   }
-  const msg = `webcache: ${s.total} pages cached, ${s.hits} hits, last fetch ${fmtAgo(s.last)}`;
+  const nsTag = s.namespace ? `[ns=${s.namespace}] ` : '';
+  const rateTag = (s.hits + s.misses) > 0
+    ? `, ${Math.round(s.hit_rate * 100)}% hit rate`
+    : '';
+  const msg = `webcache ${nsTag}${s.total} pages cached${rateTag}, last fetch ${fmtAgo(s.last)}`;
   process.stdout.write(JSON.stringify({
     continue: true,
     suppressOutput: true,
