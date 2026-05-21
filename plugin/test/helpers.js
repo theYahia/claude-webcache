@@ -19,6 +19,8 @@ const ENV_KEYS = [
   'WEBCACHE_STRICT_REDACT',
   'WEBCACHE_QUIET',
   'WEBCACHE_DEBUG',
+  'WEBCACHE_SEARCH_TTL_HOURS',
+  'WEBCACHE_AUTOREAD',
 ];
 
 function snapshotEnv() {
@@ -54,6 +56,8 @@ function applyEnv(opts) {
   setOrDelete('WEBCACHE_STRICT_REDACT', opts.strictRedact === true ? '1' : opts.strictRedact);
   setOrDelete('WEBCACHE_QUIET', opts.quiet === true ? '1' : opts.quiet);
   setOrDelete('WEBCACHE_DEBUG', opts.debug === true ? '1' : opts.debug);
+  setOrDelete('WEBCACHE_SEARCH_TTL_HOURS', opts.searchTtlHours);
+  setOrDelete('WEBCACHE_AUTOREAD', opts.autoread);
 }
 
 // cache.js bakes CACHE_DIR/DB_PATH/TTL_MS at module load from os.homedir() + env.

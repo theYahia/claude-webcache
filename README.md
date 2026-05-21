@@ -78,15 +78,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 **v0.1.5+ auto-caches every WebFetch automatically.** The pattern below is optional: add it to `~/.claude/CLAUDE.md` to also check the cache *before* making a WebFetch — this saves the WebFetch call entirely on repeat URLs.
 
-```markdown
-## WebFetch caching (claude-webcache)
+**Auto-read (v0.5+): nothing to do.** A `PreToolUse` hook checks the cache before every `WebFetch`/`WebSearch`. On a hit it serves the cached copy and skips the network; on a miss the call runs normally and the `PostToolUse` hook stores the result. Same URL + same prompt (or same search query) in any future session = instant hit, zero network cost.
 
-Before calling WebFetch, call `cached_fetch(url, prompt)` first.
-- If it returns text → use that, do NOT call WebFetch.
-- If it returns `[CACHE_MISS] <url>` → call WebFetch as normal (it will be auto-cached for next time).
-```
-
-Same URL + same prompt in any future session = instant hit, zero network cost.
+Manual lookup is still available if you want it: call `cached_fetch(url, prompt)` (or `cached_search(query)`) — returns the cached text, or `[CACHE_MISS] …` if absent. Disable auto-read with `WEBCACHE_AUTOREAD=0`.
 
 ## ⚠ Security — authenticated URLs
 
@@ -118,6 +112,7 @@ Default namespace is the empty string `""` (shared cache for v0.3 behavior). Ins
 | Tool | Args | Returns |
 |---|---|---|
 | `cached_fetch` | `url`, `prompt` | cached text, or `[CACHE_MISS] <url>` |
+| `cached_search` | `query` | cached WebSearch results, or `[CACHE_MISS] <query>` (websearch namespace, short TTL) |
 | `cache_store` | `url`, `prompt`, `output` | `stored` |
 | `cache_stats` | `global?` | `{ namespace, total, hits, misses, hit_rate, last, db_size_bytes, evicted, oversize_skipped, last_hook_error_at, top_urls, ... }` |
 | `cache_list` | `limit?`, `offset?`, `global?` | recent URLs (most recent first) |
@@ -162,6 +157,8 @@ The dashboard renders top URLs by hits, top domains (with avg hits / last fetch 
 | `WEBCACHE_STRICT_REDACT` | off | `1` makes the cache key use the redacted URL — collides per endpoint regardless of token value. See Security above. |
 | `WEBCACHE_QUIET` | off | `1` suppresses hook stderr output (file log at `~/.webcache/hook.log` still written). |
 | `WEBCACHE_DEBUG` | off | `1` enables verbose tracing in the auto-cache hook. |
+| `WEBCACHE_SEARCH_TTL_HOURS` | 6 | TTL for cached `WebSearch` results (the `websearch` namespace). Search rankings drift, so this is short by default. `0` = never expire. |
+| `WEBCACHE_AUTOREAD` | on | `0` disables the `PreToolUse` auto-read hooks (cache still fills via `PostToolUse`; you read it manually via `cached_fetch`/`cached_search`). |
 
 ## SessionStart hook
 

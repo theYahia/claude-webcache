@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.5.0 — 2026-05-21
+
+**Auto-read + WebSearch caching. Cache stops being write-only.**
+
+### Added
+
+- **Auto-read for WebFetch (`PreToolUse` hook).** New `hook-webfetch-precache.cjs` runs before every WebFetch: on a cache hit it returns `permissionDecision: "deny"` with the cached content inlined in the reason, so Claude uses the cached copy and skips the network entirely. On a miss it emits nothing — WebFetch proceeds and the `PostToolUse` hook stores the result. Before this, the cache only filled on fetch and was never read back automatically; the documented "call `cached_fetch` first" pattern was manual. Disable with `WEBCACHE_AUTOREAD=0`. Large hits (>512KB) point at the `cached_fetch` MCP tool instead of inlining.
+- **WebSearch caching.** WebSearch results are now cached in a dedicated `websearch` namespace under a synthetic `https://websearch.local/?q=…` URL, reusing the full set/get machinery (compression, oversize cap, eviction, hit counting). New `hook-websearch-cache.cjs` (`PostToolUse`) stores every search; `hook-websearch-precache.cjs` (`PreToolUse`) serves fresh hits. Short dedicated TTL — default **6h** — because search rankings drift; override with `WEBCACHE_SEARCH_TTL_HOURS` (`0` = never expire). New `cache.js` API: `searchUrl()`, `setSearch()`, `getSearch()`.
+- **New MCP tool `cached_search({query})`** — manual lookup of the websearch namespace; returns cached results or `[CACHE_MISS] <query>`. Brings the tool count to 9.
+- New env vars: `WEBCACHE_SEARCH_TTL_HOURS` (default 6), `WEBCACHE_AUTOREAD` (default on).
+
+### Fixed (rolled up from post-0.4.0 `main`)
+
+- **Race-safe schema migration** (`856adf1`, 2026-05-14). Two-process race during `getDb()` — first opener wins the WAL switch; second got `disk I/O error` before `busy_timeout` took effect. Fix: set `busy_timeout` FIRST, then retry `journal_mode=WAL` switch up to 5× with backoff. Also wrap `ALTER TABLE ADD COLUMN` in try/catch swallowing `duplicate column` errors from the row-shape migration race. Surfaced by `concurrent.test.js` at ~30% failure rate; now 5/5 clean.
+- **Hooks use `./scripts` relative paths instead of `${CLAUDE_PLUGIN_ROOT}`** (`2bd5855`, 2026-05-15, rd275 part 1). `${CLAUDE_PLUGIN_ROOT}` does not resolve in current Claude Code releases (≤2.1.123): the `PostToolUse:WebFetch` hook silently failed (`node` could not find the literal-path module before the script body ran), so **nothing was cached** in installed builds. Switched all hook commands to plain `node ./scripts/…`. Matches the fix already in `.mcp.json` since v0.1.1.
+
 ## 0.4.0 — 2026-05-14
 
 **Production-grade polish — correctness, security, observability, scale.**

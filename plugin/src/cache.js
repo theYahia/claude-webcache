@@ -32,6 +32,17 @@ const COMPRESS_MIN_BYTES = 4096;
 
 const DOMAIN_TTL_MS = parseDomainTtl(process.env.WEBCACHE_DOMAIN_TTL);
 
+// WebSearch results live in the 'websearch' namespace under a synthetic URL
+// (https://websearch.local/?q=...) so they reuse the entire set/get machinery —
+// compression, oversize cap, eviction, hit counting, expiry-on-read. They go stale
+// faster than page fetches (search rankings drift), so they get a dedicated short TTL.
+const SEARCH_NAMESPACE = 'websearch';
+const SEARCH_HOST = 'websearch.local';
+const _searchTtlRaw = process.env.WEBCACHE_SEARCH_TTL_HOURS;
+const SEARCH_TTL_MS = (_searchTtlRaw === '0')
+  ? Infinity
+  : (Number(_searchTtlRaw) > 0 ? Number(_searchTtlRaw) : 6) * 60 * 60 * 1000;
+
 const CREDENTIAL_PARAM_NAMES = new Set([
   'token', 'api_key', 'apikey', 'access_token', 'auth', 'secret',
   'password', 'passwd', 'key', 'signature', 'sig', 'sessionid',
@@ -57,13 +68,13 @@ function parseDomainTtl(raw) {
 }
 
 function getEffectiveTtl(url) {
+  let host;
+  try { host = new URL(url).hostname.toLowerCase(); } catch { return TTL_MS; }
+  if (host === SEARCH_HOST) return SEARCH_TTL_MS;
   if (!Object.keys(DOMAIN_TTL_MS).length) return TTL_MS;
-  try {
-    const host = new URL(url).hostname.toLowerCase();
-    for (const [domain, ttl] of Object.entries(DOMAIN_TTL_MS)) {
-      if (host === domain || host.endsWith('.' + domain)) return ttl;
-    }
-  } catch { /* invalid url */ }
+  for (const [domain, ttl] of Object.entries(DOMAIN_TTL_MS)) {
+    if (host === domain || host.endsWith('.' + domain)) return ttl;
+  }
   return TTL_MS;
 }
 
@@ -501,12 +512,33 @@ function recordHookError(msg) {
   } catch { /* swallow — DB itself may be the source of error */ }
 }
 
+// --- WebSearch caching --------------------------------------------------
+// Search queries have no URL, so we map a query to a synthetic https URL and
+// store under the 'websearch' namespace. set()/get() handle everything else.
+function searchUrl(query) {
+  return `https://${SEARCH_HOST}/?q=` + encodeURIComponent(String(query == null ? '' : query).trim());
+}
+
+function setSearch(query, results, opts) {
+  const q = String(query == null ? '' : query).trim();
+  if (!q) return { ok: false, reason: 'empty query' };
+  return set(searchUrl(q), '', results, Object.assign({}, opts, { namespace: SEARCH_NAMESPACE }));
+}
+
+function getSearch(query, opts) {
+  const q = String(query == null ? '' : query).trim();
+  if (!q) return null;
+  return get(searchUrl(q), '', Object.assign({}, opts, { namespace: SEARCH_NAMESPACE }));
+}
+
 module.exports = {
   get, set, stats, statsByDomain, list, listNamespaces,
   invalidate, clear,
   purgeExpired, evictIfNeeded,
   makeKey, canonUrl, redactUrl, validateUrl, getEffectiveTtl,
+  searchUrl, setSearch, getSearch,
   recordHookError,
   DB_PATH, CACHE_DIR, HOOK_LOG_PATH,
   NAMESPACE, MAX_OUTPUT_BYTES, COMPRESS, STRICT_REDACT,
+  SEARCH_NAMESPACE, SEARCH_HOST, SEARCH_TTL_MS,
 };

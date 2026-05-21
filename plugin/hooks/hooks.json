@@ -1,11 +1,25 @@
 {
-  "description": "claude-webcache hooks — session stats + auto-cache every WebFetch",
+  "description": "claude-webcache hooks — session stats + auto-cache/auto-read for WebFetch and WebSearch",
   "hooks": {
     "SessionStart": [
       {
         "matcher": "startup|clear|compact",
         "hooks": [
-          { "type": "command", "command": "node ${CLAUDE_PLUGIN_ROOT}/scripts/hook-stats.cjs" }
+          { "type": "command", "command": "node ./scripts/hook-stats.cjs" }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "WebFetch",
+        "hooks": [
+          { "type": "command", "command": "node ./scripts/hook-webfetch-precache.cjs" }
+        ]
+      },
+      {
+        "matcher": "WebSearch",
+        "hooks": [
+          { "type": "command", "command": "node ./scripts/hook-websearch-precache.cjs" }
         ]
       }
     ],
@@ -13,7 +27,13 @@
       {
         "matcher": "WebFetch",
         "hooks": [
-          { "type": "command", "command": "node ${CLAUDE_PLUGIN_ROOT}/scripts/hook-webfetch-cache.cjs" }
+          { "type": "command", "command": "node ./scripts/hook-webfetch-cache.cjs" }
+        ]
+      },
+      {
+        "matcher": "WebSearch",
+        "hooks": [
+          { "type": "command", "command": "node ./scripts/hook-websearch-cache.cjs" }
         ]
       }
     ]

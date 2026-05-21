@@ -8,7 +8,7 @@ Pick one. All under 280 chars (X free-tier limit). Pair with a screenshot from E
 Claude Code's built-in WebFetch caches results for 15 min, then they vanish.
 
 Built claude-webcache: cross-session WebFetch persistence.
-SQLite, 7-day TTL, MCP plugin.
+SQLite, unlimited TTL by default, MCP plugin.
 
 Open a new session → past fetches are still there.
 
@@ -34,7 +34,7 @@ github.com/theYahia/claude-webcache
 ```
 If you do research sprints in Claude Code: you re-fetch the same docs across sessions all the time. The 15-min in-session cache evicts before your next sprint.
 
-Built a tiny fix → claude-webcache. SQLite, 7-day TTL, ~200 lines.
+Built a tiny fix → claude-webcache. SQLite, unlimited TTL by default, ~200 lines.
 
 github.com/theYahia/claude-webcache
 ```

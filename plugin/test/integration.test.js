@@ -121,17 +121,26 @@ test('integration: initialize handshake succeeds', async () => {
   } finally { await c.close(); }
 });
 
-test('integration: tools/list returns 8 tools', async () => {
+test('integration: tools/list returns 9 tools', async () => {
   const c = makeClient();
   try {
     await c.init();
     const r = await c.request('tools/list', {});
-    assert.strictEqual(r.tools.length, 8);
+    assert.strictEqual(r.tools.length, 9);
     const names = r.tools.map((t) => t.name).sort();
     assert.deepStrictEqual(names, [
       'cache_clear', 'cache_invalidate', 'cache_list', 'cache_refresh',
-      'cache_stats', 'cache_store', 'cache_warm', 'cached_fetch',
+      'cache_stats', 'cache_store', 'cache_warm', 'cached_fetch', 'cached_search',
     ]);
+  } finally { await c.close(); }
+});
+
+test('integration: cached_search miss → WebSearch hook store → hit', async () => {
+  const c = makeClient();
+  try {
+    await c.init();
+    const miss = await c.call('cached_search', { query: 'qsearch latency 2026' });
+    assert.match(extractText(miss), /^\[CACHE_MISS\] qsearch latency 2026/);
   } finally { await c.close(); }
 });
 

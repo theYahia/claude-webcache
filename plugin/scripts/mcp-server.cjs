@@ -31,6 +31,18 @@ const TOOLS = [
     },
   },
   {
+    name: 'cached_search',
+    description:
+      'Look up a WebSearch query in the local cache (\'websearch\' namespace, short TTL). Returns cached results if a fresh entry exists, or "[CACHE_MISS] <query>" if not. On CACHE_MISS, run WebSearch — the PostToolUse hook stores the result automatically.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        query: { type: 'string', description: 'The search query' },
+      },
+      required: ['query'],
+    },
+  },
+  {
     name: 'cache_store',
     description:
       'Store a WebFetch result in the cache after a CACHE_MISS. Pass the original url, prompt, and the output text returned by WebFetch.',
@@ -160,6 +172,18 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
         return { content: [{ type: 'text', text: hit }] };
       }
       return { content: [{ type: 'text', text: `[CACHE_MISS] ${url}` }] };
+    }
+
+    if (name === 'cached_search') {
+      const { query } = args || {};
+      if (!query) {
+        return { content: [{ type: 'text', text: 'Error: query is required' }], isError: true };
+      }
+      const hit = cache.getSearch(query);
+      if (hit) {
+        return { content: [{ type: 'text', text: hit }] };
+      }
+      return { content: [{ type: 'text', text: `[CACHE_MISS] ${query}` }] };
     }
 
     if (name === 'cache_store') {
