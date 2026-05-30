@@ -2,34 +2,19 @@
 'use strict';
 process.removeAllListeners('warning');
 
-// PreToolUse hook: serve WebFetch from cache when possible (auto-read).
-// stdin = JSON { tool_name, tool_input: { url, prompt } }
-// On cache HIT  -> emit permissionDecision "deny" with the cached content in the
-//                  reason, so the model uses it without hitting the network.
-// On cache MISS -> emit nothing (let WebFetch run; PostToolUse hook will store it).
-//
-// PreToolUse output schema (verified against claude-mem's working hook):
-//   { "hookSpecificOutput": { "hookEventName": "PreToolUse",
-//       "permissionDecision": "allow"|"deny"|"ask", "permissionDecisionReason": "..." } }
+// PreToolUse hook: serve WebFetch from qsearch's url-keyed full-page cache.
+// stdin = JSON { tool_name, tool_input: { url } }   (prompt is no longer part of the key)
+// On HIT/fetch  -> deny with the full-page markdown in the reason, so the model uses it
+//                  instead of hitting the network. qsearch fetches+caches on miss.
+// On any error / qsearch down -> emit nothing (fail-open; native WebFetch runs).
+// Disable without uninstalling: WEBCACHE_AUTOREAD=0.
 
-const fs = require('node:fs');
-const cache = require('../src/cache.js');
+const q = require('./qsearch-client.cjs');
 
-const QUIET = process.env.WEBCACHE_QUIET === '1';
 const DEBUG = process.env.WEBCACHE_DEBUG === '1';
-// Disable auto-read entirely without uninstalling: WEBCACHE_AUTOREAD=0
 const AUTOREAD = process.env.WEBCACHE_AUTOREAD !== '0';
-// Above this size, point the model at cached_fetch instead of inlining the body
-// into the deny reason (keeps hook output sane for very large cached pages).
+// Above this size, point the model at the cached_fetch MCP tool instead of inlining.
 const INLINE_MAX_BYTES = 512 * 1024;
-
-function logError(label, err) {
-  const msg = err && err.message ? err.message : String(err);
-  const line = `[${new Date().toISOString()}] [claude-webcache] precache ${label}: ${msg}\n`;
-  if (!QUIET) { try { process.stderr.write(line); } catch {} }
-  try { fs.appendFileSync(cache.HOOK_LOG_PATH, line); } catch {}
-  try { cache.recordHookError(`precache ${label}: ${msg}`); } catch {}
-}
 
 function logDebug(line) {
   if (!DEBUG) return;
@@ -48,40 +33,40 @@ function emitDeny(reason) {
 
 let raw = '';
 process.stdin.on('data', (d) => { raw += d; });
-process.stdin.on('end', () => {
+process.stdin.on('end', async () => {
   try {
     if (!AUTOREAD) return;
     const { tool_name, tool_input } = JSON.parse(raw || '{}');
     if (tool_name !== 'WebFetch') return;
 
     const url = (tool_input && tool_input.url) || '';
-    const prompt = (tool_input && tool_input.prompt) || '';
     if (!url) return;
 
-    const v = cache.validateUrl(url);
+    const v = q.validateUrl(url);
     if (!v.ok) return; // let WebFetch handle/refuse it
 
-    const hit = cache.get(url, prompt); // returns content on hit, null on miss; counts the hit
-    if (hit == null) {
-      logDebug(`miss: ${url.slice(0, 80)}`);
-      return; // miss -> allow WebFetch (no output = default allow)
+    const data = await q.urlContent(url); // { markdown, source } | null (fail-open)
+    if (data == null) {
+      logDebug(`miss/unavailable: ${url.slice(0, 80)}`);
+      return; // miss or qsearch down -> allow WebFetch
     }
 
-    if (Buffer.byteLength(hit, 'utf8') <= INLINE_MAX_BYTES) {
+    const md = data.markdown;
+    if (Buffer.byteLength(md, 'utf8') <= INLINE_MAX_BYTES) {
       emitDeny(
-        `[claude-webcache] Cache HIT for ${url} — network fetch skipped. ` +
-        `Use the cached result below; do NOT retry WebFetch for this URL.\n\n` +
-        `=== CACHED CONTENT ===\n${hit}`
+        `[claude-webcache] qsearch full-page for ${url} (${data.source}) — network fetch skipped. ` +
+        `Use the content below; do NOT retry WebFetch for this URL.\n\n` +
+        `=== PAGE CONTENT (markdown) ===\n${md}`
       );
     } else {
       emitDeny(
-        `[claude-webcache] Cache HIT for ${url} (large) — network fetch skipped. ` +
-        `Call the MCP tool cached_fetch with this url and prompt to read the cached copy.`
+        `[claude-webcache] qsearch full-page for ${url} (large, ${data.source}) — network fetch skipped. ` +
+        `Call the MCP tool cached_fetch with this url to read the cached copy.`
       );
     }
-    logDebug(`hit served: ${url.slice(0, 80)}`);
+    logDebug(`served (${data.source}): ${url.slice(0, 80)}`);
   } catch (e) {
-    logError('hook error', e);
-    // On any error, emit nothing so the WebFetch proceeds normally (fail-open).
+    q.logError('webfetch-precache hook error', e);
+    // On any error, emit nothing so WebFetch proceeds normally (fail-open).
   }
 });

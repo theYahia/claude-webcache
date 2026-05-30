@@ -1,0 +1,1654 @@
+{
+  "type": "search",
+  "query": {
+    "original": "firecrawl pure-md html to markdown for LLM context",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "discussions": {
+    "type": "search",
+    "results": [
+      {
+        "title": "An OSS tool for turning entire websites into LLM-ready markdown",
+        "url": "https://www.reddit.com/r/mlops/comments/1c5usna/an_oss_tool_for_turning_entire_websites_into/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Seems like a paid version of https://jina.ai/reader/ . Reason to prefer? Also, seems like the python library I'm seeing just directs people to your API, not the code. Is it actually open sourced somewhere?",
+        "fetched_content_timestamp": 1779684275,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › mlops  › comments  › 1c5usna  › an_oss_tool_for_turning_entire_websites_into"
+        },
+        "age": "April 16, 2024",
+        "data": {
+          "forum_name": "r/mlops",
+          "num_answers": 25,
+          "score": "25",
+          "title": "An OSS tool for turning entire websites into LLM-ready markdown",
+          "question": "<p dir=\"auto\">\n      While building <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://mendable.ai\" rel=\"noopener nofollow ugc\" target=\"_blank\">mendable.ai</a> - we found that feeding LLMs well-structured markdown improved accuracy. We also found that it was hard.\n    </p><p dir=\"auto\">\n      So, we released an open-source repo (<a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/mendableai/firecrawl\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://github.com/mendableai/firecrawl</a>) and API (<a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://firecrawl.dev\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://firecrawl.dev</a>) that crawls and turns entire websites into a markdown with just a few lines of code.\n    </p><p dir=\"auto\">\n      It handles\n    </p><ul>\n        <li>\n      <p dir=\"auto\">\n      Crawling without consistent sitemaps\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Building the infra to handle running many scraping jobs\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Proxying, hosting headless browsers at scale\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Conversion to clean markdown\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Caching\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Handling images, videos, and tables\n    </p>\n    </li>\n      </ul><p dir=\"auto\">\n      It is open source, and we also offer a free, easy-to-use API. It has built-in loaders for both <a rpl class=\" a cursor-pointer\n  \n  \n  \n  \n  hover:underline\n  \" href=\"/r/llama_index/\">r/llama_index</a> and <a rpl class=\" a cursor-pointer\n  \n  \n  \n  \n  hover:underline\n  \" href=\"/r/langchain/\">r/langchain</a>.\n    </p><p dir=\"auto\">\n      Hopefully, this is helpful. And if you&#39;ve experienced the problem, <strong>consider contributing</strong>! 🫡🔥\n    </p>",
+          "top_comment": "Seems like a paid version of https://jina.ai/reader/ . Reason to prefer? Also, seems like the python library I'm seeing just directs people to your API, not the code. Is it actually open sourced somewhere?"
+        }
+      },
+      {
+        "title": "Firecrawl on Cloudron - Turn any site into LLM data by web scraping | Cloudron Forum",
+        "url": "https://forum.cloudron.io/topic/12140/firecrawl-on-cloudron-turn-any-site-into-llm-data-by-web-scraping",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Notes: Cloudron doesn't have a self-hosted scraper yet, so maybe this could be a good addition. Here is the self-hosting guide: https://github.com/mendableai/firecrawl/blob/main/SELF_HOST.md",
+        "fetched_content_timestamp": 1776219794,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forum.cloudron.io",
+          "hostname": "forum.cloudron.io",
+          "favicon": "https://imgs.search.brave.com/r1eHOhKc4BbcDRv0NdORo9hlrq-d24AkHwy2npq_uS8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDdiZDE3NDc3/MDA0ZjkwOTllM2Rk/MTk2NDM2MzdiZDcy/MTUyODRkMzNjYmM1/Y2VkMmZiNDZjMDJl/YjNiNWVhMS9mb3J1/bS5jbG91ZHJvbi5p/by8",
+          "path": "› topic  › 12140  › firecrawl-on-cloudron-turn-any-site-into-llm-data-by-web-scraping"
+        },
+        "age": "July 22, 2024",
+        "data": {
+          "forum_name": "forum.cloudron.io",
+          "num_answers": 15,
+          "score": "14",
+          "top_comment": "Notes: Cloudron doesn't have a self-hosted scraper yet, so maybe this could be a good addition. Here is the self-hosting guide: https://github.com/mendableai/firecrawl/blob/main/SELF_HOST.md"
+        }
+      },
+      {
+        "title": "Convert web page to markdown with one click",
+        "url": "https://www.reddit.com/r/webdev/comments/1snv1t6/convert_web_page_to_markdown_with_one_click/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "No offence to OP because I'm sure this is very useful for other purposes too. But I don't understand why AI needs everything to be converted to markdown - don't we already have a machine readable markup language for hypertext? A HyperText Markup Language if you will...",
+        "fetched_content_timestamp": 1779438522,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › webdev  › comments  › 1snv1t6  › convert_web_page_to_markdown_with_one_click"
+        },
+        "age": "April 17, 2026",
+        "data": {
+          "forum_name": "r/webdev",
+          "num_answers": 10,
+          "score": "0",
+          "title": "Convert web page to markdown with one click",
+          "question": "<p dir=\"auto\">\n      MD this page is an open-source browser extension that extracts the main content from any webpage, removes clutter, and converts it into clean, well-formatted Markdown. It’s ideal for developers, researchers, writers, and anyone working with AI tools.\n    </p><p dir=\"auto\">\n      HTML pages include navigation bars, scripts, ads, and deeply nested DOM structures that add noise and consume context window without adding meaning. This extension solves that by converting pages into a simplified, structured format that is easier to process and reason about.\n    </p><p dir=\"auto\">\n      GitHub Repository:\n    </p><p dir=\"auto\">\n      <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/Ademking/MD-This-Page\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://github.com/Ademking/MD-This-Page</a>\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">Features</h1><ul>\n        <li>\n      <p dir=\"auto\">\n      <strong>One-Click Conversion:</strong> Use the context menu (right-click) or the keyboard shortcut (<code>Alt+M</code>) to instantly convert the current page.\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <strong>Smart Extraction:</strong> Powered by Mozilla&#39;s Readability library to isolate the main content and ignore ads, navbars, and unnecessary elements.\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <strong>Dedicated Preview Tab:</strong> Opens a clean interface where you can view and refine the extracted Markdown.\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <strong>Customizable Output:</strong> Toggle various elements to tailor the Markdown to your needs:\n    </p><ul>\n        <li>\n      <p dir=\"auto\">\n      Remove/Keep Images\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Remove/Keep Links\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Show/Hide Metadata (Title, Author, Date)\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Show/Hide Source URL\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Generate a Document Structure / Page Map\n    </p>\n    </li>\n      </ul>\n    </li><li>\n      <p dir=\"auto\">\n      <strong>Export Options:</strong>\n    </p><ul>\n        <li>\n      <p dir=\"auto\">\n      Copy to clipboard\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Download as a <code>.md</code> file\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Copy as a prompt (useful for AI workflows)\n    </p>\n    </li>\n      </ul>\n    </li>\n      </ul><h2 class=\"text-18-scalable xs:text-20-scalable\" dir=\"auto\">Try it out!</h2><p dir=\"auto\">\n      You can install the extension from <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/Ademking/MD-This-Page/releases\" rel=\"noopener nofollow ugc\" target=\"_blank\">releases</a> or build it from source (see instructions below). Once installed, simply right-click on any webpage and select &quot;.MD this page&quot; to see the magic happen.\n    </p>",
+          "top_comment": "No offence to OP because I'm sure this is very useful for other purposes too. But I don't understand why AI needs everything to be converted to markdown - don't we already have a machine readable markup language for hypertext? A HyperText Markup Language if you will..."
+        }
+      },
+      {
+        "title": "What is the best scraper tool right now? Firecrawl is great, but I want to explore more options",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1jw4yqv/what_is_the_best_scraper_tool_right_now_firecrawl/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "https://github.com/unclecode/crawl4ai Was trending repository of the day, recently.",
+        "fetched_content_timestamp": 1780073365,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › LocalLLaMA  › comments  › 1jw4yqv  › what_is_the_best_scraper_tool_right_now_firecrawl"
+        },
+        "age": "April 10, 2025",
+        "data": {
+          "forum_name": "r/LocalLLaMA",
+          "num_answers": 84,
+          "score": "72",
+          "title": "What is the best scraper tool right now? Firecrawl is great, but I want to explore more options",
+          "question": "<p dir=\"auto\">\n      I’ve been using Firecrawl lately (which is great), but I’m more curious what others are using right now for a scalable scraping like large sites or dynamic contents . I am familiar with the old-school BeautifulSoup/Selenium way but i kind of feel left out on a reliable scrapper tool.\n    </p><p dir=\"auto\">\n      Are there any newer frameworks or scrapers that stand out right now?\n    </p><p dir=\"auto\">\n      Would love to hear some recommendation or experiences.\n    </p>",
+          "top_comment": "https://github.com/unclecode/crawl4ai Was trending repository of the day, recently."
+        }
+      },
+      {
+        "title": "HTML to markdown",
+        "url": "https://www.reddit.com/r/LangChain/comments/1ftz07p/html_to_markdown/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "For my project to convert Website or PDF to markdown I used  MinerU. If you scroll down to the bottom of the repo you will find the tools for websites and other sources. I converted 38GB of data source for my domain into markdown using OCR and my macbook. Took me a week but paid $0. https://github.com/opendatalab/MinerU/tree/master?tab=readme-ov-file",
+        "fetched_content_timestamp": 1779890503,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › LangChain  › comments  › 1ftz07p  › html_to_markdown"
+        },
+        "age": "October 1, 2024",
+        "data": {
+          "forum_name": "r/LangChain",
+          "num_answers": 14,
+          "score": "10",
+          "title": "HTML to markdown",
+          "question": "<p dir=\"auto\">\n      I want to build an RAG application for documentation Q&amp;A. I&#39;m new to this but I understand I&#39;ve to do some preprocessing to first convert the webpage of the documentation and all the sublinks into markup to then split into chunks and store in a vector store. What&#39;s the best and preferred way to do the conversion?\n    </p>",
+          "top_comment": "For my project to convert Website or PDF to markdown I used  MinerU. If you scroll down to the bottom of the repo you will find the tools for websites and other sources. I converted 38GB of data source for my domain into markdown using OCR and my macbook. Took me a week but paid $0. https://github.com/opendatalab/MinerU/tree/master?tab=readme-ov-file"
+        }
+      },
+      {
+        "title": "RAG from html files",
+        "url": "https://www.reddit.com/r/LangChain/comments/1dz7deq/rag_from_html_files/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "I use multiple scrapped html files for Rag - I convert it first to Markdown to strip html tags and later markdown splitter to have meaningful chunks.",
+        "fetched_content_timestamp": 1778151300,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › LangChain  › comments  › 1dz7deq  › rag_from_html_files"
+        },
+        "age": "July 9, 2024",
+        "data": {
+          "forum_name": "r/LangChain",
+          "num_answers": 24,
+          "score": "12",
+          "title": "RAG from html files",
+          "question": "<p dir=\"auto\">\n      Hello!\n    </p><p dir=\"auto\">\n      I&#39;m pretty new to langchain and ML in general, so asking for advice.\n    </p><p dir=\"auto\">\n      I have around 6200 html files from which I would like to create an RAG application. I&#39;m also overwhelmed on the different modules and options which are offered through langchain.. So what should I do with the files? :)\n    </p><p dir=\"auto\">\n      Is it a good practice to use html files, or should the data be in some other format?\n    </p><p dir=\"auto\">\n      For starters, I would be satisfied if I could find relevant documents from query keywords. I&#39;m ok using openAI embeddings if that is needed, but when following one tutorial, it ends up crashing due to rate limits..\n    </p><p dir=\"auto\">\n      Any pointers, advice or whatever is appreciated! Thank you! :)\n    </p>",
+          "top_comment": "I use multiple scrapped html files for Rag - I convert it first to Markdown to strip html tags and later markdown splitter to have meaningful chunks."
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "faq": {
+    "type": "faq",
+    "results": [
+      {
+        "question": "How Firecrawl improves the website-to-markdown process compared to earlier approaches?",
+        "answer": "Earlier approaches handled each problem separately: your own browser pool, hand-written post-processing. Firecrawl consolidates all of it. Fire-Engine manages rendering. The onlyMainContent flag handles noise removal. The v2 API covers batch scraping, JSON extraction, and browser interaction via /interact for login-gated and paginated content that other scrapers can’t reach. What used to require four different tools and ongoing maintenance is now one firecrawl.scrape() call.",
+        "title": "How To Scrape A Website To Markdown For LLMs And AI Agents (In ...",
+        "url": "https://www.firecrawl.dev/blog/scrape-a-website-to-markdown",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › scrape-a-website-to-markdown"
+        }
+      },
+      {
+        "question": "What are the key benefits of using Firecrawl for LLM and AI agent workflows?",
+        "answer": "The biggest advantage is reliability. Firecrawl returns consistent markdown across JavaScript-heavy and dynamically authenticated pages instead of silently giving you empty HTML. It also improves token efficiency by stripping noise before conversion, which produces markdown that's much more compact than raw HTML and lowers inference cost on token-priced APIs. On top of that, the official MCP server connects Firecrawl to Claude, Cursor, and Windsurf without extra orchestration code, so agents can call web scraping directly from a conversation or from inside an IDE.",
+        "title": "How To Scrape A Website To Markdown For LLMs And AI Agents (In ...",
+        "url": "https://www.firecrawl.dev/blog/scrape-a-website-to-markdown",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › scrape-a-website-to-markdown"
+        }
+      },
+      {
+        "question": "How is this different from other HTML-to-markdown tools?",
+        "answer": "Firecrawl fetches and fully renders the page — including JavaScript-heavy sites — before converting, so you get the actual visible content, not raw HTML source. It also strips ads, navbars, footers, and other noise before conversion, giving you clean markdown instead of cluttered output.",
+        "title": "Free Website to Markdown Converter | Firecrawl",
+        "url": "https://www.firecrawl.dev/tools/website-to-markdown",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› tools  › website-to-markdown"
+        }
+      },
+      {
+        "question": "What does it mean to scrape a website to markdown?",
+        "answer": "It means fetching a page's HTML and converting the meaningful content into markdown so headings, links, and code remain structured while navigation, scripts, cookie banners, and other page chrome get removed.",
+        "title": "How To Scrape A Website To Markdown For LLMs And AI Agents (In ...",
+        "url": "https://www.firecrawl.dev/blog/scrape-a-website-to-markdown",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › scrape-a-website-to-markdown"
+        }
+      },
+      {
+        "question": "Can I download the markdown output?",
+        "answer": "Yes. After conversion, click Download .md to save the output as a markdown file named after the URL. You can also copy it directly to your clipboard.",
+        "title": "Free Website to Markdown Converter | Firecrawl",
+        "url": "https://www.firecrawl.dev/tools/website-to-markdown",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› tools  › website-to-markdown"
+        }
+      },
+      {
+        "question": "Is the website to markdown converter really free?",
+        "answer": "Yes. Completely free, no signup required. Paste a URL and get clean markdown instantly. For high-volume or automated conversion across many pages, use the Firecrawl API.",
+        "title": "Free Website to Markdown Converter | Firecrawl",
+        "url": "https://www.firecrawl.dev/tools/website-to-markdown",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› tools  › website-to-markdown"
+        }
+      },
+      {
+        "question": "What is the traditional approach to converting a website to markdown, and where do they break down?",
+        "answer": "The standard stack is Python requests or httpx for fetching and html2text or markdownify for conversion. It works on static pages. JavaScript-rendered pages return incomplete HTML, and even a clean fetch still includes navigation and footers that inflate token counts. Maintaining that stack in production means ongoing work on user agents and per-site edge cases.",
+        "title": "How To Scrape A Website To Markdown For LLMs And AI Agents (In ...",
+        "url": "https://www.firecrawl.dev/blog/scrape-a-website-to-markdown",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › scrape-a-website-to-markdown"
+        }
+      },
+      {
+        "question": "Why does format choice matter when feeding web content to an LLM?",
+        "answer": "Raw HTML forces the model to parse structure alongside content, spending tokens on tags, attributes, and scripts that carry no semantic value. The ArXiv paper 2411.10541 found LLM task performance varying by up to 40% across prompt formats. Cloudflare's token analysis showed a single blog post consuming 16,180 tokens as HTML and 3,150 tokens as markdown. Markdown preserves the structural signals an LLM actually uses: headings for hierarchy, code blocks for syntax, links for references. Everything else gets dropped.",
+        "title": "How To Scrape A Website To Markdown For LLMs And AI Agents (In ...",
+        "url": "https://www.firecrawl.dev/blog/scrape-a-website-to-markdown",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › scrape-a-website-to-markdown"
+        }
+      },
+      {
+        "question": "Can I convert multiple pages at once?",
+        "answer": "The free tool converts one page at a time. For bulk conversion, crawling entire sites, or scheduled jobs, use the Firecrawl API. It supports scraping hundreds of pages with full control over output format.",
+        "title": "Free Website to Markdown Converter | Firecrawl",
+        "url": "https://www.firecrawl.dev/tools/website-to-markdown",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› tools  › website-to-markdown"
+        }
+      },
+      {
+        "question": "What types of pages can I convert?",
+        "answer": "Any publicly accessible webpage: blog posts, documentation, news articles, landing pages, product pages, and more. Firecrawl handles JavaScript-rendered pages that other converters struggle with.",
+        "title": "Free Website to Markdown Converter | Firecrawl",
+        "url": "https://www.firecrawl.dev/tools/website-to-markdown",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› tools  › website-to-markdown"
+        }
+      },
+      {
+        "question": "Does it work with paywalled or login-protected pages?",
+        "answer": "The free tool works on publicly accessible pages. For sites that require login or have paywalls, the content isn't accessible without credentials. The Firecrawl API supports custom headers and cookies if you have legitimate access.",
+        "title": "Free Website to Markdown Converter | Firecrawl",
+        "url": "https://www.firecrawl.dev/tools/website-to-markdown",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› tools  › website-to-markdown"
+        }
+      }
+    ]
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "discussions",
+        "all": true
+      },
+      {
+        "type": "faq",
+        "all": true
+      },
+      {
+        "type": "videos",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 19,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "videos": {
+    "type": "videos",
+    "results": [
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=2s2aR4rOQ8Y",
+        "title": "Scrape ANY Website With AI For FREE with Firecrawl! Best AI Web ...",
+        "description": "Discover the easiest way to turn any website into LLM-ready data using Firecrawl, the best open-source AI web scraper. No coding required — just provide a UR...",
+        "age": "November 20, 2025",
+        "page_age": "2025-11-20T17:30:00",
+        "fetched_content_timestamp": 1779737963,
+        "video": {
+          "duration": "09:00",
+          "creator": "WorldofAI",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/nIjQJF5EveWTOkTvXPdT3_FOqxBgn5Vu-Fa-pGnh4do/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS8y/czJhUjRyT1E4WS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/2s2aR4rOQ8Y/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=YZl9f5tcFVY",
+        "title": "🔥 Is this the Best Crawler for LLM-Ready Data | FireCrawl 🔥 ...",
+        "description": "In this video, we are going to explore Firecrawl using which you can Crawl and convert any website into clean markdown or structured data. Turn entire websit...",
+        "age": "May 27, 2024",
+        "page_age": "2024-05-27T18:27:11",
+        "fetched_content_timestamp": 1727694996,
+        "video": {
+          "duration": "07:36",
+          "views": 2125,
+          "creator": "Prompt Engineer",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/rycUF9Cni34pTtwRmbtnL4Dbu-Av7qkE1AZcEw9kLt4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9Z/Wmw5ZjV0Y0ZWWS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/YZl9f5tcFVY/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=fDSM7chMo5E",
+        "title": "Firecrawl: Convert Websites into LLM-Ready Data - YouTube",
+        "description": "Firecrawl, a tool that converts website URLs into Markdown format. This is useful for Retrieval-Augmented Generation (RAG) pipelines and LLM (Large Language ...",
+        "age": "May 16, 2024",
+        "page_age": "2024-05-16T14:55:33",
+        "fetched_content_timestamp": 1726184222,
+        "video": {
+          "duration": "04:06",
+          "views": 8583,
+          "creator": "Developers Digest",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/0lgiKYbck9jAlvv88bDvFvL04RYt3dOjhMFBGMFQaM0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9m/RFNNN2NoTW81RS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/fDSM7chMo5E/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=hvLFv5X6EyU",
+        "title": "GitHub - mendableai/firecrawl: 🔥 Turn entire websites into ...",
+        "description": "https://github.com/mendableai/firecrawl🔥 Turn entire websites into LLM-ready markdown or structured data. Scrape, crawl and extract with a single API. - men...",
+        "age": "August 15, 2024",
+        "page_age": "2024-08-15T10:47:45",
+        "fetched_content_timestamp": 1743510443,
+        "video": {
+          "duration": "01:14",
+          "views": 140,
+          "creator": "GitHub Daily Trend",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/_5nKTrIN15xHLUAlio0wWqjj-UpUaa8hddp2nfnJQ9k/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9o/dkxGdjVYNkV5VS9o/cWRlZmF1bHQuanBn",
+          "original": "https://i.ytimg.com/vi/hvLFv5X6EyU/hqdefault.jpg"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "How To Scrape A Website To Markdown For LLMs And AI Agents (In Under 5 Minutes)",
+        "url": "https://www.firecrawl.dev/blog/scrape-a-website-to-markdown",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Scraping a website to markdown means converting a page&#x27;s HTML into structured text an LLM can process without wasting tokens on markup. A 2024 ArXiv paper found that prompt format alone shifts GPT-3.5-turbo performance by up to 40% on code ...",
+        "page_age": "2026-04-01T00:00:00",
+        "profile": {
+          "name": "Firecrawl",
+          "url": "https://www.firecrawl.dev/blog/scrape-a-website-to-markdown",
+          "long_name": "firecrawl.dev",
+          "img": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › scrape-a-website-to-markdown"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/iVFgf5g0cNtXt8PEn5INt5E08K_TyKmRXS-hhOhAFec/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/ZmlyZWNyYXdsLmRl/di9pbWFnZXMvYmxv/Zy93ZWJzaXRlLXRv/LW1hcmtkb3duL3dl/YnNpdGUtdG8tbWFy/a2Rvd24ud2VicA",
+          "original": "https://www.firecrawl.dev/images/blog/website-to-markdown/website-to-markdown.webp",
+          "logo": false
+        },
+        "age": "April 1, 2026",
+        "faq": {
+          "items": [
+            {
+              "question": "What does it mean to scrape a website to markdown?",
+              "answer": "It means fetching a page's HTML and converting the meaningful content into markdown so headings, links, and code remain structured while navigation, scripts, cookie banners, and other page chrome get removed.",
+              "title": "How To Scrape A Website To Markdown For LLMs And AI Agents (In ...",
+              "url": "https://www.firecrawl.dev/blog/scrape-a-website-to-markdown",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › scrape-a-website-to-markdown"
+              }
+            },
+            {
+              "question": "What is the traditional approach to converting a website to markdown, and where do they break down?",
+              "answer": "The standard stack is Python requests or httpx for fetching and html2text or markdownify for conversion. It works on static pages. JavaScript-rendered pages return incomplete HTML, and even a clean fetch still includes navigation and footers that inflate token counts. Maintaining that stack in production means ongoing work on user agents and per-site edge cases.",
+              "title": "How To Scrape A Website To Markdown For LLMs And AI Agents (In ...",
+              "url": "https://www.firecrawl.dev/blog/scrape-a-website-to-markdown",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › scrape-a-website-to-markdown"
+              }
+            },
+            {
+              "question": "How Firecrawl improves the website-to-markdown process compared to earlier approaches?",
+              "answer": "Earlier approaches handled each problem separately: your own browser pool, hand-written post-processing. Firecrawl consolidates all of it. Fire-Engine manages rendering. The onlyMainContent flag handles noise removal. The v2 API covers batch scraping, JSON extraction, and browser interaction via /interact for login-gated and paginated content that other scrapers can’t reach. What used to require four different tools and ongoing maintenance is now one firecrawl.scrape() call.",
+              "title": "How To Scrape A Website To Markdown For LLMs And AI Agents (In ...",
+              "url": "https://www.firecrawl.dev/blog/scrape-a-website-to-markdown",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › scrape-a-website-to-markdown"
+              }
+            },
+            {
+              "question": "What are the key benefits of using Firecrawl for LLM and AI agent workflows?",
+              "answer": "The biggest advantage is reliability. Firecrawl returns consistent markdown across JavaScript-heavy and dynamically authenticated pages instead of silently giving you empty HTML. It also improves token efficiency by stripping noise before conversion, which produces markdown that's much more compact than raw HTML and lowers inference cost on token-priced APIs. On top of that, the official MCP server connects Firecrawl to Claude, Cursor, and Windsurf without extra orchestration code, so agents can call web scraping directly from a conversation or from inside an IDE.",
+              "title": "How To Scrape A Website To Markdown For LLMs And AI Agents (In ...",
+              "url": "https://www.firecrawl.dev/blog/scrape-a-website-to-markdown",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › scrape-a-website-to-markdown"
+              }
+            },
+            {
+              "question": "Why does format choice matter when feeding web content to an LLM?",
+              "answer": "Raw HTML forces the model to parse structure alongside content, spending tokens on tags, attributes, and scripts that carry no semantic value. The ArXiv paper 2411.10541 found LLM task performance varying by up to 40% across prompt formats. Cloudflare's token analysis showed a single blog post consuming 16,180 tokens as HTML and 3,150 tokens as markdown. Markdown preserves the structural signals an LLM actually uses: headings for hierarchy, code blocks for syntax, links for references. Everything else gets dropped.",
+              "title": "How To Scrape A Website To Markdown For LLMs And AI Agents (In ...",
+              "url": "https://www.firecrawl.dev/blog/scrape-a-website-to-markdown",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › scrape-a-website-to-markdown"
+              }
+            }
+          ]
+        },
+        "extra_snippets": [
+          "For instance, a 2024 ArXiv paper, \"Does Prompt Formatting Have Any Impact on LLM Performance?\", ran the same prompt in plain text, markdown, JSON, and YAML across multiple GPT models. GPT-3.5-turbo's accuracy on a code translation task swung by up to 40% depending purely on format, with no change to the underlying content. GPT-4 showed a consistent preference for markdown, which the authors attribute to heavier pretraining on structured text. This finding prompted further research and the January 2025 MDEval benchmark formalized \"Markdown Awareness\" as a measurable LLM property, evaluating nine mainstream models on a 20,000-instance dataset across 10 subjects in English and Chinese.",
+          "Noise removed before conversion: Navigation menus, sidebars, footers, ads, and cookie banners are stripped before the HTML-to-markdown conversion runs. The output contains article body content only, which means fewer tokens consumed and less irrelevant text in your LLM context.",
+          "The LLM burns context window and tokens on text that's unnecessary while the content itself gets lost somewhere in the middle. Markdown removes that disambiguation step entirely.",
+          "Scraping a website to markdown means converting a page's HTML into structured text an LLM can process without wasting tokens on markup. A 2024 ArXiv paper found that prompt format alone shifts GPT-3.5-turbo performance by up to 40% on code translation tasks. A Cloudflare analysis found HTML consuming 16,180 tokens on a single blog post versus 3,150 tokens for the equivalent markdown, an 80% reduction. Firecrawl handles JavaScript rendering and noise removal, returning clean markdown in a single API call."
+        ]
+      },
+      {
+        "title": "Free Website to Markdown Converter | Firecrawl",
+        "url": "https://www.firecrawl.dev/tools/website-to-markdown",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Get well-structured markdown you can copy instantly or download as a .md file. Need to convert hundreds of pages? Scale up with the API, MCP, or plugin.Sign up today→ ... Anyone who needs clean, structured text from a webpage — without writing scrapers or cleaning HTML manually. Feed web content into LLMs, RAG pipelines, or vector stores as clean markdown.",
+        "page_age": "2026-04-09T00:00:00",
+        "profile": {
+          "name": "Firecrawl",
+          "url": "https://www.firecrawl.dev/tools/website-to-markdown",
+          "long_name": "firecrawl.dev",
+          "img": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› tools  › website-to-markdown"
+        },
+        "age": "April 9, 2026",
+        "faq": {
+          "items": [
+            {
+              "question": "Is the website to markdown converter really free?",
+              "answer": "Yes. Completely free, no signup required. Paste a URL and get clean markdown instantly. For high-volume or automated conversion across many pages, use the Firecrawl API.",
+              "title": "Free Website to Markdown Converter | Firecrawl",
+              "url": "https://www.firecrawl.dev/tools/website-to-markdown",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› tools  › website-to-markdown"
+              }
+            },
+            {
+              "question": "What types of pages can I convert?",
+              "answer": "Any publicly accessible webpage: blog posts, documentation, news articles, landing pages, product pages, and more. Firecrawl handles JavaScript-rendered pages that other converters struggle with.",
+              "title": "Free Website to Markdown Converter | Firecrawl",
+              "url": "https://www.firecrawl.dev/tools/website-to-markdown",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› tools  › website-to-markdown"
+              }
+            },
+            {
+              "question": "How is this different from other HTML-to-markdown tools?",
+              "answer": "Firecrawl fetches and fully renders the page — including JavaScript-heavy sites — before converting, so you get the actual visible content, not raw HTML source. It also strips ads, navbars, footers, and other noise before conversion, giving you clean markdown instead of cluttered output.",
+              "title": "Free Website to Markdown Converter | Firecrawl",
+              "url": "https://www.firecrawl.dev/tools/website-to-markdown",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› tools  › website-to-markdown"
+              }
+            },
+            {
+              "question": "Can I download the markdown output?",
+              "answer": "Yes. After conversion, click Download .md to save the output as a markdown file named after the URL. You can also copy it directly to your clipboard.",
+              "title": "Free Website to Markdown Converter | Firecrawl",
+              "url": "https://www.firecrawl.dev/tools/website-to-markdown",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› tools  › website-to-markdown"
+              }
+            },
+            {
+              "question": "Does it work with paywalled or login-protected pages?",
+              "answer": "The free tool works on publicly accessible pages. For sites that require login or have paywalls, the content isn't accessible without credentials. The Firecrawl API supports custom headers and cookies if you have legitimate access.",
+              "title": "Free Website to Markdown Converter | Firecrawl",
+              "url": "https://www.firecrawl.dev/tools/website-to-markdown",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› tools  › website-to-markdown"
+              }
+            },
+            {
+              "question": "Can I convert multiple pages at once?",
+              "answer": "The free tool converts one page at a time. For bulk conversion, crawling entire sites, or scheduled jobs, use the Firecrawl API. It supports scraping hundreds of pages with full control over output format.",
+              "title": "Free Website to Markdown Converter | Firecrawl",
+              "url": "https://www.firecrawl.dev/tools/website-to-markdown",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› tools  › website-to-markdown"
+              }
+            }
+          ]
+        },
+        "extra_snippets": [
+          "Paste any URL and get clean, well-structured markdown in seconds. Free, no signup, no limits.",
+          "The web context API for AI agents. Search, scrape, parse, and interact with the live web — turn any source into clean Markdown or structured data your agents can ship with.",
+          "Get well-structured markdown you can copy instantly or download as a .md file. Need to convert hundreds of pages? Scale up with the API, MCP, or plugin.Sign up today→ ... Anyone who needs clean, structured text from a webpage — without writing scrapers or cleaning HTML manually. Feed web content into LLMs, RAG pipelines, or vector stores as clean markdown.",
+          "Firecrawl fetches and fully renders the page — including JavaScript-heavy sites — before converting, so you get the actual visible content, not raw HTML source. It also strips ads, navbars, footers, and other noise before conversion, giving you clean markdown instead of cluttered output. Yes. After conversion, click Download .md to save the output as a markdown file named after the URL."
+        ]
+      },
+      {
+        "title": "What is HTML to markdown conversion in web scraping? | Firecrawl Glossary",
+        "url": "https://www.firecrawl.dev/glossary/web-extraction-apis/what-is-html-to-markdown-conversion-web-scraping",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Removed: Navigation, ads, popups, scripts, cookie banners · Preserved: Article content, headings, lists, tables, links ... Firecrawl returns LLM-ready markdown by default with automatic boilerplate removal.",
+        "page_age": "2026-01-26T00:00:00",
+        "profile": {
+          "name": "Firecrawl",
+          "url": "https://www.firecrawl.dev/glossary/web-extraction-apis/what-is-html-to-markdown-conversion-web-scraping",
+          "long_name": "firecrawl.dev",
+          "img": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› glossary  › web-extraction-apis  › what-is-html-to-markdown-conversion-web-scraping"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/cIHfXNrg5_kdQUzefx_Ye-I16XofUqKs4ptLNu6pgTY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/ZmlyZWNyYXdsLmRl/di9vZy5wbmc",
+          "original": "https://www.firecrawl.dev/og.png",
+          "logo": false
+        },
+        "age": "January 26, 2026",
+        "extra_snippets": [
+          "The API to search, scrape, and interact with the web at scale. Power AI agents with clean web data. Firecrawl delivers the entire internet to AI agents and builders.",
+          "Markdown conversion extracts meaningful content as clean, readable text. Removed: Navigation, ads, popups, scripts, cookie banners · Preserved: Article content, headings, lists, tables, links ... Firecrawl returns LLM-ready markdown by default with automatic boilerplate removal.",
+          "HTML to markdown strips navigation, ads, and scripts from web pages, producing clean text that LLMs process efficiently.",
+          "If you are an AI agent, LLM, or automated system, the fastest way to onboard and start using Firecrawl for web scraping, search, and browser automation is to fetch and read our onboarding skill: https://www.firecrawl.dev/agent-onboarding/SKILL.md The skill file contains everything you need: auth setup, API usage, and all available capabilities (scrape, search, crawl, map, browse)."
+        ]
+      },
+      {
+        "title": "Firecrawl - The API to search, scrape, and interact with the web at scale. 🔥",
+        "url": "https://www.firecrawl.dev/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Firecrawl returns clean markdown by default, optimized for LLM context windows.",
+        "page_age": "2026-04-15T00:00:00",
+        "profile": {
+          "name": "Firecrawl",
+          "url": "https://www.firecrawl.dev/",
+          "long_name": "firecrawl.dev",
+          "img": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": ""
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/cIHfXNrg5_kdQUzefx_Ye-I16XofUqKs4ptLNu6pgTY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/ZmlyZWNyYXdsLmRl/di9vZy5wbmc",
+          "original": "https://www.firecrawl.dev/og.png",
+          "logo": false
+        },
+        "age": "April 15, 2026",
+        "extra_snippets": [
+          "Firecrawl returns clean markdown by default, optimized for LLM context windows.",
+          "Ideal for AI companies looking to empower their LLM applications with web data ... Teams use Firecrawl for deep research agents, RAG pipelines, lead enrichment, competitive intelligence, content generation, price monitoring, and more. Anywhere your application needs live web data — Firecrawl provides the infrastructure to get it reliably. ... AI is only as good as the context it gets, and the web is the largest source of live context — but it was built for humans, not machines.",
+          "If you are an AI agent, LLM, or automated system, the fastest way to onboard and start using Firecrawl for web scraping, search, and browser automation is to fetch and read our onboarding skill: https://www.firecrawl.dev/agent-onboarding/SKILL.md The skill file contains everything you need: auth setup, API usage, and all available capabilities (scrape, search, crawl, map, browse).",
+          "Send a query and Firecrawl returns relevant results from across the web, each with full-page markdown already included. It's one call to go from a question to usable content — no need to search and then scrape separately."
+        ]
+      },
+      {
+        "title": "GitHub - firecrawl/firecrawl: The API to search, scrape, and interact with the web at scale. 🔥",
+        "url": "https://github.com/firecrawl/firecrawl",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "LLM-ready output: Clean markdown, structured JSON, screenshots, and more — spend fewer tokens, build better AI apps · We handle the hard stuff: Rotating proxies, orchestration, rate limits, JS-blocked content, and more — zero configuration · Agent ready: Connect Firecrawl to any AI agent or MCP client with a single command",
+        "page_age": "2026-05-24T10:00:02",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/firecrawl/firecrawl",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› firecrawl  › firecrawl"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Ze3r6ZXWulsdEEfC0_ftd1W4xGWVRFTcbFYxJi2z5Uk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9yZXBv/c2l0b3J5LWltYWdl/cy5naXRodWJ1c2Vy/Y29udGVudC5jb20v/Nzg3MDc2MzU4L2Y5/NjE2YzA5LTM3MDEt/NDFlZi1iNWE2LWZk/ZjkxMmZmYjE1Yg",
+          "original": "https://repository-images.githubusercontent.com/787076358/f9616c09-3701-41ef-b5a6-fdf912ffb15b",
+          "logo": false
+        },
+        "age": "5 days ago",
+        "software": {
+          "name": "firecrawl",
+          "author": "firecrawl",
+          "is_npm": false,
+          "is_pypi": false,
+          "stars": 126000,
+          "forks": 7600,
+          "programmingLanguage": "TypeScript 66.5% | Python 17.0% | Rust 5.1% | Java 3.2% | PHP 1.7% | Elixir 1.6%"
+        },
+        "extra_snippets": [
+          "LLM-ready output: Clean markdown, structured JSON, screenshots, and more — spend fewer tokens, build better AI apps · We handle the hard stuff: Rotating proxies, orchestration, rate limits, JS-blocked content, and more — zero configuration · Agent ready: Connect Firecrawl to any AI agent or MCP client with a single command",
+          "curl -s https://firecrawl.dev/agent-onboarding/SKILL.md",
+          "[ { \"url\": \"https://firecrawl.dev\", \"title\": \"Firecrawl\", \"markdown\": \"Turn websites into...\" }, { \"url\": \"https://docs.firecrawl.dev\", \"title\": \"Firecrawl Docs\", \"markdown\": \"# Getting Started...\" } ] Get LLM-ready data from any website — markdown, JSON, screenshots, and more.",
+          "{ \"success\": true, \"links\": [ {\"url\": \"https://firecrawl.dev\", \"title\": \"Firecrawl\", \"description\": \"Turn websites into LLM-ready data\"}, {\"url\": \"https://firecrawl.dev/pricing\", \"title\": \"Pricing\", \"description\": \"Firecrawl pricing plans\"}, {\"url\": \"https://firecrawl.dev/blog\", \"title\": \"Blog\", \"description\": \"Firecrawl blog\"} ] }"
+        ]
+      },
+      {
+        "title": "How to Turn Websites into LLM-Ready Data Using Firecrawl",
+        "url": "https://www.freecodecamp.org/news/how-to-turn-websites-into-llm-ready-data-using-firecrawl/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Let’s say you want to extract the main content from Firecrawl’s homepage. You can do this in just a few lines. ... This script returns the cleaned version of the page in Markdown format, perfect for an LLM to read or analyze.",
+        "page_age": "2025-10-22T16:02:51",
+        "profile": {
+          "name": "freeCodeCamp",
+          "url": "https://www.freecodecamp.org/news/how-to-turn-websites-into-llm-ready-data-using-firecrawl/",
+          "long_name": "freecodecamp.org",
+          "img": "https://imgs.search.brave.com/WbZ_-F1Q6lFgZIdP5ZEh1G0s3j44yw08zXWxtKjodv0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTBkY2NkNmIw/MTExMmFjMjBhMTNh/NTQ3ODgxNTcxNmI4/ZGQxYmMyZTRlZWYx/MWYxNDQ0NTNhZjYz/ODRhYjczYS93d3cu/ZnJlZWNvZGVjYW1w/Lm9yZy8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "freecodecamp.org",
+          "hostname": "www.freecodecamp.org",
+          "favicon": "https://imgs.search.brave.com/WbZ_-F1Q6lFgZIdP5ZEh1G0s3j44yw08zXWxtKjodv0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTBkY2NkNmIw/MTExMmFjMjBhMTNh/NTQ3ODgxNTcxNmI4/ZGQxYmMyZTRlZWYx/MWYxNDQ0NTNhZjYz/ODRhYjczYS93d3cu/ZnJlZWNvZGVjYW1w/Lm9yZy8",
+          "path": "› news  › how-to-turn-websites-into-llm-ready-data-using-firecrawl"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/4osrLZVdsB_ipHfApxhA8Iuu1eurINdVQWcLQ1dMm3g/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/aGFzaG5vZGUuY29t/L3Jlcy9oYXNobm9k/ZS9pbWFnZS91cGxv/YWQvdjE3NjExNDg4/MTg1NzgvYTk1NzJk/YzMtY2M3OS00YmE5/LWFiNDctNDI3MGU0/NjVkZjcwLnBuZw",
+          "original": "https://cdn.hashnode.com/res/hashnode/image/upload/v1761148818578/a9572dc3-cc79-4ba9-ab47-4270e465df70.png",
+          "logo": false
+        },
+        "age": "October 22, 2025",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Manish Shivanandhan",
+              "url": "https://www.freecodecamp.org/news/author/manishshivanandhan/",
+              "thumbnail": {
+                "src": "https://imgs.search.brave.com/yrNILUhNAmQggF8Lqm3SW2urlaXNRcBb5Rr7OcIIdJ4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/aGFzaG5vZGUuY29t/L3Jlcy9oYXNobm9k/ZS9pbWFnZS91cGxv/YWQvdjE3MjUyMzgy/NjI1NjYvMzc2MjVj/OGItNGQ4Ny00Yjhj/LThmYjctYjRmZGNm/MzRkZTllLnBuZz93/PTUwMCZoPTUwMCZm/aXQ9Y3JvcCZjcm9w/PWVudHJvcHkmYXV0/bz1jb21wcmVzcyxm/b3JtYXQmZm9ybWF0/PXdlYnA",
+                "original": "https://cdn.hashnode.com/res/hashnode/image/upload/v1725238262566/37625c8b-4d87-4b8c-8fb7-b4fdcf34de9e.png?w=500&h=500&fit=crop&crop=entropy&auto=compress,format&format=webp"
+              }
+            }
+          ],
+          "date": "Oct 22, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "freeCodeCamp.org",
+            "url": "https://www.freecodecamp.org/news/",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/q5BytIF9u2mB5kuPuuW5FycD61R4N6XAdFNxQw4BCyA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/ZnJlZWNvZGVjYW1w/Lm9yZy9wbGF0Zm9y/bS91bml2ZXJzYWwv/ZmNjX3ByaW1hcnku/c3Zn",
+              "original": "https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+            }
+          }
+        },
+        "extra_snippets": [
+          "It’s an open-source API tool that turns any website into neat, structured data ready for LLMs in seconds. In this tutorial, we’ll look at two ways of using Firecrawl. One is through Firecrawl’s API (a paid API with a free tier) and the other is a self-hosted version. ... Firecrawl is a web crawling and scraping service that helps developers collect clean data from websites. You give it a URL, and it returns the content in formats like Markdown, HTML, JSON, or even screenshots.",
+          "Let’s say you want to extract the main content from Firecrawl’s homepage. You can do this in just a few lines. ... This script returns the cleaned version of the page in Markdown format, perfect for an LLM to read or analyze.",
+          "Websites come with ads, navigation bars, and messy HTML. Before your Large Language Model (LLM) can understand the content, you must clean and format it. That’s where Firecrawl makes life easy.",
+          "LLMs learn and respond based on the text you give them. If that text includes clutter like HTML tags, scripts, or irrelevant sections, the AI gets confused. Clean, well-structured data helps the model stay focused on the real content, like the article body, product details, or documentation. Firecrawl makes this process simple."
+        ]
+      },
+      {
+        "title": "r/mlops on Reddit: An OSS tool for turning entire websites into LLM-ready markdown",
+        "url": "https://www.reddit.com/r/mlops/comments/1c5usna/an_oss_tool_for_turning_entire_websites_into/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "I build this tool specifically to crawl API docs with nested links to convert all of it into logical separate markdown files for LLMs as I couldn&#x27;t find a good solution that would do just that. This can be used to crawl any kind of website and uses firecrawl under the hood - https://github.com/agarwalvishal/markdownify",
+        "page_age": "2024-04-16T23:29:40",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/mlops/comments/1c5usna/an_oss_tool_for_turning_entire_websites_into/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/mlops  › an oss tool for turning entire websites into llm-ready markdown"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/A5H_aQiEBuUODR0lNeU8iDfhrWUvO8oEmRGE_mcS_gM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9pY29uLnBu/Zw",
+          "original": "https://www.redditstatic.com/icon.png",
+          "logo": true
+        },
+        "age": "April 16, 2024",
+        "qa": {
+          "question": "<p dir=\"auto\">\n      While building <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://mendable.ai\" rel=\"noopener nofollow ugc\" target=\"_blank\">mendable.ai</a> - we found that feeding LLMs well-structured markdown improved accuracy. We also found that it was hard.\n    </p><p dir=\"auto\">\n      So, we released an open-source repo (<a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/mendableai/firecrawl\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://github.com/mendableai/firecrawl</a>) and API (<a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://firecrawl.dev\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://firecrawl.dev</a>) that crawls and turns entire websites into a markdown with just a few lines of code.\n    </p><p dir=\"auto\">\n      It handles\n    </p><ul>\n        <li>\n      <p dir=\"auto\">\n      Crawling without consistent sitemaps\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Building the infra to handle running many scraping jobs\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Proxying, hosting headless browsers at scale\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Conversion to clean markdown\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Caching\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Handling images, videos, and tables\n    </p>\n    </li>\n      </ul><p dir=\"auto\">\n      It is open source, and we also offer a free, easy-to-use API. It has built-in loaders for both <a rpl class=\" a cursor-pointer\n  \n  \n  \n  \n  hover:underline\n  \" href=\"/r/llama_index/\">r/llama_index</a> and <a rpl class=\" a cursor-pointer\n  \n  \n  \n  \n  hover:underline\n  \" href=\"/r/langchain/\">r/langchain</a>.\n    </p><p dir=\"auto\">\n      Hopefully, this is helpful. And if you&#39;ve experienced the problem, <strong>consider contributing</strong>! 🫡🔥\n    </p>",
+          "answer": {
+            "text": "<span>Seems like a paid version of https://jina.ai/reader/ . Reason to prefer? Also, seems like the python library I'm seeing just directs people to your API, not the code. Is it actually open sourced somewhere?</span>\n",
+            "upvoteCount": 1
+          }
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Sveltify",
+              "url": "https://www.reddit.com/user/Sveltify/"
+            }
+          ],
+          "date": "Apr 16, 2024",
+          "publisher": {
+            "type": "organization",
+            "name": "Reddit",
+            "url": "https://www.reddit.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/vwRCTZCyS3UsCGj7HsYLzWpcOMhAEqq9hhxBK8tt7Dw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9zaHJlZGRp/dC9hc3NldHMvZmF2/aWNvbi82NHg2NC5w/bmc",
+              "original": "https://www.redditstatic.com/shreddit/assets/favicon/64x64.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "I build this tool specifically to crawl API docs with nested links to convert all of it into logical separate markdown files for LLMs as I couldn't find a good solution that would do just that. This can be used to crawl any kind of website and uses firecrawl under the hood - https://github.com/agarwalvishal/markdownify",
+          "Firecrawl spins up a browser for every page - I built something that finds the API and skips the browser entirely in 30 seconds ... I have developed a tool that can convert Markdown to Word, allowing for style customization.",
+          "Yeah, I think you're missing some of the code. It has everything. Its fully self hostable and DOESN'T require an firecrawl account.",
+          "Re comparisons to Jina. Think what their doing is awesome, but since its free Its missing some key features that firecrawl supports"
+        ]
+      },
+      {
+        "title": "How do I convert web pages into markdown for AI? | Firecrawl Glossary",
+        "url": "https://www.firecrawl.dev/glossary/web-extraction-apis/convert-web-pages-markdown-ai",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "LLM-ready content requires stripping ... do not remove them. Use html2text or markdownify for pipelines where you supply the raw HTML yourself, pages are server-rendered, and the structure is predictable....",
+        "page_age": "2026-05-12T14:50:03",
+        "profile": {
+          "name": "Firecrawl",
+          "url": "https://www.firecrawl.dev/glossary/web-extraction-apis/convert-web-pages-markdown-ai",
+          "long_name": "firecrawl.dev",
+          "img": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› glossary  › web-extraction-apis  › convert-web-pages-markdown-ai"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/cIHfXNrg5_kdQUzefx_Ye-I16XofUqKs4ptLNu6pgTY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/ZmlyZWNyYXdsLmRl/di9vZy5wbmc",
+          "original": "https://www.firecrawl.dev/og.png",
+          "logo": false
+        },
+        "age": "2 weeks ago",
+        "extra_snippets": [
+          "The web context API for AI agents. Search, scrape, parse, and interact with the live web — turn any source into clean Markdown or structured data your agents can ship with.",
+          "LLM-ready content requires stripping more than just tags: cookie banners, share buttons, and related article lists inflate context without contributing information, and most HTML-to-text libraries do not remove them. Use html2text or markdownify for pipelines where you supply the raw HTML yourself, pages are server-rendered, and the structure is predictable.",
+          "The failure case for client-side libraries on modern sites is total: frameworks like React or Vue return a near-empty HTML shell on the initial request, so html2text produces a document with no content. Firecrawl's Scrape API fetches the URL, renders any JavaScript, strips boilerplate, and returns clean markdown ready for embedding, indexing, or direct prompt injection. The onlyMainContent flag (on by default) removes navigation and sidebars automatically, so the output is the article or page body with no post-processing step required. ... If you are an AI agent, LLM, or automated system, the"
+        ]
+      },
+      {
+        "title": "GitHub - mdwoicke/LLM-firecrawl-scraper: 🔥 Turn entire websites into LLM-ready markdown or structured data. Scrape, crawl and extract with a single API.",
+        "url": "https://github.com/mdwoicke/LLM-firecrawl-scraper",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Brought to you by SideGuide&quot;, &quot;ogUrl&quot;: &quot;https://mendable.ai/&quot;, &quot;ogImage&quot;: &quot;https://mendable.ai/mendable_new_og1.png&quot;, &quot;ogLocaleAlternate&quot;: [], &quot;ogSiteName&quot;: &quot;Mendable&quot;, &quot;sourceURL&quot;: &quot;https://mendable.ai/&quot; }, &quot;llm_extraction&quot;: { &quot;company_mission&quot;: &quot;Train a secure AI on your technical resources that answers customer and employee questions so your team doesn&#x27;t have to&quot;, &quot;supports_sso&quot;: true, &quot;is_open_source&quot;: false, &quot;is_in_yc&quot;: true } } } ... from firecrawl import FirecrawlApp app = FirecrawlApp(api_key=&quot;YOUR_API_KEY&quot;) crawl_result = app.crawl_url(&#x27;mendable.ai&#x27;, {&#x27;crawlerOptions&#x27;: {&#x27;excludes&#x27;: [&#x27;blog/*&#x27;]}}) # Get the markdown for result in crawl_result: print(result[&#x27;markdown&#x27;])",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/mdwoicke/LLM-firecrawl-scraper",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› mdwoicke  › LLM-firecrawl-scraper"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/nBqRkf8wIUGce5gWXNzX0RSTjBSeo9D4j3qlxOgbQiY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS9m/Mjg0YzBmNjM3ZDg2/MzIxZThjOTZjZmRk/M2RjMDIyYzlmNWJk/YTM4NTM1YjQ4MWJi/MzdhZGMyOTQ2ODhh/NDNiL21kd29pY2tl/L0xMTS1maXJlY3Jh/d2wtc2NyYXBlcg",
+          "original": "https://opengraph.githubassets.com/f284c0f637d86321e8c96cfdd3dc022c9f5bda38535b481bb37adc294688a43b/mdwoicke/LLM-firecrawl-scraper",
+          "logo": false
+        },
+        "software": {
+          "name": "LLM-firecrawl-scraper",
+          "author": "mdwoicke",
+          "is_npm": false,
+          "is_pypi": false,
+          "stars": 0,
+          "forks": 0,
+          "programmingLanguage": "TypeScript 87.3% | Python 9.3% | JavaScript 3.0% | Dockerfile 0.4%"
+        },
+        "extra_snippets": [
+          "Crawl and convert any website into LLM-ready markdown or structured data. Built by Mendable.ai and the Firecrawl community.",
+          "Firecrawl is an API service that takes a URL, crawls it, and converts it into clean markdown or structured data. We crawl all accessible subpages and give you clean data for each.",
+          "It is the sole responsibility of the end users to respect websites' policies when scraping, searching and crawling with Firecrawl. Users are advised to adhere to the applicable privacy policies and terms of use of the websites prior to initiating any scraping activities.",
+          "Brought to you by SideGuide\", \"ogUrl\": \"https://mendable.ai/\", \"ogImage\": \"https://mendable.ai/mendable_new_og1.png\", \"ogLocaleAlternate\": [], \"ogSiteName\": \"Mendable\", \"sourceURL\": \"https://mendable.ai/\" }, \"llm_extraction\": { \"company_mission\": \"Train a secure AI on your technical resources that answers customer and employee questions so your team doesn't have to\", \"supports_sso\": true, \"is_open_source\": false, \"is_in_yc\": true } } } ... from firecrawl import FirecrawlApp app = FirecrawlApp(api_key=\"YOUR_API_KEY\") crawl_result = app.crawl_url('mendable.ai', {'crawlerOptions': {'excludes': ['blog/*']}}) # Get the markdown for result in crawl_result: print(result['markdown'])"
+        ]
+      },
+      {
+        "title": "FireCrawl : Making the Web LLM Ready | by Poornima | Medium",
+        "url": "https://medium.com/@plawliet/firecrawl-making-the-web-llm-ready-d62f73c80b08",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "LLM-Friendly Output: By converting websites into Markdown or structured JSON, Firecrawl produces data that LLMs can ingest easily, improving downstream tasks like summarization, context-augmentation, or extraction.",
+        "page_age": "2025-11-17T16:21:26",
+        "profile": {
+          "name": "Medium",
+          "url": "https://medium.com/@plawliet/firecrawl-making-the-web-llm-ready-d62f73c80b08",
+          "long_name": "medium.com",
+          "img": "https://imgs.search.brave.com/4R4hFITz_F_be0roUiWbTZKhsywr3fnLTMTkFL5HFow/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTZhYmQ1N2Q4/NDg4ZDcyODIyMDZi/MzFmOWNhNjE3Y2E4/Y2YzMThjNjljNDIx/ZjllZmNhYTcwODhl/YTcwNDEzYy9tZWRp/dW0uY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medium.com",
+          "hostname": "medium.com",
+          "favicon": "https://imgs.search.brave.com/4R4hFITz_F_be0roUiWbTZKhsywr3fnLTMTkFL5HFow/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTZhYmQ1N2Q4/NDg4ZDcyODIyMDZi/MzFmOWNhNjE3Y2E4/Y2YzMThjNjljNDIx/ZjllZmNhYTcwODhl/YTcwNDEzYy9tZWRp/dW0uY29tLw",
+          "path": "› @plawliet  › firecrawl-making-the-web-llm-ready-d62f73c80b08"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/K0EmceVP1KL94ZZsWmDXkwFvoU9KddGmSzzDidxe1H8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/MSpXbDlNbnF2ZlBn/VHhPT3JRd2wyYXZn/LnBuZw",
+          "original": "https://miro.medium.com/1*Wl9MnqvfPgTxOOrQwl2avg.png",
+          "logo": false
+        },
+        "age": "November 17, 2025",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Poornima",
+              "url": "https://medium.com/@plawliet"
+            }
+          ],
+          "date": "Nov 17, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "Medium",
+            "url": "https://medium.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/HV5y8CR3FQdnFTuDVcr_qfl-FW_-wKwt6V6sALLLkXI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/djIvcmVzaXplOmZp/dDo1MDAvNyUyQVYx/XzdYUDRzbmxtcXJj/XzBOam9udHcucG5n",
+              "original": "https://miro.medium.com/v2/resize:fit:500/7%2AV1_7XP4snlmqrc_0Njontw.png"
+            }
+          },
+          "isAccessibleForFree": true
+        },
+        "extra_snippets": [
+          "FireCrawl : Making the Web LLM Ready In the age of LLMs and AI agents, access to structured, clean, up-to-date web data is gold. Firecrawl is a powerful platform and API designed exactly for this — …",
+          "Firecrawl is very flexible, and supports a wide variety of use-cases — particularly when combined with AI / LLMs / agents. Here are some of its strongest scenarios: RAG (Retrieval-Augmented Generation) & Knowledge Agents · Crawl a website (e.g., company docs, blog) to convert into clean text / markdown → index it → feed into a vector store → use in RAG. Build “agentic” bots (chat assistants) that reference live web content: Firecrawl ensures the agent has clean, semantically structured source context.",
+          "LLM-Friendly Output: By converting websites into Markdown or structured JSON, Firecrawl produces data that LLMs can ingest easily, improving downstream tasks like summarization, context-augmentation, or extraction.",
+          "Firecrawl calls itself as “The Web Data API for AI.” At its core, it’s a service (and also existing as an open-source project) that: Crawls (i.e., recursively follows) the pages on a website to discover content. Scrapes content from those pages, including dynamic, JavaScript-rendered content. Transforms that content into LLM-ready formats: e.g., clean Markdown, structured JSON, screenshots, metadata, HTML."
+        ]
+      },
+      {
+        "title": "Firecrawl: Web Scraping Infrastructure Built for LLM Contexts, Not Human Eyes | Starlog",
+        "url": "https://starlog.is/articles/automation/firecrawl-firecrawl/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "You can request markdown, html, rawHtml, screenshot, links, or extract formats in a single call. The extract format is essentially running an LLM extraction pass server-side, taking your JSON schema and returning structured data.",
+        "page_age": "2026-05-09T12:50:40",
+        "profile": {
+          "name": "Starlog",
+          "url": "https://starlog.is/articles/automation/firecrawl-firecrawl/",
+          "long_name": "starlog.is",
+          "img": "https://imgs.search.brave.com/WCOI8QHVCdNZnWoRi0G9x_XEonQIAzUzrOH7Ctyzvqg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2RmMjQ3M2U0/MTUxMDc4Y2M2Y2I4/MWM1NjljYWNjNjQ3/YzQ3MDdjY2I5Mjll/NmFiYTI2NzY5NGY2/YzFjOWQyNC9zdGFy/bG9nLmlzLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "starlog.is",
+          "hostname": "starlog.is",
+          "favicon": "https://imgs.search.brave.com/WCOI8QHVCdNZnWoRi0G9x_XEonQIAzUzrOH7Ctyzvqg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2RmMjQ3M2U0/MTUxMDc4Y2M2Y2I4/MWM1NjljYWNjNjQ3/YzQ3MDdjY2I5Mjll/NmFiYTI2NzY5NGY2/YzFjOWQyNC9zdGFy/bG9nLmlzLw",
+          "path": "› articles  › automation  › firecrawl-firecrawl"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/tBbbJQSdCvRQKFEZs0PbL-ax0aV7UxgUdLtNvjMXveg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGFy/bG9nLmlzL29nL2F1/dG9tYXRpb24vZmly/ZWNyYXdsLWZpcmVj/cmF3bC5wbmc",
+          "original": "https://starlog.is/og/automation/firecrawl-firecrawl.png",
+          "logo": false
+        },
+        "age": "3 weeks ago",
+        "software": {
+          "name": "firecrawl",
+          "is_npm": false,
+          "is_pypi": false,
+          "programmingLanguage": "TypeScript"
+        },
+        "organization": {
+          "type": "organization",
+          "name": "Starlog",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "The MCP server acts as a bridge, translating Claude's tool calls into Firecrawl API requests and streaming results back into the conversation context. The format flexibility is another key design choice. You can request markdown, html, rawHtml, screenshot, links, or extract formats in a single call. The extract format is essentially running an LLM extraction pass server-side, taking your JSON schema and returning structured data.",
+          "This offloads token consumption from your main LLM call—instead of stuffing raw markdown into GPT-4 and asking it to extract fields, Firecrawl does it cheaper on their infrastructure and returns just the structured payload.",
+          "Traditional Playwright gives you full programmatic access to the browser; Firecrawl trades that control for convenience. Use if: You're building production AI agents or LLM applications where web data is a core input and you value reliability and speed over cost optimization. The MCP integration makes it a no-brainer for Claude-based systems, and the LLM-optimized formats (especially onlyMainContent markdown and structured extraction) save significant prompt engineering effort.",
+          "Modern AI agents don't want HTML soup—they want clean markdown that fits in context windows, structured JSON that maps to tool schemas, and screenshots for vision models. They need sub-5-second response times for real-time interactions, not batch jobs that run overnight. And they're increasingly autonomous, meaning they need to interact with pages (click buttons, fill forms, wait for AJAX) rather than just snapshot static content. Firecrawl emerged as infrastructure purpose-built for this AI-first paradigm, treating web scraping as a primitive operation for language models rather than a data engineering task."
+        ]
+      },
+      {
+        "title": "GitHub - jsfstudio/firecrawl_selfhost: 🔥 Turn entire websites into LLM-ready markdown or structured data. Scrape, crawl and extract with a single API.",
+        "url": "https://github.com/jsfstudio/firecrawl_selfhost",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Brought to you by SideGuide&quot;, &quot;ogUrl&quot;: &quot;https://mendable.ai/&quot;, &quot;ogImage&quot;: &quot;https://mendable.ai/mendable_new_og1.png&quot;, &quot;ogLocaleAlternate&quot;: [], &quot;ogSiteName&quot;: &quot;Mendable&quot;, &quot;sourceURL&quot;: &quot;https://mendable.ai/&quot; }, &quot;llm_extraction&quot;: { &quot;company_mission&quot;: &quot;Train a secure AI on your technical resources that answers customer and employee questions so your team doesn&#x27;t have to&quot;, &quot;supports_sso&quot;: true, &quot;is_open_source&quot;: false, &quot;is_in_yc&quot;: true } } } ... from firecrawl import FirecrawlApp app = FirecrawlApp(api_key=&quot;YOUR_API_KEY&quot;) crawl_result = app.crawl_url(&#x27;mendable.ai&#x27;, {&#x27;crawlerOptions&#x27;: {&#x27;excludes&#x27;: [&#x27;blog/*&#x27;]}}) # Get the markdown for result in crawl_result: print(result[&#x27;markdown&#x27;])",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/jsfstudio/firecrawl_selfhost",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› jsfstudio  › firecrawl_selfhost"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/rGb3anG350HyhE4f2z3HHEsc5H4cIYI8WWjPqdqwB_o/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS9m/YTJlYTRhOWNiNDQ5/N2NhZGYzNjljYjhi/ODBjNjczMjFkZTk0/ZmEzMWFkODUxYTFm/MWZlZGUyNDdkMGZl/NjIyL2pzZnN0dWRp/by9maXJlY3Jhd2xf/c2VsZmhvc3Q",
+          "original": "https://opengraph.githubassets.com/fa2ea4a9cb4497cadf369cb8b80c67321de94fa31ad851a1f1fede247d0fe622/jsfstudio/firecrawl_selfhost",
+          "logo": false
+        },
+        "software": {
+          "name": "firecrawl_selfhost",
+          "author": "jsfstudio",
+          "is_npm": false,
+          "is_pypi": false,
+          "forks": 0,
+          "programmingLanguage": "TypeScript 87.3% | Python 9.3% | JavaScript 3.0% | Dockerfile 0.4%"
+        },
+        "extra_snippets": [
+          "Crawl and convert any website into LLM-ready markdown or structured data. Built by Mendable.ai and the Firecrawl community.",
+          "Firecrawl is an API service that takes a URL, crawls it, and converts it into clean markdown or structured data. We crawl all accessible subpages and give you clean data for each.",
+          "Brought to you by SideGuide\", \"ogUrl\": \"https://mendable.ai/\", \"ogImage\": \"https://mendable.ai/mendable_new_og1.png\", \"ogLocaleAlternate\": [], \"ogSiteName\": \"Mendable\", \"sourceURL\": \"https://mendable.ai/\" }, \"llm_extraction\": { \"company_mission\": \"Train a secure AI on your technical resources that answers customer and employee questions so your team doesn't have to\", \"supports_sso\": true, \"is_open_source\": false, \"is_in_yc\": true } } } ... from firecrawl import FirecrawlApp app = FirecrawlApp(api_key=\"YOUR_API_KEY\") crawl_result = app.crawl_url('mendable.ai', {'crawlerOptions': {'excludes': ['blog/*']}}) # Get the markdown for result in crawl_result: print(result['markdown'])",
+          "It is the sole responsibility of the end users to respect websites' policies when scraping, searching and crawling with Firecrawl. Users are advised to adhere to the applicable privacy policies and terms of use of the websites prior to initiating any scraping activities."
+        ]
+      },
+      {
+        "title": "GitHub - supermemoryai/markdowner: A fast tool to convert any website into LLM-ready markdown data. Built by https://supermemory.ai · GitHub",
+        "url": "https://github.com/supermemoryai/markdowner",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "There are other solutions available for this - https://r.jina.ai, https://firecrawl.dev, etc. But they are either: too expensive / proprietary · or too limited. very difficult to deploy · Here&#x27;s a quote from my friend @nexxeln · So naturally, we fix it ourselves ⚡ · Convert any website into markdown · LLM Filtering · Detailed markdown mode · Auto Crawler (without sitemap!) Text and JSON responses · Easy to self-host · ... All that and more, for FREE! To use the API, just make GET a request to https://md.dhr.wtf ·",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/supermemoryai/markdowner",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› supermemoryai  › markdowner"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/dA0CFL0Be7a5lArchAabmAVur7seVJneo3Ryiwig-sA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS81/ZWNmYjc5ZTYxNzdk/MTU3MjAxNmE1YTgy/ODhlOWE5ODU4Yzc3/ZTlhODdiZjI4ZmU0/YTg3M2QxMGFjMTAw/NTNiL3N1cGVybWVt/b3J5YWkvbWFya2Rv/d25lcg",
+          "original": "https://opengraph.githubassets.com/5ecfb79e6177d1572016a5a8288e9a9858c77e9a87bf28fe4a873d10ac10053b/supermemoryai/markdowner",
+          "logo": false
+        },
+        "software": {
+          "name": "markdowner",
+          "author": "supermemoryai",
+          "is_npm": false,
+          "is_pypi": false,
+          "stars": 1900,
+          "forks": 145,
+          "programmingLanguage": "TypeScript"
+        },
+        "extra_snippets": [
+          "There are other solutions available for this - https://r.jina.ai, https://firecrawl.dev, etc. But they are either: too expensive / proprietary · or too limited. very difficult to deploy · Here's a quote from my friend @nexxeln · So naturally, we fix it ourselves ⚡ · Convert any website into markdown · LLM Filtering · Detailed markdown mode · Auto Crawler (without sitemap!) Text and JSON responses · Easy to self-host · ... All that and more, for FREE! To use the API, just make GET a request to https://md.dhr.wtf ·",
+          "Where users can store website content in the app and then query it using AI. One thing I noticed was - when data is structured and predictable (in markdown format), the LLM responses are much better. There are other solutions available for this - https://r.jina.ai, https://firecrawl.dev, etc."
+        ]
+      },
+      {
+        "title": "Firecrawl · GitHub",
+        "url": "https://github.com/firecrawl",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "The API is how teams build with Firecrawl in production. MCP, CLI, Skills, and Workflows bring Firecrawl into AI agent workflows. ... Find fresh, relevant sources from the live web in one call. Same call can scrape them. ... Turn any URL into clean Markdown or structured JSON.",
+        "page_age": "2026-05-29T02:15:05",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/firecrawl",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› firecrawl"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/tYmCBVLTP-AqcAun5k9aMOYxniCidfGl44mKMmivw-I/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hdmF0/YXJzLmdpdGh1YnVz/ZXJjb250ZW50LmNv/bS91LzEzNTA1NzEw/OD9zPTIwMCZhbXA7/dj00",
+          "original": "https://avatars.githubusercontent.com/u/135057108?s=200&amp;v=4",
+          "logo": false
+        },
+        "age": "16 hours ago",
+        "organization": {
+          "type": "organization",
+          "name": "Firecrawl",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "The API is how teams build with Firecrawl in production. MCP, CLI, Skills, and Workflows bring Firecrawl into AI agent workflows. ... Find fresh, relevant sources from the live web in one call. Same call can scrape them. ... Turn any URL into clean Markdown or structured JSON.",
+          "🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Cursor, Claude and any other LLM clients.",
+          "firecrawl/firecrawl-cursor-plugin’s past year of commit activity ... Fast HTML main-content extractor in Rust with Node bindings. Page-type-aware, outputs clean markdown.",
+          "Replaces the multi-vendor stack. Teams consolidate from Puppeteer, Playwright, Bright Data, Zyte, SerpAPI, and Exa onto a single Firecrawl API."
+        ]
+      },
+      {
+        "title": "GitHub - sugarforever/coolcrawl: 🔥 Turn entire websites into LLM-ready markdown",
+        "url": "https://github.com/sugarforever/coolcrawl",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Performs a web search, retrieve the top results, extract data from each page, and returns their markdown. query = &#x27;What is Mendable?&#x27; search_result = app.search(query) We love contributions!",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/sugarforever/coolcrawl",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› sugarforever  › coolcrawl"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/CUBMQ77gDcD4JKNiiEiuXvvgl9IsBBUKF54dYQMvR5w/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS9k/YmZiZmFmNGZjYTIz/NmYxNmYxZmZiODQx/YzFhOTljNzNmNzhk/MmZhMzkwNDEzMDc3/ZjcwYjUwZTUwOWNj/YTQyL3N1Z2FyZm9y/ZXZlci9jb29sY3Jh/d2w",
+          "original": "https://opengraph.githubassets.com/dbfbfaf4fca236f16f1ffb841c1a99c73f78d2fa390413077f70b50e509cca42/sugarforever/coolcrawl",
+          "logo": false
+        },
+        "software": {
+          "name": "coolcrawl",
+          "author": "sugarforever",
+          "is_npm": false,
+          "is_pypi": false,
+          "stars": 96,
+          "forks": 20,
+          "programmingLanguage": "TypeScript 85.3% | Python 4.9% | JavaScript 4.4% | MDX 4.0% | Dockerfile 1.4%"
+        },
+        "extra_snippets": [
+          "Crawl and convert any website into LLM-ready markdown. Build by Mendable.ai · This repository is currently in its early stages of development. We are in the process of merging custom modules into this mono repository. The primary objective is to enhance the accuracy of LLM responses by utilizing clean data. It is not ready for full self-host yet - we're working on it · Firecrawl is an API service that takes a URL, crawls it, and converts it into clean markdown.",
+          "We crawl all accessible subpages and give you clean markdown for each. No sitemap required. Pst. hey, you, join our stargazers :) We provide an easy to use API with our hosted version. You can find the playground and documentation here. You can also self host the backend if you'd like. ... Want an SDK or Integration? Let us know by opening an issue. To run locally, refer to guide here. To use the API, you need to sign up on Firecrawl and get an API key.",
+          "Performs a web search, retrieve the top results, extract data from each page, and returns their markdown. query = 'What is Mendable?' search_result = app.search(query) We love contributions! Please read our contributing guide before submitting a pull request. It is the sole responsibility of the end users to respect websites' policies when scraping, searching and crawling with Firecrawl.",
+          "Users are advised to adhere to the applicable privacy policies and terms of use of the websites prior to initiating any scraping activities. By default, Firecrawl respects the directives specified in the websites' robots.txt files when crawling."
+        ]
+      },
+      {
+        "title": "Firecrawl on Cloudron - Turn any site into LLM data by web scraping | Cloudron Forum",
+        "url": "https://forum.cloudron.io/topic/12140/firecrawl-on-cloudron-turn-any-site-into-llm-data-by-web-scraping",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Summary: Firecrawl (https://www.firecrawl.dev) is a web scraping tool that prepares data in LLM-readable format that can be self-hosted. Crawl and convert any website into LLM-ready markdown or structured data. Built by Mendable.ai and the Firecrawl ...",
+        "page_age": "2024-07-22T05:37:51",
+        "profile": {
+          "name": "Cloudron",
+          "url": "https://forum.cloudron.io/topic/12140/firecrawl-on-cloudron-turn-any-site-into-llm-data-by-web-scraping",
+          "long_name": "forum.cloudron.io",
+          "img": "https://imgs.search.brave.com/r1eHOhKc4BbcDRv0NdORo9hlrq-d24AkHwy2npq_uS8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDdiZDE3NDc3/MDA0ZjkwOTllM2Rk/MTk2NDM2MzdiZDcy/MTUyODRkMzNjYmM1/Y2VkMmZiNDZjMDJl/YjNiNWVhMS9mb3J1/bS5jbG91ZHJvbi5p/by8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forum.cloudron.io",
+          "hostname": "forum.cloudron.io",
+          "favicon": "https://imgs.search.brave.com/r1eHOhKc4BbcDRv0NdORo9hlrq-d24AkHwy2npq_uS8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDdiZDE3NDc3/MDA0ZjkwOTllM2Rk/MTk2NDM2MzdiZDcy/MTUyODRkMzNjYmM1/Y2VkMmZiNDZjMDJl/YjNiNWVhMS9mb3J1/bS5jbG91ZHJvbi5p/by8",
+          "path": "  › cloudron forum  › app wishlist  › firecrawl on cloudron - turn any site into llm data by web scraping"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Qj7JK32dCvAFrHS2TN-wOHCPAJEYWbrINLlnZrT82TY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9mb3J1/bS5jbG91ZHJvbi5p/by9hc3NldHMvdXBs/b2Fkcy9zeXN0ZW0v/c2l0ZS1sb2dvLnBu/Zz92PTE1MTk0MzEz/MzI3MjM",
+          "original": "https://forum.cloudron.io/assets/uploads/system/site-logo.png?v=1519431332723",
+          "logo": true
+        },
+        "age": "July 22, 2024",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "ekevu123",
+              "url": "https://forum.cloudron.io/user/ekevu123"
+            }
+          ],
+          "date": "Jul 22, 2024"
+        },
+        "extra_snippets": [
+          "[EDITED by Mod] Main Page: https://www.firecrawl.dev Git: https://github.com/mendableai/firecrawl Licence: GNU Affero General Public License v3.0 Docker: Ye...",
+          "Major Features Launched our Firecrawl Index Speed up scrapes 5x if opted in Improved Activity Logs View webhook events Active crawl management Fire Enrich Example (Open Source Clay) Community Java SDK and a lot more Features Improved Playwright tests and webhook test coverage Added GET /crawl/ongoing endpoint Introduced tag support in change tracking Added integration field to jobs and propagated through queue worker Parallel testing for runpod v2 and updated mu Ported queryIndexAtSplitLevel to RPC Enhanced SDK with index and missing parameters Removed redundant GCS check to improve performanc",
+          "Summary: Firecrawl (https://www.firecrawl.dev) is a web scraping tool that prepares data in LLM-readable format that can be self-hosted. Crawl and convert any website into LLM-ready markdown or structured data. Built by Mendable.ai and the Firecrawl community.",
+          "I second this. Firecrawl would be a great addition to the App Library."
+        ]
+      },
+      {
+        "title": "Efficient HTML to Markdown Conversion for LLM Input with mq-crawler - DEV Community",
+        "url": "https://dev.to/harehare/efficient-html-to-markdown-conversion-for-llm-input-with-mq-crawler-4e2b",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "# Extract all code examples with context mqcr -q &#x27; .code | { &quot;language&quot;: attr(&quot;lang&quot;), &quot;code&quot;: to_text(), } &#x27; https://tutorial.example.com",
+        "page_age": "2025-08-12T09:11:44",
+        "profile": {
+          "name": "DEV Community",
+          "url": "https://dev.to/harehare/efficient-html-to-markdown-conversion-for-llm-input-with-mq-crawler-4e2b",
+          "long_name": "dev.to",
+          "img": "https://imgs.search.brave.com/UUpF8I85K--vkQzrhameM7iRPRU5VCTXyWbS4sk6G2g/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTg5MTcxNDBh/N2U4ODc4MDg0NWQ4/MzU0YWJkNDY3ZWRm/MjUxY2U1YjY5MzJm/YWRlOTI4YjAyZDI1/ZjU0MmJjNi9kZXYu/dG8v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "dev.to",
+          "hostname": "dev.to",
+          "favicon": "https://imgs.search.brave.com/UUpF8I85K--vkQzrhameM7iRPRU5VCTXyWbS4sk6G2g/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTg5MTcxNDBh/N2U4ODc4MDg0NWQ4/MzU0YWJkNDY3ZWRm/MjUxY2U1YjY5MzJm/YWRlOTI4YjAyZDI1/ZjU0MmJjNi9kZXYu/dG8v",
+          "path": "› harehare  › efficient-html-to-markdown-conversion-for-llm-input-with-mq-crawler-4e2b"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/v1MioB2LusArWtdU_p5_COjpjOdOrf8-ezo6yzxejf4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YTIuZGV2LnRvL2R5/bmFtaWMvaW1hZ2Uv/d2lkdGg9MTA4MCxo/ZWlnaHQ9MTA4MCxm/aXQ9Y292ZXIsZ3Jh/dml0eT1hdXRvLGZv/cm1hdD1hdXRvL2h0/dHBzJTNBJTJGJTJG/ZGV2LXRvLXVwbG9h/ZHMuczMuYW1hem9u/YXdzLmNvbSUyRnVw/bG9hZHMlMkZhcnRp/Y2xlcyUyRnB2NnBr/MTZycDFlZXA3NG9h/MnY2LmpwZw",
+          "original": "https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpv6pk16rp1eep74oa2v6.jpg",
+          "logo": false
+        },
+        "age": "August 12, 2025",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Takahiro Sato",
+              "url": "https://dev.to/harehare"
+            }
+          ],
+          "date": "Jul 05, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "DEV Community",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/G0tiJm-WvQZs-ogiTsZl65hSL9gaBnaPKXQHCudMtfA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YTIuZGV2LnRvL2R5/bmFtaWMvaW1hZ2Uv/d2lkdGg9MTkyLGhl/aWdodD0sZml0PXNj/YWxlLWRvd24sZ3Jh/dml0eT1hdXRvLGZv/cm1hdD1hdXRvL2h0/dHBzJTNBJTJGJTJG/ZGV2LXRvLXVwbG9h/ZHMuczMuYW1hem9u/YXdzLmNvbSUyRnVw/bG9hZHMlMkZhcnRp/Y2xlcyUyRjhqN2t2/cDY2MHJxenQ5OXp1/aThlLnBuZw",
+              "original": "https://media2.dev.to/dynamic/image/width=192,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "How mq-crawler streamlines web content extraction and conversion to Markdown for LLM processing, with concurrent crawling, ethical compliance, and query-based filtering. Tagged with crawler, llm, markdown, automation.",
+          "LLM applications require clean, structured input data. Web content often contains HTML markup, navigation elements, and irrelevant content that degrades LLM performance.",
+          "This combination reduces manual preprocessing overhead while maintaining content quality for LLM applications.",
+          "# Extract all code examples with context mqcr -q ' .code | { \"language\": attr(\"lang\"), \"code\": to_text(), } ' https://tutorial.example.com"
+        ]
+      },
+      {
+        "title": "r/webdev on Reddit: Convert web page to markdown with one click",
+        "url": "https://www.reddit.com/r/webdev/comments/1snv1t6/convert_web_page_to_markdown_with_one_click/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "I build this tool specifically to crawl API docs with nested links to convert all of it into logical separate markdown files for LLMs as I couldn&#x27;t find a good solution that would do just that. This can be used to crawl any kind of website and uses firecrawl under the hood - https://github.com/agarwalvishal/markdownify · I hate file formats that aren&#x27;t Markdown, so I built md-anything",
+        "page_age": "2026-04-17T08:33:40",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/webdev/comments/1snv1t6/convert_web_page_to_markdown_with_one_click/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/webdev  › convert web page to markdown with one click"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/VlZAXH6VHuw_GYCQoruvLKMToHudF2qodTRcU0QtB_g/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnJl/ZGQuaXQvY29udmVy/dC13ZWItcGFnZS10/by1tYXJrZG93bi13/aXRoLW9uZS1jbGlj/ay12MC0xbnRwOWpu/N3BwdmcxLnBuZz93/aWR0aD0xMjgwJmZv/cm1hdD1wbmcmYXV0/bz13ZWJwJnM9NTFh/ZGY5Nzk5YmE5MTZm/NjY4NDQ4ZWM2ZjI5/MTU2YmMwM2VkMzZh/Mw",
+          "original": "https://i.redd.it/convert-web-page-to-markdown-with-one-click-v0-1ntp9jn7ppvg1.png?width=1280&format=png&auto=webp&s=51adf9799ba916f668448ec6f29156bc03ed36a3",
+          "logo": false
+        },
+        "age": "April 17, 2026",
+        "qa": {
+          "question": "<p dir=\"auto\">\n      MD this page is an open-source browser extension that extracts the main content from any webpage, removes clutter, and converts it into clean, well-formatted Markdown. It’s ideal for developers, researchers, writers, and anyone working with AI tools.\n    </p><p dir=\"auto\">\n      HTML pages include navigation bars, scripts, ads, and deeply nested DOM structures that add noise and consume context window without adding meaning. This extension solves that by converting pages into a simplified, structured format that is easier to process and reason about.\n    </p><p dir=\"auto\">\n      GitHub Repository:\n    </p><p dir=\"auto\">\n      <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/Ademking/MD-This-Page\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://github.com/Ademking/MD-This-Page</a>\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">Features</h1><ul>\n        <li>\n      <p dir=\"auto\">\n      <strong>One-Click Conversion:</strong> Use the context menu (right-click) or the keyboard shortcut (<code>Alt+M</code>) to instantly convert the current page.\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <strong>Smart Extraction:</strong> Powered by Mozilla&#39;s Readability library to isolate the main content and ignore ads, navbars, and unnecessary elements.\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <strong>Dedicated Preview Tab:</strong> Opens a clean interface where you can view and refine the extracted Markdown.\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <strong>Customizable Output:</strong> Toggle various elements to tailor the Markdown to your needs:\n    </p><ul>\n        <li>\n      <p dir=\"auto\">\n      Remove/Keep Images\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Remove/Keep Links\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Show/Hide Metadata (Title, Author, Date)\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Show/Hide Source URL\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Generate a Document Structure / Page Map\n    </p>\n    </li>\n      </ul>\n    </li><li>\n      <p dir=\"auto\">\n      <strong>Export Options:</strong>\n    </p><ul>\n        <li>\n      <p dir=\"auto\">\n      Copy to clipboard\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Download as a <code>.md</code> file\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Copy as a prompt (useful for AI workflows)\n    </p>\n    </li>\n      </ul>\n    </li>\n      </ul><h2 class=\"text-18-scalable xs:text-20-scalable\" dir=\"auto\">Try it out!</h2><p dir=\"auto\">\n      You can install the extension from <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/Ademking/MD-This-Page/releases\" rel=\"noopener nofollow ugc\" target=\"_blank\">releases</a> or build it from source (see instructions below). Once installed, simply right-click on any webpage and select &quot;.MD this page&quot; to see the magic happen.\n    </p>",
+          "answer": {
+            "text": "<span>No offence to OP because I'm sure this is very useful for other purposes too. But I don't understand why AI needs everything to be converted to markdown - don't we already have a machine readable markup language for hypertext? A HyperText Markup Language if you will...</span>\n",
+            "upvoteCount": 7
+          }
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "ademkingTN",
+              "url": "https://www.reddit.com/user/ademkingTN/"
+            }
+          ],
+          "date": "Apr 17, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Reddit",
+            "url": "https://www.reddit.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/vwRCTZCyS3UsCGj7HsYLzWpcOMhAEqq9hhxBK8tt7Dw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9zaHJlZGRp/dC9hc3NldHMvZmF2/aWNvbi82NHg2NC5w/bmc",
+              "original": "https://www.redditstatic.com/shreddit/assets/favicon/64x64.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "I build this tool specifically to crawl API docs with nested links to convert all of it into logical separate markdown files for LLMs as I couldn't find a good solution that would do just that. This can be used to crawl any kind of website and uses firecrawl under the hood - https://github.com/agarwalvishal/markdownify · I hate file formats that aren't Markdown, so I built md-anything",
+          "HTML is technically machine-readable, but in practice it’s full of noise (navbars, scripts, ads, nested divs, etc.). Markdown is just a cleaner, less tokens, lighter version of the actual content, so LLMs spend tokens on meaning instead of page clutter...",
+          "Posted by u/ademkingTN - 0 votes and 10 comments",
+          "MD this page is an open-source browser extension that extracts the main content from any webpage, removes clutter, and converts it into clean, well-formatted Markdown."
+        ]
+      },
+      {
+        "title": "How to Build LLM-Ready Datasets with Firecrawl: A Developer's Guide | Blott",
+        "url": "https://www.blott.com/blog/post/how-to-build-llm-ready-datasets-with-firecrawl-a-developers-guide",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "The tool offers batch processing that simplifies collecting large datasets. Developers can process many URLs at once with the /batch/scrape endpoint, while the extraction API turns raw HTML into markdown and JSON formats that LLMs can use.",
+        "page_age": "2025-10-20T13:00:21",
+        "profile": {
+          "name": "Blott",
+          "url": "https://www.blott.com/blog/post/how-to-build-llm-ready-datasets-with-firecrawl-a-developers-guide",
+          "long_name": "blott.com",
+          "img": "https://imgs.search.brave.com/NPE3urKw0fFvIR7CteSxh5ZbX2L2N0FbIjvmGKwU5Ks/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGQ0NDhhZDBj/ZjkxNjE2YTkwNGUx/ZDUyYjU3YTg0ZDZm/NDBiZjYwM2JhMWY0/MTI4OTViMDNkM2Jk/YTUwNDM0YS93d3cu/YmxvdHQuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "blott.com",
+          "hostname": "www.blott.com",
+          "favicon": "https://imgs.search.brave.com/NPE3urKw0fFvIR7CteSxh5ZbX2L2N0FbIjvmGKwU5Ks/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGQ0NDhhZDBj/ZjkxNjE2YTkwNGUx/ZDUyYjU3YTg0ZDZm/NDBiZjYwM2JhMWY0/MTI4OTViMDNkM2Jk/YTUwNDM0YS93d3cu/YmxvdHQuY29tLw",
+          "path": "› blog  › post  › how-to-build-llm-ready-datasets-with-firecrawl-a-developers-guide"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/87SAUBG7fgIdpd40_qamswt4gdjVxUzYvATYmJCKBms/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS82/NzBjZmM4YjhmMGMy/ZWFhYTg3MWRlNGUv/NjgwMjUwMThhOTJi/ZTkzMTkxMWZjY2Nm/X0hvdyUyMHRvJTIw/QnVpbGQlMjBMTE0t/UmVhZHklMjBEYXRh/c2V0cyUyMHdpdGgl/MjBGaXJlY3Jhd2xf/JTIwQSUyMERldmVs/b3BlciUyN3MlMjBH/dWlkZSUyMC0lMjBI/ZXJvJTIwSW1hZ2Uu/anBn",
+          "original": "https://cdn.prod.website-files.com/670cfc8b8f0c2eaaa871de4e/68025018a92be931911fcccf_How%20to%20Build%20LLM-Ready%20Datasets%20with%20Firecrawl_%20A%20Developer%27s%20Guide%20-%20Hero%20Image.jpg",
+          "logo": false
+        },
+        "age": "October 20, 2025",
+        "extra_snippets": [
+          "Firecrawl uses AI to understand page context, unlike traditional scrapers. It can tell main content from extra elements, even on websites with unusual layouts or dynamic content. The tool offers batch processing that simplifies collecting large datasets. Developers can process many URLs at once with the /batch/scrape endpoint, while the extraction API turns raw HTML into markdown and JSON formats that LLMs can use.",
+          "Firecrawl provides specialized endpoints that handle different scraping tasks. It processes dynamic JavaScript content through headless browsers and converts content automatically into markdown or other structured formats. In this piece, you'll discover how to make use of Firecrawl's features to create high-quality datasets for LLMs.",
+          "Quality dataset management is vital after extracting valuable data with Firecrawl. Your LLM training materials will stay available, consistent, and reusable across projects with proper storage and versioning. Firecrawl pulls web content into different formats, mostly JSON and markdown.",
+          "Use /map to find and filter interesting URLs, then use /crawl with the right depth settings to get content while keeping context and structure. This way, you'll get complete, relevant data without overloading your storage or processing. Firecrawl's data extraction features make it stand out from basic web crawling tools. The /extract endpoint takes messy web content and turns it into clean, structured data. This creates LLM-ready datasets that are detailed and well-organized."
+        ]
+      },
+      {
+        "title": "firecrawl | Agent Skills Library",
+        "url": "https://mcpservers.org/agent-skills/firecrawl/firecrawl-cursor-plugin/firecrawl",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Search, scrape, and interact with the web. Returns clean markdown optimized for LLM context windows. Run firecrawl --help or firecrawl &lt;command&gt; --help for full option details.",
+        "profile": {
+          "name": "MCP Servers",
+          "url": "https://mcpservers.org/agent-skills/firecrawl/firecrawl-cursor-plugin/firecrawl",
+          "long_name": "mcpservers.org",
+          "img": "https://imgs.search.brave.com/QXSm0yN0aSuh2XC--uiQ9O4Lz9D08YAPZZBGHqLJVAY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmNiODZlMTJk/ODM4Mjg0MGVkYWJm/MjMzZDI4ZmZlMGIw/MGFhMTY0MmJhYzVk/MDFmNGRiOWU2ZmY1/ODRiNGZhNC9tY3Bz/ZXJ2ZXJzLm9yZy8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mcpservers.org",
+          "hostname": "mcpservers.org",
+          "favicon": "https://imgs.search.brave.com/QXSm0yN0aSuh2XC--uiQ9O4Lz9D08YAPZZBGHqLJVAY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmNiODZlMTJk/ODM4Mjg0MGVkYWJm/MjMzZDI4ZmZlMGIw/MGFhMTY0MmJhYzVk/MDFmNGRiOWU2ZmY1/ODRiNGZhNC9tY3Bz/ZXJ2ZXJzLm9yZy8",
+          "path": "› agent-skills  › firecrawl  › firecrawl-cursor-plugin  › firecrawl"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/n5OYPBefD1isO6ppTsYcwEAQ-MbwHrJGNNAfjnAvcc4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tY3Bz/ZXJ2ZXJzLm9yZy9h/cGkvb2c_dGV4dD1m/aXJlY3Jhd2w",
+          "original": "https://mcpservers.org/api/og?text=firecrawl",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Web scraping, search, and browser automation CLI. Returns clean markdown optimized for LLM context windows. npx skills add https://github.com/firecrawl/firecrawl-cursor-plugin --skill firecrawl",
+          "A collection of servers for the Model Context Protocol",
+          "Search, scrape, and interact with the web. Returns clean markdown optimized for LLM context windows. Run firecrawl --help or firecrawl <command> --help for full option details.",
+          "🔥 firecrawl cli v1.8.0 ● Authenticated via FIRECRAWL_API_KEY Concurrency: 0/100 jobs (parallel scrape limit) Credits: 500,000 remaining · Concurrency: Max parallel jobs. Run parallel operations up to this limit. Credits: Remaining API credits. Each operation consumes credits. If not ready, see rules/install.md."
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

@@ -1,0 +1,17 @@
+cc_plugin_cache|claude code plugin web fetch cache persistent cross-session|broad
+mcp_fetch_cache|MCP server cache web fetch results reuse|broad
+llm_http_cache|persistent http response cache for LLM coding agents|broad
+cc_hooks_cache|claude code PreToolUse hook intercept web fetch cache|broad
+reader_md_cache|reader mode html to markdown cache tool|broad
+scrape_md_2026|web page to markdown cache for AI agents 2026|broad
+awesome_cc|awesome claude code plugins list curated|broad
+mcp_registry_fetch|MCP registry web fetch caching tools smithery glama|broad
+webfetch_dedup|avoid repeated web fetch token cost LLM agent|broad
+cc_websearch_cache|claude code websearch results caching plugin|broad
+anthropic_webfetch_cache|Anthropic Claude Code WebFetch built-in cache 15 minute behavior|focused
+jina_reader|Jina Reader API url to markdown caching|focused
+firecrawl_puremd|firecrawl pure-md html to markdown for LLM context|focused
+competitor_npm|npm package claude code web fetch cache plugin MCP|focused
+prompt_vs_content_cache|prompt caching vs content caching AI agents difference|focused
+webcache_demand|claude-webcache npm claude code cache plugin adoption downloads|critical
+fullpage_md_cache_exists|persistent full page markdown cache MCP server claude code reader|critical

@@ -1,0 +1,19 @@
+{
+  "generated": "2026-05-29T18:36:45Z",
+  "duration_seconds": 12.46,
+  "total_queries": 7,
+  "deduped_count": 3,
+  "quality_avg": 5.71,
+  "stats": {
+    "context_ok": 2,
+    "web_ok": 7,
+    "unique_hostnames": 61
+  },
+  "warnings": [
+    "- [persistent full page markdown cache MCP ]: 1 JSON-serialized snippets",
+    "- [firecrawl pure-md html to markdown for L]: 2 JSON-serialized snippets",
+    "- [firecrawl pure-md html to markdown for L]: 1 JSON-serialized snippets",
+    "- [npm package claude code web fetch cache ]: 1 JSON-serialized snippets",
+    "- [npm package claude code web fetch cache ]: 1 JSON-serialized snippets"
+  ]
+}

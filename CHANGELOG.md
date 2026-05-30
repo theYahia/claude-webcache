@@ -1,5 +1,42 @@
 # Changelog
 
+## 0.6.0 — 2026-05-29
+
+**Pivot: qsearch companion. The local SQLite cache is retired — qsearch is now the backend.**
+
+A uniqueness research sprint (`research/webcache-uniqueness.md`) found the niche is crowded (8+
+self-fetching WebFetch-cache MCP servers) and webcache's only real moat is the transparent hook
+interception of *native* WebFetch/WebSearch. Meanwhile qsearch already does persistent web-content
+storage (Meilisearch + Qdrant), a query cache, and fetch→markdown extraction. So webcache drops its
+own storage and becomes a thin hook adapter to a running qsearch. Not published to npm.
+
+### Changed
+
+- **WebFetch hook now backs onto qsearch `POST /url_content`** — corpus-first exact-URL lookup, then
+  `fetchHtml` + `extractMainContent` + corpus index on miss. Keyed by **URL alone** (was url+prompt),
+  so pages reuse across prompts/sessions. Returns full-page markdown, not WebFetch's prompt-specific
+  summary. Every fetch passively grows the qsearch corpus.
+- **WebSearch hooks** use qsearch `/cache_lookup` + `/cache_store` instead of the local SQLite
+  `websearch` namespace.
+- **`SessionStart` status line** now reports the qsearch backend (corpus size, search hit rate).
+- New `qsearch-client.cjs` — shared fail-open HTTP client (`QSEARCH_URL`, default `http://localhost:8080`).
+- New env: `QSEARCH_URL`, `WEBCACHE_QSEARCH_TIMEOUT_MS` (8000). `WEBCACHE_AUTOREAD` still honored.
+
+### Removed
+
+- `plugin/src/cache.js` (SQLite cache, migrations, eviction, domain TTL, gzip) and its tests.
+- `hook-webfetch-cache.cjs` (PostToolUse:WebFetch) — qsearch fetches on the precache path, so the
+  store-after-fetch hook is gone. Hooks: 4 → 3.
+- CLI dashboard (`cli.cjs`, `dashboard.cjs`), the `claude-webcache` bin, and the SQLite-era MCP tools
+  (`cache_store`, `cache_list`, `cache_invalidate`, `cache_clear`, `cache_warm`, `cache_refresh`).
+  MCP surface is now `cached_fetch`, `cached_search`, `cache_stats`.
+
+### Migration
+
+Requires a running qsearch (`http://localhost:8080` by default). If qsearch is down, all hooks
+fail-open and Claude Code's native WebFetch/WebSearch run normally. Old `~/.webcache/cache.db` is no
+longer used and can be deleted.
+
 ## 0.5.0 — 2026-05-21
 
 **Auto-read + WebSearch caching. Cache stops being write-only.**

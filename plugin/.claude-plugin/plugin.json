@@ -1,7 +1,7 @@
 {
   "name": "claude-webcache",
-  "version": "0.5.0",
-  "description": "Cross-session WebFetch cache for Claude Code. WebFetches disappear after 15 minutes — claude-webcache makes them persist.",
+  "version": "0.6.0",
+  "description": "qsearch companion for Claude Code: hooks intercept native WebFetch/WebSearch and serve them from a running qsearch (url-keyed full-page cache + query cache).",
   "author": {
     "name": "theYahia"
   },
@@ -12,8 +12,10 @@
     "claude-code",
     "mcp",
     "webfetch",
+    "websearch",
     "cache",
-    "sqlite",
+    "qsearch",
+    "hooks",
     "anthropic"
   ]
 }

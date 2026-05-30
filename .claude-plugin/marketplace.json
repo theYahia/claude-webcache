@@ -10,9 +10,9 @@
   "plugins": [
     {
       "name": "claude-webcache",
-      "version": "0.5.0",
+      "version": "0.6.0",
       "source": "./plugin",
-      "description": "Cross-session WebFetch cache for Claude Code"
+      "description": "qsearch companion: hooks cache native WebFetch/WebSearch via a running qsearch"
     }
   ]
 }

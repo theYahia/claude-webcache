@@ -1,0 +1,1398 @@
+{
+  "type": "search",
+  "query": {
+    "original": "prompt caching vs content caching AI agents difference",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "discussions": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Why Aren't We Talking About Caching \"System Prompts\" in LLM Workflows?",
+        "url": "https://www.reddit.com/r/AI_Agents/comments/1jsem9f/why_arent_we_talking_about_caching_system_prompts/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "because this is not going to be resolved by any framework. it needs to happen at the vendor level/ before the api call, which is already whats happening - openai and anthropic already implemented ‘prompt caching’ where the ‘system prompts’ are kv cached to improve token cost, latency for repeated api call with the same prompts (usually the system / developer prompt)",
+        "fetched_content_timestamp": 1779165967,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › AI_Agents  › comments  › 1jsem9f  › why_arent_we_talking_about_caching_system_prompts"
+        },
+        "age": "April 5, 2025",
+        "data": {
+          "forum_name": "r/AI_Agents",
+          "num_answers": 23,
+          "score": "12",
+          "title": "Why Aren't We Talking About Caching \"System Prompts\" in LLM Workflows?",
+          "question": "<p dir=\"auto\">\n      There&#39;s this recurring and evident efficiency issue with simple AI workflows that I can’t find a clean solution for.\n    </p><p dir=\"auto\">\n      Tbh I can&#39;t understand why there aren&#39;t more discussions about it, and why it hasn&#39;t already been solved. I&#39;m really hoping someone here has tackled this.\n    </p><h3 class=\"text-16-scalable xs:text-18-scalable\" dir=\"auto\">The Problem:</h3><p dir=\"auto\">\n      When triggering a simple LLM agent, we usually send a long, static system message with every call. It includes formatting rules, product descriptions, few-shot examples, etc. This payload doesn&#39;t change between sessions or users, and it&#39;s resent to the LLM every time a new user triggers the workflow.\n    </p><p dir=\"auto\">\n      For CAG workflows, it&#39;s even worse. Those   &quot;system prompts&quot; can get really hefty.\n    </p><p dir=\"auto\">\n      Is there any way — at the LLM or framework level — to cache or persist the system prompt so that only the user input needs to be sent per interaction?\n    </p><p dir=\"auto\">\n      I know LLM APIs are stateless by default, but I&#39;m wondering if:\n    </p><ul>\n        <li>\n      <p dir=\"auto\">\n      There’s a known workaround to persist a static prompt context\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Anyone’s simulated this using memory modules, prompt compression, or prompt-chaining strategies, etc.\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Are there any patterns that approximate “prompt caching” even if not natively supported\n    </p>\n    </li>\n      </ul><p dir=\"auto\">\n      Unfortunately, fine-tuning isn&#39;t a viable solutions when it comes to these simple workflows.\n    </p><p dir=\"auto\">\n      Appreciate any insight. I’m  really interested in your opinion about this, and whether you&#39;ve found a way to fix this redundancy issue and optimize speed, even if it&#39;s a bit hacky.\n    </p>",
+          "top_comment": "because this is not going to be resolved by any framework. it needs to happen at the vendor level/ before the api call, which is already whats happening - openai and anthropic already implemented ‘prompt caching’ where the ‘system prompts’ are kv cached to improve token cost, latency for repeated api call with the same prompts (usually the system / developer prompt)"
+        }
+      },
+      {
+        "title": "How Prompt Caching Works: A Deep Dive into Optimizing AI Efficiency",
+        "url": "https://www.reddit.com/r/OpenAI/comments/1g5r377/how_prompt_caching_works_a_deep_dive_into/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Interesting... Theoretically, could they create a super large intelligent model that is way too expensive to give to the public and too costly to run long term, but then perform and cache enough queries on it to create a cheap model that has this super models abilities?",
+        "fetched_content_timestamp": 1779910224,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › OpenAI  › comments  › 1g5r377  › how_prompt_caching_works_a_deep_dive_into"
+        },
+        "age": "October 17, 2024",
+        "data": {
+          "forum_name": "r/OpenAI",
+          "num_answers": 30,
+          "score": "46",
+          "title": "How Prompt Caching Works: A Deep Dive into Optimizing AI Efficiency",
+          "question": "<p dir=\"auto\">\n      Hello everyone,\n    </p><p dir=\"auto\">\n      With the release of Prompt Caching from Anthropic and OpenAI, I’ve been deep-diving into how it works and it super impressive.\n    </p><p dir=\"auto\">\n      They’re designed to make repeated prompts lightning-fast while saving up to 90% in costs.<br>What’s fascinating is that they don’t cache the LLM output, which can vary, but instead cache the embedded vectors of the input just before the self-attention mechanism.\n    </p><p dir=\"auto\">\n      If you&#39;re curious, don&#39;t hesitate to check my latest blog post <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://www.metadocs.co/2024/10/17/how-prompt-caching-works-a-deep-dive-into-optimizing-ai-efficiency/\" rel=\"noopener nofollow ugc\" target=\"_blank\">here</a> 🎯.\n    </p><p dir=\"auto\">\n      Have a nice read :D,\n    </p>",
+          "top_comment": "Interesting... Theoretically, could they create a super large intelligent model that is way too expensive to give to the public and too costly to run long term, but then perform and cache enough queries on it to create a cheap model that has this super models abilities?"
+        }
+      },
+      {
+        "title": "how to save 90% on ai costs with prompt caching? need real implementation advice",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1oawd9c/how_to_save_90_on_ai_costs_with_prompt_caching/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "are you doing a vectorization of the prompt? There is so much nuance that I am skeptical that short of having tens or hundreds of millions of requests you would rarely get a cache hit",
+        "fetched_content_timestamp": 1771330627,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ClaudeAI  › comments  › 1oawd9c  › how_to_save_90_on_ai_costs_with_prompt_caching"
+        },
+        "age": "October 19, 2025",
+        "data": {
+          "forum_name": "r/ClaudeAI",
+          "num_answers": 15,
+          "score": "14",
+          "title": "how to save 90% on ai costs with prompt caching? need real implementation advice",
+          "question": "<p>working on a custom prompt caching layer for llm apps, goal is to reuse “similar enough” prompts, not just exact prefix matches like openai or anthropic do. they claim <strong>50–90% savings</strong>, but real-world caching is messy.</p><p>problems:</p><ul><li><p><strong>exact hash:</strong> one token change = cache miss</p></li><li><p><strong>embeddings:</strong> too slow for real-time</p></li><li><p><strong>normalization:</strong> json, few-shot, params all break consistency</p></li></ul><p>tried redis + minhash for lsh, getting 70% hit rate on test data, but prod is trickier. over-matching gives wrong responses fast.</p><p>curious how others handle this:</p><ul><li><p>how do you detect similarity without increasing latency?</p></li><li><p>do you hash prefixes, use edit distance, or semantic thresholds?</p></li><li><p>what’s your cutoff for “same enough”?</p></li></ul><p>any open-source refs or actually-tested tricks would help. not theory but looking for actual engineering patterns that survive load.</p>",
+          "top_comment": "are you doing a vectorization of the prompt? There is so much nuance that I am skeptical that short of having tens or hundreds of millions of requests you would rarely get a cache hit"
+        }
+      },
+      {
+        "title": "What’s the best way to handle memory with AI agents? ",
+        "url": "https://www.reddit.com/r/AI_Agents/comments/1i2wbp3/whats_the_best_way_to_handle_memory_with_ai_agents/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Using vector database like Chroma, Pinecone or Langchain for conversational agents.",
+        "fetched_content_timestamp": 1779296621,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › AI_Agents  › comments  › 1i2wbp3  › whats_the_best_way_to_handle_memory_with_ai_agents"
+        },
+        "age": "January 16, 2025",
+        "data": {
+          "forum_name": "r/AI_Agents",
+          "num_answers": 15,
+          "score": "5",
+          "title": "What’s the best way to handle memory with AI agents? ",
+          "question": "<p dir=\"auto\">\n      I recently started experimenting with AI agents in Python, and I’ve noticed that most implementations rely on passing the entire chat context to the agent. In my opinion, this approach isn’t very efficient for production use, mainly due to the costs and the fact that the agent can eventually lose context as conversations grow.\n    </p><p dir=\"auto\">\n      Are there better ways to manage memory in AI agents? I’ve heard a bit about using RAG as memory, but I’m not familiar with any specific tools or frameworks that utilize it. Any recommendations?\n    </p>",
+          "top_comment": "Using vector database like Chroma, Pinecone or Langchain for conversational agents."
+        }
+      },
+      {
+        "title": "Prompt caching with Claude",
+        "url": "https://www.reddit.com/r/OpenAI/comments/1es5ovf/prompt_caching_with_claude/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "<blockquote>\n    <p>\n    With prompt caching, customers can provide Claude with more background knowledge and example outputs—all while reducing costs by up to 90% and latency by up to 85% for long prompts.\n  </p>\n  </blockquote>",
+        "fetched_content_timestamp": 1736636977,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › OpenAI  › comments  › 1es5ovf  › prompt_caching_with_claude"
+        },
+        "age": "August 14, 2024",
+        "data": {
+          "forum_name": "r/OpenAI",
+          "num_answers": 13,
+          "score": "70",
+          "title": "Prompt caching with Claude",
+          "top_comment": "<blockquote>\n    <p>\n    With prompt caching, customers can provide Claude with more background knowledge and example outputs—all while reducing costs by up to 90% and latency by up to 85% for long prompts.\n  </p>\n  </blockquote>"
+        }
+      },
+      {
+        "title": "Claude launches Prompt Caching which reduces API cost by upto 90%",
+        "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1eszro5/claude_launches_prompt_caching_which_reduces_api/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Apparently only caches for ~5 minutes. Which makes it a lot less useful in a human interactive coding use case. Make change -> think -> cache blown -> make change -> go get coffee -> cache blown.",
+        "fetched_content_timestamp": 1779577866,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ChatGPTCoding  › comments  › 1eszro5  › claude_launches_prompt_caching_which_reduces_api"
+        },
+        "age": "August 15, 2024",
+        "data": {
+          "forum_name": "r/ChatGPTCoding",
+          "num_answers": 24,
+          "score": "103",
+          "title": "Claude launches Prompt Caching which reduces API cost by upto 90%",
+          "question": "<p dir=\"auto\">\n      Claude just rolled out prompt caching, they claim it can reduce API costs up to 90% and 80% faster latency. This seems particularly useful for code generation where you&#39;re reusing the same prompts or same context. (Unclear if the prompt has to 100% match previous one, or can be subset of previous prompt)\n    </p><p dir=\"auto\">\n      I compiled all the steps info from Anthropic&#39;s tweets, blogs, documentation.<br><a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://blog.getbind.co/2024/08/15/what-is-claude-prompt-caching-how-does-it-work/\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://blog.getbind.co/2024/08/15/what-is-claude-prompt-caching-how-does-it-work/</a>\n    </p>",
+          "top_comment": "Apparently only caches for ~5 minutes. Which makes it a lot less useful in a human interactive coding use case. Make change -> think -> cache blown -> make change -> go get coffee -> cache blown."
+        }
+      },
+      {
+        "title": "Does anyone use caching of openAI calls?",
+        "url": "https://www.reddit.com/r/aipromptprogramming/comments/13s9es5/does_anyone_use_caching_of_openai_calls/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "I use Microsoft Guidance for this. https://github.com/microsoft/guidance",
+        "fetched_content_timestamp": 1749253052,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › aipromptprogramming  › comments  › 13s9es5  › does_anyone_use_caching_of_openai_calls"
+        },
+        "age": "May 26, 2023",
+        "data": {
+          "forum_name": "r/aipromptprogramming",
+          "num_answers": 4,
+          "score": "2",
+          "title": "Does anyone use caching of openAI calls?",
+          "question": "<p>\n      After playing with the openAI API, me and a friend built a managed caching service to avoid repeated calls.\n    </p><p>\n      For our use case, something like memcache was not sufficient because it gets deleted after each run. We also did not want to maintain our own service each time we have this problem, and wanted some solution that just works with python code and nothing else.\n    </p><p>\n      Usage example:\n    </p><pre>\npip install rmmbr</pre\n    ><pre>\nfrom rmmbr import cloud_cache\n\nn_called = 0\n\n@cloud_cache(\n    &quot;https://rmmbr.net&quot;,\n    &quot;your-service-token&quot;,\n    &quot;your-cache-name&quot;,\n    60 * 60 * 24, # TTL is one day.\n    // e2e encrypted, so you can do it even for sensitive information.\n    &quot;your-encryption-key&quot;,\n)\nasync def f(x: int):\n  nonlocal n_called\n  n_called += 1\n  return x\n\nawait f(3)\nawait f(3)\n# nCalled is 1 here</pre\n    ><p>\n      <a rpl\n      class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \"\n      href=\"https://github.com/uriva/rmmbr\"\n      rel=\"noopener nofollow ugc\"\n      target=\"_blank\"\n      >github link</a\n    >\n    </p><p>\n      How do you do it?\n    </p>",
+          "top_comment": "I use Microsoft Guidance for this. https://github.com/microsoft/guidance"
+        }
+      },
+      {
+        "title": "Anthropic adds prompt caching (Talk directly to books, papers, etc)",
+        "url": "https://www.reddit.com/r/singularity/comments/1es605j/anthropic_adds_prompt_caching_talk_directly_to/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Interesting how the implementation & pricing differs from Google Gemini 1.5 Pro. Anthropic: $3.75 / MTok - Cache write $0.30 / MTok - Cache read Automatic 5-minute unused expiration Google: $0.875 for <= 128K tokens $1.75 for > 128K tokens $4.50 / 1 million tokens per hour (storage) Custom TTL set for expiration, default is 1 hour *Edited because I was outsmarted by the Google pricing page dropdown.",
+        "fetched_content_timestamp": 1779914655,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › singularity  › comments  › 1es605j  › anthropic_adds_prompt_caching_talk_directly_to"
+        },
+        "age": "August 14, 2024",
+        "data": {
+          "forum_name": "r/singularity",
+          "num_answers": 29,
+          "score": "207",
+          "title": "Anthropic adds prompt caching (Talk directly to books, papers, etc)",
+          "top_comment": "Interesting how the implementation & pricing differs from Google Gemini 1.5 Pro. Anthropic: $3.75 / MTok - Cache write $0.30 / MTok - Cache read Automatic 5-minute unused expiration Google: $0.875 for <= 128K tokens $1.75 for > 128K tokens $4.50 / 1 million tokens per hour (storage) Custom TTL set for expiration, default is 1 hour *Edited because I was outsmarted by the Google pricing page dropdown."
+        }
+      },
+      {
+        "title": "How usable is prompt caching in production ?",
+        "url": "https://www.reddit.com/r/LLMDevs/comments/1fb7e2q/how_usable_is_prompt_caching_in_production/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "<p>\n    Remind me! 7 days\n  </p>",
+        "fetched_content_timestamp": 1733524397,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › LLMDevs  › comments  › 1fb7e2q  › how_usable_is_prompt_caching_in_production"
+        },
+        "age": "September 7, 2024",
+        "data": {
+          "forum_name": "r/LLMDevs",
+          "num_answers": 9,
+          "score": "4",
+          "title": "How usable is prompt caching in production ?",
+          "question": "<p>\n    Hi,\n  </p><p>\n    I have been trying libraries like GPTCache for caching prompts in LLM apps.\n  </p><p>\n    How usable are they in production applications that have RAG?\n  </p><p>\n    Few problems I can think:\n  </p><ol>\n      <li>\n    <p>\n    Though the prompt might be similar, the context can be different. So, cache miss.\n  </p>\n  </li><li>\n    <p>\n    Large number of incorrect cache hits as it use word embedding for evaluating similarity between prompts. These prompts are treated similar:\n  </p>\n  </li>\n    </ol><p>\n    Prompt 1: Java code to check if a number is odd or even<br />Prompt 2: Python code to check if a number is odd or even\n  </p><p>\n    What do you think?\n  </p>",
+          "top_comment": "<p>\n    Remind me! 7 days\n  </p>"
+        }
+      },
+      {
+        "title": "Anthropic just released Prompt Caching, making Claude up to 90% cheaper and 85% faster. Here's a comparison of running the same task in Claude Dev before and after:",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1esto2i/anthropic_just_released_prompt_caching_making/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "hope you reset the api key",
+        "fetched_content_timestamp": 1762021767,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ClaudeAI  › comments  › 1esto2i  › anthropic_just_released_prompt_caching_making"
+        },
+        "age": "August 15, 2024",
+        "data": {
+          "forum_name": "r/ClaudeAI",
+          "num_answers": 100,
+          "score": "609",
+          "title": "Anthropic just released Prompt Caching, making Claude up to 90% cheaper and 85% faster. Here's a comparison of running the same task in Claude Dev before and after:",
+          "top_comment": "hope you reset the api key"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "discussions",
+        "all": true
+      },
+      {
+        "type": "videos",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "videos": {
+    "type": "videos",
+    "results": [
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=eYb7BKW4QcU",
+        "title": "Spring AI Prompt Caching: Stop Wasting Money on Repeated Tokens ...",
+        "description": "Tired of watching your AI API costs skyrocket? Prompt caching can save you up to 90% on your Claude bill by caching repeated content like system prompts and ...",
+        "age": "February 9, 2026",
+        "page_age": "2026-02-09T17:50:23",
+        "fetched_content_timestamp": 1779577997,
+        "video": {
+          "duration": "17:39",
+          "creator": "Dan Vega",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/yCcCO7W4AAeVm3Pdz1Fg4Nbw2wN3w7MdBndLIJVCdIo/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9l/WWI3QktXNFFjVS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/eYb7BKW4QcU/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=u57EnkQaUTY",
+        "title": "What is Prompt Caching? Optimize LLM Latency with AI Transformers ...",
+        "description": "Ready to become a certified watsonx Generative AI Engineer? Register now and use code IBMTechYT20 for 20% off of your exam → https://ibm.biz/BdbNiKLearn more...",
+        "age": "February 7, 2026",
+        "page_age": "2026-02-07T12:01:27",
+        "fetched_content_timestamp": 1779889844,
+        "video": {
+          "duration": "09:06",
+          "creator": "IBM Technology",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/kk8s2JUDRk7dSwPvptOpfnQR-hNQ9yG3XP-srmlDcLA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS91/NTdFbmtRYVVUWS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/u57EnkQaUTY/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=RDjaUJz-uWo",
+        "title": "Prompt caching guide (non-technical) - YouTube",
+        "description": "Learn how OpenAI, Anthropic, and Google handle prompt caching and how you can leverage it to reduce costs by up to 90% and decrease latency by up to 80%Resou...",
+        "age": "December 6, 2024",
+        "page_age": "2024-12-06T18:30:32",
+        "fetched_content_timestamp": 1779577997,
+        "video": {
+          "duration": "09:50",
+          "creator": "Dan Cleary",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/murczKoHVeCnFmE1dhfLpg8QpDzUDrhI6T2wyHT5zCA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9S/RGphVUp6LXVXby9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/RDjaUJz-uWo/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=O_pQG6x9dvY",
+        "title": "Let's Speed up LOCAL AI, OpenClaw & Coding Agents | Batched Caching ...",
+        "description": "In this video we'll go through using persistent prompt caching, batching and tool calls all working together to make a super agent computer to inference Open...",
+        "age": "February 20, 2026",
+        "page_age": "2026-02-20T08:22:18",
+        "fetched_content_timestamp": 1771614013,
+        "video": {
+          "duration": "12:45",
+          "creator": "xCreate",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/NStXqisCBzM0wE5uSBkvxhGvGLUHFsC4JgPJrSE5lYE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9P/X3BRRzZ4OWR2WS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/O_pQG6x9dvY/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=tECAkJAI_Vk",
+        "title": "Build Hour: Prompt Caching - YouTube",
+        "description": "Build faster, cheaper, and with lower latency using prompt caching. This Build Hour breaks down how prompt caching works and how to design your prompts to ma...",
+        "age": "February 18, 2026",
+        "page_age": "2026-02-18T21:25:25",
+        "fetched_content_timestamp": 1779635329,
+        "video": {
+          "duration": "56:04",
+          "creator": "OpenAI",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/jEIIWi761h5ZqJ-Xg9Nz08VOacNUp1gj3wFMjm89AOg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS90/RUNBa0pBSV9Way9o/cWRlZmF1bHQuanBn",
+          "original": "https://i.ytimg.com/vi/tECAkJAI_Vk/hqdefault.jpg"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Prompt caching vs semantic caching: How to make AI agents faster",
+        "url": "https://redis.io/blog/prompt-caching-vs-semantic-caching/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Prompt caching reuses identical prompt prefixes to cut token work, while semantic caching uses embedding-based similarity to reuse responses across meaningfully similar queries—improving cost, latency, and scalability with different TTLs, ...",
+        "page_age": "2025-12-08T23:37:16",
+        "profile": {
+          "name": "Redis",
+          "url": "https://redis.io/blog/prompt-caching-vs-semantic-caching/",
+          "long_name": "redis.io",
+          "img": "https://imgs.search.brave.com/0XydAktjaqN0nORmaggM2VJsY1Tx1nJiVNuih_WpnBU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzAzNjQzNTY5/NTYzYTQyYzdmZmRl/ZTNiMzMwYWZhZTgw/MzQwN2JkMDg5NDcy/N2E3NzBkNDUxODIx/MWM3YWU5Mi9yZWRp/cy5pby8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "redis.io",
+          "hostname": "redis.io",
+          "favicon": "https://imgs.search.brave.com/0XydAktjaqN0nORmaggM2VJsY1Tx1nJiVNuih_WpnBU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzAzNjQzNTY5/NTYzYTQyYzdmZmRl/ZTNiMzMwYWZhZTgw/MzQwN2JkMDg5NDcy/N2E3NzBkNDUxODIx/MWM3YWU5Mi9yZWRp/cy5pby8",
+          "path": "  › home  › prompt caching vs semantic caching: how to make ai agents faster"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/VfSgCa7K8jfZGK7dYsyO_u2vYoOqFckrNgQ9hByGi6s/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/c2FuaXR5LmlvL2lt/YWdlcy9zeTFqc2No/aC9wcm9kdWN0aW9u/LzFiOWMxMjY0ODQ2/NDczNmFiNTIwOWRh/YzkxNjZmZDg1Zjli/MWEzZmMtMTIwMHg2/MjgucG5n",
+          "original": "https://cdn.sanity.io/images/sy1jschh/production/1b9c12648464736ab5209dac9166fd85f9b1a3fc-1200x628.png",
+          "logo": false
+        },
+        "age": "December 8, 2025",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Redis",
+              "url": "https://redis.io/"
+            }
+          ],
+          "date": "Dec 05, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "Redis",
+            "url": "https://redis.io/",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/qARQfgLfK7lsL4hP1qC6iEXhFSNYxpbaztlm_VtRpao/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9yZWRp/cy5pby9zY2hlbWEt/aWNvbi5wbmc",
+              "original": "https://redis.io/schema-icon.png"
+            }
+          }
+        },
+        "organization": {
+          "type": "organization",
+          "name": "Redis",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Use cases: Summarizing documents, multi-turn conversations with fixed prompts, or workflows requiring repeated processing of the same large context. ... Semantic caching is matching data based on semantic meaning rather than exact key-value lookups. In AI agent workflows, this allows storing past query–answer pairs and reusing them when a new query is semantically similar, avoiding another LLM call. Sometimes two queries look different but mean the same thing.",
+          "Prompt caching reuses identical prompt prefixes to cut token work, while semantic caching uses embedding-based similarity to reuse responses across meaningfully similar queries—improving cost, latency, and scalability with different TTLs, complexity, and use-case profiles. For complex AI systems, the best approach is often double caching: Prompt caching handles repeated large contexts. Semantic caching handles repeated queries with similar meanings. Example: A customer support agent analyzing a large knowledge base:",
+          "Learn how prompt caching and semantic caching work, when to use each, and how Redis LangCache speeds up AI agents while cutting LLM costs.",
+          "At Redis, we believe caching isn’t just a nice-to-have but it’s a critical technique for building high-performance, cost-efficient AI agents. In this post, we’ll explain two key caching approaches: prompt caching and semantic caching, and show how they can turbocharge your AI workflows."
+        ]
+      },
+      {
+        "title": "What is Prompt Caching? | IBM",
+        "url": "https://www.ibm.com/think/topics/prompt-caching",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Instead of making multiple requests to the API with same request for the full prompt or system prompt, the system takes advantage of cached content (for example, prompt prefixes, cache prefixes, static content) to represent that data saving ...",
+        "page_age": "2025-11-17T13:27:44",
+        "profile": {
+          "name": "IBM",
+          "url": "https://www.ibm.com/think/topics/prompt-caching",
+          "long_name": "ibm.com",
+          "img": "https://imgs.search.brave.com/WtFphd-kJr-JtTbMqTUV8D4gBvSovY56CfvQYWvRbAw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWI0MWQyYmEy/MTNmNWVkODQ2ODFj/ZjYxMjk4YjI3NmY5/Yjk5M2E0YjhjNWZi/OGUyODMzNzllOTQx/M2I4ZDc2My93d3cu/aWJtLmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "ibm.com",
+          "hostname": "www.ibm.com",
+          "favicon": "https://imgs.search.brave.com/WtFphd-kJr-JtTbMqTUV8D4gBvSovY56CfvQYWvRbAw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWI0MWQyYmEy/MTNmNWVkODQ2ODFj/ZjYxMjk4YjI3NmY5/Yjk5M2E0YjhjNWZi/OGUyODMzNzllOTQx/M2I4ZDc2My93d3cu/aWJtLmNvbS8",
+          "path": "  › home  › think  › topics  › prompt caching"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/X6jU0OuEBgyLZYsJ3lThL3HO-tuO8zLZto_w6AsKEwI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/aWJtLmNvbS90aGlu/ay90b3BpY3MvcHJv/bXB0LWNhY2hpbmc",
+          "original": "https://www.ibm.com/think/topics/prompt-caching",
+          "logo": false
+        },
+        "age": "November 17, 2025",
+        "extra_snippets": [
+          "In this article, we will explore what exactly is prompt caching , how it is different from conventional caching, how it can be applied in AI applications, various use cases. We will also look at the benefits and caveats to consider with prompt caching. Prompt caching is a straightforward method to improve the speed and cost-efficiency of LLMs. It accomplishes these improvements by storing frequently unchanged parts of a prompt such as instructional content or reference material considerations so the model doesn’t have to reprocess those tokens repeatedly.",
+          "Go from zero to hero with prompt templates for different types of prompts. ... Master the language of AI and unleash its full potential with our free prompt engineering course. ... Get started with generative AI using curated tools, frameworks, tutorials, labs and community support. ... Easily design scalable AI assistants and agents, automate repetitive tasks and simplify complex processes with IBM® watsonx Orchestrate™.",
+          "Prompt caching is an intelligent caching strategy that enhances the performance of AI-driven systems such as chatbots, coding assistants and RAG pipelines to improve both performance and efficiency. Instead of making multiple requests to the API with same request for the full prompt or system prompt, the system takes advantage of cached content (for example, prompt prefixes, cache prefixes, static content) to represent that data saving on both input tokens and output tokens.",
+          "Prompt caching works best for intrinsic to AI-powered systems like chatbots, enhances performance by leveraging user messages, reducing API requests and dramatically increasing cache hit rates through concise cache read. For running a function, or responding to subsequent requests or queries in your application; prompt caching saves prompt tokens, total tokens and token counts, plus improves the ease of tracking metrics."
+        ]
+      },
+      {
+        "title": "Faster Agents with Automatic Prompt Caching | Heroku",
+        "url": "https://www.heroku.com/blog/faster-agents-automatic-prompt-caching/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Prompt caching is an optimization that speeds up inference by securely caching and reusing the processed components of your requests for system prompts and tool definitions. For applications involving agents, a large portion of the request remains ...",
+        "page_age": "2025-12-04T16:05:58",
+        "profile": {
+          "name": "Heroku",
+          "url": "https://www.heroku.com/blog/faster-agents-automatic-prompt-caching/",
+          "long_name": "heroku.com",
+          "img": "https://imgs.search.brave.com/zgI8BS06xGlRIfgAjU3wNQCS7SmSpUiLyIh_3ob3afU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWMwZjQ2YjUy/YWRkZDBkYWY0ZWRh/NjBjMGE3ZWNkNjY5/OTVmMzNiZDA5Y2Vm/YTBkNmU3MDgzNTU3/ZDM1ZDRmZi93d3cu/aGVyb2t1LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "heroku.com",
+          "hostname": "www.heroku.com",
+          "favicon": "https://imgs.search.brave.com/zgI8BS06xGlRIfgAjU3wNQCS7SmSpUiLyIh_3ob3afU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWMwZjQ2YjUy/YWRkZDBkYWY0ZWRh/NjBjMGE3ZWNkNjY5/OTVmMzNiZDA5Y2Vm/YTBkNmU3MDgzNTU3/ZDM1ZDRmZi93d3cu/aGVyb2t1LmNvbS8",
+          "path": "  › news  › faster agents with automatic prompt caching"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/VFc5D3Z3xX151WpRbFJed0dCKUDJqSA_VUyAKedzNe8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/aGVyb2t1LmNvbS9i/bG9nL2Zhc3Rlci1h/Z2VudHMtYXV0b21h/dGljLXByb21wdC1j/YWNoaW5nLw",
+          "original": "https://www.heroku.com/blog/faster-agents-automatic-prompt-caching/",
+          "logo": false
+        },
+        "age": "December 4, 2025",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Anush DSouza"
+            },
+            {
+              "type": "person",
+              "name": "Mandeep Bal"
+            }
+          ],
+          "date": "Dec 04, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "Heroku",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/eKHmWp3Amx8eQe1cAOKrDCW9spXAj36nXgC8aNrUsiY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/aGVyb2t1LmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyNS8w/MS9IZXJva3UtTG9n/by1LTy1SR0IucG5n",
+              "original": "https://www.heroku.com/wp-content/uploads/2025/01/Heroku-Logo-KO-RGB.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Prompt caching is an optimization that speeds up inference by securely caching and reusing the processed components of your requests for system prompts and tool definitions. For applications involving agents, a large portion of the request remains static. Instead of reprocessing this content on every call, Heroku can now reuse the processed result from a secure cache. Currently, to simplify billing, we do not charge for cache writes or pass on the difference for cache hits as we evaluate the system. When your application sends an AI request, Heroku intelligently adds cache checkpoints to system prompts or tool definitions before securely passing them to the model.",
+          "This mechanism applies to all supported models, but caching only occurs when content meets the minimum token threshold, focusing performance gains where they add the most value. Caching behavior is model-specific, as different models have different thresholds and capabilities (such as caching tool definitions). Privacy and Security is fundamental to Heroku Managed Inference and Agents. Our prompt caching feature is built on proven security infrastructure, protecting your data with enterprise-grade measures like cryptographic hashing and automatic expiration.",
+          "Optimize your AI Agents on Heroku. New automatic prompt caching reuses processed system prompts to deliver significantly faster responses. No config needed.",
+          "Prompt caching is another step in making Heroku Managed Inference and Agents easy, secure, and efficient for building AI applications."
+        ]
+      },
+      {
+        "title": "Prompt Caching and Context Optimization in Coding Agents",
+        "url": "https://susheemk.substack.com/p/prompt-caching-and-context-optimization",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "A high-level workflow diagram showing how Turn 1 vs Turn 2 to N of a session looks like with Prompt Caching Enabled. Notice that the full pre-fill is done once on T1 while T2…N leverage cache plus incremental Transformer Runs · Most of the LLM providers are implicitly optimizing for this compute overhead. This structural optimization makes long-context interactions financially viable for tool builders and noticeably faster for users, drastically reducing the time to first token on heavy requests. For reference, here is Google AI Studios documentation on how their models use context caching : https://docs.cloud.google.com/vertex-ai/generative-ai/docs/context-cache/context-cache-overview",
+        "page_age": "2026-05-03T15:39:36",
+        "profile": {
+          "name": "Substack",
+          "url": "https://susheemk.substack.com/p/prompt-caching-and-context-optimization",
+          "long_name": "susheemk.substack.com",
+          "img": "https://imgs.search.brave.com/gAlhfU4pLqJsbweMZb7hXrn3uSzUbiYm9BGo8h0a7sA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWU1YzQ3Yjk3/YTFjZGRhMTVhMmNi/ODAwNWU4ZjE1ZTcz/ZGVlZTRlZDczYjMy/ZWE1ODYyODRlNGE1/N2Q2MTMwZC9zdXNo/ZWVtay5zdWJzdGFj/ay5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "susheemk.substack.com",
+          "hostname": "susheemk.substack.com",
+          "favicon": "https://imgs.search.brave.com/gAlhfU4pLqJsbweMZb7hXrn3uSzUbiYm9BGo8h0a7sA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWU1YzQ3Yjk3/YTFjZGRhMTVhMmNi/ODAwNWU4ZjE1ZTcz/ZGVlZTRlZDczYjMy/ZWE1ODYyODRlNGE1/N2Q2MTMwZC9zdXNo/ZWVtay5zdWJzdGFj/ay5jb20v",
+          "path": "› p  › prompt-caching-and-context-optimization"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/epHdbzYC-R5rpIdsUzhL7OY6Psy0Mil372wYsZdL0os/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdWJz/dGFjay1wb3N0LW1l/ZGlhLnMzLmFtYXpv/bmF3cy5jb20vcHVi/bGljL2ltYWdlcy8z/OWYxNTNiZS1hZTYy/LTRhZGMtYTdlYy02/Nzk2YmY3ZGJjOTRf/MjgxNngxNTM2LnBu/Zw",
+          "original": "https://substack-post-media.s3.amazonaws.com/public/images/39f153be-ae62-4adc-a7ec-6796bf7dbc94_2816x1536.png",
+          "logo": false
+        },
+        "age": "1 month ago",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Susheem Koul",
+              "url": "https://substack.com/@susheemk",
+              "thumbnail": {
+                "src": "https://imgs.search.brave.com/SuoiFcvRLyEI4sQHN_bCmt2pugDRQHyt0JwycfE-Q4E/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdWJz/dGFja2Nkbi5jb20v/aW1hZ2UvZmV0Y2gv/JHNfIW9rb1IhLGZf/YXV0byxxX2F1dG86/Z29vZCxmbF9wcm9n/cmVzc2l2ZTpzdGVl/cC9odHRwcyUzQSUy/RiUyRnN1YnN0YWNr/LXBvc3QtbWVkaWEu/czMuYW1hem9uYXdz/LmNvbSUyRnB1Ymxp/YyUyRmltYWdlcyUy/RjJhNzQxZmYyLTNm/NGItNDhiMC05MWQz/LThhMGU3M2I2MDI1/MV8zMDI0eDQwMzIu/anBlZw",
+                "original": "https://substackcdn.com/image/fetch/$s_!okoR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2a741ff2-3f4b-48b0-91d3-8a0e73b60251_3024x4032.jpeg"
+              }
+            }
+          ],
+          "date": "May 03, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Susheem’s Jottings",
+            "url": "https://susheemk.substack.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/ew32-m8ikVnPGKboxjGQEPqe_ftMJtsdJtA_60MiOLs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdWJz/dGFja2Nkbi5jb20v/aW1hZ2UvZmV0Y2gv/JHNfIVFrdWohLGZf/YXV0byxxX2F1dG86/Z29vZCxmbF9wcm9n/cmVzc2l2ZTpzdGVl/cC9odHRwcyUzQSUy/RiUyRnN1YnN0YWNr/LXBvc3QtbWVkaWEu/czMuYW1hem9uYXdz/LmNvbSUyRnB1Ymxp/YyUyRmltYWdlcyUy/Rjk0MjEzZGVhLTU0/YjktNDJjZS05ZjE3/LTMxNmU4NmZhZTc3/NF81MDB4NTAwLnBu/Zw",
+              "original": "https://substackcdn.com/image/fetch/$s_!Qkuj!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94213dea-54b9-42ce-9f17-316e86fae774_500x500.png"
+            }
+          },
+          "isAccessibleForFree": true
+        },
+        "extra_snippets": [
+          "Screenshot from my Cursor Dashboard showing close to 99% of input tokens picked from Cache. Thank you LLM Gods :) Agentic coding tools pass massive amounts of context to language models—system instructions, workspace rules, file contents, and conversation history. Since LLMs are inherently stateless, they normally process this entire payload from scratch on every single request. Prompt caching is a mechanism that saves the intermediate computations—specifically the output of the transformer stage.",
+          "While LLM providers generally charge more for output token generation, the sheer size of the input context that modern day AI Coding Agents are providing makes it worthwhile to consider any possible cost saving on the input stage as well. When you ask a follow-up question in the same session, the system instructions, project rules, and file context remain identical. The prefix matches. Instead of recalculating the entire attention matrix from scratch, the model hits the cache for the bulk of the payload.",
+          "A high-level workflow diagram showing how Turn 1 vs Turn 2 to N of a session looks like with Prompt Caching Enabled. Notice that the full pre-fill is done once on T1 while T2…N leverage cache plus incremental Transformer Runs · Most of the LLM providers are implicitly optimizing for this compute overhead. This structural optimization makes long-context interactions financially viable for tool builders and noticeably faster for users, drastically reducing the time to first token on heavy requests. For reference, here is Google AI Studios documentation on how their models use context caching : https://docs.cloud.google.com/vertex-ai/generative-ai/docs/context-cache/context-cache-overview",
+          "Prompt caching is just one part of the cost optimization playbook. Instead of stuffing every file into the context window and hoping for a cache hit, coding agents also need ways to selectively retrieve only the most relevant code."
+        ]
+      },
+      {
+        "title": "Prompt caching | OpenAI API",
+        "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Reduce latency and cost with prompt caching. ... Model prompts often contain repetitive content, like system prompts and common instructions. OpenAI routes API requests to servers that recently processed the same prompt, making it cheaper and ...",
+        "profile": {
+          "name": "Openai",
+          "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+          "long_name": "developers.openai.com",
+          "img": "https://imgs.search.brave.com/wwjL7FxKsYg9swL43bg5iIhK0Y9raP8LOGycO2vU7Z0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTZhZDMxYzM0/MTU5ZDBmMDkyNGQ2/ZGIwYWQyNDBkMDBh/YmJkNzkzZTYzODI0/ZDQxZGRmYTVhNjAx/MDRkMDZlNi9kZXZl/bG9wZXJzLm9wZW5h/aS5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "developers.openai.com",
+          "hostname": "developers.openai.com",
+          "favicon": "https://imgs.search.brave.com/wwjL7FxKsYg9swL43bg5iIhK0Y9raP8LOGycO2vU7Z0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTZhZDMxYzM0/MTU5ZDBmMDkyNGQ2/ZGIwYWQyNDBkMDBh/YmJkNzkzZTYzODI0/ZDQxZGRmYTVhNjAx/MDRkMDZlNi9kZXZl/bG9wZXJzLm9wZW5h/aS5jb20v",
+          "path": "› api  › docs  › guides  › prompt-caching"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/_mANjzn1_Osn9n6pFHBHFNur_cemNRWUyGpyBxQYZms/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kZXZl/bG9wZXJzLm9wZW5h/aS5jb20vb2cvYXBp/L2RvY3MvZ3VpZGVz/L3Byb21wdC1jYWNo/aW5nLnBuZw",
+          "original": "https://developers.openai.com/og/api/docs/guides/prompt-caching.png",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Prompt Caching can either use in-memory or extended retention policies. When available, Extended Prompt Caching aims to retain the cache for longer, so that subsequent requests are more likely to match the cache.",
+          "Reduce latency and cost with prompt caching. ... Model prompts often contain repetitive content, like system prompts and common instructions. OpenAI routes API requests to servers that recently processed the same prompt, making it cheaper and faster than processing a prompt from scratch.",
+          "Cache hits are only possible for exact prefix matches within a prompt. To realize caching benefits, place static content like instructions and examples at the beginning of your prompt, and put variable content, such as user-specific information, at the end.",
+          "Extended Prompt Caching works by offloading the key/value tensors to GPU-local storage when memory is full, significantly increasing the storage capacity available for caching. key/value tensors are the intermediate representation from the model’s attention layers produced during prefill. Only the key/value tensors may be persisted in local storage; the original customer content, such as prompt text, is only retained in memory."
+        ]
+      },
+      {
+        "title": "Understanding the difference between context caching or prompt caching and semantic caching: A step toward optimizing RAG-based projects | by Wael SAIDENI | Medium",
+        "url": "https://medium.com/@wael-saideni/understanding-the-difference-between-context-caching-and-semantic-caching-a-step-toward-optimizing-1a2b44d25c12",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "This blog post explores the differences ... LLM workflows. ... Context caching (also known as prompt caching) focuses on optimizing the processing of large context windows within generative models....",
+        "page_age": "2024-09-16T08:26:33",
+        "profile": {
+          "name": "Medium",
+          "url": "https://medium.com/@wael-saideni/understanding-the-difference-between-context-caching-and-semantic-caching-a-step-toward-optimizing-1a2b44d25c12",
+          "long_name": "medium.com",
+          "img": "https://imgs.search.brave.com/4R4hFITz_F_be0roUiWbTZKhsywr3fnLTMTkFL5HFow/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTZhYmQ1N2Q4/NDg4ZDcyODIyMDZi/MzFmOWNhNjE3Y2E4/Y2YzMThjNjljNDIx/ZjllZmNhYTcwODhl/YTcwNDEzYy9tZWRp/dW0uY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medium.com",
+          "hostname": "medium.com",
+          "favicon": "https://imgs.search.brave.com/4R4hFITz_F_be0roUiWbTZKhsywr3fnLTMTkFL5HFow/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTZhYmQ1N2Q4/NDg4ZDcyODIyMDZi/MzFmOWNhNjE3Y2E4/Y2YzMThjNjljNDIx/ZjllZmNhYTcwODhl/YTcwNDEzYy9tZWRp/dW0uY29tLw",
+          "path": "› @wael-saideni  › understanding-the-difference-between-context-caching-and-semantic-caching-a-step-toward-optimizing-1a2b44d25c12"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Gwr_xRgdt2js7arZXYp-vIF3ygmZAB1tNWiYwT_dgCA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/MSprcFNBajhEbDNW/Ymh4cC1Hei1sb09B/LnBuZw",
+          "original": "https://miro.medium.com/1*kpSAj8Dl3Vbhxp-Gz-loOA.png",
+          "logo": false
+        },
+        "age": "September 16, 2024",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Wael SAIDENI",
+              "url": "https://medium.com/@wael-saideni"
+            }
+          ],
+          "date": "Sep 13, 2024",
+          "publisher": {
+            "type": "organization",
+            "name": "Medium",
+            "url": "https://medium.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/HV5y8CR3FQdnFTuDVcr_qfl-FW_-wKwt6V6sALLLkXI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/djIvcmVzaXplOmZp/dDo1MDAvNyUyQVYx/XzdYUDRzbmxtcXJj/XzBOam9udHcucG5n",
+              "original": "https://miro.medium.com/v2/resize:fit:500/7%2AV1_7XP4snlmqrc_0Njontw.png"
+            }
+          },
+          "isAccessibleForFree": true
+        },
+        "extra_snippets": [
+          "Understanding the difference between context caching or prompt caching and semantic caching: A step toward optimizing RAG-based projects As generative AI models and large language models (LLMs) …",
+          "While both methods aim to minimize redundant processing and reduce computational load, they operate on different principles and excel in distinct scenarios. This blog post explores the differences between these two caching strategies and highlights their respective advantages in optimizing LLM workflows. ... Context caching (also known as prompt caching) focuses on optimizing the processing of large context windows within generative models.",
+          "However, it shines in scenarios where the model needs to maintain and reuse a large context, which makes it suitable for tasks like document summarization, in-context learning, or working with large system prompts. ... Semantic caching is a more advanced form of caching that stores the meaning of a query or request rather than just its physical characteristics (i.e., raw data). In this approach, the cache stores previous queries and their results based on the semantic content, allowing the system to recognize when two queries are essentially the same, even if the input differs slightly.",
+          "While context caching is most useful in scenarios where large datasets need to be reused across multiple requests, semantic caching shines when dealing with queries that have similar meanings but come in different forms. Understanding the differences between these two approaches allows developers and businesses to choose the most effective strategy to meet their specific needs, ensuring smoother, faster, and more cost-effective AI-driven processes."
+        ]
+      },
+      {
+        "title": "Prompt Caching Explained | DigitalOcean",
+        "url": "https://www.digitalocean.com/community/tutorials/prompt-caching-explained",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Similarly, on Vertex AI, there is implicit and explicit caching. Requests must be of a certain minimum size (documented, e.g., 2,048 tokens), and implicit cached tokens may be eligible for large discounts, whereas explicit caching introduces storage costs. The golden rule of prompt caching: ...",
+        "page_age": "2025-12-26T07:42:18",
+        "profile": {
+          "name": "DigitalOcean",
+          "url": "https://www.digitalocean.com/community/tutorials/prompt-caching-explained",
+          "long_name": "digitalocean.com",
+          "img": "https://imgs.search.brave.com/dE_vtEMxYDH3wV2HlQrtQ19g7v45wr72E9Du2m_lOYo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjZmYTIzYTI3/ZTk2NjRhZjUyZTE4/YmU5OTg0ZGM2YzQ1/YjNmZGQ0YzBlNjAz/NmQ4MTFhODFkYjRj/YTRmZDA0MC93d3cu/ZGlnaXRhbG9jZWFu/LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "digitalocean.com",
+          "hostname": "www.digitalocean.com",
+          "favicon": "https://imgs.search.brave.com/dE_vtEMxYDH3wV2HlQrtQ19g7v45wr72E9Du2m_lOYo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjZmYTIzYTI3/ZTk2NjRhZjUyZTE4/YmU5OTg0ZGM2YzQ1/YjNmZGQ0YzBlNjAz/NmQ4MTFhODFkYjRj/YTRmZDA0MC93d3cu/ZGlnaXRhbG9jZWFu/LmNvbS8",
+          "path": "› community  › tutorials  › prompt-caching-explained"
+        },
+        "age": "December 26, 2025",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Adrien Payong"
+            }
+          ],
+          "date": "Dec 26, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "DigitalOcean",
+            "url": "https://www.digitalocean.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/kj606tbcYnoIcrPRFFo29UMyAcQWQGw4QTBHzrCgWdg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuZGlnaXRhbG9j/ZWFuLmNvbS9sb2dv/cy9ET19Mb2dvX2hv/cml6b250YWxfYmx1/ZS5wbmc",
+              "original": "https://assets.digitalocean.com/logos/DO_Logo_horizontal_blue.png"
+            }
+          },
+          "isAccessibleForFree": true
+        },
+        "extra_snippets": [
+          "Only a matching prefix can be cached; any part of the prompt that changes between requests must be excluded from the cached section. In practice, that means you should concatenate the prompt in a consistent order, for example: System instructions/role prompt: e.g., “You are an AI assistant tasked with …” – all the rules, guidelines, and persona descriptions that remain constant. Tool definitions or function schema (if using an agent): JSON or XML definitions of tools and their settings, or function signatures, which are reused each time.",
+          "Similarly, on Vertex AI, there is implicit and explicit caching. Requests must be of a certain minimum size (documented, e.g., 2,048 tokens), and implicit cached tokens may be eligible for large discounts, whereas explicit caching introduces storage costs. The golden rule of prompt caching: “Static-first, dynamic-last.” To maximize cache hits, structure your prompts so that the prefix (start of the prompt) contains the static and reusable parts, and the suffix (the end of the prompt) contains all the request-specific or user-provided content.",
+          "(For OpenAI, this is automatic; for Claude, you’d include a cache_control block at this point; for Google’s explicit caching, this is where you’d have uploaded and referenced the cached content.) User query or dynamic input (last): The final part of the prompt is the portion that changes each request, e.g., the latest user question or any new data. This is what comes after the cached prefix. It will not be cached (and doesn’t need to be), since it’s different every time.",
+          "Join the many businesses that use the DigitalOcean AI Platform to accelerate growth. Reach out to our team for assistance with GPU Droplets, 1-click LLM models, AI agents, and bare metal GPUs."
+        ]
+      },
+      {
+        "title": "Prompt Caching Explained: What It Is, What It Isn’t, and When to Use It",
+        "url": "https://medium.com/@michael.hannecke/prompt-caching-explained-what-it-is-what-it-isnt-and-when-to-use-it-9f5c6fce7bdb",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "The agent’s reasoning changes. The scaffolding does not. Caching the stable parts cuts per-step costs dramatically. Batch processing. Same instructions, varying inputs. Think: “Classify these 10,000 support tickets.” The classification prompt is identical. Only the ticket content changes.",
+        "page_age": "2026-02-11T09:16:06",
+        "profile": {
+          "name": "Medium",
+          "url": "https://medium.com/@michael.hannecke/prompt-caching-explained-what-it-is-what-it-isnt-and-when-to-use-it-9f5c6fce7bdb",
+          "long_name": "medium.com",
+          "img": "https://imgs.search.brave.com/4R4hFITz_F_be0roUiWbTZKhsywr3fnLTMTkFL5HFow/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTZhYmQ1N2Q4/NDg4ZDcyODIyMDZi/MzFmOWNhNjE3Y2E4/Y2YzMThjNjljNDIx/ZjllZmNhYTcwODhl/YTcwNDEzYy9tZWRp/dW0uY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medium.com",
+          "hostname": "medium.com",
+          "favicon": "https://imgs.search.brave.com/4R4hFITz_F_be0roUiWbTZKhsywr3fnLTMTkFL5HFow/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTZhYmQ1N2Q4/NDg4ZDcyODIyMDZi/MzFmOWNhNjE3Y2E4/Y2YzMThjNjljNDIx/ZjllZmNhYTcwODhl/YTcwNDEzYy9tZWRp/dW0uY29tLw",
+          "path": "› @michael.hannecke  › prompt-caching-explained-what-it-is-what-it-isnt-and-when-to-use-it-9f5c6fce7bdb"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/cy1OoCM88wl7RyQb40Xq_5nHahyqJmH9G65lQoUxGIY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/MSpfa2RFZVZLZkJi/MzBkVGhsVDRfaGVB/LmpwZWc",
+          "original": "https://miro.medium.com/1*_kdEeVKfBb30dThlT4_heA.jpeg",
+          "logo": false
+        },
+        "age": "February 11, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Michael Hannecke",
+              "url": "https://medium.com/@michael.hannecke"
+            }
+          ],
+          "date": "Feb 10, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Medium",
+            "url": "https://medium.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/HV5y8CR3FQdnFTuDVcr_qfl-FW_-wKwt6V6sALLLkXI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/djIvcmVzaXplOmZp/dDo1MDAvNyUyQVYx/XzdYUDRzbmxtcXJj/XzBOam9udHcucG5n",
+              "original": "https://miro.medium.com/v2/resize:fit:500/7%2AV1_7XP4snlmqrc_0Njontw.png"
+            }
+          },
+          "isAccessibleForFree": true
+        },
+        "extra_snippets": [
+          "The highest-ROI optimization most LLM teams still overlook",
+          "Prompt Caching: 10x Cheaper LLM Tokens, But How? (ngrok Blog, Dec 2025) ... This article reflects my professional perspective. AI assistance was used in drafting; insights and final curation are entirely my own. Sovereign AI Strategist @ bluetuple.ai | Exploring autonomous AI systems, agentic architectures, and secure AI independence.",
+          "The agent’s reasoning changes. The scaffolding does not. Caching the stable parts cuts per-step costs dramatically. Batch processing. Same instructions, varying inputs. Think: “Classify these 10,000 support tickets.” The classification prompt is identical. Only the ticket content changes.",
+          "Your system prompt and conversation history grow with every turn. Caching ensures the model only processes the latest message from scratch. Everything before it rides the cache. Document Q&A and RAG. You inject the same reference documents into every request. Different users ask different questions about the same corpus. The documents get cached. Only the questions get recomputed. Agentic workflows."
+        ]
+      },
+      {
+        "title": "Amazon Bedrock Prompt Caching: Saving Time and Money in LLM Applications | Caylent",
+        "url": "https://caylent.com/blog/prompt-caching-saving-time-and-money-in-llm-applications",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Decreased latency: By avoiding redundant processing of identical prompt segments, response times can improve dramatically. Amazon Bedrock reports up to 85% faster responses for cached content on supported models. For interactive applications like chatbots, this can mean the difference between a fluid conversation and a frustratingly laggy experience. And if you&#x27;re building agentic applications where the model might make multiple API calls in sequence, that latency reduction compounds with each step.",
+        "profile": {
+          "name": "Caylent",
+          "url": "https://caylent.com/blog/prompt-caching-saving-time-and-money-in-llm-applications",
+          "long_name": "caylent.com",
+          "img": "https://imgs.search.brave.com/l7b-28rU0PVQIHq6WLZyA0Mn7xSJbIfVYfe6RwvEC4A/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTM0NWQ3MTVh/ZmZlZThlY2FkNDA4/MDdhMzY2MDE5NmFh/NjBlYmExZjU5ZDEx/YTljYjE1NzY2Y2Iz/ZTAwYjhiZi9jYXls/ZW50LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "caylent.com",
+          "hostname": "caylent.com",
+          "favicon": "https://imgs.search.brave.com/l7b-28rU0PVQIHq6WLZyA0Mn7xSJbIfVYfe6RwvEC4A/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTM0NWQ3MTVh/ZmZlZThlY2FkNDA4/MDdhMzY2MDE5NmFh/NjBlYmExZjU5ZDEx/YTljYjE1NzY2Y2Iz/ZTAwYjhiZi9jYXls/ZW50LmNvbS8",
+          "path": "› blog  › prompt-caching-saving-time-and-money-in-llm-applications"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/lXjSg6PKIzpj6a9j74uyJayyt8VuJuYXQ60KYDKFddA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/YnVpbGRlci5pby9h/cGkvdjEvaW1hZ2Uv/YXNzZXRzJTJGNzhk/ZmI2YWVlOWZkNGFh/NGJlNDQ3YmI1Y2Nl/YTEzZTMlMkZhZGFl/NmEzMTBlMGM0OGY4/YjIzNzMxOGNlNWVl/NTNmMj9mb3JtYXQ9/d2VicA",
+          "original": "https://cdn.builder.io/api/v1/image/assets%2F78dfb6aee9fd4aa4be447bb5ccea13e3%2Fadae6a310e0c48f8b237318ce5ee53f2?format=webp",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Decreased latency: By avoiding redundant processing of identical prompt segments, response times can improve dramatically. Amazon Bedrock reports up to 85% faster responses for cached content on supported models. For interactive applications like chatbots, this can mean the difference between a fluid conversation and a frustratingly laggy experience. And if you're building agentic applications where the model might make multiple API calls in sequence, that latency reduction compounds with each step.",
+          "Caylent Launches Dedicated Anthropic Practice to Lead Enterprise AI Transformation ... Explore how to use prompt caching on Large Language Models (LLMs) such as Amazon Bedrock and Anthropic Claude to reduce costs and improve latency.",
+          "Bedrock Agents: If you're using Amazon Bedrock Agents for higher-level task orchestration, you can simply turn on prompt caching when creating or updating an agent. The agent will then automatically handle caching behavior without additional coding. With Claude models you can use simplified cache management, where you simply place one checkpoint at the end of static content, and Bedrock automatically checks for cache hits at previous content-block boundaries.",
+          "Prompt caching provides substantial benefits for applications requiring consistent, repeated context across multiple interactions. This include: Conversational agents: where system instructions or user-specific context can be reused across turns to maintain flow and reduce cost. Coding assistants and large document processing systems: allowing models to efficiently query and analyze extensive information without re-reading the full content for each interaction."
+        ]
+      },
+      {
+        "title": "What Is Prompt Caching? LLM Speed & Cost Guide",
+        "url": "https://redis.io/blog/what-is-prompt-caching/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "That makes semantic caching generally more cost-effective for workloads where users ask similar questions in different ways, while prompt caching helps more with genuinely novel queries that share a long prefix.",
+        "page_age": "2026-03-11T21:29:28",
+        "profile": {
+          "name": "Redis",
+          "url": "https://redis.io/blog/what-is-prompt-caching/",
+          "long_name": "redis.io",
+          "img": "https://imgs.search.brave.com/0XydAktjaqN0nORmaggM2VJsY1Tx1nJiVNuih_WpnBU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzAzNjQzNTY5/NTYzYTQyYzdmZmRl/ZTNiMzMwYWZhZTgw/MzQwN2JkMDg5NDcy/N2E3NzBkNDUxODIx/MWM3YWU5Mi9yZWRp/cy5pby8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "redis.io",
+          "hostname": "redis.io",
+          "favicon": "https://imgs.search.brave.com/0XydAktjaqN0nORmaggM2VJsY1Tx1nJiVNuih_WpnBU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzAzNjQzNTY5/NTYzYTQyYzdmZmRl/ZTNiMzMwYWZhZTgw/MzQwN2JkMDg5NDcy/N2E3NzBkNDUxODIx/MWM3YWU5Mi9yZWRp/cy5pby8",
+          "path": "  › home  › what is prompt caching? llm speed & cost guide"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/9ImB4VYVYayxk-xozEYON5Q74ZL9Sqg2d0-AwQNoOLQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9yZWRp/cy5pby9vcGVuLWdy/YXBoLnBuZw",
+          "original": "https://redis.io/open-graph.png",
+          "logo": false
+        },
+        "age": "March 11, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Redis",
+              "url": "https://redis.io/"
+            }
+          ],
+          "date": "Mar 11, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Redis",
+            "url": "https://redis.io/",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/qARQfgLfK7lsL4hP1qC6iEXhFSNYxpbaztlm_VtRpao/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9yZWRp/cy5pby9zY2hlbWEt/aWNvbi5wbmc",
+              "original": "https://redis.io/schema-icon.png"
+            }
+          }
+        },
+        "organization": {
+          "type": "organization",
+          "name": "Redis",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "That makes semantic caching generally more cost-effective for workloads where users ask similar questions in different ways, while prompt caching helps more with genuinely novel queries that share a long prefix. Redis supports both exact-match and semantic caching with vector search, so you can run all three layers from a single platform. Because prompt caching relies on prefix matching, it works best when you structure prompts with stable content first and variable content last.",
+          "This is especially valuable in long conversations, where session costs can vary widely depending on cache hit rate and token usage. In long-horizon agentic systems, the system prompt is typically where teams see the most consistent caching benefits because it's both large and stable.",
+          "Optional parameters like prompt_cache_retention (for extended 24-hour caching) and prompt_cache_key (for routing control) are available for optimization. Google supports context caching through both the Gemini Developer API (Google AI Studio) and Vertex AI, with implicit caching enabled by default on Gemini 2.5 models.",
+          "This guide covers how prompt caching works at the model layer, how it differs from regular and semantic caching, where each approach fits in your architecture, and how to combine them with Redis for maximum cost and latency reduction."
+        ]
+      },
+      {
+        "title": "r/AI_Agents on Reddit: Why Aren't We Talking About Caching \"System Prompts\" in LLM Workflows?",
+        "url": "https://www.reddit.com/r/AI_Agents/comments/1jsem9f/why_arent_we_talking_about_caching_system_prompts/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Anthropic&#x27;s prompt caching has a lifetime of 5-minutes. OpenAI docs don&#x27;t state the exact time, but it&#x27;s in the same ballpark as Anthropic (less during peak hours). ... The cache has a minimum lifetime (TTL) of 5 minutes.",
+        "page_age": "2025-04-05T21:55:08",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/AI_Agents/comments/1jsem9f/why_arent_we_talking_about_caching_system_prompts/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/ai_agents  › why aren't we talking about caching \"system prompts\" in llm workflows?"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/eMcP8BDMJkwOesmHjHs5e67ZWtFUwqHmZOZGbroL7HU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zaGFy/ZS5yZWRkLml0L3By/ZXZpZXcvcG9zdC8x/anNlbTlm",
+          "original": "https://share.redd.it/preview/post/1jsem9f",
+          "logo": false
+        },
+        "age": "April 5, 2025",
+        "qa": {
+          "question": "<p dir=\"auto\">\n      There&#39;s this recurring and evident efficiency issue with simple AI workflows that I can’t find a clean solution for.\n    </p><p dir=\"auto\">\n      Tbh I can&#39;t understand why there aren&#39;t more discussions about it, and why it hasn&#39;t already been solved. I&#39;m really hoping someone here has tackled this.\n    </p><h3 class=\"text-16-scalable xs:text-18-scalable\" dir=\"auto\">The Problem:</h3><p dir=\"auto\">\n      When triggering a simple LLM agent, we usually send a long, static system message with every call. It includes formatting rules, product descriptions, few-shot examples, etc. This payload doesn&#39;t change between sessions or users, and it&#39;s resent to the LLM every time a new user triggers the workflow.\n    </p><p dir=\"auto\">\n      For CAG workflows, it&#39;s even worse. Those   &quot;system prompts&quot; can get really hefty.\n    </p><p dir=\"auto\">\n      Is there any way — at the LLM or framework level — to cache or persist the system prompt so that only the user input needs to be sent per interaction?\n    </p><p dir=\"auto\">\n      I know LLM APIs are stateless by default, but I&#39;m wondering if:\n    </p><ul>\n        <li>\n      <p dir=\"auto\">\n      There’s a known workaround to persist a static prompt context\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Anyone’s simulated this using memory modules, prompt compression, or prompt-chaining strategies, etc.\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Are there any patterns that approximate “prompt caching” even if not natively supported\n    </p>\n    </li>\n      </ul><p dir=\"auto\">\n      Unfortunately, fine-tuning isn&#39;t a viable solutions when it comes to these simple workflows.\n    </p><p dir=\"auto\">\n      Appreciate any insight. I’m  really interested in your opinion about this, and whether you&#39;ve found a way to fix this redundancy issue and optimize speed, even if it&#39;s a bit hacky.\n    </p>",
+          "answer": {
+            "text": "<span>because this is not going to be resolved by any framework. it needs to happen at the vendor level/ before the api call, which is already whats happening - openai and anthropic already implemented ‘prompt caching’ where the ‘system prompts’ are kv cached to improve token cost, latency for repeated api call with the same prompts (usually the system / developer prompt)</span>\n",
+            "upvoteCount": 6
+          }
+        },
+        "extra_snippets": [
+          "When triggering a simple LLM agent, we usually send a long, static system message with every call. It includes formatting rules, product descriptions, few-shot examples, etc. This payload doesn't change between sessions or users, and it's resent to the LLM every time a new user triggers the workflow. For CAG workflows, it's even worse. Those \"system prompts\" can get really hefty. Is there any way — at the LLM or framework level — to cache or persist the system prompt so that only the user input needs to be sent per interaction?",
+          "However, what you should do is to cache \"at source\" - what I mean by that is that you should be managing state within your application and adjust the system prompts to match the relevant situation (e.g. don't send out ABCD if only A and B applies at any particular point). Agents SDK supports this natively (but pretty much any decent framework does too) - https://openai.github.io/openai-agents-python/agents/#dynamic-instructions",
+          "Longer caching time = lesser profit for llm providers. Therefore, probably not a priority for them. ... by assigning a primary directive to an agent we set them up with what they need to do and then this primary directive is inserted into a system prompt so you as a user only have to worry about handling the user side prompt as this system prompt is automatically inserted into the messages array if there is no attached system prompt",
+          "Anthropic's prompt caching has a lifetime of 5-minutes. OpenAI docs don't state the exact time, but it's in the same ballpark as Anthropic (less during peak hours). ... The cache has a minimum lifetime (TTL) of 5 minutes. This lifetime is refreshed each time the cached content is used."
+        ]
+      },
+      {
+        "title": "Prompt Caching | Reduce AI Model Costs with OpenRouter | OpenRouter | Documentation",
+        "url": "https://openrouter.ai/docs/guides/best-practices/prompt-caching",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Prompt caching with Moonshot AI is automated and does not require any additional configuration. ... Prompt caching with Groq is automated and does not require any additional configuration.",
+        "profile": {
+          "name": "OpenRouter",
+          "url": "https://openrouter.ai/docs/guides/best-practices/prompt-caching",
+          "long_name": "openrouter.ai",
+          "img": "https://imgs.search.brave.com/UdH8t5Av54Kgd9uNK_gmXOQnRysyI2CMutdaZLsbxY8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWZmOWFlZDRm/MzM3NTc0NWVjMzhl/OTdlNDRlMGI4ODdk/Mjk0YWU2YmZkYTFi/Nzg3Mzg5OWVlYTg5/Yjc0YjljYS9vcGVu/cm91dGVyLmFpLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "openrouter.ai",
+          "hostname": "openrouter.ai",
+          "favicon": "https://imgs.search.brave.com/UdH8t5Av54Kgd9uNK_gmXOQnRysyI2CMutdaZLsbxY8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWZmOWFlZDRm/MzM3NTc0NWVjMzhl/OTdlNDRlMGI4ODdk/Mjk0YWU2YmZkYTFi/Nzg3Mzg5OWVlYTg5/Yjc0YjljYS9vcGVu/cm91dGVyLmFpLw",
+          "path": "› docs  › guides  › best-practices  › prompt-caching"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/F2Qb9MWGPjOq2d9W2nGGGAp0mYpEvOuPqLq1-isfIj4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/cm91dGVyLmFpL2R5/bmFtaWMtb2c_dGl0/bGU9UHJvbXB0JTIw/Q2FjaGluZyZhbXA7/ZGVzY3JpcHRpb249/T3B0aW1pemUlMjBB/SSUyMG1vZGVsJTIw/Y29zdHMlMjB3aXRo/JTIwT3BlblJvdXRl/cg",
+          "original": "https://openrouter.ai/dynamic-og?title=Prompt%20Caching&amp;description=Optimize%20AI%20model%20costs%20with%20OpenRouter",
+          "logo": false
+        },
+        "extra_snippets": [
+          "For AI agents: a documentation index is available at the root level at /llms.txt and /llms-full.txt. Append /llms.txt to any URL for a page-level index, or .md for the markdown version of any page. ... To save on inference costs, you can enable prompt caching on supported providers and models.",
+          "Prompt caching with Moonshot AI is automated and does not require any additional configuration. ... Prompt caching with Groq is automated and does not require any additional configuration. Currently available on Kimi K2 models. Click here to view Groq’s documentation. ... Alibaba prompt caching requires explicit cache breakpoints. Add cache_control: { \"type\": \"ephemeral\" } to content blocks you want to cache, using the same syntax as Anthropic explicit caching.",
+          "The 1-hour TTL for explicit cache breakpoints is supported across all Claude model providers (Anthropic, Amazon Bedrock, and Google Vertex AI). With automatic caching, add cache_control at the top level of the request. The system automatically caches all content up to the last cacheable block: As the conversation grows, the cache breakpoint automatically advances to cover the growing message history. ... Prompt caching with DeepSeek is automated and does not require any additional configuration.",
+          "This means different conversations naturally stick to different providers, improving load-balancing and throughput while keeping caches warm within each conversation. For more explicit control over sticky routing, you can pass a session_id in your request. When a session_id is present, OpenRouter uses it directly as the sticky routing key instead of deriving one from message hashing. This is especially useful for multi-turn agentic workflows where the opening messages may change between requests but you still want to route to the same provider."
+        ]
+      },
+      {
+        "title": "Prompt caching for lower AI cost and latency",
+        "url": "https://www.parloa.com/knowledge-hub/prompt-caching/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Contact center AI agents are a strong fit for prompt caching because most interactions reuse the same prompt structure. Effective caching depends on placing static content at the beginning of the prompt and dynamic content at the end.",
+        "page_age": "2026-04-06T00:00:00",
+        "profile": {
+          "name": "Parloa",
+          "url": "https://www.parloa.com/knowledge-hub/prompt-caching/",
+          "long_name": "parloa.com",
+          "img": "https://imgs.search.brave.com/NA8uH9z66OPA2ge6J_bp7rxrVPXqdVRjEleelTIzZ0s/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWY0Mjk0YTE4/N2RlNzRjZTU2ZjJh/NzI0YTk1MTdjNWM2/ZWJiZDQ3MWQ3MmIz/Mzc4NDBkNjFmM2Fi/Yjk0YWI1Mi93d3cu/cGFybG9hLmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "parloa.com",
+          "hostname": "www.parloa.com",
+          "favicon": "https://imgs.search.brave.com/NA8uH9z66OPA2ge6J_bp7rxrVPXqdVRjEleelTIzZ0s/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWY0Mjk0YTE4/N2RlNzRjZTU2ZjJh/NzI0YTk1MTdjNWM2/ZWJiZDQ3MWQ3MmIz/Mzc4NDBkNjFmM2Fi/Yjk0YWI1Mi93d3cu/cGFybG9hLmNvbS8",
+          "path": "› knowledge-hub  › prompt-caching"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/HzZFaGCnH8h4q91SjFR6DoDDyrauK8-Tm_7OBHOnOq0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hLnN0/b3J5Ymxvay5jb20v/Zi8zMzAzMDMvMzA3/MngyMDQ4LzIxODhl/ZDM5MDcvcHIucG5n",
+          "original": "https://a.storyblok.com/f/330303/3072x2048/2188ed3907/pr.png",
+          "logo": false
+        },
+        "age": "April 6, 2026",
+        "extra_snippets": [
+          "Prompt caching is not a one-time optimization; it must be governed across the entire AI agent lifecycle. Cache hit rates depend on prompt structure remaining stable over time, which means every change to system prompts, tool definitions, compliance rules, or knowledge base content has the potential to silently break caching and inflate costs.",
+          "Learn how prompt caching reduces AI inference cost and latency for enterprise contact centers handling millions of interactions.",
+          "The following table breaks down a typical contact center prompt into its cached and non-cached zones, showing where each content type falls and how caching applies: ... prompt engineering frameworks, where disciplined prompt architecture supports both agent quality and infrastructure efficiency.",
+          "Multi-language deployments add another layer of caching complexity. ... Berlin-Brandenburg Airport's AI agent handles passenger inquiries around the clock in German, English, Polish, and Spanish. Each language requires its own system prompt, brand guidelines, and compliance rules, creating separate cache prefixes per language."
+        ]
+      },
+      {
+        "title": "Prompt Caching",
+        "url": "https://humanloop.com/blog/prompt-caching",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "This guide will help you understand how prompt caching works, the difference between prompt caching using OpenAI and Anthropic, its benefits and challenges, and how it can be applied in AI applications. Model prompts often contain repetitive content, like system prompts and common instructions.",
+        "page_age": "2024-10-02T00:00:00",
+        "profile": {
+          "name": "Humanloop",
+          "url": "https://humanloop.com/blog/prompt-caching",
+          "long_name": "humanloop.com",
+          "img": "https://imgs.search.brave.com/FJlTgY0EO5x3w6K6FxFvO7ckF8WnGEMcZwB7NfoWMEg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjgwNGY5MjVi/Yjc5NWNmMjg4NTk3/NTEyMGU4NzBhYTJh/YTJmN2M0YjA3Mjg2/MTk4ODAyYjNiN2M2/NWUyNGY2YS9odW1h/bmxvb3AuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "humanloop.com",
+          "hostname": "humanloop.com",
+          "favicon": "https://imgs.search.brave.com/FJlTgY0EO5x3w6K6FxFvO7ckF8WnGEMcZwB7NfoWMEg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjgwNGY5MjVi/Yjc5NWNmMjg4NTk3/NTEyMGU4NzBhYTJh/YTJmN2M0YjA3Mjg2/MTk4ODAyYjNiN2M2/NWUyNGY2YS9odW1h/bmxvb3AuY29tLw",
+          "path": "› blog  › prompt-caching"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/WA61_WuBF1a4TdaWAJeCGLZVnlksQOxVWhlbV61EGgg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9odW1h/bmxvb3AuY29tL2Js/b2cvcHJvbXB0LWNh/Y2hpbmcvcHJvbXB0/LWNhY2hpbmcucG5n",
+          "original": "https://humanloop.com/blog/prompt-caching/prompt-caching.png",
+          "logo": false
+        },
+        "age": "October 2, 2024",
+        "extra_snippets": [
+          "This guide will help you understand how prompt caching works, the difference between prompt caching using OpenAI and Anthropic, its benefits and challenges, and how it can be applied in AI applications. Model prompts often contain repetitive content, like system prompts and common instructions.",
+          "Cache stable, reusable content like system instructions, background information, large contexts, or frequent tool definitions. Aim to place cotent you wish to cache towards the top of your prompt to maximize cache hits. Use cache breakpoints strategically to separate different cacheable prefix sections.",
+          "How often do you send a query to an AI agent or chatbot and find that the response time is too slow? Or find that there’s a trade-off between the speed and accuracy of responses? This has long been an issue for large language model (LLM) applications - as models get larger, they require more compute to generate completions, resulting in longer response times and higher costs. Prompt caching can solve this by intelligently storing and reusing previous responses to identical prompts, allowing AI engineers to dramatically reduce the processing required for repetitive tasks and resulting in faster, more efficient AI applications.",
+          "Below are three key examples of where prompt caching can be in useful in real-world AI applications: Conversational agents, such as customer service bots, often manage a high volume of similar inquiries. These agents can struggle with maintaining quick response times under heavy load, particularly when dealing with repeated questions."
+        ]
+      },
+      {
+        "title": "Prompt Caching 201",
+        "url": "https://developers.openai.com/cookbook/examples/prompt_caching_201",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "In that regard, context engineering and prompt caching are inherently at odds - one prioritizes dynamism, the other stability. With the rise of longer running agents and native compaction tools, it’s important to keep caching in mind when architecting to ensure the right balance of cost versus intelligence savings.",
+        "page_age": "2026-02-18T00:00:00",
+        "profile": {
+          "name": "Openai",
+          "url": "https://developers.openai.com/cookbook/examples/prompt_caching_201",
+          "long_name": "developers.openai.com",
+          "img": "https://imgs.search.brave.com/wwjL7FxKsYg9swL43bg5iIhK0Y9raP8LOGycO2vU7Z0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTZhZDMxYzM0/MTU5ZDBmMDkyNGQ2/ZGIwYWQyNDBkMDBh/YmJkNzkzZTYzODI0/ZDQxZGRmYTVhNjAx/MDRkMDZlNi9kZXZl/bG9wZXJzLm9wZW5h/aS5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "developers.openai.com",
+          "hostname": "developers.openai.com",
+          "favicon": "https://imgs.search.brave.com/wwjL7FxKsYg9swL43bg5iIhK0Y9raP8LOGycO2vU7Z0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTZhZDMxYzM0/MTU5ZDBmMDkyNGQ2/ZGIwYWQyNDBkMDBh/YmJkNzkzZTYzODI0/ZDQxZGRmYTVhNjAx/MDRkMDZlNi9kZXZl/bG9wZXJzLm9wZW5h/aS5jb20v",
+          "path": "› cookbook  › examples  › prompt_caching_201"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/3m_dQk3CGLnIhB25HtgGr5OTSH9Q2rztWX-iT7ABj9s/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kZXZl/bG9wZXJzLm9wZW5h/aS5jb20vb3Blbi1n/cmFwaC5wbmc",
+          "original": "https://developers.openai.com/open-graph.png",
+          "logo": false
+        },
+        "age": "February 18, 2026",
+        "extra_snippets": [
+          "A practical guide to prompt caching: fundamentals, performance impact, measurement, and optimization strategies. Model prompts often include repeated content - such as system instructions, tools, and messages.",
+          "This is the lowest-effort, highest-impact optimization: keep the early portion of the prompt stable. Place durable content at the beginning: ... Move volatile content (e.g., user input, dynamic values, session-specific data) to the end. Even small changes in early tokens will invalidate exact prefix matching and prevent cache hits. Learnings from Codex When our engineering team outlined how they architected the Codex agent loop, they emphasized prompt structure as a first-class performance surface and caching as a top priority.",
+          "The agent loop appends new messages (rather than modifying earlier ones) when runtime configurations change mid-conversation (e.g. new working directory or approval mode). By avoiding changes to the original prefix, the system preserves exact-prefix matches, which are required for prompt cache hits.",
+          "In that regard, context engineering and prompt caching are inherently at odds - one prioritizes dynamism, the other stability. With the rise of longer running agents and native compaction tools, it’s important to keep caching in mind when architecting to ensure the right balance of cost versus intelligence savings."
+        ]
+      },
+      {
+        "title": "Prompt Caching Explained Like You're Talking to a Smart Human (Not an AI Researcher) - DEV Community",
+        "url": "https://dev.to/anandindia93/prompt-caching-explained-like-youre-talking-to-a-smart-human-not-an-ai-researcher-26gf",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "As an SRE, imagine building an AI incident assistant. ... - Kubernetes topology - Loki queries - Grafana dashboards - Service dependencies - Runbooks - Deployment metadata ... People confuse these two constantly. ... They are completely different systems. ... Prompt caching becomes exponentially valuable as context windows grow.",
+        "page_age": "2026-05-20T22:10:03",
+        "profile": {
+          "name": "DEV Community",
+          "url": "https://dev.to/anandindia93/prompt-caching-explained-like-youre-talking-to-a-smart-human-not-an-ai-researcher-26gf",
+          "long_name": "dev.to",
+          "img": "https://imgs.search.brave.com/UUpF8I85K--vkQzrhameM7iRPRU5VCTXyWbS4sk6G2g/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTg5MTcxNDBh/N2U4ODc4MDg0NWQ4/MzU0YWJkNDY3ZWRm/MjUxY2U1YjY5MzJm/YWRlOTI4YjAyZDI1/ZjU0MmJjNi9kZXYu/dG8v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "dev.to",
+          "hostname": "dev.to",
+          "favicon": "https://imgs.search.brave.com/UUpF8I85K--vkQzrhameM7iRPRU5VCTXyWbS4sk6G2g/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTg5MTcxNDBh/N2U4ODc4MDg0NWQ4/MzU0YWJkNDY3ZWRm/MjUxY2U1YjY5MzJm/YWRlOTI4YjAyZDI1/ZjU0MmJjNi9kZXYu/dG8v",
+          "path": "› anandindia93  › prompt-caching-explained-like-youre-talking-to-a-smart-human-not-an-ai-researcher-26gf"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/vrMHY0yQWmKAWJU7D0w1_C1nMJJhRcADMJ7xVLPHH5I/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YTIuZGV2LnRvL2R5/bmFtaWMvaW1hZ2Uv/d2lkdGg9MTA4MCxo/ZWlnaHQ9MTA4MCxm/aXQ9Y292ZXIsZ3Jh/dml0eT1hdXRvLGZv/cm1hdD1hdXRvL2h0/dHBzJTNBJTJGJTJG/ZGV2LXRvLXVwbG9h/ZHMuczMuYW1hem9u/YXdzLmNvbSUyRnVw/bG9hZHMlMkZhcnRp/Y2xlcyUyRmJqN3Vt/NnY5dml5Z2l2a3Bi/anp6LnBuZw",
+          "original": "https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbj7um6v9viygivkpbjzz.png",
+          "logo": false
+        },
+        "age": "1 week ago",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Anand Kannan",
+              "url": "https://dev.to/anandindia93"
+            }
+          ],
+          "date": "May 20, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "DEV Community",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/G0tiJm-WvQZs-ogiTsZl65hSL9gaBnaPKXQHCudMtfA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YTIuZGV2LnRvL2R5/bmFtaWMvaW1hZ2Uv/d2lkdGg9MTkyLGhl/aWdodD0sZml0PXNj/YWxlLWRvd24sZ3Jh/dml0eT1hdXRvLGZv/cm1hdD1hdXRvL2h0/dHBzJTNBJTJGJTJG/ZGV2LXRvLXVwbG9h/ZHMuczMuYW1hem9u/YXdzLmNvbSUyRnVw/bG9hZHMlMkZhcnRp/Y2xlcyUyRjhqN2t2/cDY2MHJxenQ5OXp1/aThlLnBuZw",
+              "original": "https://media2.dev.to/dynamic/image/width=192,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "If you've started using AI APIs for coding assistants, chatbots, agents, RAG systems, or internal... Tagged with ai, llm, performance, tutorial.",
+          "As an SRE, imagine building an AI incident assistant. ... - Kubernetes topology - Loki queries - Grafana dashboards - Service dependencies - Runbooks - Deployment metadata ... People confuse these two constantly. ... They are completely different systems. ... Prompt caching becomes exponentially valuable as context windows grow.",
+          "That is essentially prompt caching. Suppose your AI coding assistant sends this every request:",
+          "Prompt caching sounds like a small optimization feature. It isn’t. It is one of the foundational techniques making modern AI systems: ... Without it, many long-context AI applications would become economically impractical very quickly. ... The bigger your context becomes, the more prompt caching stops being “nice to have” and becomes essential infrastructure."
+        ]
+      },
+      {
+        "title": "Don’t Break the Cache: An Evaluation of Prompt Caching for Long-Horizon Agentic Tasks",
+        "url": "https://arxiv.org/html/2601.06007v1",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "A cache miss occurs when any token differs from the cached content, even at the very beginning (shown with an orange indicator), forcing complete recomputation of all tokens (shown in gray). Figure 4: Prompt caching requires exact prefix matches. Different shades represent message types in agentic conversations: brightest (system prompt), light gray (human messages), medium gray (AI ...",
+        "page_age": "2026-01-09T18:40:44",
+        "profile": {
+          "name": "arXiv",
+          "url": "https://arxiv.org/html/2601.06007v1",
+          "long_name": "arxiv.org",
+          "img": "https://imgs.search.brave.com/l36MWBCdhb-teoPlxGGMWEenj3njVas--CoLjN2ciHU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjcxZDU5ZmZl/ZmIwNzY4NTUyZDg1/ZTVjNGNhMzE2NjUz/MjljMzQwZTA0MThm/NTdjN2Q0N2I3NjFm/ZjIwZmU5MC9hcnhp/di5vcmcv"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "arxiv.org",
+          "hostname": "arxiv.org",
+          "favicon": "https://imgs.search.brave.com/l36MWBCdhb-teoPlxGGMWEenj3njVas--CoLjN2ciHU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjcxZDU5ZmZl/ZmIwNzY4NTUyZDg1/ZTVjNGNhMzE2NjUz/MjljMzQwZTA0MThm/NTdjN2Q0N2I3NjFm/ZjIwZmU5MC9hcnhp/di5vcmcv",
+          "path": "› html  › 2601.06007v1"
+        },
+        "age": "January 9, 2026",
+        "extra_snippets": [
+          "A cache miss occurs when any token differs from the cached content, even at the very beginning (shown with an orange indicator), forcing complete recomputation of all tokens (shown in gray). Figure 4: Prompt caching requires exact prefix matches. Different shades represent message types in agentic conversations: brightest (system prompt), light gray (human messages), medium gray (AI messages), darker gray (tool calls), and darkest (tool results).",
+          "The emerging pattern for agentic applications is to maintain a large, stable system prompt that benefits from caching, while treating tool calls and results as dynamic content that may be summarized, pruned, or otherwise managed throughout the session. Provider implementations of prompt caching differ in important ways that affect practical deployment.",
+          "Y. Cheng, K. Du, J. Yao, and J. Jiang (2024) Do large language models need a content delivery network?. arXiv preprint arXiv:2409.13761. Cited by: §5.3. Y. Cheng, Y. Liu, J. Yao, Y. An, X. Chen, S. Feng, Y. Huang, S. Shen, K. Du, and J. Jiang (2025) LMCache: an efficient kv cache layer for enterprise-scale llm inference. arXiv preprint arXiv:2510.09665. Cited by: §5.3. CrewAI (2023) CrewAI: framework for orchestrating collaborative, autonomous ai agents.",
+          "As agentic systems continue to trend toward longer-running sessions with dozens of tool calls, strategic prompt caching becomes critical for reducing operational costs and improving user experience, and our findings provide practitioners with guidance for implementing prompt caching in production agentic systems. Agno (2026) Agno: framework for building ai agents and agentic workflows."
+        ]
+      },
+      {
+        "title": "Prompt caching - Claude API Docs",
+        "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Developers often include an example or two in the prompt, but with prompt caching you can get even better performance by including 20+ diverse examples of high quality answers. Agentic tool use: Enhance performance for scenarios involving multiple ...",
+        "page_age": "2026-04-02T07:10:05",
+        "profile": {
+          "name": "Claude API Docs",
+          "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+          "long_name": "platform.claude.com",
+          "img": "https://imgs.search.brave.com/Lt7ZVSb5e0oWX_MwGoQKGWVu_O0n_Osvv1_EBX-bmqA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmU2YjhkYmQ2/YjA3YmEwNWZkYzNh/ZmZiODRmYTFmNTUx/Mzc0N2Y3ZDc1NzA0/ODUyZjMyNGM2NzIz/M2JmYzY1MS9wbGF0/Zm9ybS5jbGF1ZGUu/Y29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "platform.claude.com",
+          "hostname": "platform.claude.com",
+          "favicon": "https://imgs.search.brave.com/Lt7ZVSb5e0oWX_MwGoQKGWVu_O0n_Osvv1_EBX-bmqA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmU2YjhkYmQ2/YjA3YmEwNWZkYzNh/ZmZiODRmYTFmNTUx/Mzc0N2Y3ZDc1NzA0/ODUyZjMyNGM2NzIz/M2JmYzY1MS9wbGF0/Zm9ybS5jbGF1ZGUu/Y29tLw",
+          "path": "› docs  › en  › build-with-claude  › prompt-caching"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Ld-fAeYdTYrgEfYeI6J20uvnbFNu_z76dRnLCxDQtEc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9wbGF0/Zm9ybS5jbGF1ZGUu/Y29tL2RvY3Mvb2c_/bG9jYWxlPWVuJmFt/cDtwYXRoPWJ1aWxk/LXdpdGgtY2xhdWRl/L3Byb21wdC1jYWNo/aW5n",
+          "original": "https://platform.claude.com/docs/og?locale=en&amp;path=build-with-claude/prompt-caching",
+          "logo": false
+        },
+        "age": "April 2, 2026",
+        "extra_snippets": [
+          "Developers often include an example or two in the prompt, but with prompt caching you can get even better performance by including 20+ diverse examples of high quality answers. Agentic tool use: Enhance performance for scenarios involving multiple tool calls and iterative code changes, where each step typically requires a new API call. Talk to books, papers, documentation, podcast transcripts, and other longform content: Bring any knowledge base alive by embedding the entire document(s) into the prompt, and letting users ask it questions.",
+          "Use cache breakpoints strategically to separate different cacheable prefix sections. Place the breakpoint on the last block that stays identical across requests. For a prompt with a static prefix and a varying suffix (timestamps, per-request context, the incoming message), that is the end of the prefix, not the varying block. Regularly analyze cache hit rates and adjust your strategy as needed. Tailor your prompt caching strategy to your scenario: Conversational agents: Reduce cost and latency for extended conversations, especially those with long instructions or uploaded documents.",
+          "Adding more cache_control breakpoints doesn't increase your costs - you still pay the same amount based on what content is actually cached and read. The breakpoints simply give you control over what sections can be cached independently. On the Claude API, Claude Platform on AWS, Vertex AI, and Microsoft Foundry (beta), the minimum cacheable prompt length is:",
+          "As of February 5, 2026, prompt caching uses workspace-level isolation instead of organization-level isolation. Caches are isolated per workspace, ensuring data separation between workspaces within the same organization. This applies to the Claude API, Claude Platform on AWS, and Microsoft Foundry (beta); Bedrock and Vertex AI maintain organization-level cache isolation. If you use multiple workspaces, review your caching strategy to account for this difference."
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

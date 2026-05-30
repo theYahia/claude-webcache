@@ -2,27 +2,17 @@
 'use strict';
 process.removeAllListeners('warning');
 
-// PreToolUse hook: serve WebSearch from cache when a fresh entry exists (auto-read).
+// PreToolUse hook: serve WebSearch from qsearch's query cache when a fresh entry exists.
 // stdin = JSON { tool_name, tool_input: { query } }
-// On cache HIT  -> deny with the cached results inlined (within TTL — default 6h).
-// On cache MISS -> emit nothing (let WebSearch run; PostToolUse hook stores it).
+// On HIT  -> deny with the cached results inlined.
+// On MISS / qsearch down -> emit nothing (native WebSearch runs; PostToolUse stores it).
 // Disable without uninstalling: WEBCACHE_AUTOREAD=0.
 
-const fs = require('node:fs');
-const cache = require('../src/cache.js');
+const q = require('./qsearch-client.cjs');
 
-const QUIET = process.env.WEBCACHE_QUIET === '1';
 const DEBUG = process.env.WEBCACHE_DEBUG === '1';
 const AUTOREAD = process.env.WEBCACHE_AUTOREAD !== '0';
 const INLINE_MAX_BYTES = 512 * 1024;
-
-function logError(label, err) {
-  const msg = err && err.message ? err.message : String(err);
-  const line = `[${new Date().toISOString()}] [claude-webcache] websearch-precache ${label}: ${msg}\n`;
-  if (!QUIET) { try { process.stderr.write(line); } catch {} }
-  try { fs.appendFileSync(cache.HOOK_LOG_PATH, line); } catch {}
-  try { cache.recordHookError(`websearch-precache ${label}: ${msg}`); } catch {}
-}
 
 function logDebug(line) {
   if (!DEBUG) return;
@@ -41,7 +31,7 @@ function emitDeny(reason) {
 
 let raw = '';
 process.stdin.on('data', (d) => { raw += d; });
-process.stdin.on('end', () => {
+process.stdin.on('end', async () => {
   try {
     if (!AUTOREAD) return;
     const { tool_name, tool_input } = JSON.parse(raw || '{}');
@@ -50,7 +40,7 @@ process.stdin.on('end', () => {
     const query = (tool_input && tool_input.query) || '';
     if (!query) return;
 
-    const hit = cache.getSearch(query); // content on hit (within TTL), null on miss/expired
+    const hit = await q.searchLookup(query); // results text on hit, null on miss/down
     if (hit == null) {
       logDebug(`miss: ${query.slice(0, 80)}`);
       return;
@@ -70,6 +60,6 @@ process.stdin.on('end', () => {
     }
     logDebug(`hit served: ${query.slice(0, 80)}`);
   } catch (e) {
-    logError('hook error', e);
+    q.logError('websearch-precache hook error', e);
   }
 });

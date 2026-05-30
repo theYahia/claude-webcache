@@ -2,24 +2,15 @@
 'use strict';
 process.removeAllListeners('warning');
 
-// PostToolUse hook: auto-cache every WebSearch result into the 'websearch' namespace.
+// PostToolUse hook: store every native WebSearch result into qsearch's query cache.
 // stdin = JSON { tool_name, tool_input: { query }, tool_response: <results> }
-// WebSearch response shape isn't contractually fixed, so we extract defensively:
-// prefer joined text blocks, fall back to a JSON dump of the whole response.
+// Native WebSearch runs through Anthropic's server-side tool — qsearch never sees it,
+// so we capture the result here and POST it to /cache_store for next-time reuse.
+// WebSearch response shape isn't contractually fixed → extract defensively.
 
-const fs = require('node:fs');
-const cache = require('../src/cache.js');
+const q = require('./qsearch-client.cjs');
 
-const QUIET = process.env.WEBCACHE_QUIET === '1';
 const DEBUG = process.env.WEBCACHE_DEBUG === '1';
-
-function logError(label, err) {
-  const msg = err && err.message ? err.message : String(err);
-  const line = `[${new Date().toISOString()}] [claude-webcache] websearch ${label}: ${msg}\n`;
-  if (!QUIET) { try { process.stderr.write(line); } catch {} }
-  try { fs.appendFileSync(cache.HOOK_LOG_PATH, line); } catch {}
-  try { cache.recordHookError(`websearch ${label}: ${msg}`); } catch {}
-}
 
 function logDebug(line) {
   if (!DEBUG) return;
@@ -40,26 +31,22 @@ function extractOutput(resp) {
 
 let raw = '';
 process.stdin.on('data', (d) => { raw += d; });
-process.stdin.on('end', () => {
+process.stdin.on('end', async () => {
   try {
     const { tool_name, tool_input, tool_response } = JSON.parse(raw || '{}');
     if (tool_name !== 'WebSearch') return;
 
     const query = (tool_input && tool_input.query) || '';
     const output = extractOutput(tool_response);
-
     if (!query || !output) {
       logDebug(`skip: missing query or output (query=${!!query}, output=${!!output})`);
       return;
     }
 
-    const r = cache.setSearch(query, output);
-    if (!r || !r.ok) {
-      logError('setSearch failed', new Error((r && r.reason) || 'unknown'));
-      return;
-    }
+    const ok = await q.searchStore(query, output);
+    if (!ok) { logDebug(`store failed/unavailable: ${query.slice(0, 80)}`); return; }
     logDebug(`cached search: ${query.slice(0, 80)} (${output.length} bytes)`);
   } catch (e) {
-    logError('hook error', e);
+    q.logError('websearch-cache hook error', e);
   }
 });

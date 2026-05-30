@@ -25,12 +25,6 @@
     ],
     "PostToolUse": [
       {
-        "matcher": "WebFetch",
-        "hooks": [
-          { "type": "command", "command": "node ./scripts/hook-webfetch-cache.cjs" }
-        ]
-      },
-      {
         "matcher": "WebSearch",
         "hooks": [
           { "type": "command", "command": "node ./scripts/hook-websearch-cache.cjs" }

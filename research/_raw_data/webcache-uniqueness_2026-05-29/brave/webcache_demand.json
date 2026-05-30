@@ -1,0 +1,1560 @@
+{
+  "type": "search",
+  "query": {
+    "original": "claude-webcache npm claude code cache plugin adoption downloads",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "discussions": {
+    "type": "search",
+    "results": [
+      {
+        "title": "The creator of Claude Code notes on the current Caching Issue",
+        "url": "https://www.reddit.com/r/ClaudeCode/comments/1sk4y1p/the_creator_of_claude_code_notes_on_the_current/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "This explains the TOKEN taxonomy, but what about the MODEL REGRESSION? I don't use multiple agents/sub, but right now, the model is totally unreliable,",
+        "fetched_content_timestamp": 1780032668,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ClaudeCode  › comments  › 1sk4y1p  › the_creator_of_claude_code_notes_on_the_current"
+        },
+        "age": "April 13, 2026",
+        "data": {
+          "forum_name": "r/ClaudeCode",
+          "num_answers": 124,
+          "score": "366",
+          "title": "The creator of Claude Code notes on the current Caching Issue",
+          "question": "<p dir=\"auto\">\n      It&#39;s been pretty well documented on this subreddit + GH issues that caching is a big current problem.\n    </p><p dir=\"auto\">\n      Boris said this in the raised GH issue (<a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/anthropics/claude-code/issues/45756#issuecomment-4231739206\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://github.com/anthropics/claude-code/issues/45756#issuecomment-4231739206</a>)\n    </p><p dir=\"auto\">\n      TL;DR\n    </p><ul>\n        <li>\n      <p dir=\"auto\">\n      They know about it\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Leaving an agent session open too long causes a full cache miss (causing inflated token usage)\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Rather start a new conversation to avoid these large cache misses + rewrites\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      People have way too many skills / agents inflating their context usage massively (so rather  be selective on which agents / skills you use per project)\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Use /feedback to help them debug\n    </p>\n    </li>\n      </ul><p dir=\"auto\">\n      Thoughts?\n    </p>",
+          "top_comment": "This explains the TOKEN taxonomy, but what about the MODEL REGRESSION? I don't use multiple agents/sub, but right now, the model is totally unreliable,"
+        }
+      },
+      {
+        "title": "Plugin cache grows indefinitely without automatic cleanup",
+        "url": "https://github.com/anthropics/claude-code/issues/16453",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Description The plugin cache at ~/.claude/plugins/cache/ grows indefinitely as new versions of plugins are cached. There's no automatic garbage collection or TTL-based eviction, causing the cac...",
+        "fetched_content_timestamp": 1778118703,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› anthropics  › claude-code  › issues  › 16453"
+        },
+        "age": "January 6, 2026",
+        "data": {
+          "forum_name": "github.com",
+          "num_answers": 3,
+          "title": "Plugin cache grows indefinitely without automatic cleanup",
+          "top_comment": "Description The plugin cache at ~/.claude/plugins/cache/ grows indefinitely as new versions of plugins are cached. There's no automatic garbage collection or TTL-based eviction, causing the cac..."
+        }
+      },
+      {
+        "title": "Marketplace-backed npm plugin install/update can use stale local cache instead of current marketplace version",
+        "url": "https://github.com/anthropics/claude-code/issues/37670",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Summary Claude Code can install or update a stale npm-backed plugin version from a marketplace even when the marketplace metadata, npm package version, and npm dist-tags all point to a newer versio...",
+        "fetched_content_timestamp": 1778855248,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› anthropics  › claude-code  › issues  › 37670"
+        },
+        "age": "March 23, 2026",
+        "data": {
+          "forum_name": "github.com",
+          "num_answers": 2,
+          "title": "Marketplace-backed npm plugin install/update can use stale local cache instead of current marketplace version",
+          "top_comment": "Summary Claude Code can install or update a stale npm-backed plugin version from a marketplace even when the marketplace metadata, npm package version, and npm dist-tags all point to a newer versio..."
+        }
+      },
+      {
+        "title": "[BUG] Local plugin cache not invalidated when source files change",
+        "url": "https://github.com/anthropics/claude-code/issues/28492",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Preflight Checklist I have searched existing issues and this hasn't been reported yet This is a single bug report (please file separate reports for different bugs) I am using the latest version of ...",
+        "fetched_content_timestamp": 1775486512,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› anthropics  › claude-code  › issues  › 28492"
+        },
+        "age": "February 25, 2026",
+        "data": {
+          "forum_name": "github.com",
+          "num_answers": 3,
+          "title": "[BUG] Local plugin cache not invalidated when source files change",
+          "top_comment": "Preflight Checklist I have searched existing issues and this hasn't been reported yet This is a single bug report (please file separate reports for different bugs) I am using the latest version of ..."
+        }
+      },
+      {
+        "title": "PSA: Claude Code has two cache bugs that can silently 10-20x your API costs — here's the root cause and workarounds",
+        "url": "https://www.reddit.com/r/ClaudeCode/comments/1s7mitf/psa_claude_code_has_two_cache_bugs_that_can/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "So it seems like fewer and fewer people @ anthropic actually code or understand code now...",
+        "fetched_content_timestamp": 1779215454,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ClaudeCode  › comments  › 1s7mitf  › psa_claude_code_has_two_cache_bugs_that_can"
+        },
+        "age": "April 4, 2026",
+        "data": {
+          "forum_name": "r/ClaudeCode",
+          "num_answers": 202,
+          "score": "999",
+          "title": "PSA: Claude Code has two cache bugs that can silently 10-20x your API costs — here's the root cause and workarounds",
+          "question": "<p dir=\"auto\">\n      Edit: Issues linked in the description have been closed as resolved. Unfortunately I can&#39;t verify those claims as I&#39;m away from my PC.\n    </p><p dir=\"auto\">\n      I spent the past few days reverse-engineering the Claude Code standalone binary (228MB ELF, Ghidra + MITM proxy + radare2) and found two independent bugs that cause prompt cache to break, silently inflating costs by 10-20x. Posting this so others can protect themselves.\n    </p><h2 class=\"text-18-scalable xs:text-20-scalable\" dir=\"auto\">Bug 1: Sentinel replacement in standalone binary breaks cache when conversation discusses billing internals</h2><p dir=\"auto\">\n      <strong>Issue:</strong> <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/anthropics/claude-code/issues/40524\" rel=\"noopener nofollow ugc\" target=\"_blank\">anthropics/claude-code#40524</a>\n    </p><p dir=\"auto\">\n      The standalone Claude Code binary (the one you get from <code>claude.ai/install.sh</code> or <code>npm install -g</code>) contains a <strong>native-layer string replacement</strong> baked into Anthropic&#39;s custom Bun fork. It&#39;s injected into the Zig HTTP header builder function — the same function that builds <code>Content-Length</code>, <code>User-Agent</code>, etc.\n    </p><p dir=\"auto\">\n      On every API request to <code>/v1/messages</code>, if the <code>anthropic-version</code> header is present, it searches the JSON request body for <code>cch=00000</code> (the billing attribution sentinel) and replaces <code>00000</code> with a 5-char hex derived from hashing the body. This happens <strong>after</strong> <code>JSON.stringify</code> but <strong>before</strong> TLS encryption — completely invisible from JavaScript.\n    </p><p dir=\"auto\">\n      <strong>When does this cause problems?</strong> The replacement targets the <strong>first</strong> occurrence in the body. Since <code>messages[]</code> comes before <code>system[]</code> in the serialized JSON, if your conversation history contains the literal sentinel (e.g., from reading the CC bundle source, discussing billing headers, or having it in your CLAUDE.md), the sentinel in messages gets replaced instead of the one in <code>system[0]</code>. This changes your messages content every request → cache prefix broken → full cache rebuild (~$0.04-0.15 per request depending on context size).\n    </p><p dir=\"auto\">\n      In normal usage (not discussing CC internals), only <code>system[0]</code> is affected, and since it has <code>cache_control: null</code>, it doesn&#39;t impact caching.\n    </p><p dir=\"auto\">\n      <strong>Workaround:</strong> Run Claude Code via <code>npx @anthropic-ai/claude-code</code>* instead of the standalone binary. The replacement mechanism exists only in the custom Bun fork compiled into the standalone — the npm package running on standard Bun/Node has no replacement. Confirmed experimentally: same JS, same bytecode, zero replacement on npx.\n    </p><p dir=\"auto\">\n      *- Do not blindly use that command, verify what it does (it is safe, but you should check nonetheless)\n    </p><h2 class=\"text-18-scalable xs:text-20-scalable\" dir=\"auto\">Bug 2: --resume ALWAYS breaks cache (since v2.1.69)</h2><p dir=\"auto\">\n      <strong>Issue:</strong> <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/anthropics/claude-code/issues/34629\" rel=\"noopener nofollow ugc\" target=\"_blank\">anthropics/claude-code#34629</a>\n    </p><p dir=\"auto\">\n      Every <code>--resume</code> causes a full cache miss on the entire conversation history. Only the system prompt (~11-14k tokens) is cached; everything else is <code>cache_creation</code> from scratch. This is a ~10-20x cost increase on the resume request.\n    </p><p dir=\"auto\">\n      <strong>Root cause:</strong> In v2.1.69, Anthropic introduced <code>deferred_tools_delta</code> — a new system-reminder attachment listing tools available via ToolSearch. On a <strong>fresh session</strong>, these attachments (deferred tools + MCP instructions + skills list, ~13KB) are injected into <code>messages[0]</code> alongside the AU$ user context. On <strong>resume</strong>, they&#39;re appended at the <strong>end</strong> of messages (<code>messages[N]</code>) while <code>messages[0]</code> contains only the AU$ context (~352B).\n    </p><p dir=\"auto\">\n      This creates three independent cache-breaking differences:\n    </p><ol>\n        <li>\n      <p dir=\"auto\">\n      <code>messages[0]</code>: 13KB (4 reminders) vs 352B (1 reminder) — completely different prefix\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <code>system[0]</code> billing hash: changes because <code>cc_version</code> suffix is computed from chars at positions 4, 7, 20 of the first user message (which IS the system-reminder, not the actual user prompt)\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <code>cache_control</code> breakpoint position: moves from <code>messages[0]</code> to <code>messages[last]</code>\n    </p>\n    </li>\n      </ol><p dir=\"auto\">\n      <code>deferred_tools_delta</code> does not exist in v2.1.68 (<code>grep -c &#39;deferred_tools_delta&#39; cli.js</code> → 0 in 2.1.68, 5 in 2.1.69). Without it, <code>messages[0]</code> was identical on fresh and resumed sessions → cache hit.\n    </p><p dir=\"auto\">\n      <strong>Subsequent turns after resume cache normally</strong> — the one-time miss is only on the first request after resume.\n    </p><p dir=\"auto\">\n      <strong>Workaround:</strong> There&#39;s no external workaround for this one. Pinning to v2.1.68 works (as the original issue reporter found) but you lose 60+ versions of features. An invasive patch to the npm package&#39;s <code>cli.js</code> could theoretically reorder the attachment injection on resume, but that&#39;s fragile across updates.\n    </p><h2 class=\"text-18-scalable xs:text-20-scalable\" dir=\"auto\">Cost impact</h2><p dir=\"auto\">\n      For a large conversation (~500k tokens):\n    </p><ul>\n        <li>\n      <p dir=\"auto\">\n      <strong>Bug 1</strong> (when triggered): ~155k tokens shift from <code>cache_read</code> ($0.03/MTok) to <code>cache_creation</code> ($0.30/MTok) = <strong>~$0.04 per request</strong>, every request\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <strong>Bug 2</strong> (every resume): ~500k tokens as <code>cache_creation</code> = <strong>~$0.15 one-time per resume</strong>\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Combined (discussing CC internals + resuming): up to <strong>$0.20+ per request</strong>\n    </p>\n    </li>\n      </ul><h2 class=\"text-18-scalable xs:text-20-scalable\" dir=\"auto\">Methodology</h2><p dir=\"auto\">\n      Full details in the GitHub issues, but briefly: MITM proxy (mitmproxy addon capturing all API payloads), Ghidra reverse engineering of the standalone ELF to locate the replacement code in the Zig HTTP header builder, <code>Bun.hash()</code> to identify all header name hashes, npm package comparison across versions 1.0.0–2.1.87, and controlled experiments with fresh sessions → resume → consecutive resumes with payload diffing.\n    </p><p dir=\"auto\">\n      PS. Co-written by claude code, obviously\n    </p><p dir=\"auto\">\n      PPS. Claude code has special 1h TTL of cache, or at least mine has, so any request should be cached correctly. Except extra usage, it has 5 minutes TTL.\n    </p><p dir=\"auto\">\n      PPPS. Apparently downgrading to 2.1.34 (or 2.1.30 just to be sure) also works\n    </p><p dir=\"auto\">\n      Verification script you may use: <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://gitlab.com/treetank/cc-diag/-/raw/c126a7890f2ee12f76d91bfb1cc92612ae95284e/test_cache.py\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://gitlab.com/treetank/cc-diag/-/raw/c126a7890f2ee12f76d91bfb1cc92612ae95284e/test_cache.py</a>\n    </p><p dir=\"auto\">\n      A followup (nothing fancy): <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://www.reddit.com/r/ClaudeCode/comments/1s9pjbl/claude_code_cache_crisis_a_complete/\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://www.reddit.com/r/ClaudeCode/comments/1s9pjbl/claude_code_cache_crisis_a_complete/</a>\n    </p>",
+          "top_comment": "So it seems like fewer and fewer people @ anthropic actually code or understand code now..."
+        }
+      },
+      {
+        "title": "PSA: Claude Code has two cache bugs that can silently 10-20x your API costs — here's the root cause and workarounds",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1s7mkn3/psa_claude_code_has_two_cache_bugs_that_can/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Edit: Issues linked in the description have been closed as resolved. Unfortunately I can't verify those claims as I'm away…",
+        "fetched_content_timestamp": 1779777555,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ClaudeAI  › comments  › 1s7mkn3  › psa_claude_code_has_two_cache_bugs_that_can"
+        },
+        "age": "April 4, 2026",
+        "data": {
+          "forum_name": "r/ClaudeAI",
+          "num_answers": 141,
+          "score": "957",
+          "title": "PSA: Claude Code has two cache bugs that can silently 10-20x your API costs — here's the root cause and workarounds",
+          "question": "<p dir=\"auto\">\n      Edit: Issues linked in the description have been closed as resolved. Unfortunately I can&#39;t verify those claims as I&#39;m away from my PC.\n    </p><p dir=\"auto\">\n      I spent the past few days reverse-engineering the Claude Code standalone binary (228MB ELF, Ghidra + MITM proxy + radare2) and found two independent bugs that cause prompt cache to break, silently inflating costs by 10-20x. Posting this so others can protect themselves.\n    </p><h2 class=\"text-18-scalable xs:text-20-scalable\" dir=\"auto\">Bug 1: Sentinel replacement in standalone binary breaks cache when conversation discusses billing internals</h2><p dir=\"auto\">\n      <strong>Issue:</strong> <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/anthropics/claude-code/issues/40524\" rel=\"noopener nofollow ugc\" target=\"_blank\">anthropics/claude-code#40524</a>\n    </p><p dir=\"auto\">\n      The standalone Claude Code binary (the one you get from <code>claude.ai/install.sh</code> or <code>npm install -g</code>) contains a <strong>native-layer string replacement</strong> baked into Anthropic&#39;s custom Bun fork. It&#39;s injected into the Zig HTTP header builder function — the same function that builds <code>Content-Length</code>, <code>User-Agent</code>, etc.\n    </p><p dir=\"auto\">\n      On every API request to <code>/v1/messages</code>, if the <code>anthropic-version</code> header is present, it searches the JSON request body for <code>cch=00000</code> (the billing attribution sentinel) and replaces <code>00000</code> with a 5-char hex derived from hashing the body. This happens <strong>after</strong> <code>JSON.stringify</code> but <strong>before</strong> TLS encryption — completely invisible from JavaScript.\n    </p><p dir=\"auto\">\n      <strong>When does this cause problems?</strong> The replacement targets the <strong>first</strong> occurrence in the body. Since <code>messages[]</code> comes before <code>system[]</code> in the serialized JSON, if your conversation history contains the literal sentinel (e.g., from reading the CC bundle source, discussing billing headers, or having it in your CLAUDE.md), the sentinel in messages gets replaced instead of the one in <code>system[0]</code>. This changes your messages content every request → cache prefix broken → full cache rebuild (~$0.04-0.15 per request depending on context size).\n    </p><p dir=\"auto\">\n      In normal usage (not discussing CC internals), only <code>system[0]</code> is affected, and since it has <code>cache_control: null</code>, it doesn&#39;t impact caching.\n    </p><p dir=\"auto\">\n      <strong>Workaround:</strong> Run Claude Code via <code>npx @anthropic-ai/claude-code</code>* instead of the standalone binary. The replacement mechanism exists only in the custom Bun fork compiled into the standalone — the npm package running on standard Bun/Node has no replacement. Confirmed experimentally: same JS, same bytecode, zero replacement on npx.\n    </p><p dir=\"auto\">\n      *- Do not blindly use that command, verify what it does (it is safe, but you should check nonetheless)\n    </p><h2 class=\"text-18-scalable xs:text-20-scalable\" dir=\"auto\">Bug 2: --resume ALWAYS breaks cache (since v2.1.69)</h2><p dir=\"auto\">\n      <strong>Issue:</strong> <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/anthropics/claude-code/issues/34629\" rel=\"noopener nofollow ugc\" target=\"_blank\">anthropics/claude-code#34629</a>\n    </p><p dir=\"auto\">\n      Every <code>--resume</code> causes a full cache miss on the entire conversation history. Only the system prompt (~11-14k tokens) is cached; everything else is <code>cache_creation</code> from scratch. This is a ~10-20x cost increase on the resume request.\n    </p><p dir=\"auto\">\n      <strong>Root cause:</strong> In v2.1.69, Anthropic introduced <code>deferred_tools_delta</code> — a new system-reminder attachment listing tools available via ToolSearch. On a <strong>fresh session</strong>, these attachments (deferred tools + MCP instructions + skills list, ~13KB) are injected into <code>messages[0]</code> alongside the AU$ user context. On <strong>resume</strong>, they&#39;re appended at the <strong>end</strong> of messages (<code>messages[N]</code>) while <code>messages[0]</code> contains only the AU$ context (~352B).\n    </p><p dir=\"auto\">\n      This creates three independent cache-breaking differences:\n    </p><ol>\n        <li>\n      <p dir=\"auto\">\n      <code>messages[0]</code>: 13KB (4 reminders) vs 352B (1 reminder) — completely different prefix\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <code>system[0]</code> billing hash: changes because <code>cc_version</code> suffix is computed from chars at positions 4, 7, 20 of the first user message (which IS the system-reminder, not the actual user prompt)\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <code>cache_control</code> breakpoint position: moves from <code>messages[0]</code> to <code>messages[last]</code>\n    </p>\n    </li>\n      </ol><p dir=\"auto\">\n      <code>deferred_tools_delta</code> does not exist in v2.1.68 (<code>grep -c &#39;deferred_tools_delta&#39; cli.js</code> → 0 in 2.1.68, 5 in 2.1.69). Without it, <code>messages[0]</code> was identical on fresh and resumed sessions → cache hit.\n    </p><p dir=\"auto\">\n      <strong>Subsequent turns after resume cache normally</strong> — the one-time miss is only on the first request after resume.\n    </p><p dir=\"auto\">\n      <strong>Workaround:</strong> There&#39;s no external workaround for this one. Pinning to v2.1.68 works (as the original issue reporter found) but you lose 60+ versions of features. An invasive patch to the npm package&#39;s <code>cli.js</code> could theoretically reorder the attachment injection on resume, but that&#39;s fragile across updates.\n    </p><h2 class=\"text-18-scalable xs:text-20-scalable\" dir=\"auto\">Cost impact</h2><p dir=\"auto\">\n      For a large conversation (~500k tokens):\n    </p><ul>\n        <li>\n      <p dir=\"auto\">\n      <strong>Bug 1</strong> (when triggered): ~155k tokens shift from <code>cache_read</code> ($0.03/MTok) to <code>cache_creation</code> ($0.30/MTok) = <strong>~$0.04 per request</strong>, every request\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <strong>Bug 2</strong> (every resume): ~500k tokens as <code>cache_creation</code> = <strong>~$0.15 one-time per resume</strong>\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Combined (discussing CC internals + resuming): up to <strong>$0.20+ per request</strong>\n    </p>\n    </li>\n      </ul><h2 class=\"text-18-scalable xs:text-20-scalable\" dir=\"auto\">Methodology</h2><p dir=\"auto\">\n      Full details in the GitHub issues, but briefly: MITM proxy (mitmproxy addon capturing all API payloads), Ghidra reverse engineering of the standalone ELF to locate the replacement code in the Zig HTTP header builder, <code>Bun.hash()</code> to identify all header name hashes, npm package comparison across versions 1.0.0–2.1.87, and controlled experiments with fresh sessions → resume → consecutive resumes with payload diffing.\n    </p><p dir=\"auto\">\n      PS. Co-written by claude code, obviously\n    </p><p dir=\"auto\">\n      PPS. Claude code has special 1h TTL of cache, or at least mine has, so any request should be cached correctly. Except extra usage, it has 5 minutes TTL.\n    </p><p dir=\"auto\">\n      PPPS. Apparently downgrading to 2.1.30 also works.\n    </p><p dir=\"auto\">\n      Verification script: <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://gitlab.com/treetank/cc-diag/-/raw/c126a7890f2ee12f76d91bfb1cc92612ae95284e/test_cache.py\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://gitlab.com/treetank/cc-diag/-/raw/c126a7890f2ee12f76d91bfb1cc92612ae95284e/test_cache.py</a> (please read it before executing)\n    </p><p dir=\"auto\">\n      A followup (nothing fancy): <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://www.reddit.com/r/ClaudeCode/comments/1s9pjbl/claude_code_cache_crisis_a_complete/\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://www.reddit.com/r/ClaudeCode/comments/1s9pjbl/claude_code_cache_crisis_a_complete/</a>\n    </p>",
+          "top_comment": "Edit: Issues linked in the description have been closed as resolved. Unfortunately I can't verify those claims as I'm away…"
+        }
+      },
+      {
+        "title": "Thanks to the leaked source code for Claude Code, I used Codex to find and patch the root cause of the insane token drain in Claude Code and patched it. Usage limits are back to normal for me!",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1s8zxt4/thanks_to_the_leaked_source_code_for_claude_code/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "“All our software engineers aren’t writing code anymore” -Dario Yeah that’s pretty freaking apparent dude",
+        "fetched_content_timestamp": 1779371648,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ClaudeAI  › comments  › 1s8zxt4  › thanks_to_the_leaked_source_code_for_claude_code"
+        },
+        "age": "April 1, 2026",
+        "data": {
+          "forum_name": "r/ClaudeAI",
+          "num_answers": 231,
+          "score": "2747",
+          "title": "Thanks to the leaked source code for Claude Code, I used Codex to find and patch the root cause of the insane token drain in Claude Code and patched it. Usage limits are back to normal for me!",
+          "question": "<p dir=\"auto\">\n      <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/Rangizingo/cc-cache-fix/tree/main\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://github.com/Rangizingo/cc-cache-fix/tree/main</a>\n    </p><p dir=\"auto\">\n      Edit : to be clear, I prefer Claude and Claude code. I would have much rather used it to find and fix this issue, but I couldn’t because I had no usage left 😂. So, I used codex. This is NOT a shill post for codex. It’s good but I think Claude code and Claude are better.\n    </p><p dir=\"auto\">\n      Disclaimer : Codex found and fixed this, not me. I work in IT and know how to ask the right questions, but it did the work. Giving you this as is cause it&#39;s been steady for the last 2 hours for me. My 5 hour usage is at 6% which is normal! Let&#39;s be real you&#39;re probably just gonna tell claude to clone this repo, and apply it so here is the repo lol. I main Linux but I had codex write stuff that should work across OS. Works on my Mac too.\n    </p><p dir=\"auto\">\n      Also Codex wrote everything below this, not me. I spent a full session reverse-engineering the minified cli.js and found two bugs that silently nuke prompt caching on resumed sessions.\n    </p><p dir=\"auto\">\n      What&#39;s actually happening Claude Code has a function called db8 that filters what gets saved to your session files (the JSONL files in ~/.claude/projects/). For non-Anthropic users, it strips out ALL attachment-type messages. Sounds harmless, except some of those attachments are deferred_tools_delta records that track which tools have already been announced to the model.\n    </p><p dir=\"auto\">\n      When you resume a session, Claude Code scans your message history to figure out &quot;what tools did I already tell the model about?&quot; But because db8 nuked those records from the session file, it finds nothing. So it re-announces every single deferred tool from scratch. Every. Single. Resume.\n    </p><p dir=\"auto\">\n      This breaks the cache prefix in three ways:\n    </p><p dir=\"auto\">\n      The system reminders that were at messages[0] in the fresh session now land at messages[N] The billing hash (computed from your first user message) changes because the first message content is different The cache_control breakpoint shifts because the message array is a different length Net result: your entire conversation gets rebuilt as cache_creation tokens instead of hitting cache_read. The longer the conversation, the worse it gets.\n    </p><p dir=\"auto\">\n      The numbers from my actual session Stock claude, same conversation, watching the cache ratio drop with every turn:\n    </p><p dir=\"auto\">\n      Turn 1:  cache_read: 15,451  cache_creation:  7,473  ratio: 67% Turn 5:  cache_read: 15,451  cache_creation: 16,881  ratio: 48% Turn 10: cache_read: 15,451  cache_creation: 35,006  ratio: 31% Turn 15: cache_read: 15,451  cache_creation: 42,970  ratio: 26% cache_read NEVER moved. Stuck at 15,451 (just the system prompt). Everything else was full-price token processing.\n    </p><p dir=\"auto\">\n      After applying the patch:\n    </p><p dir=\"auto\">\n      Turn 1 (resume): cache_read:  7,208  cache_creation: 49,748  ratio: 13%  (structural reset, expected) Turn 2:          cache_read: 56,956  cache_creation:    728  ratio: 99% Turn 3:          cache_read: 57,684  cache_creation:    611  ratio: 99% 26% to 99%. That&#39;s the difference.\n    </p><p dir=\"auto\">\n      There&#39;s also a second bug The standalone binary (the one installed at ~/.local/share/claude/) uses a custom Bun fork that rewrites a sentinel value cch=00000 in every outgoing API request. If your conversation happens to contain that string, it breaks the cache prefix. Running via Node.js (node cli.js) instead of the binary eliminates this entirely.\n    </p><p dir=\"auto\">\n      Related issues: anthropics/claude-code#40524 and anthropics/claude-code#34629\n    </p><p dir=\"auto\">\n      The fix Two parts:\n    </p><ol>\n        <li>\n      <p dir=\"auto\">\n      Run via npm/Node.js instead of the standalone binary. This kills the sentinel replacement bug.\n    </p>\n    </li>\n      </ol><p dir=\"auto\">\n      The original db8:\n    </p><p dir=\"auto\">\n      function db8(A){ if(A.type===&quot;attachment&quot;&amp;&amp;ss1()!==&quot;ant&quot;){ if(A.attachment.type===&quot;hook_additional_context&quot; &amp;&amp;a6(process.env.CLAUDE_CODE_SAVE_HOOK_ADDITIONAL_CONTEXT))return!0; return!1  // ← drops EVERYTHING else, including deferred_tools_delta } if(A.type===&quot;progress&quot;&amp;&amp;Ns6(A.data?.type))return!1; return!0 } The patched version just adds two types to the allowlist:\n    </p><p dir=\"auto\">\n      if(A.attachment.type===&quot;deferred_tools_delta&quot;)return!0; if(A.attachment.type===&quot;mcp_instructions_delta&quot;)return!0; That&#39;s it. Two lines. The deferred tool announcements survive to the session file, so on resume the delta computation sees &quot;I already announced these&quot; and doesn&#39;t re-emit them. Cache prefix stays stable.\n    </p><p dir=\"auto\">\n      How to apply it yourself I wrote a patch script that handles everything. Tested on v2.1.81 with Max x20.\n    </p><p dir=\"auto\">\n      mkdir -p ~/cc-cache-fix &amp;&amp; cd ~/cc-cache-fix\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">Install the npm version locally (doesn&#39;t touch your stock claude)</h1><p dir=\"auto\">\n      npm install @anthropic-ai/claude-code@2.1.81\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">Back up the original</h1><p dir=\"auto\">\n      cp node_modules/@anthropic-ai/claude-code/cli.js node_modules/@anthropic-ai/claude-code/cli.js.orig\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">Apply the patch (find db8 and add the two allowlist lines)</h1><p dir=\"auto\">\n      python3 -c &quot; import sys path = &#39;node_modules/@anthropic-ai/claude-code/cli.js&#39; with open(path) as f: src = f.read()\n    </p><p dir=\"auto\">\n      old = &#39;if(A.attachment.type===&quot;hook_additional_context&quot;&amp;&amp;a6(process.env.CLAUDE_CODE_SAVE_HOOK_ADDITIONAL_CONTEXT))return!0;return!1}&#39; new = old.replace(&#39;return!1}&#39;, &#39;if(A.attachment.type===&quot;deferred_tools_delta&quot;)return!0;&#39; &#39;if(A.attachment.type===&quot;mcp_instructions_delta&quot;)return!0;&#39; &#39;return!1}&#39;)\n    </p><p dir=\"auto\">\n      if old not in src: print(&#39;ERROR: pattern not found, wrong version?&#39;); sys.exit(1) src = src.replace(old, new, 1)\n    </p><p dir=\"auto\">\n      with open(path, &#39;w&#39;) as f: f.write(src) print(&#39;Patched. Verify:&#39;) print(&#39;  FOUND&#39; if new.split(&#39;return!1}&#39;)[0] in open(path).read() else &#39;  FAILED&#39;) &quot;\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">Run it</h1><p dir=\"auto\">\n      node node_modules/@anthropic-ai/claude-code/cli.js Or make a wrapper script so you can just type claude-patched:\n    </p><p dir=\"auto\">\n      cat &gt; ~/.local/bin/claude-patched &lt;&lt; &#39;EOF&#39;\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">!/usr/bin/env bash</h1><p dir=\"auto\">\n      exec node ~/cc-cache-fix/node_modules/@anthropic-ai/claude-code/cli.js &quot;$@&quot; EOF chmod +x ~/.local/bin/claude-patched Stock claude stays completely untouched. Zero risk.\n    </p><p dir=\"auto\">\n      What you should see Run a session, resume it, check the JSONL:\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">Check your latest session&#39;s cache stats</h1><p dir=\"auto\">\n      tail -50 ~/.claude/projects/<em>/</em>.jsonl | python3 -c &quot; import sys, json for line in sys.stdin: try: d = json.loads(line.strip()) except: continue u = d.get(&#39;usage&#39;) or d.get(&#39;message&#39;,{}).get(&#39;usage&#39;) if not u or &#39;cache_read_input_tokens&#39; not in u: continue cr, cc = u.get(&#39;cache_read_input_tokens&#39;,0), u.get(&#39;cache_creation_input_tokens&#39;,0) total = cr + cc + u.get(&#39;input_tokens&#39;,0) print(f&#39;CR:{cr:&gt;7,}  CC:{cc:&gt;7,}  ratio:{cr/total*100:.0f}%&#39; if total else &#39;&#39;) &quot; If consecutive resumes show cache_read growing and cache_creation staying small, you&#39;re good.\n    </p><p dir=\"auto\">\n      Note: The first resume after a fresh session will still show low cache_read (the message structure changes going from fresh to resumed). That&#39;s normal. Every resume after that should hit 95%+ cache ratio.\n    </p><p dir=\"auto\">\n      Caveats Tested on v2.1.81 only. Function names are minified and will change across versions. The patch script pattern-matches on the exact db8 string, so it&#39;ll fail safely if the code changes. This doesn&#39;t help with output tokens, only input caching. If Anthropic fixes this upstream, you can just go back to stock claude and delete the patch directory. Hopefully Anthropic picks this up. The fix is literally two lines in their source.\n    </p>",
+          "top_comment": "“All our software engineers aren’t writing code anymore” -Dario Yeah that’s pretty freaking apparent dude"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "faq": {
+    "type": "faq",
+    "results": [
+      {
+        "question": "What makes a good Claude Code plugin?",
+        "answer": "A strong plugin solves a real workflow problem, is actively maintained, and includes clear documentation. The best plugins tend to have a healthy GitHub repository (recent commits, meaningful star count), a verified maintainer, and well-structured components like commands, agents, or skills. Copy clicks are tracked too, but most installations happen via 'plugin marketplace add', which we can't track.",
+        "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+        "url": "https://www.claudepluginhub.com/top-plugins",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "claudepluginhub.com",
+          "hostname": "www.claudepluginhub.com",
+          "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+          "path": "› top-plugins"
+        }
+      },
+      {
+        "question": "How are plugin rankings calculated?",
+        "answer": "Rankings blend several signals: GitHub stars (the heaviest weight), maintenance score (commit recency and frequency in the last 90 days), public repo adoption (how many public GitHub repos reference this plugin), copy clicks (a secondary engagement signal), claimed-maintainer status, and recency of the last commit. Community Sparks are not part of this default formula — they power the dedicated Sparks and Trending sort options instead.",
+        "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+        "url": "https://www.claudepluginhub.com/top-plugins",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "claudepluginhub.com",
+          "hostname": "www.claudepluginhub.com",
+          "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+          "path": "› top-plugins"
+        }
+      },
+      {
+        "question": "Can I submit my plugin to be ranked?",
+        "answer": "Yes. Any public GitHub repository with a valid Claude Code plugin manifest is eligible. Submit your repository URL on ClaudePluginHub, or wait for automatic discovery via GitHub Code Search. Once indexed, your plugin will appear in rankings based on its actual metrics.",
+        "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+        "url": "https://www.claudepluginhub.com/top-plugins",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "claudepluginhub.com",
+          "hostname": "www.claudepluginhub.com",
+          "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+          "path": "› top-plugins"
+        }
+      },
+      {
+        "question": "What does 'Most Adopted' measure?",
+        "answer": "Most Adopted ranks plugins by how many distinct public GitHub repositories reference them in their Claude Code settings (.claude/settings.json enabledPlugins). This is one of ClaudePluginHub's strongest objective signals — it shows which plugins developers are actually committing to their projects. Two important caveats: only public repos are counted (private and local installs are invisible), and GitHub's Code Search caps results, so a '+' next to a count means the true number is at least that high.",
+        "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+        "url": "https://www.claudepluginhub.com/top-plugins",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "claudepluginhub.com",
+          "hostname": "www.claudepluginhub.com",
+          "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+          "path": "› top-plugins"
+        }
+      },
+      {
+        "question": "What do copy clicks measure?",
+        "answer": "Copy clicks count how many visitors have pressed the install/copy button on this directory. They aren't verified installations, and they don't include installs done through 'plugin marketplace add' — that path is invisible to us. So copy clicks are a useful engagement signal, but they're a secondary one in default ranking.",
+        "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+        "url": "https://www.claudepluginhub.com/top-plugins",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "claudepluginhub.com",
+          "hostname": "www.claudepluginhub.com",
+          "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+          "path": "› top-plugins"
+        }
+      },
+      {
+        "question": "What is the maintenance score?",
+        "answer": "The maintenance score is a 0–10 composite from two equally-weighted signals: how recent the last commit is, and how many commits landed in the last 90 days. A higher score indicates a more actively maintained project. It does not factor in issue response times or release cadence.",
+        "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+        "url": "https://www.claudepluginhub.com/top-plugins",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "claudepluginhub.com",
+          "hostname": "www.claudepluginhub.com",
+          "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+          "path": "› top-plugins"
+        }
+      },
+      {
+        "question": "How often are rankings updated?",
+        "answer": "Rankings refresh automatically through cache invalidation and hourly revalidation. The underlying data — copy-click counts, GitHub metadata, and engagement signals — updates continuously as the system processes new events and syncs repositories.",
+        "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+        "url": "https://www.claudepluginhub.com/top-plugins",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "claudepluginhub.com",
+          "hostname": "www.claudepluginhub.com",
+          "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+          "path": "› top-plugins"
+        }
+      },
+      {
+        "question": "What are Sparks?",
+        "answer": "Sparks are a community promotion mechanism. Users can assign Sparks to plugins they vouch for, boosting their visibility across the directory. Sparks are time-limited (7 days) and serve as a real signal of community endorsement — users invest their Sparks in plugins they genuinely find valuable.",
+        "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+        "url": "https://www.claudepluginhub.com/top-plugins",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "claudepluginhub.com",
+          "hostname": "www.claudepluginhub.com",
+          "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+          "path": "› top-plugins"
+        }
+      }
+    ]
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "discussions",
+        "all": true
+      },
+      {
+        "type": "faq",
+        "all": true
+      },
+      {
+        "type": "videos",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "videos": {
+    "type": "videos",
+    "results": [
+      {
+        "type": "video_result",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1saqq94/i_got_tired_of_managing_terminal_tabs_for/",
+        "title": "r/ClaudeAI on Reddit: I got tired of managing terminal tabs for ...",
+        "description": "I use Claude Code a lot for non-coding tasks - running the same prompt with different inputs for research and analysis. The workflow was always the…",
+        "age": "April 2, 2026",
+        "page_age": "2026-04-02T19:12:19",
+        "fetched_content_timestamp": 1775203899,
+        "video": {},
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ClaudeAI  › comments  › 1saqq94  › i_got_tired_of_managing_terminal_tabs_for"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/88ofshs9Z7EB6L_EbR1cc-AMQGdS4nJDZsWFjrbnhQc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9leHRl/cm5hbC1wcmV2aWV3/LnJlZGQuaXQvaS1n/b3QtdGlyZWQtb2Yt/bWFuYWdpbmctdGVy/bWluYWwtdGFicy1m/b3ItcGFyYWxsZWwt/Y2xhdWRlLXYwLWRt/UndOM2xzWldwMGRI/Tm5NV2FFamkxNi0x/SjZONTN3cDJvbHJs/c2g2ek94RVA2UGxI/RmNfNnZ0d0xiaS5w/bmc_d2lkdGg9MTA4/MCZhbXA7Y3JvcD1z/bWFydCZhbXA7Zm9y/bWF0PXBqcGcmYW1w/O2F1dG89d2VicCZh/bXA7cz03MzYyYjU1/ZWU0MjFlMzA4OWI4/Y2RjYjg1MTU5ZmU1/NDgxZDBmZjcx",
+          "original": "https://external-preview.redd.it/i-got-tired-of-managing-terminal-tabs-for-parallel-claude-v0-dmRwN3lsZWp0dHNnMWaEji16-1J6N53wp2olrlsh6zOxEP6PlHFc_6vtwLbi.png?width=1080&amp;crop=smart&amp;format=pjpg&amp;auto=webp&amp;s=7362b55ee421e3089b8cdcb85159fe5481d0ff71"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=XB6iJvrLFmE",
+        "title": "Claude Code - 10 Tricks to Optimise Token Usage - YouTube",
+        "description": "Stop letting \"Usage Limit Reached\" kill your coding flow. If you’re tired of burning through your context window and being locked out for five hours, this gu...",
+        "age": "April 1, 2026",
+        "page_age": "2026-04-01T20:00:16",
+        "fetched_content_timestamp": 1779622295,
+        "video": {
+          "duration": "11:31",
+          "creator": "Daniel Barczak",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/qH0lqzDDqQgYOiRpfauNd9QEPkJD1LBEQGBzf1hKHl0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9Y/QjZpSnZyTEZtRS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/XB6iJvrLFmE/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=KnE9qCzX7dw",
+        "title": "How To Clear Cache and History on Claude AI (Best Method) - YouTube",
+        "description": "Learn how to clear cache and history on Claude AI with this quick and easy guide! If you've been experiencing glitches, slow performance, or simply want to r...",
+        "age": "March 15, 2026",
+        "page_age": "2026-03-15T05:25:57",
+        "fetched_content_timestamp": 1774033562,
+        "video": {
+          "duration": "01:33",
+          "creator": "Chris Tech Guide",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/v6CqrRcZxfT-UV1dsPvWYg9NQQXk2AzDYQPevBSer58/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9L/bkU5cUN6WDdkdy9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/KnE9qCzX7dw/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=yWCd-JEEn-Y",
+        "title": "How to Clear Claude AI Cache [2026 Full Guide] - YouTube",
+        "description": "How to Clear Claude AI CacheIn this video, we help you resolve the common issue where Claude AI may experience performance lag, interface glitches, or loadin...",
+        "age": "February 8, 2026",
+        "page_age": "2026-02-08T08:27:10",
+        "fetched_content_timestamp": 1770659435,
+        "video": {
+          "duration": "02:37",
+          "creator": "Behind Tools",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/_wfR6UVNZvP1zsvGSxFB0g3N9OqvVwBNRfGeb6Xti-Q/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS95/V0NkLUpFRW4tWS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/yWCd-JEEn-Y/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=ULMepxpvaTk",
+        "title": "Claude Code 2.1.72 - Just Released! (Update Overview) - YouTube",
+        "description": "Claude Code has rolled out version 2.1.71, bringing significant enhancements and fixes, making it a powerful tool for ai coding. This update introduces 8 new...",
+        "age": "March 10, 2026",
+        "page_age": "2026-03-10T08:16:23",
+        "fetched_content_timestamp": 1778633785,
+        "video": {
+          "duration": "03:40",
+          "creator": "DIY Smart Code",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/exISaCC5Mt3np8P0r02a3b8HxJ4Vb0ny1QRviHWcVHQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9V/TE1lcHhwdmFUay9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/ULMepxpvaTk/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/shorts/8sA4BU-gCd4",
+        "title": "Clear Your Claude Code Context in 1 Second - YouTube",
+        "description": "AboutPressCopyrightContact usCreatorsAdvertiseDevelopersTermsPrivacyPolicy & SafetyHow YouTube worksTest new featuresNFL Sunday Ticket · © 2026 Google LLC",
+        "age": "January 26, 2026",
+        "page_age": "2026-01-26T19:32:57",
+        "fetched_content_timestamp": 1779638804,
+        "video": {
+          "duration": "00:16",
+          "creator": "AyyazTech",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› shorts  › 8sA4BU-gCd4"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/AnMwS8bhWdn8EcQ4_7Sx0chTnttaEOkgmPTZ25ey62Q/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS84/c0E0QlUtZ0NkNC9v/YXIyLmpwZz9zcXA9/LW9heW13RWRDSlVE/RU5BRlNGV1FBZ0h5/cTRxcEF3d0lBUlVB/QUloQ2NBSEFBUVk9/JmFtcDtycz1BT240/Q0xBN216WkxhcnBw/N0JSSDN4d3RjVUli/dFA1RmJ3JmFtcDt1/c3FwPUNDaw",
+          "original": "https://i.ytimg.com/vi/8sA4BU-gCd4/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&amp;rs=AOn4CLA7mzZLarpp7BRH3xwtcUIbtP5Fbw&amp;usqp=CCk"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Plugins reference - Claude Code Docs",
+        "url": "https://code.claude.com/docs/en/plugins-reference",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Claude Code uses the plugin’s version as the cache key that determines whether an update is available. When you run /plugin update or auto-update fires, Claude Code computes the current version and skips the update if it matches what’s already installed. The version is resolved from the first of these that is set: ... The git commit SHA of the plugin’s source, for github, url, git-subdir, and relative-path sources in a git-hosted marketplace · unknown, for npm sources or local directories not inside a git repository This gives you two ways to version a plugin:",
+        "page_age": "2026-04-15T04:40:03",
+        "profile": {
+          "name": "Claude",
+          "url": "https://code.claude.com/docs/en/plugins-reference",
+          "long_name": "code.claude.com",
+          "img": "https://imgs.search.brave.com/4338_Tk2DZ84UcnpBp0G71TyXhdZejsFEQ2p0hRMMDA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTgzODJmMTIz/MTE3ZjJjOGJkOTMy/NGFmZDgzZmRkZmE1/Y2VkY2E0NmNmOTE2/NjE0NTNjOTRhMTQx/Y2Q3YWNkOS9jb2Rl/LmNsYXVkZS5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "code.claude.com",
+          "hostname": "code.claude.com",
+          "favicon": "https://imgs.search.brave.com/4338_Tk2DZ84UcnpBp0G71TyXhdZejsFEQ2p0hRMMDA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTgzODJmMTIz/MTE3ZjJjOGJkOTMy/NGFmZDgzZmRkZmE1/Y2VkY2E0NmNmOTE2/NjE0NTNjOTRhMTQx/Y2Q3YWNkOS9jb2Rl/LmNsYXVkZS5jb20v",
+          "path": "› docs  › en  › plugins-reference"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/OL4fXFPrlXIbIeKsaxIpI9lB04CB4GGnX4jsfXzPytA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jbGF1/ZGUtY29kZS5taW50/bGlmeS5hcHAvX25l/eHQvaW1hZ2U_dXJs/PSUyRl9taW50bGlm/eSUyRmFwaSUyRm9n/JTNGZGl2aXNpb24l/M0RSZWZlcmVuY2Ul/MjZhcHBlYXJhbmNl/JTNEc3lzdGVtJTI2/dGl0bGUlM0RQbHVn/aW5zJTJCcmVmZXJl/bmNlJTI2ZGVzY3Jp/cHRpb24lM0RDb21w/bGV0ZSUyQnRlY2hu/aWNhbCUyQnJlZmVy/ZW5jZSUyQmZvciUy/QkNsYXVkZSUyQkNv/ZGUlMkJwbHVnaW4l/MkJzeXN0ZW0lMjUy/QyUyQmluY2x1ZGlu/ZyUyQnNjaGVtYXMl/MjUyQyUyQkNMSSUy/QmNvbW1hbmRzJTI1/MkMlMkJhbmQlMkJj/b21wb25lbnQlMkJz/cGVjaWZpY2F0aW9u/cy4lMjZsb2dvTGln/aHQlM0RodHRwcyUy/NTNBJTI1MkYlMjUy/Rm1pbnRjZG4uY29t/JTI1MkZjbGF1ZGUt/Y29kZSUyNTJGYzVy/OV82dGpQTXpGZERE/VCUyNTJGbG9nbyUy/NTJGbGlnaHQuc3Zn/JTI1M0ZmaXQlMjUz/RG1heCUyNTI2YXV0/byUyNTNEZm9ybWF0/JTI1MjZuJTI1M0Rj/NXI5XzZ0alBNekZk/RERUJTI1MjZxJTI1/M0Q4NSUyNTI2cyUy/NTNENzhmZDAxZmY0/ZjQzNDAyOTVhNGY2/NmUyZWE1NDkwM2Ml/MjZsb2dvRGFyayUz/RGh0dHBzJTI1M0El/MjUyRiUyNTJGbWlu/dGNkbi5jb20lMjUy/RmNsYXVkZS1jb2Rl/JTI1MkZjNXI5XzZ0/alBNekZkRERUJTI1/MkZsb2dvJTI1MkZk/YXJrLnN2ZyUyNTNG/Zml0JTI1M0RtYXgl/MjUyNmF1dG8lMjUz/RGZvcm1hdCUyNTI2/biUyNTNEYzVyOV82/dGpQTXpGZEREVCUy/NTI2cSUyNTNEODUl/MjUyNnMlMjUzRDEy/OThhMGMzYjNhMWRh/NjAzYjE5MGQwZGUw/ZTMxNzEyJTI2cHJp/bWFyeUNvbG9yJTNE/JTI1MjMwRTBFMEUl/MjZsaWdodENvbG9y/JTNEJTI1MjNENEEy/N0YlMjZkYXJrQ29s/b3IlM0QlMjUyMzBF/MEUwRSUyNmJhY2tn/cm91bmRMaWdodCUz/RCUyNTIzRkRGREY3/JTI2YmFja2dyb3Vu/ZERhcmslM0QlMjUy/MzA5MDkwQiZhbXA7/dz0xMjAwJmFtcDtx/PTEwMA",
+          "original": "https://claude-code.mintlify.app/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DReference%26appearance%3Dsystem%26title%3DPlugins%2Breference%26description%3DComplete%2Btechnical%2Breference%2Bfor%2BClaude%2BCode%2Bplugin%2Bsystem%252C%2Bincluding%2Bschemas%252C%2BCLI%2Bcommands%252C%2Band%2Bcomponent%2Bspecifications.%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Flight.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D78fd01ff4f4340295a4f66e2ea54903c%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Fdark.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D1298a0c3b3a1da603b190d0de0e31712%26primaryColor%3D%25230E0E0E%26lightColor%3D%2523D4A27F%26darkColor%3D%25230E0E0E%26backgroundLight%3D%2523FDFDF7%26backgroundDark%3D%252309090B&amp;w=1200&amp;q=100",
+          "logo": true
+        },
+        "age": "April 15, 2026",
+        "extra_snippets": [
+          "Claude Code uses the plugin’s version as the cache key that determines whether an update is available. When you run /plugin update or auto-update fires, Claude Code computes the current version and skips the update if it matches what’s already installed. The version is resolved from the first of these that is set: ... The git commit SHA of the plugin’s source, for github, url, git-subdir, and relative-path sources in a git-hosted marketplace · unknown, for npm sources or local directories not inside a git repository This gives you two ways to version a plugin:",
+          "Claude Code ignores top-level fields it does not recognize. You can keep metadata from another ecosystem in plugin.json and the plugin still loads. This makes it practical to maintain one manifest that doubles as a VS Code or Cursor extension manifest, an npm package.json, or an MCPB/DXT bundle manifest.",
+          "The diff exits nonzero when the stored copy is missing or differs from the bundled one, covering both first run and dependency-changing updates. If npm install fails, the trailing rm removes the copied manifest so the next session retries.",
+          "For security and verification purposes, Claude Code copies marketplace plugins to the user’s local plugin cache (~/.claude/plugins/cache) rather than using them in-place. Understanding this behavior is important when developing plugins that reference external files."
+        ]
+      },
+      {
+        "title": "Claude Code Plugin Cache - DEV Community",
+        "url": "https://dev.to/wkusnierczyk/claude-code-plugin-cache-1dn",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "# after editing plugin files rm -rf ~/.claude/plugins/cache/local-plugins/my-plugin # then restart your Claude Code session · Or adopt a habit of bumping the patch version with every edit cycle.",
+        "page_age": "2026-02-25T11:52:35",
+        "profile": {
+          "name": "DEV Community",
+          "url": "https://dev.to/wkusnierczyk/claude-code-plugin-cache-1dn",
+          "long_name": "dev.to",
+          "img": "https://imgs.search.brave.com/UUpF8I85K--vkQzrhameM7iRPRU5VCTXyWbS4sk6G2g/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTg5MTcxNDBh/N2U4ODc4MDg0NWQ4/MzU0YWJkNDY3ZWRm/MjUxY2U1YjY5MzJm/YWRlOTI4YjAyZDI1/ZjU0MmJjNi9kZXYu/dG8v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "dev.to",
+          "hostname": "dev.to",
+          "favicon": "https://imgs.search.brave.com/UUpF8I85K--vkQzrhameM7iRPRU5VCTXyWbS4sk6G2g/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTg5MTcxNDBh/N2U4ODc4MDg0NWQ4/MzU0YWJkNDY3ZWRm/MjUxY2U1YjY5MzJm/YWRlOTI4YjAyZDI1/ZjU0MmJjNi9kZXYu/dG8v",
+          "path": "› wkusnierczyk  › claude-code-plugin-cache-1dn"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/3SSr_eJ35uIQz4JpGBG6P-z8sAVOGl4tPa_utQu21XE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YTIuZGV2LnRvL2R5/bmFtaWMvaW1hZ2Uv/d2lkdGg9MTA4MCxo/ZWlnaHQ9MTA4MCxm/aXQ9Y292ZXIsZ3Jh/dml0eT1hdXRvLGZv/cm1hdD1hdXRvL2h0/dHBzJTNBJTJGJTJG/ZGV2LXRvLXVwbG9h/ZHMuczMuYW1hem9u/YXdzLmNvbSUyRnVw/bG9hZHMlMkZhcnRp/Y2xlcyUyRm90bnky/NmtnMHNpM3BlM2Vs/a2oyLnBuZw",
+          "original": "https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fotny26kg0si3pe3elkj2.png",
+          "logo": false
+        },
+        "age": "February 25, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Waclaw Kusnierczyk",
+              "url": "https://dev.to/wkusnierczyk"
+            }
+          ],
+          "date": "Feb 25, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "DEV Community",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/G0tiJm-WvQZs-ogiTsZl65hSL9gaBnaPKXQHCudMtfA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YTIuZGV2LnRvL2R5/bmFtaWMvaW1hZ2Uv/d2lkdGg9MTkyLGhl/aWdodD0sZml0PXNj/YWxlLWRvd24sZ3Jh/dml0eT1hdXRvLGZv/cm1hdD1hdXRvL2h0/dHBzJTNBJTJGJTJG/ZGV2LXRvLXVwbG9h/ZHMuczMuYW1hem9u/YXdzLmNvbSUyRnVw/bG9hZHMlMkZhcnRp/Y2xlcyUyRjhqN2t2/cDY2MHJxenQ5OXp1/aThlLnBuZw",
+              "original": "https://media2.dev.to/dynamic/image/width=192,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Claude Code Plugin Cache Gotcha: Why Your Edits Aren't Taking Effect If you're developing... Tagged with ai, programming, tooling, tutorial.",
+          "# after editing plugin files rm -rf ~/.claude/plugins/cache/local-plugins/my-plugin # then restart your Claude Code session · Or adopt a habit of bumping the patch version with every edit cycle.",
+          "If you're developing a Claude Code plugin and your changes aren't showing up after restarting the session, you're probably hitting the plugin cache.",
+          "You edit a command, agent, or skill file in your plugin directory. You restart Claude Code. The old version still runs. You restart again."
+        ]
+      },
+      {
+        "title": "claude-code-cache-fix - npm",
+        "url": "https://www.npmjs.com/package/claude-code-cache-fix",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "It sits between Claude Code and the Anthropic API, applying cache fixes as hot-reloadable extensions. # Install npm install -g claude-code-cache-fix # Start the proxy (runs on localhost:9801) node &quot;$(npm root -g)/claude-code-cache-fix/proxy/server.mjs&quot; &amp; # Launch Claude Code through it ANTHROPIC_BASE_URL=http://127.0.0.1:9801 claude",
+        "page_age": "2026-04-23T00:00:00",
+        "profile": {
+          "name": "npm",
+          "url": "https://www.npmjs.com/package/claude-code-cache-fix",
+          "long_name": "npmjs.com",
+          "img": "https://imgs.search.brave.com/129PsExJCizx2_pC-7e4exnT1C0gWE4PUinIWjrXr-4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzg1ZTZiOGFm/M2NhY2JjMmE1NmJl/ZTRlODIwNDVhZWIy/OWRjZDgzYjYyYjcw/NjhmNzQzMWM0NDBk/Y2U3MGIzMi93d3cu/bnBtanMuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "npmjs.com",
+          "hostname": "www.npmjs.com",
+          "favicon": "https://imgs.search.brave.com/129PsExJCizx2_pC-7e4exnT1C0gWE4PUinIWjrXr-4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzg1ZTZiOGFm/M2NhY2JjMmE1NmJl/ZTRlODIwNDVhZWIy/OWRjZDgzYjYyYjcw/NjhmNzQzMWM0NDBk/Y2U3MGIzMi93d3cu/bnBtanMuY29tLw",
+          "path": "› package  › claude-code-cache-fix"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/62DpwhFyijlhFgJ_IRELYduUocC0mVxUE3w26Sc04W0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtcHJvZHVjdGlv/bi5ucG1qcy5jb20v/YTEyYzcyOGU5MDc1/OGNjZDE2OTc2YjM5/NGI5NjQzMTcucG5n",
+          "original": "https://static-production.npmjs.com/a12c728e90758ccd16976b394b964317.png",
+          "logo": false
+        },
+        "age": "April 23, 2026",
+        "software": {
+          "name": "claude-code-cache-fix",
+          "version": "3.6.0",
+          "datePublished": "May 14, 2026",
+          "is_npm": true,
+          "is_pypi": false,
+          "programmingLanguage": ""
+        },
+        "extra_snippets": [
+          "Cache optimization proxy and interceptor for Claude Code. Fixes prompt cache bugs, stabilizes prefix, reduces quota burn.. Latest version: 3.6.0, last published: a day ago. Start using claude-code-cache-fix in your project by running `npm i claude-code-cache-fix`. There are no other projects in the npm registry using claude-code-cache-fix.",
+          "It sits between Claude Code and the Anthropic API, applying cache fixes as hot-reloadable extensions. # Install npm install -g claude-code-cache-fix # Start the proxy (runs on localhost:9801) node \"$(npm root -g)/claude-code-cache-fix/proxy/server.mjs\" & # Launch Claude Code through it ANTHROPIC_BASE_URL=http://127.0.0.1:9801 claude",
+          "All telemetry is written to local files under ~/.claude/. No data leaves your machine. Supply chain: Proxy mode: 7 small extension modules in proxy/extensions/ (each under 200 lines). Preload mode: single unminified file (preload.mjs, ~1,700 lines). One dev dependency (zod for schema validation in tests only). Review before installing. npm provenance links each published version to its source commit.",
+          "@fgrosswig — claude-usage-dashboard forensic methodology: cost-factor overhead ratio metric, anthropic-* header capture pattern, proxy NDJSON schema that informed our dashboard interop layer · @TomTheMenace — Windows .bat wrapper, first Windows platform validation (7.5h/536-call Opus 4.6 session, 98.4% cache hit rate) @arjansingh — nvm-compatible wrapper script with dynamic npm root -g path resolution (PR #15)"
+        ]
+      },
+      {
+        "title": "GitHub - cnighswonger/claude-code-cache-fix: Fixes prompt cache regression in Claude Code that causes up to 20x cost increase on resumed sessions · GitHub",
+        "url": "https://github.com/cnighswonger/claude-code-cache-fix",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "It sits between Claude Code and the Anthropic API, applying cache fixes as hot-reloadable extensions. # Install npm install -g claude-code-cache-fix # Start the proxy (runs on localhost:9801) node &quot;$(npm root -g)/claude-code-cache-fix/proxy/server.mjs&quot; &amp; # Launch Claude Code through it ANTHROPIC_BASE_URL=http://127.0.0.1:9801 claude",
+        "page_age": "2026-05-27T07:45:05",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/cnighswonger/claude-code-cache-fix",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› cnighswonger  › claude-code-cache-fix"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/7q0Mbf0QbuH1AQGDTdcE0XsoCWWCNZ3nW8a4b8XFXe0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS9h/Y2UwZTYzM2JhYWM4/MmExN2ExOWUyOTJi/MjA5OGJhNGMzNDRi/OGJiMGY0MWIxNDFm/NmE4NWIzOTZlM2Fi/YjliL2NuaWdoc3dv/bmdlci9jbGF1ZGUt/Y29kZS1jYWNoZS1m/aXg",
+          "original": "https://opengraph.githubassets.com/ace0e633baac82a17a19e292b2098ba4c344b8bb0f41b141f6a85b396e3abb9b/cnighswonger/claude-code-cache-fix",
+          "logo": false
+        },
+        "age": "2 days ago",
+        "software": {
+          "name": "claude-code-cache-fix",
+          "author": "cnighswonger",
+          "is_npm": false,
+          "is_pypi": false,
+          "stars": 253,
+          "forks": 19,
+          "programmingLanguage": "JavaScript 95.6% | Shell 3.9%"
+        },
+        "extra_snippets": [
+          "It sits between Claude Code and the Anthropic API, applying cache fixes as hot-reloadable extensions. # Install npm install -g claude-code-cache-fix # Start the proxy (runs on localhost:9801) node \"$(npm root -g)/claude-code-cache-fix/proxy/server.mjs\" & # Launch Claude Code through it ANTHROPIC_BASE_URL=http://127.0.0.1:9801 claude",
+          "All telemetry is written to local files under ~/.claude/. No data leaves your machine. Supply chain: Proxy mode: 7 small extension modules in proxy/extensions/ (each under 200 lines). Preload mode: single unminified file (preload.mjs, ~1,700 lines). One dev dependency (zod for schema validation in tests only). Review before installing. Published builds carry npm's default registry signatures; sigstore provenance attestation is not currently published — tracked as a follow-up.",
+          "(Proxy-mode users can inspect the deltas in ~/.claude/quota-status/ files, which the proxy writes directly from response headers.) Workaround until upstream fix: use these commands sparingly in long sessions. If you need them frequently in a session, consider /compact after a diagnostic run to reset the bleed. If you're on a Node.js-based CC version (v2.1.112 or earlier), the preload interceptor works without a proxy: npm install -g claude-code-cache-fix NODE_OPTIONS=\"--import claude-code-cache-fix\" claude",
+          "@fgrosswig — claude-usage-dashboard forensic methodology: cost-factor overhead ratio metric, anthropic-* header capture pattern, proxy NDJSON schema that informed our dashboard interop layer · @TomTheMenace — Windows .bat wrapper, first Windows platform validation (7.5h/536-call Opus 4.6 session, 98.4% cache hit rate) @arjansingh — nvm-compatible wrapper script with dynamic npm root -g path resolution (PR #15)"
+        ]
+      },
+      {
+        "title": "Caching | Claude Platform",
+        "url": "https://platform.claude.com/usage/cache",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Build with the Claude API",
+        "profile": {
+          "name": "Claude",
+          "url": "https://platform.claude.com/usage/cache",
+          "long_name": "platform.claude.com",
+          "img": "https://imgs.search.brave.com/Lt7ZVSb5e0oWX_MwGoQKGWVu_O0n_Osvv1_EBX-bmqA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmU2YjhkYmQ2/YjA3YmEwNWZkYzNh/ZmZiODRmYTFmNTUx/Mzc0N2Y3ZDc1NzA0/ODUyZjMyNGM2NzIz/M2JmYzY1MS9wbGF0/Zm9ybS5jbGF1ZGUu/Y29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "platform.claude.com",
+          "hostname": "platform.claude.com",
+          "favicon": "https://imgs.search.brave.com/Lt7ZVSb5e0oWX_MwGoQKGWVu_O0n_Osvv1_EBX-bmqA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmU2YjhkYmQ2/YjA3YmEwNWZkYzNh/ZmZiODRmYTFmNTUx/Mzc0N2Y3ZDc1NzA0/ODUyZjMyNGM2NzIz/M2JmYzY1MS9wbGF0/Zm9ybS5jbGF1ZGUu/Y29tLw",
+          "path": "› usage  › cache"
+        }
+      },
+      {
+        "title": "r/ClaudeCode on Reddit: The creator of Claude Code notes on the current Caching Issue",
+        "url": "https://www.reddit.com/r/ClaudeCode/comments/1sk4y1p/the_creator_of_claude_code_notes_on_the_current/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "PSA: Claude Code has two cache bugs that can silently 10-20x your API costs — here&#x27;s the root cause and workarounds ... Claude Code seems to have suddenly become stupid. ... My 6 year old free app finally got its refactor. Claude Code did it overnight while I slept. ... BREAKING 🚨: Claude Code source code has been leaked via the map file in Anthropic&#x27;s npm registry.",
+        "page_age": "2026-04-13T08:38:30",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1sk4y1p/the_creator_of_claude_code_notes_on_the_current/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/claudecode  › the creator of claude code notes on the current caching issue"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/F-m9szflJnVL9dq17MnFofl6ntjlAtocmY5TjjPcLEg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/dGhlLWNyZWF0b3It/b2YtY2xhdWRlLWNv/ZGUtbm90ZXMtb24t/dGhlLWN1cnJlbnQt/Y2FjaGluZy12MC0z/bzRoa3YzYTZ4dWcx/LnBuZz9hdXRvPXdl/YnAmcz0wMThiYzhk/YjVjNTk5MTk3YWU3/YWE3Y2Y4MzNiOTJk/NmZjZDVlZjEz",
+          "original": "https://preview.redd.it/the-creator-of-claude-code-notes-on-the-current-caching-v0-3o4hkv3a6xug1.png?auto=webp&s=018bc8db5c599197ae7aa7cf833b92d6fcd5ef13",
+          "logo": false
+        },
+        "age": "April 13, 2026",
+        "qa": {
+          "question": "<p dir=\"auto\">\n      It&#39;s been pretty well documented on this subreddit + GH issues that caching is a big current problem.\n    </p><p dir=\"auto\">\n      Boris said this in the raised GH issue (<a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/anthropics/claude-code/issues/45756#issuecomment-4231739206\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://github.com/anthropics/claude-code/issues/45756#issuecomment-4231739206</a>)\n    </p><p dir=\"auto\">\n      TL;DR\n    </p><ul>\n        <li>\n      <p dir=\"auto\">\n      They know about it\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Leaving an agent session open too long causes a full cache miss (causing inflated token usage)\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Rather start a new conversation to avoid these large cache misses + rewrites\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      People have way too many skills / agents inflating their context usage massively (so rather  be selective on which agents / skills you use per project)\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Use /feedback to help them debug\n    </p>\n    </li>\n      </ul><p dir=\"auto\">\n      Thoughts?\n    </p>",
+          "answer": {
+            "text": "<span>This explains the TOKEN taxonomy, but what about the MODEL REGRESSION? I don't use multiple agents/sub, but right now, the model is totally unreliable,</span>\n",
+            "upvoteCount": 117
+          }
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "oh-keh",
+              "url": "https://www.reddit.com/user/oh-keh/"
+            }
+          ],
+          "date": "Apr 13, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Reddit",
+            "url": "https://www.reddit.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/vwRCTZCyS3UsCGj7HsYLzWpcOMhAEqq9hhxBK8tt7Dw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9zaHJlZGRp/dC9hc3NldHMvZmF2/aWNvbi82NHg2NC5w/bmc",
+              "original": "https://www.redditstatic.com/shreddit/assets/favicon/64x64.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "PSA: Claude Code has two cache bugs that can silently 10-20x your API costs — here's the root cause and workarounds ... Claude Code seems to have suddenly become stupid. ... My 6 year old free app finally got its refactor. Claude Code did it overnight while I slept. ... BREAKING 🚨: Claude Code source code has been leaked via the map file in Anthropic's npm registry.",
+          "If only they would implement the profiles request so people could try new skills, plugins, and tweaks to CLAUDE.md discretely without bloating things on start-up. ... Put it in for the OSS version, it’ll get added in like a day, with no bugs. ... Why doesn't Claude keep the cache permanently until the session is destroyed instead of disposing of the cache after an hour?",
+          "Be really great if the tools I used for cowork. short little admin tasks weren't loaded by default into claude code or chat... burning 40K tokens every time... this is low hanging fruit.. also let me disable the pluging without having to recconnect it... fix this ... You think that's bad you should try Claude Code with a different provider that has no prompt caching at all.",
+          "I run Claude Code with a detailed CLAUDE.md file per repo and no extra skills or background agents, and my cache hit rate has been noticeably better than what people here seem to be reporting. The CLAUDE.md approach is also more token-efficient than loading multiple skill files — one focused context doc that Claude reads at session start vs. multiple plugins competing for context space."
+        ]
+      },
+      {
+        "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+        "url": "https://www.claudepluginhub.com/top-plugins",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Rankings refresh automatically through cache invalidation and hourly revalidation. ... Search everything... PluginsTop PluginsMarketplacesComponentsTechnologies · SkillsAgentsCommandsHooksMCP ServersLSP ServersOutput StylesThemesMonitors ... Objective, multi-signal rankings combining public repo adoption, copy clicks, GitHub stars, maintenance, and community Sparks.",
+        "profile": {
+          "name": "ClaudePluginHub",
+          "url": "https://www.claudepluginhub.com/top-plugins",
+          "long_name": "claudepluginhub.com",
+          "img": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "claudepluginhub.com",
+          "hostname": "www.claudepluginhub.com",
+          "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+          "path": "› top-plugins"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/9y0dwh6ZhBrdoYFmY25ZOJnFVpECW-RyhixEY-BXZG8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS9vZy1p/bWFnZS5wbmc",
+          "original": "https://www.claudepluginhub.com/og-image.png",
+          "logo": false
+        },
+        "faq": {
+          "items": [
+            {
+              "question": "What makes a good Claude Code plugin?",
+              "answer": "A strong plugin solves a real workflow problem, is actively maintained, and includes clear documentation. The best plugins tend to have a healthy GitHub repository (recent commits, meaningful star count), a verified maintainer, and well-structured components like commands, agents, or skills. Copy clicks are tracked too, but most installations happen via 'plugin marketplace add', which we can't track.",
+              "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+              "url": "https://www.claudepluginhub.com/top-plugins",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "claudepluginhub.com",
+                "hostname": "www.claudepluginhub.com",
+                "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+                "path": "› top-plugins"
+              }
+            },
+            {
+              "question": "How are plugin rankings calculated?",
+              "answer": "Rankings blend several signals: GitHub stars (the heaviest weight), maintenance score (commit recency and frequency in the last 90 days), public repo adoption (how many public GitHub repos reference this plugin), copy clicks (a secondary engagement signal), claimed-maintainer status, and recency of the last commit. Community Sparks are not part of this default formula — they power the dedicated Sparks and Trending sort options instead.",
+              "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+              "url": "https://www.claudepluginhub.com/top-plugins",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "claudepluginhub.com",
+                "hostname": "www.claudepluginhub.com",
+                "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+                "path": "› top-plugins"
+              }
+            },
+            {
+              "question": "What does 'Most Adopted' measure?",
+              "answer": "Most Adopted ranks plugins by how many distinct public GitHub repositories reference them in their Claude Code settings (.claude/settings.json enabledPlugins). This is one of ClaudePluginHub's strongest objective signals — it shows which plugins developers are actually committing to their projects. Two important caveats: only public repos are counted (private and local installs are invisible), and GitHub's Code Search caps results, so a '+' next to a count means the true number is at least that high.",
+              "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+              "url": "https://www.claudepluginhub.com/top-plugins",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "claudepluginhub.com",
+                "hostname": "www.claudepluginhub.com",
+                "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+                "path": "› top-plugins"
+              }
+            },
+            {
+              "question": "How often are rankings updated?",
+              "answer": "Rankings refresh automatically through cache invalidation and hourly revalidation. The underlying data — copy-click counts, GitHub metadata, and engagement signals — updates continuously as the system processes new events and syncs repositories.",
+              "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+              "url": "https://www.claudepluginhub.com/top-plugins",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "claudepluginhub.com",
+                "hostname": "www.claudepluginhub.com",
+                "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+                "path": "› top-plugins"
+              }
+            },
+            {
+              "question": "What is the maintenance score?",
+              "answer": "The maintenance score is a 0–10 composite from two equally-weighted signals: how recent the last commit is, and how many commits landed in the last 90 days. A higher score indicates a more actively maintained project. It does not factor in issue response times or release cadence.",
+              "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+              "url": "https://www.claudepluginhub.com/top-plugins",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "claudepluginhub.com",
+                "hostname": "www.claudepluginhub.com",
+                "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+                "path": "› top-plugins"
+              }
+            },
+            {
+              "question": "What do copy clicks measure?",
+              "answer": "Copy clicks count how many visitors have pressed the install/copy button on this directory. They aren't verified installations, and they don't include installs done through 'plugin marketplace add' — that path is invisible to us. So copy clicks are a useful engagement signal, but they're a secondary one in default ranking.",
+              "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+              "url": "https://www.claudepluginhub.com/top-plugins",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "claudepluginhub.com",
+                "hostname": "www.claudepluginhub.com",
+                "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+                "path": "› top-plugins"
+              }
+            },
+            {
+              "question": "What are Sparks?",
+              "answer": "Sparks are a community promotion mechanism. Users can assign Sparks to plugins they vouch for, boosting their visibility across the directory. Sparks are time-limited (7 days) and serve as a real signal of community endorsement — users invest their Sparks in plugins they genuinely find valuable.",
+              "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+              "url": "https://www.claudepluginhub.com/top-plugins",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "claudepluginhub.com",
+                "hostname": "www.claudepluginhub.com",
+                "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+                "path": "› top-plugins"
+              }
+            },
+            {
+              "question": "Can I submit my plugin to be ranked?",
+              "answer": "Yes. Any public GitHub repository with a valid Claude Code plugin manifest is eligible. Submit your repository URL on ClaudePluginHub, or wait for automatic discovery via GitHub Code Search. Once indexed, your plugin will appear in rankings based on its actual metrics.",
+              "title": "Best Claude Code Plugins — Top Ranked | ClaudePluginHub",
+              "url": "https://www.claudepluginhub.com/top-plugins",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "claudepluginhub.com",
+                "hostname": "www.claudepluginhub.com",
+                "favicon": "https://imgs.search.brave.com/cgSkha6X13blGF5Sg3f5hyQROaJB4sGBa1ZvVfkBvgg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc2OGYwNzAw/MjQ4YTgwYjBlYTkz/YjUxODg2ZjcyZmU2/ODZhYTk1NzdkOTM0/ZTMxZDBkNjY4YTcy/OTVhNDc1NS93d3cu/Y2xhdWRlcGx1Z2lu/aHViLmNvbS8",
+                "path": "› top-plugins"
+              }
+            }
+          ]
+        },
+        "organization": {
+          "type": "organization",
+          "name": "ClaudePluginHub",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Public repo adoption counts the number of distinct public GitHub repositories that reference a plugin in their Claude Code settings. Only public repos are visible; private or local installs are not counted.",
+          "Rankings refresh automatically through cache invalidation and hourly revalidation. ... Search everything... PluginsTop PluginsMarketplacesComponentsTechnologies · SkillsAgentsCommandsHooksMCP ServersLSP ServersOutput StylesThemesMonitors ... Objective, multi-signal rankings combining public repo adoption, copy clicks, GitHub stars, maintenance, and community Sparks.",
+          "Counted in the most public GitHub repositories — an objective adoption signal from repos that reference this plugin in their Claude Code settings.View all",
+          "Automate multi-agent code reviews on GitHub pull requests, auditing CLAUDE.md files, detecting bugs, analyzing git history and prior PRs, reviewing code comments, and scoring issues by confidence level to prioritize fixes."
+        ]
+      },
+      {
+        "title": "Releases · anthropics/claude-code",
+        "url": "https://github.com/anthropics/claude-code/releases",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Added skipLfs option to github/git plugin marketplace sources to skip Git LFS downloads during clone and update · Claude Code now shows a one-time notice when your npm global install can&#x27;t auto-update; /doctor lists the fixes",
+        "page_age": "2026-05-29T13:20:02",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/anthropics/claude-code/releases",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› anthropics  › claude-code  › releases"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/iyCmwKsaM6LF-nTTHUScmfRNYB-Kz8NaatZuge-1G6I/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS8w/NTEzZmEyODFlMTQ4/ZDI2YzBjZmUyNTAx/YTM1MTkwODEwYWJk/Yzc4ZWUwNGIyY2Y5/YmVjNWVjMzk1Mzdh/NTgwL2FudGhyb3Bp/Y3MvY2xhdWRlLWNv/ZGU",
+          "original": "https://opengraph.githubassets.com/0513fa281e148d26c0cfe2501a35190810abdc78ee04b2cf9bec5ec39537a580/anthropics/claude-code",
+          "logo": false
+        },
+        "age": "5 hours ago",
+        "software": {
+          "name": "claude-code",
+          "author": "anthropics",
+          "is_npm": false,
+          "is_pypi": false,
+          "programmingLanguage": ""
+        },
+        "extra_snippets": [
+          "Added skipLfs option to github/git plugin marketplace sources to skip Git LFS downloads during clone and update · Claude Code now shows a one-time notice when your npm global install can't auto-update; /doctor lists the fixes",
+          "Fixed /insights crashing when cached session-meta files are missing optional fields · Fixed malformed PowerShell and History tool calls with missing input being misclassified as reads in transcript collapsing · Fixed renaming a Remote Control session from claude.ai or the Claude mobile app not updating the local session name for claude --resume",
+          "Claude in Chrome: pick which connected browser to use via /chrome → \"Select browser…\", or in-chat when a browser action runs with multiple connected · Plugins can now declare defaultEnabled: false in plugin.json or a marketplace entry; enable them with /plugin or claude plugin enable.",
+          "The /plugin Discover tab now pins plugins whose relevance signals match the current directory with a \"suggested for this directory\" annotation · Streaming tool execution is now always enabled, including when telemetry is disabled or on Bedrock/Vertex/Foundry (previously behind a feature flag) Stdio MCP server subprocesses now receive CLAUDE_CODE_SESSION_ID and CLAUDECODE=1 in their environment"
+        ]
+      },
+      {
+        "title": "claude-code/CHANGELOG.md at main · anthropics/claude-code",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "- Added `skipLfs` option to `github`/`git` plugin marketplace sources to skip Git LFS downloads during clone and update · - Claude Code now shows a one-time notice when your npm global install can&#x27;t auto-update; `/doctor` lists the fixes",
+        "page_age": "2026-05-09T22:15:04",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› anthropics  › claude-code  › blob  › main  › CHANGELOG.md"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/w2GyGz09WJyoy-eSxHwHAQ6J2251exF5X2sG8BFRU44/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS9h/NWI3YjkyNGJhY2U3/OWQ4NzMwMzY2NjUw/ZDZlZmU2NTNlMjdl/ZjkzODBiMTI4MWVl/OTIyOThmYTA0NjRi/Y2FkL2FudGhyb3Bp/Y3MvY2xhdWRlLWNv/ZGU",
+          "original": "https://opengraph.githubassets.com/a5b7b924bace79d8730366650d6efe653e27ef9380b1281ee92298fa0464bcad/anthropics/claude-code",
+          "logo": false
+        },
+        "age": "3 weeks ago",
+        "software": {
+          "name": "claude-code",
+          "author": "anthropics",
+          "is_npm": false,
+          "is_pypi": false,
+          "programmingLanguage": ""
+        },
+        "extra_snippets": [
+          "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands. - claude-code/CHANGELOG.md at main · anthropics/claude-code",
+          "- Fixed MCP stdio servers receiving corrupted arguments when `CLAUDE_CODE_SHELL_PREFIX` is set and an argument contains spaces or shell metacharacters · - Fixed sub-agent progress summaries missing the prompt cache (~3× `cache_creation` reduction) - Fixed `/plugin update` never detecting new versions of npm-sourced plugins",
+          "- Added `skipLfs` option to `github`/`git` plugin marketplace sources to skip Git LFS downloads during clone and update · - Claude Code now shows a one-time notice when your npm global install can't auto-update; `/doctor` lists the fixes",
+          "- Fixed plugins enabled in your own settings showing \"not cached\" errors after first load on a fresh machine; plugins enabled only by a project's `.claude/settings.json` now show an actionable `claude plugin install` hint"
+        ]
+      },
+      {
+        "title": "Plugin cache grows indefinitely without automatic cleanup · Issue #16453 · anthropics/claude-code",
+        "url": "https://github.com/anthropics/claude-code/issues/16453",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Each time Claude Code resolves plugins from a marketplace (e.g., claude-plugins-official), it caches the plugin at the resolved git commit hash:",
+        "page_age": "2026-01-06T11:37:32",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/anthropics/claude-code/issues/16453",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› anthropics  › claude-code  › issues  › 16453"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/GgVx0wQp35bN3SbeCP5odoGANrlhbDHKTo7p3KGyMGk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS9j/OWU5NTBkMTY4N2Ni/ODZmNjQxYTY4NGYz/YjM5NGM1NGZmNDZl/ZWU0YTQ5NDFhZjI1/YjQxYmU4MWFkZGQy/ZDBhL2FudGhyb3Bp/Y3MvY2xhdWRlLWNv/ZGUvaXNzdWVzLzE2/NDUz",
+          "original": "https://opengraph.githubassets.com/c9e950d1687cb86f641a684f3b394c54ff46eee4a4941af25b41be81addd2d0a/anthropics/claude-code/issues/16453",
+          "logo": false
+        },
+        "age": "January 6, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "ferdousbhai",
+              "url": "https://github.com/ferdousbhai"
+            }
+          ],
+          "date": "Jan 06, 2026"
+        },
+        "software": {
+          "name": "claude-code",
+          "author": "anthropics",
+          "is_npm": false,
+          "is_pypi": false,
+          "programmingLanguage": ""
+        },
+        "extra_snippets": [
+          "Description The plugin cache at ~/.claude/plugins/cache/ grows indefinitely as new versions of plugins are cached. There's no automatic garbage collection or TTL-based eviction, causing the cache to accumulate stale entries over time. Ob...",
+          "~/.claude/plugins/cache/claude-plugins-official/ ├── frontend-design/ │ ├── unknown/ # Jan 3 (initial, no version) │ ├── 6d3752c000e2/ # Jan 5 │ └── 15b07b46dab3/ # Jan 5 ├── ralph-wiggum/ │ ├── unknown/ # Jan 3 │ ├── 6d3752c000e2/ # Jan 5 │ ├── 15b07b46dab3/ # Jan 6 │ └── dbc4a7733cd4/ # Jan 6 ...",
+          "Each time Claude Code resolves plugins from a marketplace (e.g., claude-plugins-official), it caches the plugin at the resolved git commit hash:"
+        ]
+      },
+      {
+        "title": "Tool use with prompt caching - Claude API Docs",
+        "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-use-with-prompt-caching",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Cache tool definitions across turns and understand what invalidates your cache.",
+        "profile": {
+          "name": "Claude API Docs",
+          "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-use-with-prompt-caching",
+          "long_name": "platform.claude.com",
+          "img": "https://imgs.search.brave.com/Lt7ZVSb5e0oWX_MwGoQKGWVu_O0n_Osvv1_EBX-bmqA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmU2YjhkYmQ2/YjA3YmEwNWZkYzNh/ZmZiODRmYTFmNTUx/Mzc0N2Y3ZDc1NzA0/ODUyZjMyNGM2NzIz/M2JmYzY1MS9wbGF0/Zm9ybS5jbGF1ZGUu/Y29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "platform.claude.com",
+          "hostname": "platform.claude.com",
+          "favicon": "https://imgs.search.brave.com/Lt7ZVSb5e0oWX_MwGoQKGWVu_O0n_Osvv1_EBX-bmqA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmU2YjhkYmQ2/YjA3YmEwNWZkYzNh/ZmZiODRmYTFmNTUx/Mzc0N2Y3ZDc1NzA0/ODUyZjMyNGM2NzIz/M2JmYzY1MS9wbGF0/Zm9ybS5jbGF1ZGUu/Y29tLw",
+          "path": "› docs  › en  › agents-and-tools  › tool-use  › tool-use-with-prompt-caching"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Eh6yjgZyUh4O7e2M6mC8R3_z9CFo78fFE91O9Ztbgpk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9wbGF0/Zm9ybS5jbGF1ZGUu/Y29tL2RvY3Mvb2c_/bG9jYWxlPWVuJmFt/cDtwYXRoPWFnZW50/cy1hbmQtdG9vbHMv/dG9vbC11c2UvdG9v/bC11c2Utd2l0aC1w/cm9tcHQtY2FjaGlu/Zw",
+          "original": "https://platform.claude.com/docs/og?locale=en&amp;path=agents-and-tools/tool-use/tool-use-with-prompt-caching",
+          "logo": false
+        }
+      },
+      {
+        "title": "Marketplace-backed npm plugin install/update can use stale local cache instead of current marketplace version · Issue #37670 · anthropics/claude-code",
+        "url": "https://github.com/anthropics/claude-code/issues/37670",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "A marketplace added from a newer source URL should not continue resolving an older cached plugin package version. Claude continues to install an older cached plugin version until local plugin caches under ~/.claude/plugins are manually removed.",
+        "page_age": "2026-03-23T04:52:58",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/anthropics/claude-code/issues/37670",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› anthropics  › claude-code  › issues  › 37670"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/CqCOGKKikGaw3vo5KGnyQAkQux1GBP3OxlgR4ZMeOd0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS83/OTFkMzhhMjk1NDNi/NTk4NTg0NzhmZTk5/ZWJkZWM5ZWExZmQy/OTY4NDFjYTNjNGRj/YmU2YmRmZDYzMDZj/NDQxL2FudGhyb3Bp/Y3MvY2xhdWRlLWNv/ZGUvaXNzdWVzLzM3/Njcw",
+          "original": "https://opengraph.githubassets.com/791d38a29543b59858478fe99ebdec9ea1fd296841ca3c4dcbe6bdfd6306c441/anthropics/claude-code/issues/37670",
+          "logo": false
+        },
+        "age": "March 23, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "deeepanshu",
+              "url": "https://github.com/deeepanshu"
+            }
+          ],
+          "date": "Mar 23, 2026"
+        },
+        "software": {
+          "name": "claude-code",
+          "author": "anthropics",
+          "is_npm": false,
+          "is_pypi": false,
+          "programmingLanguage": ""
+        },
+        "extra_snippets": [
+          "Summary Claude Code can install or update a stale npm-backed plugin version from a marketplace even when the marketplace metadata, npm package version, and npm dist-tags all point to a newer version. In my case, a marketplace entry point...",
+          "Marketplace-backed npm plugin install/update can use stale local cache instead of current marketplace version#37670 ... area:pluginsbugSomething isn't workingSomething isn't workinghas reproHas detailed reproduction stepsHas detailed reproduction stepsplatform:macosIssue specifically occurs on macOSIssue specifically occurs on macOSstaleIssue is inactiveIssue is inactive ... Claude Code can install or update a stale npm-backed plugin version from a marketplace even when the marketplace metadata, npm package version, and npm dist-tags all point to a newer version.",
+          "In my case, a marketplace entry pointed to a newer prerelease plugin version, but claude plugin install / claude plugin update kept installing an older prerelease until I manually deleted local plugin cache directories under ~/.claude/plugins.",
+          "A marketplace added from a newer source URL should not continue resolving an older cached plugin package version. Claude continues to install an older cached plugin version until local plugin caches under ~/.claude/plugins are manually removed."
+        ]
+      },
+      {
+        "title": "GitHub - ArkNill/claude-code-hidden-problem-analysis: Measured analysis of Claude Code cache bugs causing 10-20x token inflation on Max plans · GitHub",
+        "url": "https://github.com/ArkNill/claude-code-cache-analysis",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Update to v2.1.91+ (cap at v2.1.109 — see 4.7 advisory) — fixes the cache regression (worst drain). v2.1.92–109 add no bug fixes for issues tracked here but are safe to use. Do not upgrade to v2.1.110+ (Opus 4.7 risks) npm or standalone — both fine on v2.1.91 (Sentinel gap closed)",
+        "page_age": "2026-04-01T00:20:04",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/ArkNill/claude-code-cache-analysis",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› ArkNill  › claude-code-cache-analysis"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/tPgCbTHQXORc6eAaNT7xPR3e8kTdPc9BT4g02bRn5UM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS80/YThmZGNhOGFiOGQ2/ZjYyMDRlYWIwZTQ5/YjMzMjY4ZDI2Mjc2/ODE2MjE1MDNlM2Yy/NzRkNjIzMTIxMTc3/NTFjL0Fya05pbGwv/Y2xhdWRlLWNvZGUt/aGlkZGVuLXByb2Js/ZW0tYW5hbHlzaXM",
+          "original": "https://opengraph.githubassets.com/4a8fdca8ab8d6f6204eab0e49b33268d2627681621503e3f274d62312117751c/ArkNill/claude-code-hidden-problem-analysis",
+          "logo": false
+        },
+        "age": "April 1, 2026",
+        "software": {
+          "name": "claude-code-hidden-problem-analysis",
+          "author": "ArkNill",
+          "is_npm": false,
+          "is_pypi": false,
+          "stars": 109,
+          "forks": 7,
+          "programmingLanguage": ""
+        },
+        "extra_snippets": [
+          "See 09_QUICKSTART.md for the full list of behaviors to avoid and adopt, including /branch, /release-notes, and environment variable recommendations. On April 1, 2026, my Max 20 plan ($200/mo) hit 100% usage in ~70 minutes during normal coding. JSONL analysis showed the session averaging 36.1% cache read (min 21.1%) where it should have been 90%+. Every token was being billed at full price.",
+          "Update to v2.1.91+ (cap at v2.1.109 — see 4.7 advisory) — fixes the cache regression (worst drain). v2.1.92–109 add no bug fixes for issues tracked here but are safe to use. Do not upgrade to v2.1.110+ (Opus 4.7 risks) npm or standalone — both fine on v2.1.91 (Sentinel gap closed)",
+          "Opus 4.7 advisory: 2.4x Q5h burn, model pin bypass, cache metering, long-context retrieval regression, autocompact ~195K, xhigh regression. §2.8 sycophancy (#45502), §2.9 tunnel-vision cluster, §2.10 perception-gap footnote ... All 11 bugs (B1-B11, B2a, B8a) + 3 preliminary + changelog cross-reference through v2.1.140 + new tracked regression #58424 ... Quick fix guide — Option A (v2.1.91+) vs Option B (v2.1.63 downgrade), npm vs standalone, diagnosis",
+          "TL;DR: Claude Code has 11 confirmed client-side bugs (B1-B5, B8, B8a, B9, B10, B11, B2a) plus 3 preliminary findings (P1-P3). Cache bugs (B1-B2) are fixed in v2.1.91. Six remain unfixed as of v2.1.140 (latest): B3, B4, B5, B8, B9, B10. B8a received a symptom mitigation (v2.1.121)."
+        ]
+      },
+      {
+        "title": "Clear Plugin Cache Claude Code Skill | Plugin Maintenance",
+        "url": "https://mcpmarket.com/tools/skills/clear-plugin-cache",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "The Clear Plugin Cache skill provides an essential maintenance utility for the Claude Code ecosystem, allowing users to aggressively manage their local plugin storage. It targets the plugin cache directory to remove specific or all cached plugin copies while intelligently preserving the plugin registry and marketplace configurations.",
+        "page_age": "2026-05-05T00:00:00",
+        "profile": {
+          "name": "MCP Market",
+          "url": "https://mcpmarket.com/tools/skills/clear-plugin-cache",
+          "long_name": "mcpmarket.com",
+          "img": "https://imgs.search.brave.com/cOn6qgwV6CwsMU6DjZpTrGuq9STwEm5mY1cGqJVWFBI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNmUwNzY4MDQx/ZTBlZDI1NTI4M2Q2/ODRjZGE4MDJmYWJj/ODM0ODdlNDdiYzJk/NWVlNTZlMmM2Yjg0/NDY4NTVmNy9tY3Bt/YXJrZXQuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mcpmarket.com",
+          "hostname": "mcpmarket.com",
+          "favicon": "https://imgs.search.brave.com/cOn6qgwV6CwsMU6DjZpTrGuq9STwEm5mY1cGqJVWFBI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNmUwNzY4MDQx/ZTBlZDI1NTI4M2Q2/ODRjZGE4MDJmYWJj/ODM0ODdlNDdiYzJk/NWVlNTZlMmM2Yjg0/NDY4NTVmNy9tY3Bt/YXJrZXQuY29tLw",
+          "path": "  › home  › agent skills  › clear plugin cache"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Ih6Am4a35oCaSxRoMoTQLBurIqrpIfPtv8RTdGQDLOg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tY3Bt/YXJrZXQuY29tL2Fw/aS9vZz90aXRsZT1D/bGVhciUyMFBsdWdp/biUyMENhY2hl",
+          "original": "https://mcpmarket.com/api/og?title=Clear%20Plugin%20Cache",
+          "logo": false
+        },
+        "age": "4 weeks ago",
+        "faq": {
+          "items": [
+            {
+              "question": "What is the difference between this and /user-config:reset-plugins?",
+              "answer": "This skill only clears the physical file cache. /user-config:reset-plugins is a complete reset that also wipes your registry, meaning Claude will 'forget' which plugins you had installed.",
+              "title": "Clear Plugin Cache Claude Code Skill | Plugin Maintenance",
+              "url": "https://mcpmarket.com/tools/skills/clear-plugin-cache",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mcpmarket.com",
+                "hostname": "mcpmarket.com",
+                "favicon": "https://imgs.search.brave.com/cOn6qgwV6CwsMU6DjZpTrGuq9STwEm5mY1cGqJVWFBI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNmUwNzY4MDQx/ZTBlZDI1NTI4M2Q2/ODRjZGE4MDJmYWJj/ODM0ODdlNDdiYzJk/NWVlNTZlMmM2Yjg0/NDY4NTVmNy9tY3Bt/YXJrZXQuY29tLw",
+                "path": "  › home  › agent skills  › clear plugin cache"
+              }
+            },
+            {
+              "question": "Will clearing the cache delete my plugin configuration?",
+              "answer": "No, this skill only removes the cached executable files. Your plugin registry (installed_plugins.json) and marketplace settings are preserved, though you will need to trigger a reinstall to use the plugins again.",
+              "title": "Clear Plugin Cache Claude Code Skill | Plugin Maintenance",
+              "url": "https://mcpmarket.com/tools/skills/clear-plugin-cache",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mcpmarket.com",
+                "hostname": "mcpmarket.com",
+                "favicon": "https://imgs.search.brave.com/cOn6qgwV6CwsMU6DjZpTrGuq9STwEm5mY1cGqJVWFBI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNmUwNzY4MDQx/ZTBlZDI1NTI4M2Q2/ODRjZGE4MDJmYWJj/ODM0ODdlNDdiYzJk/NWVlNTZlMmM2Yjg0/NDY4NTVmNy9tY3Bt/YXJrZXQuY29tLw",
+                "path": "  › home  › agent skills  › clear plugin cache"
+              }
+            },
+            {
+              "question": "How do I clear the cache for just one specific plugin?",
+              "answer": "You can provide the plugin name as an argument, for example: /clear-plugin-cache plugin-name. This will only target that specific plugin's cached files.",
+              "title": "Clear Plugin Cache Claude Code Skill | Plugin Maintenance",
+              "url": "https://mcpmarket.com/tools/skills/clear-plugin-cache",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mcpmarket.com",
+                "hostname": "mcpmarket.com",
+                "favicon": "https://imgs.search.brave.com/cOn6qgwV6CwsMU6DjZpTrGuq9STwEm5mY1cGqJVWFBI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNmUwNzY4MDQx/ZTBlZDI1NTI4M2Q2/ODRjZGE4MDJmYWJj/ODM0ODdlNDdiYzJk/NWVlNTZlMmM2Yjg0/NDY4NTVmNy9tY3Bt/YXJrZXQuY29tLw",
+                "path": "  › home  › agent skills  › clear plugin cache"
+              }
+            },
+            {
+              "question": "Is it safe to use this on local or git-based plugins?",
+              "answer": "Yes. The cache is a downstream copy. For local plugins, it will simply re-copy from your source; for git plugins, it will re-fetch from the remote repository upon reinstallation.",
+              "title": "Clear Plugin Cache Claude Code Skill | Plugin Maintenance",
+              "url": "https://mcpmarket.com/tools/skills/clear-plugin-cache",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mcpmarket.com",
+                "hostname": "mcpmarket.com",
+                "favicon": "https://imgs.search.brave.com/cOn6qgwV6CwsMU6DjZpTrGuq9STwEm5mY1cGqJVWFBI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNmUwNzY4MDQx/ZTBlZDI1NTI4M2Q2/ODRjZGE4MDJmYWJj/ODM0ODdlNDdiYzJk/NWVlNTZlMmM2Yjg0/NDY4NTVmNy9tY3Bt/YXJrZXQuY29tLw",
+                "path": "  › home  › agent skills  › clear plugin cache"
+              }
+            }
+          ]
+        },
+        "extra_snippets": [
+          "The Clear Plugin Cache skill provides an essential maintenance utility for the Claude Code ecosystem, allowing users to aggressively manage their local plugin storage. It targets the plugin cache directory to remove specific or all cached plugin copies while intelligently preserving the plugin registry and marketplace configurations.",
+          "Sync skills to Claude Cowork, Claude Code, Codex, and more."
+        ]
+      },
+      {
+        "title": "[BUG] Local plugin cache not invalidated when source files change · Issue #28492 · anthropics/claude-code",
+        "url": "https://github.com/anthropics/claude-code/issues/28492",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "For local plugins (those loaded from ~/.claude/my-plugins/ or similar local paths), invalidate the cache when source file modification timestamps are newer than the cached copies.",
+        "page_age": "2026-02-25T10:41:10",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/anthropics/claude-code/issues/28492",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› anthropics  › claude-code  › issues  › 28492"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/SgQIzuBY576pHxAWLyvLHexLcMhU7Qge_MgdK2am4Sk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS9h/Y2QyYTRiNzliMjhj/ZTVkYjdmM2VlMDE0/ZjYyOGIxYTI2NDE3/NGU1YjU2ZmFiNWJh/OWQ2ODA1NjFlODQ1/ODg3L2FudGhyb3Bp/Y3MvY2xhdWRlLWNv/ZGUvaXNzdWVzLzI4/NDky",
+          "original": "https://opengraph.githubassets.com/acd2a4b79b28ce5db7f3ee014f628b1a264174e5b56fab5ba9d680561e845887/anthropics/claude-code/issues/28492",
+          "logo": false
+        },
+        "age": "February 25, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "wkusnierczyk",
+              "url": "https://github.com/wkusnierczyk"
+            }
+          ],
+          "date": "Feb 25, 2026"
+        },
+        "software": {
+          "name": "claude-code",
+          "author": "anthropics",
+          "is_npm": false,
+          "is_pypi": false,
+          "programmingLanguage": ""
+        },
+        "extra_snippets": [
+          "Preflight Checklist I have searched existing issues and this hasn't been reported yet This is a single bug report (please file separate reports for different bugs) I am using the latest version of Claude Code What's Wrong? Summary Claude...",
+          "Claude Code caches local plugin files under ~/.claude/plugins/cache/ keyed by plugin name and version.",
+          "The command still runs the old content (\"Hello v1\"). The cached copy at ~/.claude/plugins/cache/local-plugins/{name}/0.1.0/commands/my-command.md is served instead of the source file.",
+          "For local plugins (those loaded from ~/.claude/my-plugins/ or similar local paths), invalidate the cache when source file modification timestamps are newer than the cached copies."
+        ]
+      },
+      {
+        "title": "How to Install Claude Code: Windows, Mac & Linux",
+        "url": "https://claudefa.st/blog/guide/installation-guide",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "npm uninstall -g @anthropic-ai/claude-code rm -rf ~/.claude ~/.npm/_cacache npm cache clean --force npm install -g @anthropic-ai/claude-code claude --version",
+        "page_age": "2026-05-27T14:55:06",
+        "profile": {
+          "name": "Claude Fast",
+          "url": "https://claudefa.st/blog/guide/installation-guide",
+          "long_name": "claudefa.st",
+          "img": "https://imgs.search.brave.com/b0A7m9WP43qCpVHuMt6aAxtsQzwxMl1SRuFspaI7wVI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzczMzc4OGE5/YmM2NGY2ODAyZmU2/ZWIzMjdiYzI3ZGYx/NGU5ZjU4MjljZjUy/MDg4Njc1NDdiMmE0/MDRlZTM0OC9jbGF1/ZGVmYS5zdC8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "claudefa.st",
+          "hostname": "claudefa.st",
+          "favicon": "https://imgs.search.brave.com/b0A7m9WP43qCpVHuMt6aAxtsQzwxMl1SRuFspaI7wVI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzczMzc4OGE5/YmM2NGY2ODAyZmU2/ZWIzMjdiYzI3ZGYx/NGU5ZjU4MjljZjUy/MDg4Njc1NDdiMmE0/MDRlZTM0OC9jbGF1/ZGVmYS5zdC8",
+          "path": "› blog  › guide  › installation-guide"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/GKBxsRDHWN0fLxJc6U9mOQhHPP3orSZsNN4x-1oxAsA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jbGF1/ZGVmYS5zdC9hcGkv/b2cvZ3VpZGUvaW5z/dGFsbGF0aW9uLWd1/aWRlL2ltYWdlLnBu/Zz92NA",
+          "original": "https://claudefa.st/api/og/guide/installation-guide/image.png?v4",
+          "logo": false
+        },
+        "age": "2 days ago",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Abdullah Mobayad",
+              "url": "https://x.com/AbdoMobayad"
+            }
+          ],
+          "date": "May 27, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Claude Fast",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/vhL3eDxeIxFVk33sWYKeDXvzVfgE0TpNuYzdI6qbn9k/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jbGF1/ZGVmYS5zdC9hcHBs/ZS1pY29uLnBuZw",
+              "original": "https://claudefa.st/apple-icon.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "npm uninstall -g @anthropic-ai/claude-code rm -rf ~/.claude ~/.npm/_cacache npm cache clean --force npm install -g @anthropic-ai/claude-code claude --version",
+          "Windows users: The native installer no longer requires Node.js. WSL users should run Claude Code from their Linux terminal. ... npm install -g @anthropic-ai/claude-code # If you see \"command not found\", fix PATH: echo 'export PATH=\"$(npm config get prefix)/bin:$PATH\"' >> ~/.zshrc source ~/.zshrc claude --version",
+          "# Create user npm directory (prevents sudo requirements) mkdir ~/.npm-global npm config set prefix '~/.npm-global' echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc source ~/.bashrc # Install Claude Code npm install -g @anthropic-ai/claude-code claude --version",
+          "which claude # Check if installed npm list -g @anthropic-ai/claude-code # Add to PATH manually echo 'export PATH=\"$PATH:/usr/local/lib/node_modules/@anthropic-ai/claude-code/bin\"' >> ~/.bashrc source ~/.bashrc"
+        ]
+      },
+      {
+        "title": "r/ClaudeCode on Reddit: PSA: Claude Code has two cache bugs that can silently 10-20x your API costs — here's the root cause and workarounds",
+        "url": "https://www.reddit.com/r/ClaudeCode/comments/1s7mitf/psa_claude_code_has_two_cache_bugs_that_can/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Workaround: Run Claude Code via npx @anthropic-ai/claude-code* instead of the standalone binary. The replacement mechanism exists only in the custom Bun fork compiled into the standalone — the npm package running on standard Bun/Node has no replacement.",
+        "page_age": "2026-04-04T15:32:03",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1s7mitf/psa_claude_code_has_two_cache_bugs_that_can/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/claudecode  › psa: claude code has two cache bugs that can silently 10-20x your api costs — here's the root cause and workarounds"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/A5H_aQiEBuUODR0lNeU8iDfhrWUvO8oEmRGE_mcS_gM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9pY29uLnBu/Zw",
+          "original": "https://www.redditstatic.com/icon.png",
+          "logo": true
+        },
+        "age": "April 4, 2026",
+        "qa": {
+          "question": "<p dir=\"auto\">\n      Edit: Issues linked in the description have been closed as resolved. Unfortunately I can&#39;t verify those claims as I&#39;m away from my PC.\n    </p><p dir=\"auto\">\n      I spent the past few days reverse-engineering the Claude Code standalone binary (228MB ELF, Ghidra + MITM proxy + radare2) and found two independent bugs that cause prompt cache to break, silently inflating costs by 10-20x. Posting this so others can protect themselves.\n    </p><h2 class=\"text-18-scalable xs:text-20-scalable\" dir=\"auto\">Bug 1: Sentinel replacement in standalone binary breaks cache when conversation discusses billing internals</h2><p dir=\"auto\">\n      <strong>Issue:</strong> <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/anthropics/claude-code/issues/40524\" rel=\"noopener nofollow ugc\" target=\"_blank\">anthropics/claude-code#40524</a>\n    </p><p dir=\"auto\">\n      The standalone Claude Code binary (the one you get from <code>claude.ai/install.sh</code> or <code>npm install -g</code>) contains a <strong>native-layer string replacement</strong> baked into Anthropic&#39;s custom Bun fork. It&#39;s injected into the Zig HTTP header builder function — the same function that builds <code>Content-Length</code>, <code>User-Agent</code>, etc.\n    </p><p dir=\"auto\">\n      On every API request to <code>/v1/messages</code>, if the <code>anthropic-version</code> header is present, it searches the JSON request body for <code>cch=00000</code> (the billing attribution sentinel) and replaces <code>00000</code> with a 5-char hex derived from hashing the body. This happens <strong>after</strong> <code>JSON.stringify</code> but <strong>before</strong> TLS encryption — completely invisible from JavaScript.\n    </p><p dir=\"auto\">\n      <strong>When does this cause problems?</strong> The replacement targets the <strong>first</strong> occurrence in the body. Since <code>messages[]</code> comes before <code>system[]</code> in the serialized JSON, if your conversation history contains the literal sentinel (e.g., from reading the CC bundle source, discussing billing headers, or having it in your CLAUDE.md), the sentinel in messages gets replaced instead of the one in <code>system[0]</code>. This changes your messages content every request → cache prefix broken → full cache rebuild (~$0.04-0.15 per request depending on context size).\n    </p><p dir=\"auto\">\n      In normal usage (not discussing CC internals), only <code>system[0]</code> is affected, and since it has <code>cache_control: null</code>, it doesn&#39;t impact caching.\n    </p><p dir=\"auto\">\n      <strong>Workaround:</strong> Run Claude Code via <code>npx @anthropic-ai/claude-code</code>* instead of the standalone binary. The replacement mechanism exists only in the custom Bun fork compiled into the standalone — the npm package running on standard Bun/Node has no replacement. Confirmed experimentally: same JS, same bytecode, zero replacement on npx.\n    </p><p dir=\"auto\">\n      *- Do not blindly use that command, verify what it does (it is safe, but you should check nonetheless)\n    </p><h2 class=\"text-18-scalable xs:text-20-scalable\" dir=\"auto\">Bug 2: --resume ALWAYS breaks cache (since v2.1.69)</h2><p dir=\"auto\">\n      <strong>Issue:</strong> <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/anthropics/claude-code/issues/34629\" rel=\"noopener nofollow ugc\" target=\"_blank\">anthropics/claude-code#34629</a>\n    </p><p dir=\"auto\">\n      Every <code>--resume</code> causes a full cache miss on the entire conversation history. Only the system prompt (~11-14k tokens) is cached; everything else is <code>cache_creation</code> from scratch. This is a ~10-20x cost increase on the resume request.\n    </p><p dir=\"auto\">\n      <strong>Root cause:</strong> In v2.1.69, Anthropic introduced <code>deferred_tools_delta</code> — a new system-reminder attachment listing tools available via ToolSearch. On a <strong>fresh session</strong>, these attachments (deferred tools + MCP instructions + skills list, ~13KB) are injected into <code>messages[0]</code> alongside the AU$ user context. On <strong>resume</strong>, they&#39;re appended at the <strong>end</strong> of messages (<code>messages[N]</code>) while <code>messages[0]</code> contains only the AU$ context (~352B).\n    </p><p dir=\"auto\">\n      This creates three independent cache-breaking differences:\n    </p><ol>\n        <li>\n      <p dir=\"auto\">\n      <code>messages[0]</code>: 13KB (4 reminders) vs 352B (1 reminder) — completely different prefix\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <code>system[0]</code> billing hash: changes because <code>cc_version</code> suffix is computed from chars at positions 4, 7, 20 of the first user message (which IS the system-reminder, not the actual user prompt)\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <code>cache_control</code> breakpoint position: moves from <code>messages[0]</code> to <code>messages[last]</code>\n    </p>\n    </li>\n      </ol><p dir=\"auto\">\n      <code>deferred_tools_delta</code> does not exist in v2.1.68 (<code>grep -c &#39;deferred_tools_delta&#39; cli.js</code> → 0 in 2.1.68, 5 in 2.1.69). Without it, <code>messages[0]</code> was identical on fresh and resumed sessions → cache hit.\n    </p><p dir=\"auto\">\n      <strong>Subsequent turns after resume cache normally</strong> — the one-time miss is only on the first request after resume.\n    </p><p dir=\"auto\">\n      <strong>Workaround:</strong> There&#39;s no external workaround for this one. Pinning to v2.1.68 works (as the original issue reporter found) but you lose 60+ versions of features. An invasive patch to the npm package&#39;s <code>cli.js</code> could theoretically reorder the attachment injection on resume, but that&#39;s fragile across updates.\n    </p><h2 class=\"text-18-scalable xs:text-20-scalable\" dir=\"auto\">Cost impact</h2><p dir=\"auto\">\n      For a large conversation (~500k tokens):\n    </p><ul>\n        <li>\n      <p dir=\"auto\">\n      <strong>Bug 1</strong> (when triggered): ~155k tokens shift from <code>cache_read</code> ($0.03/MTok) to <code>cache_creation</code> ($0.30/MTok) = <strong>~$0.04 per request</strong>, every request\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <strong>Bug 2</strong> (every resume): ~500k tokens as <code>cache_creation</code> = <strong>~$0.15 one-time per resume</strong>\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Combined (discussing CC internals + resuming): up to <strong>$0.20+ per request</strong>\n    </p>\n    </li>\n      </ul><h2 class=\"text-18-scalable xs:text-20-scalable\" dir=\"auto\">Methodology</h2><p dir=\"auto\">\n      Full details in the GitHub issues, but briefly: MITM proxy (mitmproxy addon capturing all API payloads), Ghidra reverse engineering of the standalone ELF to locate the replacement code in the Zig HTTP header builder, <code>Bun.hash()</code> to identify all header name hashes, npm package comparison across versions 1.0.0–2.1.87, and controlled experiments with fresh sessions → resume → consecutive resumes with payload diffing.\n    </p><p dir=\"auto\">\n      PS. Co-written by claude code, obviously\n    </p><p dir=\"auto\">\n      PPS. Claude code has special 1h TTL of cache, or at least mine has, so any request should be cached correctly. Except extra usage, it has 5 minutes TTL.\n    </p><p dir=\"auto\">\n      PPPS. Apparently downgrading to 2.1.34 (or 2.1.30 just to be sure) also works\n    </p><p dir=\"auto\">\n      Verification script you may use: <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://gitlab.com/treetank/cc-diag/-/raw/c126a7890f2ee12f76d91bfb1cc92612ae95284e/test_cache.py\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://gitlab.com/treetank/cc-diag/-/raw/c126a7890f2ee12f76d91bfb1cc92612ae95284e/test_cache.py</a>\n    </p><p dir=\"auto\">\n      A followup (nothing fancy): <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://www.reddit.com/r/ClaudeCode/comments/1s9pjbl/claude_code_cache_crisis_a_complete/\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://www.reddit.com/r/ClaudeCode/comments/1s9pjbl/claude_code_cache_crisis_a_complete/</a>\n    </p>",
+          "answer": {
+            "text": "<span>So it seems like fewer and fewer people @ anthropic actually code or understand code now...</span>\n",
+            "upvoteCount": 71
+          }
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "skibidi-toaleta-2137",
+              "url": "https://www.reddit.com/user/skibidi-toaleta-2137/"
+            }
+          ],
+          "date": "Mar 30, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Reddit",
+            "url": "https://www.reddit.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/vwRCTZCyS3UsCGj7HsYLzWpcOMhAEqq9hhxBK8tt7Dw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9zaHJlZGRp/dC9hc3NldHMvZmF2/aWNvbi82NHg2NC5w/bmc",
+              "original": "https://www.redditstatic.com/shreddit/assets/favicon/64x64.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Posted by u/skibidi-toaleta-2137 - 999 votes and 202 comments",
+          "Workaround: Run Claude Code via npx @anthropic-ai/claude-code* instead of the standalone binary. The replacement mechanism exists only in the custom Bun fork compiled into the standalone — the npm package running on standard Bun/Node has no replacement.",
+          "Full details in the GitHub issues, but briefly: MITM proxy (mitmproxy addon capturing all API payloads), Ghidra reverse engineering of the standalone ELF to locate the replacement code in the Zig HTTP header builder, Bun.hash() to identify all header name hashes, npm package comparison across versions 1.0.0–2.1.87, and controlled experiments with fresh sessions → resume → consecutive resumes with payload diffing. PS. Co-written by claude code, obviously",
+          "In general, is it possible to recover the full (or most of) the source code of claude code? How is CC even written? Is it an output of some compiled language or just a \"compiled\" JS? ... It's a homebrew version of bun (with zig patches) with a minified version of their source code in js. Some parts can be easily deminified from the npm package, however one of the bugs was hidden in a compiled binary."
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

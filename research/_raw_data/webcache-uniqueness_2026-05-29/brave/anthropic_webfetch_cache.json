@@ -1,0 +1,1600 @@
+{
+  "type": "search",
+  "query": {
+    "original": "Anthropic Claude Code WebFetch built-in cache 15 minute behavior",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "discussions": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Claude Code 2.1.108+ 1h Prompt Caching Fix – Stop Token Bleeding",
+        "url": "https://www.reddit.com/r/Anthropic/comments/1slo0iu/claude_code_21108_1h_prompt_caching_fix_stop/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "What is the benefit to using 5m vs 1h? And it says \"on API key, Bedrock, Vertex, and Foundry\" so does that mean it doesn't work on a max sub?",
+        "fetched_content_timestamp": 1779898643,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › Anthropic  › comments  › 1slo0iu  › claude_code_21108_1h_prompt_caching_fix_stop"
+        },
+        "age": "April 14, 2026",
+        "data": {
+          "forum_name": "r/Anthropic",
+          "num_answers": 18,
+          "score": "9",
+          "title": "Claude Code 2.1.108+ 1h Prompt Caching Fix – Stop Token Bleeding",
+          "question": "<p dir=\"auto\">\n      If you&#39;re on Claude Code and your token usage has been brutal lately (60k+ tokens just to resume?), there&#39;s a fix in 2.1.108+:\n    </p><p dir=\"auto\">\n      <strong>Problem:</strong> Default 5min cache TTL. Step away, full history reread = wallet pain.\n    </p><p dir=\"auto\">\n      <strong>Fix:</strong> <code>ENABLE_PROMPT_CACHING_1H=1</code> for 1-hour cache.\n    </p><pre>\nexport ENABLE_PROMPT_CACHING_1H=1\nclaude</pre><p dir=\"auto\">\n      <strong>Permanent:</strong>\n    </p><pre>\necho &#39;export ENABLE_PROMPT_CACHING_1H=1&#39; &gt;&gt; ~/.zshrc\nsource ~/.zshrc</pre><p dir=\"auto\">\n      <strong>Gotcha:</strong> <code>DISABLE_PROMPT_CACHING*</code> vars kill it. Check:\n    </p><pre>\nenv | grep DISABLE_PROMPT_CACHING</pre><p dir=\"auto\">\n      Comment them out in <code>~/.zshrc</code>/<code>~/.bashrc</code>.\n    </p><p dir=\"auto\">\n      Changelog: <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://code.claude.com/docs/ja/changelog\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://code.claude.com/docs/ja/changelog</a>\n    </p>",
+          "top_comment": "What is the benefit to using 5m vs 1h? And it says \"on API key, Bedrock, Vertex, and Foundry\" so does that mean it doesn't work on a max sub?"
+        }
+      },
+      {
+        "title": "Cache TTL silently regressed from 1h to 5m around early March 2026, causing quota and cost inflation",
+        "url": "https://github.com/anthropics/claude-code/issues/46829",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Cache TTL appears to have silently regressed from 1h to 5m around early March 2026, causing significant quota and cost inflation Summary Analysis of raw Claude Code session JSONL files spanning Jan 11 – Apr 11, 2026 shows that Anthropic ...",
+        "fetched_content_timestamp": 1780054045,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› anthropics  › claude-code  › issues  › 46829"
+        },
+        "age": "April 12, 2026",
+        "data": {
+          "forum_name": "github.com",
+          "num_answers": 56,
+          "title": "Cache TTL silently regressed from 1h to 5m around early March 2026, causing quota and cost inflation",
+          "top_comment": "Cache TTL appears to have silently regressed from 1h to 5m around early March 2026, causing significant quota and cost inflation Summary Analysis of raw Claude Code session JSONL files spanning Jan 11 – Apr 11, 2026 shows that Anthropic ..."
+        }
+      },
+      {
+        "title": "Tool Search now available in Claude Code!!",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1qczqsx/tool_search_now_available_in_claude_code/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Tweet: Today we're rolling out MCP Tool Search for Claude Code. As MCP has grown to become a more popular protocol and agents…",
+        "fetched_content_timestamp": 1779448415,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ClaudeAI  › comments  › 1qczqsx  › tool_search_now_available_in_claude_code"
+        },
+        "age": "January 14, 2026",
+        "data": {
+          "forum_name": "r/ClaudeAI",
+          "num_answers": 18,
+          "score": "64",
+          "title": "Tool Search now available in Claude Code!!",
+          "question": "<p dir=\"auto\">\n      Tweet:\n    </p><p dir=\"auto\">\n      Today we&#39;re rolling out MCP Tool Search for Claude Code.\n    </p><p dir=\"auto\">\n      As MCP has grown to become a more popular protocol and agents have become more capable, we&#39;ve found that MCP servers may have up to 50+ tools and take up a large amount of context.\n    </p><p dir=\"auto\">\n      Tool Search allows Claude Code to dynamically load tools into context when MCP tools would otherwise take up a lot of context.\n    </p><p dir=\"auto\">\n      How it works:\n    </p><p dir=\"auto\">\n      - Claude Code detects when your MCP tool descriptions would use more than 10% of context\n    </p><p dir=\"auto\">\n      - When triggered, tools are loaded via search instead of preloaded\n    </p><p dir=\"auto\">\n      Otherwise,  MCP tools work exactly as before.\n    </p><p dir=\"auto\">\n      This resolves one of our most-requested features on GitHub: lazy loading for MCP servers. Users were documenting setups with 7+ servers consuming 67k+ tokens.\n    </p><p dir=\"auto\">\n      If you&#39;re making a MCP server\n    </p><p dir=\"auto\">\n      Things are mostly the same, but the &quot;server instructions&quot; field becomes more useful with tool search enabled. It helps Claude know when to search for your tools, similar to skills\n    </p><p dir=\"auto\">\n      If you&#39;re making a MCP client\n    </p><p dir=\"auto\">\n      We highly suggest implementing the ToolSearchTool, you can find the docs here. We implemented it with a custom search function to make it work for Claude Code.\n    </p><p dir=\"auto\">\n      What about programmatic tool calling?\n    </p><p dir=\"auto\">\n      We experimented with doing programmatic tool calling such that MCP tools could be composed with each other via code. While we will continue to explore this in the future, we felt the most important need was to get Tool Search out to reduce context usage.\n    </p><p dir=\"auto\">\n      Tell us what you think here or on Github as you see the ToolSearchTool work.\n    </p>",
+          "top_comment": "Tweet: Today we're rolling out MCP Tool Search for Claude Code. As MCP has grown to become a more popular protocol and agents…"
+        }
+      },
+      {
+        "title": "Claude.ai is using very short prompt caching time limits for Opus 4.6, causing it to eat through limits very quickly if you spend even a few minutes between consecutive prompts.",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1r1g0fn/claudeai_is_using_very_short_prompt_caching_time/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Yeah, it's 5 min on the other models as well. And the new insights report shows a frustrating number are landing just over 5 minutes...",
+        "fetched_content_timestamp": 1779888708,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ClaudeAI  › comments  › 1r1g0fn  › claudeai_is_using_very_short_prompt_caching_time"
+        },
+        "age": "February 10, 2026",
+        "data": {
+          "forum_name": "r/ClaudeAI",
+          "num_answers": 20,
+          "score": "36",
+          "title": "Claude.ai is using very short prompt caching time limits for Opus 4.6, causing it to eat through limits very quickly if you spend even a few minutes between consecutive prompts.",
+          "question": "<p dir=\"auto\">\n      I don&#39;t know if everyone else is also having this issue but with Opus 4.6 if I am deep in a long chat on the web app and I step away for more than 5 minutes it seems to flush away all the context meaning the next time I send a message all the context has to be reloaded meaning a huge amount of input tokens get consumed and causing a large fraction of my 5 hour limit to be gobbled up by that single message, regardless of how simple or complex it is.\n    </p><p dir=\"auto\">\n      It feels like something which should be easily fixable on the backend (keep prompts cached for longer than 5 minutes or so) but at the moment I&#39;m sending random &quot;test&quot; messages every 3-4 minutes to ensure my prompt caching time resets as this is much much cheaper in terms of limit usage than having to have everything reloaded back into context so it can reply to your message.\n    </p>",
+          "top_comment": "Yeah, it's 5 min on the other models as well. And the new insights report shows a frustrating number are landing just over 5 minutes..."
+        }
+      },
+      {
+        "title": "Claude's web_fetch fails to extract body content from some pages — verified it's not a site issue, how do I work around this?",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1r23xdh/claudes_web_fetch_fails_to_extract_body_content/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "I'm having the same issue.",
+        "fetched_content_timestamp": 1778938370,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ClaudeAI  › comments  › 1r23xdh  › claudes_web_fetch_fails_to_extract_body_content"
+        },
+        "age": "February 11, 2026",
+        "data": {
+          "forum_name": "r/ClaudeAI",
+          "num_answers": 3,
+          "score": "3",
+          "title": "Claude's web_fetch fails to extract body content from some pages — verified it's not a site issue, how do I work around this?",
+          "question": "<p dir=\"auto\">\n      I am working on a documentation site (Next.js on Vercel) and I&#39;ve been trying to make sure our pages work well when people use Claude to read them. I noticed that when Claude fetches certain pages, it only returns the nav/sidebar/footer — the actual article content is completely missing.\n    </p><p dir=\"auto\">\n      I assumed it was something wrong on our end (SSR, hydration, etc.), so I spent time investigating. Claude itself was very confident it was a rendering issue and even helped me put together a plan to fix our Next.js pipeline.\n    </p><p dir=\"auto\">\n      After auditing with `curl` and Claude Code&#39;s WebFetch, turns out **every page is fully server-rendered with complete body content in `&lt;article&gt;` tags**. The HTML is fine. Claude&#39;s `web_fetch` tool is just failing to extract the content from certain pages.\n    </p><p dir=\"auto\">\n      <strong>What I verified</strong>\n    </p><p dir=\"auto\">\n      - `curl` returns full article content for every page\n    </p><p dir=\"auto\">\n      - Claude Code&#39;s WebFetch returns full content for every page\n    </p><p dir=\"auto\">\n      - The &quot;failing&quot; pages have 7,000+ chars of article content in the HTML — it&#39;s not empty\n    </p><p dir=\"auto\">\n      - The results are deterministic — same pages fail every time, so it&#39;s not a cache/timing issue\n    </p><p dir=\"auto\">\n      - Pages that work and pages that don&#39;t use the same layout/template\n    </p><p dir=\"auto\">\n      <strong>Why I&#39;m posting</strong>\n    </p><p dir=\"auto\">\n      As a site owner, I want our docs to be accessible when people ask Claude about them. Right now there&#39;s nothing I can do on my end to fix this — the HTML is valid, the content is server-rendered, and it works with every other tool.\n    </p><p dir=\"auto\">\n      The frustrating part is Claude doesn&#39;t indicate anything went wrong — it just presents the partial content as if that&#39;s all there is, and if you push back it&#39;ll blame your site&#39;s rendering.\n    </p><p dir=\"auto\">\n      Has anyone else run into this with their own sites? Is there a known pattern in the DOM structure that web_fetch handles poorly? Any workarounds?\n    </p><p dir=\"auto\">\n      Would also love to know the right channel to report this to Anthropic.\n    </p>",
+          "top_comment": "I'm having the same issue."
+        }
+      },
+      {
+        "title": "API responses are cached",
+        "url": "https://www.reddit.com/r/Anthropic/comments/1dmg7yw/api_responses_are_cached/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "On temp. 0 you will always get the same response, no? But yeah, I noticed that even on higher temps you will sometimes get the same response twice or even thrice. You could compare the responses and run again if they are the same I guess... or always add a random number/symbol to the prompt? Didn't try, but could work",
+        "fetched_content_timestamp": 1764102427,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › Anthropic  › comments  › 1dmg7yw  › api_responses_are_cached"
+        },
+        "age": "June 23, 2024",
+        "data": {
+          "forum_name": "r/Anthropic",
+          "num_answers": 5,
+          "score": "1",
+          "title": "API responses are cached",
+          "question": "<figure class=\"rte-media\"><a href=\"https://preview.redd.it/api-responses-are-cached-v0-h4caq84kq98d1.png?width=2316&amp;format=png&amp;auto=webp&amp;s=859ec633b6073eba0f488dc503a8c1f55c5ea0c9\" title=\"Image from r/Anthropic - API responses are cached\" rel=\"noopener noreferrer ugc\" target=\"_blank\"> <img src=\"https://preview.redd.it/api-responses-are-cached-v0-h4caq84kq98d1.png?width=2316&amp;format=png&amp;auto=webp&amp;s=859ec633b6073eba0f488dc503a8c1f55c5ea0c9\" alt=\"r/Anthropic - API responses are cached\" class=\"mb-0 block w-fit my-0 mx-auto max-w-[100%] non-lightboxed-content\" width=\"750\" height=\"auto\" srcset=\"https://preview.redd.it/api-responses-are-cached-v0-h4caq84kq98d1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=ca79fea4a38575518f9e64e9f277e807a589c3e4 320w, https://preview.redd.it/api-responses-are-cached-v0-h4caq84kq98d1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=63b7884cf4f1ea2d6fc8a9cdd79d3e8652e06be8 640w, https://preview.redd.it/api-responses-are-cached-v0-h4caq84kq98d1.png?width=1080&amp;crop=smart&amp;auto=webp&amp;s=72bf7211c9bcd1c3230ead8ffa5fe7799d02b1cf 1080w\" sizes=\"(min-width: 1415px) 750px, (min-width: 768px) 50vw, 100vw\" style=\"aspect-ratio:750/351.0362694300518\" loading=\"eager\"> </a></figure><p>I had a situation with Opus where I had difficulty getting a variation of response for the same prompt, both long prompt and answer. I switched a daily content creation process to Sonnet 3.5 on Friday. The content was good for the first couple of days, but the text generated does not follow the instructions today. I then rerun the script to generate the content, and it generated the exact same content. I tried another time and got the exact same thing again. It was a bad response, and it was not following the instructions. Until I slightly changed the prompt to get a different and better response.</p><p>I use temperature 0 to follow instructions, but here, it looks like responses are cached, or at least a part of the process is. It sounds weird to get the exact same generation.</p><p>Is anyone else experiencing the same situation? How do you deal with this in an automated script?</p>",
+          "top_comment": "On temp. 0 you will always get the same response, no? But yeah, I noticed that even on higher temps you will sometimes get the same response twice or even thrice. You could compare the responses and run again if they are the same I guess... or always add a random number/symbol to the prompt? Didn't try, but could work"
+        }
+      },
+      {
+        "title": "Anyone actually saving money with Claude's prompt caching?",
+        "url": "https://www.reddit.com/r/Anthropic/comments/1idf7x7/anyone_actually_saving_money_with_claudes_prompt/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "It saves me dollars every time I use Cline or TypingMind at least.",
+        "fetched_content_timestamp": 1779969807,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › Anthropic  › comments  › 1idf7x7  › anyone_actually_saving_money_with_claudes_prompt"
+        },
+        "age": "January 30, 2025",
+        "data": {
+          "forum_name": "r/Anthropic",
+          "num_answers": 13,
+          "score": "8",
+          "title": "Anyone actually saving money with Claude's prompt caching?",
+          "question": "<p dir=\"auto\">\n      I&#39;ve started looking at Claude&#39;s prompt caching and I&#39;m not convinced. Only talked with AI about it so far, so maybe I&#39;m missing something or got it wrong.\n    </p><p dir=\"auto\">\n      What&#39;s bugging me:\n    </p><p dir=\"auto\">\n      - Cache dies after 5 mins if not used<br>- First time you cache something, it costs 25% MORE<br>- When cache expires, you pay that extra 25% AGAIN<br>- Yeah cache hits are 90% cheaper but with that 5-min timeout... meh\n    </p><p dir=\"auto\">\n      I&#39;m building my own chat app and I don&#39;t see how I&#39;m gonna save money here. Like, I&#39;m not gonna sit there shooting messages every 4 mins just to keep the cache alive lol.\n    </p><p dir=\"auto\">\n      Maybe I&#39;m not getting the full picture since I&#39;ve only discussed this with Claude. Could be some tricks or use cases I haven&#39;t thought about.\n    </p><p dir=\"auto\">\n      Anyone using this in their projects? Is it saving you cash or just adding extra work?<br>Just wanna know if it&#39;s worth my time or not.\n    </p>",
+          "top_comment": "It saves me dollars every time I use Cline or TypingMind at least."
+        }
+      },
+      {
+        "title": "ClaudeMind now supports 60-minute TTL prompt caching",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1ez0dd0/claudemind_now_supports_60minute_ttl_prompt/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Any plans to make it usage for vs code? I'd love to combine it with claude dev",
+        "fetched_content_timestamp": 1774833326,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ClaudeAI  › comments  › 1ez0dd0  › claudemind_now_supports_60minute_ttl_prompt"
+        },
+        "age": "August 23, 2024",
+        "data": {
+          "forum_name": "r/ClaudeAI",
+          "num_answers": 23,
+          "score": "40",
+          "title": "ClaudeMind now supports 60-minute TTL prompt caching",
+          "question": "<p>\n      Disclaimer: 1. I am the developer of ClaudeMind, which I created to seamlessly use the Claude AI model within JetBrains IDEs. 2. ClaudeMind is free.\n    </p><p>\n      I think the Prompt Caching feature released by Anthropic is excellent, but its TTL is only 5 minutes, this means that if my colleague Bob comes over for a 6-minute chat, the content I wrote to the cache at 125% of the price becomes invalid. So, in ClaudeMind, I extended the cache TTL to 60 minutes, and the implementation is quite simple. When the 5-minute cache is about to expire, I send a Ping message to the Anthropic API (specifically: cached content + Ping), hitting the cache once, which gives that cached content another 5 minutes of life. A 60-minute TTL only requires 12 Pings (actually 2-3 more, because to be safe, we need to send a Ping at around 4 minutes and some seconds).\n    </p><p>\n      I believe a 60-minute TTL is a sweet spot.\n    </p><p>\n      First: After writing to the cache, 60 minutes is enough time for you to chat with Bob for 10 minutes, have a 10-minute stand-up meeting, browse Twitter for 30 minutes, and still hit the cache when you ask ClaudeMind a question.\n    </p><p>\n      Second: In terms of pricing, to achieve a 60-minute TTL, about 12 Pings are needed. Each Ping will hit the cache. The price of a cache read token is one-tenth of a base input token. The price of 12 Pings is 1.2 times that of an equivalent amount of base input tokens. This means that within these 60 minutes, if you ask just 2 questions, it&#39;s worth the money spent on those 12 Pings.\n    </p><p>\n      Finally, ClaudeMind allows you to specify what content to cache. I think this is very important. I don&#39;t want to cache everything! I only want to cache those reusable large files or documents. For example, I can tell ClaudeMind: cache all files under package X (or folder Y, or the whole project!). Then I can ask it related questions.\n    </p><p>\n      If you&#39;re using a JetBrains IDE (IntelliJ IDEA, Android Studio, AppCode, Aqua, CLion, GoLand, PhpStorm, PyCharm, Rider, RubyMine, RustRover, WebStorm) and want to seamlessly use the Claude AI model in your IDE, just head to the JetBrains Plugin Marketplace, search for ClaudeMind, and click install.\n    </p>",
+          "top_comment": "Any plans to make it usage for vs code? I'd love to combine it with claude dev"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "discussions",
+        "all": true
+      },
+      {
+        "type": "videos",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 19,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "videos": {
+    "type": "videos",
+    "results": [
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=LFvw_xlj0LQ",
+        "title": "Prompt Caching with Claude 3.5 Sonnet is HUGE! (Tutorial) - YouTube",
+        "description": "Overview of the new prompt caching feature with Claude introduced by Anthropic.00:00 Overview of Prompt Caching01:52 Basic example06:40 Multi-turn conversati...",
+        "age": "August 23, 2024",
+        "page_age": "2024-08-23T14:11:30",
+        "fetched_content_timestamp": 1779464439,
+        "video": {
+          "duration": "12:17",
+          "creator": "Elvis Saravia",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/kLuPOGp89U9uNqxJaNj_WvMqcquw3huoE5o-7NoEFdk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9M/RnZ3X3hsajBMUS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/LFvw_xlj0LQ/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1esto2i/anthropic_just_released_prompt_caching_making/",
+        "title": "r/ClaudeAI on Reddit: Anthropic just released Prompt Caching, making ...",
+        "description": "609 votes, 100 comments. 360K subscribers in the ClaudeAI community. This is a Claude by Anthropic discussion subreddit to help you make a fully informed decision about how to use Claude and Claude Code to best effect for your own purposes. ¹⌉ Anthropic does not control or operate this subreddit ...",
+        "age": "August 15, 2024",
+        "page_age": "2024-08-15T12:17:06",
+        "fetched_content_timestamp": 1762021767,
+        "video": {},
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ClaudeAI  › comments  › 1esto2i  › anthropic_just_released_prompt_caching_making"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/YDqslYLFZI4v0n9NBBLtN09awU_98o441PKxFkUEopk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9leHRl/cm5hbC1wcmV2aWV3/LnJlZGQuaXQvYW50/aHJvcGljLWp1c3Qt/cmVsZWFzZWQtcHJv/bXB0LWNhY2hpbmct/bWFraW5nLWNsYXVk/ZS11cC10by12MC1j/bTB3ZW5OeFkzUnJk/R2xrTVdBcGhlRVl2/TVhiV2pmbjRSODJS/ZS1SRnF3WHJHeXdy/U0hyT1pPMWRMTzQu/cG5nP3dpZHRoPTEw/ODAmYW1wO2Nyb3A9/c21hcnQmYW1wO2Zv/cm1hdD1wanBnJmFt/cDthdXRvPXdlYnAm/YW1wO3M9NTA5YmRj/N2NkNjAwNmM5YmM1/YWE5MzlmMzRhYzYz/MWFmMmQ1MTYwYw",
+          "original": "https://external-preview.redd.it/anthropic-just-released-prompt-caching-making-claude-up-to-v0-cm0wenNxY3RrdGlkMWApheEYvMXbWjfn4R82Re-RFqwXrGywrSHrOZO1dLO4.png?width=1080&amp;crop=smart&amp;format=pjpg&amp;auto=webp&amp;s=509bdc7cd6006c9bc5aa939f34ac631af2d5160c"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=gujAar8NZKo",
+        "title": "Claude Prompt Caching: Did Anthropic Create a Better Alternative ...",
+        "description": "Claude AI Prompt Caching: Did Anthropic Create a Better Alternative to RAG?👊 Become a YouTube Member:https://www.youtube.com/c/AllAboutAI/join🤖 Great AI En...",
+        "age": "August 15, 2024",
+        "page_age": "2024-08-15T14:13:36",
+        "fetched_content_timestamp": 1779735481,
+        "video": {
+          "duration": "14:45",
+          "creator": "All About AI",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/u0iOIXMKDH9qEKDCI_LIBCVSQ_AGzpmzIFHXgR9yCOo/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9n/dWpBYXI4TlpLby9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/gujAar8NZKo/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=2VBG_H9brdk",
+        "title": "Anthropic Claude Prompt Caching Going to be Game Changer - YouTube",
+        "description": "Discover how to drastically reduce the costs and latency of using large language models with prompt caching in Claude! 🌟 In this video, we explore how promp...",
+        "age": "August 15, 2024",
+        "page_age": "2024-08-15T20:29:41",
+        "fetched_content_timestamp": 1779735539,
+        "video": {
+          "duration": "10:19",
+          "creator": "Mervin Praison",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/0skIwdVabW49-dC1nwFmS_Q8EnNYaZLF_ErqJUD-xqU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS8y/VkJHX0g5YnJkay9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/2VBG_H9brdk/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=Fv_j52DDJUE",
+        "title": "Is This the End of RAG? Anthropic's NEW Prompt Caching - YouTube",
+        "description": "Anthropic's new prompt caching with Claude can reduce costs by 90% and latency by 85%. This video explores its similarities and differences with Google's con...",
+        "age": "August 15, 2024",
+        "page_age": "2024-08-15T10:00:24",
+        "fetched_content_timestamp": 1726689427,
+        "video": {
+          "duration": "18:50",
+          "views": 64332,
+          "creator": "Prompt Engineering",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Dfd2947BP1e-FjOPQXwPN1iAzMQ0q6GDTFqIZrwGGNI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9G/dl9qNTJEREpVRS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/Fv_j52DDJUE/maxresdefault.jpg"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "How Claude Code Web Tools Work: WebFetch and WebSearch Internals | Quercle Blog",
+        "url": "https://quercle.dev/blog/claude-code-web-tools",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "15-minute cache - Results cached by URL (TTL = 900000ms) Redirect handling - Cross-host redirects return a message instructing Claude Code to make a new request with the redirect URL · WebSearch performs searches using Anthropic&#x27;s server-side ...",
+        "page_age": "2025-01-15T00:00:00",
+        "profile": {
+          "name": "Quercle",
+          "url": "https://quercle.dev/blog/claude-code-web-tools",
+          "long_name": "quercle.dev",
+          "img": "https://imgs.search.brave.com/ritm7kCnbZCxm_QMzTM7M36uQsPtFBci4HF--u3VO3E/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGZlZWJiODll/NDA3MzIzYWJmMzJk/MzFiMTNlOGRiZDU2/MjRiNzQ4YTgxZGM2/ZGQxM2M0Yjg3NTVm/YmY5MDQ0ZS9xdWVy/Y2xlLmRldi8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "quercle.dev",
+          "hostname": "quercle.dev",
+          "favicon": "https://imgs.search.brave.com/ritm7kCnbZCxm_QMzTM7M36uQsPtFBci4HF--u3VO3E/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGZlZWJiODll/NDA3MzIzYWJmMzJk/MzFiMTNlOGRiZDU2/MjRiNzQ4YTgxZGM2/ZGQxM2M0Yjg3NTVm/YmY5MDQ0ZS9xdWVy/Y2xlLmRldi8",
+          "path": "› blog  › claude-code-web-tools"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/OzRHjphYCtNqt_jy9MJhPqB7zNIoqkniL4Yw542umI4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9xdWVy/Y2xlLmRldi9ibG9n/L2NsYXVkZS1jb2Rl/LXdlYi10b29scy5q/cGc",
+          "original": "https://quercle.dev/blog/claude-code-web-tools.jpg",
+          "logo": false
+        },
+        "age": "January 15, 2025",
+        "organization": {
+          "type": "organization",
+          "name": "Quercle",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "15-minute cache - Results cached by URL (TTL = 900000ms) Redirect handling - Cross-host redirects return a message instructing Claude Code to make a new request with the redirect URL · WebSearch performs searches using Anthropic's server-side web_search_20250305 tool - unlike WebFetch, this actually uses Anthropic's infrastructure.",
+          "Main conversation calls WebFetch with url and prompt · URL is fetched locally using Axios (from your machine's IP) A secondary conversation with Claude Haiku processes the content ... You are Claude Code, Anthropic's official CLI for Claude.",
+          "Claude Code's web tools spawn secondary LLM conversations to process content. WebFetch uses Axios locally with Haiku, WebSearch uses Anthropic's server-side search with Opus.",
+          "WebFetch fetches web content and summarizes it using a secondary LLM conversation. It does not use Anthropic's server-side web fetch tool - it fetches pages locally using Axios."
+        ]
+      },
+      {
+        "title": "Prompt caching - Claude API Docs",
+        "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Prompt caching (both automatic and explicit) is ZDR eligible. Anthropic does not store the raw text of your prompts or Claude&#x27;s responses.",
+        "page_age": "2026-04-02T07:10:05",
+        "profile": {
+          "name": "Claude API Docs",
+          "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+          "long_name": "platform.claude.com",
+          "img": "https://imgs.search.brave.com/Lt7ZVSb5e0oWX_MwGoQKGWVu_O0n_Osvv1_EBX-bmqA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmU2YjhkYmQ2/YjA3YmEwNWZkYzNh/ZmZiODRmYTFmNTUx/Mzc0N2Y3ZDc1NzA0/ODUyZjMyNGM2NzIz/M2JmYzY1MS9wbGF0/Zm9ybS5jbGF1ZGUu/Y29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "platform.claude.com",
+          "hostname": "platform.claude.com",
+          "favicon": "https://imgs.search.brave.com/Lt7ZVSb5e0oWX_MwGoQKGWVu_O0n_Osvv1_EBX-bmqA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmU2YjhkYmQ2/YjA3YmEwNWZkYzNh/ZmZiODRmYTFmNTUx/Mzc0N2Y3ZDc1NzA0/ODUyZjMyNGM2NzIz/M2JmYzY1MS9wbGF0/Zm9ybS5jbGF1ZGUu/Y29tLw",
+          "path": "› docs  › en  › build-with-claude  › prompt-caching"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Ld-fAeYdTYrgEfYeI6J20uvnbFNu_z76dRnLCxDQtEc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9wbGF0/Zm9ybS5jbGF1ZGUu/Y29tL2RvY3Mvb2c_/bG9jYWxlPWVuJmFt/cDtwYXRoPWJ1aWxk/LXdpdGgtY2xhdWRl/L3Byb21wdC1jYWNo/aW5n",
+          "original": "https://platform.claude.com/docs/og?locale=en&amp;path=build-with-claude/prompt-caching",
+          "logo": false
+        },
+        "age": "April 2, 2026",
+        "extra_snippets": [
+          "If you find that 5 minutes is too short, Anthropic also offers a 1-hour cache duration at additional cost.",
+          "Prompt caching (both automatic and explicit) is ZDR eligible. Anthropic does not store the raw text of your prompts or Claude's responses.",
+          "client = anthropic.Anthropic() # Fire this before users arrive to warm the shared system-prompt cache.",
+          "Turn 2: 15 blocks, breakpoint on block 15. Block 15 has no entry, so the system walks back to block 10 and finds the turn-1 entry."
+        ]
+      },
+      {
+        "title": "Anthropic quietly nerfed Claude Code's 1-hour cache, and your token budget is paying the price",
+        "url": "https://www.xda-developers.com/anthropic-quietly-nerfed-claude-code-hour-cache-token-budget/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Beginning in early April, Anthropic quietly switched Claude Code&#x27;s default prompt cache time-to-live from one hour down to five minutes, and the switch landed for different users on different days.",
+        "page_age": "2026-04-20T19:00:21",
+        "profile": {
+          "name": "XDA Developers",
+          "url": "https://www.xda-developers.com/anthropic-quietly-nerfed-claude-code-hour-cache-token-budget/",
+          "long_name": "xda-developers.com",
+          "img": "https://imgs.search.brave.com/eoJNObPj2nrhHxVy7oc8bGDx7_SkAdM2ETfK5HbRt6A/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTdiMmI0NWZl/ODNiZmQ0MGMxNGU1/MWM3NjUzNDExZmYw/ODg5OGY3NTE2MWJl/Nzk4M2ZkNWMzNmE0/Y2QzNmRmZS93d3cu/eGRhLWRldmVsb3Bl/cnMuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "xda-developers.com",
+          "hostname": "www.xda-developers.com",
+          "favicon": "https://imgs.search.brave.com/eoJNObPj2nrhHxVy7oc8bGDx7_SkAdM2ETfK5HbRt6A/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTdiMmI0NWZl/ODNiZmQ0MGMxNGU1/MWM3NjUzNDExZmYw/ODg5OGY3NTE2MWJl/Nzk4M2ZkNWMzNmE0/Y2QzNmRmZS93d3cu/eGRhLWRldmVsb3Bl/cnMuY29tLw",
+          "path": "  › home  › ai tools  › anthropic quietly nerfed claude code's 1-hour cache, and your token budget is paying the price"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/fLgv6nImX1gfCFJfVJP4Rr0TRqp38Mh1pkzWKr0xbo0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMwLnhkYWltYWdl/cy5jb20vd29yZHBy/ZXNzL3dwLWNvbnRl/bnQvdXBsb2Fkcy93/bS8yMDI2LzA0L2Ns/YXVkZS1jb2RlLXRl/cm1pbmFsLXdpbmRv/dy1vbi1tYWMtbGFw/dG9wLWRpc3BsYXlp/bmctd2VsY29tZS1t/ZXNzYWdlLWFuZC1y/ZWNlbnQtYWN0aXZp/dHkuanBlZz93PTE2/MDAmaD05MDAmZml0/PWNyb3A",
+          "original": "https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2026/04/claude-code-terminal-window-on-mac-laptop-displaying-welcome-message-and-recent-activity.jpeg?w=1600&h=900&fit=crop",
+          "logo": false
+        },
+        "age": "April 20, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Adam Conway",
+              "url": "https://www.xda-developers.com/author/adamconway-xda/",
+              "thumbnail": {
+                "src": "https://imgs.search.brave.com/BMhIK5dj6pKd8_Z8caZXFpoLqdqfIJvqYLgNZyCMYTU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMwLnhkYWltYWdl/cy5jb20vd29yZHBy/ZXNzL3dwLWNvbnRl/bnQvYXV0aG9ycy82/Njk3ZDgzNDZhNTc4/LWFkYW1jb253YXkt/cGZwLXVwZGF0ZWQt/dmFsbmV0LnBuZw",
+                "original": "https://static0.xdaimages.com/wordpress/wp-content/authors/6697d8346a578-adamconway-pfp-updated-valnet.png"
+              }
+            }
+          ],
+          "date": "Apr 20, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "XDA",
+            "url": "https://www.xda-developers.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/BqIeeEYzJsvtLsNfG6L6lWjddcQCloJNUNw21yTGy4M/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMwLnhkYWltYWdl/cy5jb20vYXNzZXRz/L2ltYWdlcy94ZGEt/YW1wLWxvZ28ucG5n/P3c9MTEyJmg9MTEy/JmZpdD1jcm9w",
+              "original": "https://static0.xdaimages.com/assets/images/xda-amp-logo.png?w=112&h=112&fit=crop"
+            }
+          },
+          "isAccessibleForFree": true
+        },
+        "organization": {
+          "type": "organization",
+          "name": "XDA",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "But something changed over the past couple of weeks, and if you've been burning through your token quota faster than you used to, as many have said they are, there's a likely major cause. Beginning in early April, Anthropic quietly switched Claude Code's default prompt cache time-to-live from one hour down to five minutes, and the switch landed for different users on different days.",
+          "Claude Code writes session logs to \"~/.claude/projects/\" as JSONL files, and every response from the API includes a \"usage.cache_creation\" object with two relevant fields: \"ephemeral_5m_input_tokens\" and \"ephemeral_1h_input_tokens\". Only one of those is ever non-zero on any given turn, so it's easy to tell which tier your session is hitting, and Anthropic can't hide this number because it's part of the public API spec.",
+          "The next day, Boris Cherny, creator of Claude Code, replied to a query on social media about it, stating that a one hour cache has been implemented in some places for subscribers, though didn't mention where those places are, while also framing a five minute cache as the true default. It's possible Anthropic replied elsewhere, too, but it doesn't really matter; the messaging around this feature has been terrible, and it's only the users who notice that have it confirmed to them.",
+          "In that GitHub thread that was opened in the Claude Code repository, Jarred Sumner from Anthropic said that the shorter cache window actually makes Claude Code cheaper in aggregate, because \"a meaningful share of Claude Code's requests are one-shot calls where the cached context is used once and not revisited.\""
+        ]
+      },
+      {
+        "title": "Inside Claude Code's Web Tools: WebFetch vs WebSearch | Mikhail Shilkov",
+        "url": "https://mikhail.io/2025/10/claude-code-web-tools/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "According to Anthropic’s web search tool documentation, each search result actually includes more fields: ... However, Claude Code’s implementation only extracts title and url from the results, discarding the page_age and encrypted_content fields. If Claude Code needs actual page content, it must make an explicit WebFetch call.",
+        "profile": {
+          "name": "Mikhail",
+          "url": "https://mikhail.io/2025/10/claude-code-web-tools/",
+          "long_name": "mikhail.io",
+          "img": "https://imgs.search.brave.com/0xe55J_NWsc6ToB1EtvijvFD9C7DdomHmfV3YnzbRkE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2U0NjdlNjk3/YjdiOGZiYTE1MmQ0/OGI0MjAzMGVkYTM1/NzMzNjNlYWMxODEw/ZTYxNWMyMTM3M2Nm/NzkyZDJmMy9taWto/YWlsLmlvLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mikhail.io",
+          "hostname": "mikhail.io",
+          "favicon": "https://imgs.search.brave.com/0xe55J_NWsc6ToB1EtvijvFD9C7DdomHmfV3YnzbRkE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2U0NjdlNjk3/YjdiOGZiYTE1MmQ0/OGI0MjAzMGVkYTM1/NzMzNjNlYWMxODEw/ZTYxNWMyMTM3M2Nm/NzkyZDJmMy9taWto/YWlsLmlvLw",
+          "path": "› 2025  › 10  › claude-code-web-tools"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ygPZ5FSKiClO3JW8u1OjRcffC4Ju9IptQAeocOle9pc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taWto/YWlsLmlvLzIwMjUv/MTAvY2xhdWRlLWNv/ZGUtd2ViLXRvb2xz/L3RlYXNlci5qcGc",
+          "original": "https://mikhail.io/2025/10/claude-code-web-tools/teaser.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "According to Anthropic’s web search tool documentation, each search result actually includes more fields: ... However, Claude Code’s implementation only extracts title and url from the results, discarding the page_age and encrypted_content fields. If Claude Code needs actual page content, it must make an explicit WebFetch call.",
+          "The server-side search tool is available on Anthropic’s first-party API but it isn’t supported on Bedrock/Vertex. If Claude Code is configured to use those platforms, Claude Code hides the WebSearch tool entirely. Claude Code uses two tools to work with the web: WebFetch answers questions from a given page it trusts; WebSearch finds the pages it needs to read.",
+          "When it doesn’t know the URL, Claude Code issues search requests to Anthropic’s server-side WebSearch tool, the same one that Claude chat uses.",
+          "Claude Code is a popular coding assistant. The tool isn’t open-source, so I inspected its runtime behavior to understand the internals. This post documents what I’ve seen in the two “web” tools—WebFetch and WebSearch—and how they’re designed."
+        ]
+      },
+      {
+        "title": "r/Anthropic on Reddit: Claude Code 2.1.108+ 1h Prompt Caching Fix – Stop Token Bleeding",
+        "url": "https://www.reddit.com/r/Anthropic/comments/1slo0iu/claude_code_21108_1h_prompt_caching_fix_stop/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "... I know how it works, my point is it is easy to miss a 5 minute window to renew the cache. 15-20 minutes would be more ideal for my use case when I&#x27;m toggling between several sessions.",
+        "page_age": "2026-04-14T22:40:12",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/Anthropic/comments/1slo0iu/claude_code_21108_1h_prompt_caching_fix_stop/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/anthropic  › claude code 2.1.108+ 1h prompt caching fix – stop token bleeding"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/A5H_aQiEBuUODR0lNeU8iDfhrWUvO8oEmRGE_mcS_gM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9pY29uLnBu/Zw",
+          "original": "https://www.redditstatic.com/icon.png",
+          "logo": true
+        },
+        "age": "April 14, 2026",
+        "qa": {
+          "question": "<p dir=\"auto\">\n      If you&#39;re on Claude Code and your token usage has been brutal lately (60k+ tokens just to resume?), there&#39;s a fix in 2.1.108+:\n    </p><p dir=\"auto\">\n      <strong>Problem:</strong> Default 5min cache TTL. Step away, full history reread = wallet pain.\n    </p><p dir=\"auto\">\n      <strong>Fix:</strong> <code>ENABLE_PROMPT_CACHING_1H=1</code> for 1-hour cache.\n    </p><pre>\nexport ENABLE_PROMPT_CACHING_1H=1\nclaude</pre><p dir=\"auto\">\n      <strong>Permanent:</strong>\n    </p><pre>\necho &#39;export ENABLE_PROMPT_CACHING_1H=1&#39; &gt;&gt; ~/.zshrc\nsource ~/.zshrc</pre><p dir=\"auto\">\n      <strong>Gotcha:</strong> <code>DISABLE_PROMPT_CACHING*</code> vars kill it. Check:\n    </p><pre>\nenv | grep DISABLE_PROMPT_CACHING</pre><p dir=\"auto\">\n      Comment them out in <code>~/.zshrc</code>/<code>~/.bashrc</code>.\n    </p><p dir=\"auto\">\n      Changelog: <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://code.claude.com/docs/ja/changelog\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://code.claude.com/docs/ja/changelog</a>\n    </p>",
+          "answer": {
+            "text": "<span>What is the benefit to using 5m vs 1h? And it says \"on API key, Bedrock, Vertex, and Foundry\" so does that mean it doesn't work on a max sub?</span>\n",
+            "upvoteCount": 3
+          }
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "CodeCrusader94",
+              "url": "https://www.reddit.com/user/CodeCrusader94/"
+            }
+          ],
+          "date": "Apr 14, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Reddit",
+            "url": "https://www.reddit.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/vwRCTZCyS3UsCGj7HsYLzWpcOMhAEqq9hhxBK8tt7Dw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9zaHJlZGRp/dC9hc3NldHMvZmF2/aWNvbi82NHg2NC5w/bmc",
+              "original": "https://www.redditstatic.com/shreddit/assets/favicon/64x64.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Posted by u/CodeCrusader94 - 9 votes and 18 comments",
+          "Shame Anthropic had to degrade their service because they haven't got sufficient compute. ... \"By default, the cache has a 5-minute lifetime. The cache is refreshed for no additional cost each time the cached content is used.\" ... I know how it works, my point is it is easy to miss a 5 minute window to renew the cache. 15-20 minutes would be more ideal for my use case when I'm toggling between several sessions.",
+          "Official: Anthropic just released Claude Code 2.1.21 with 10 CLI, 3 flag & 1 prompt change, details below."
+        ]
+      },
+      {
+        "title": "Anthropic: Claude quota drain not caused by cache tweaks",
+        "url": "https://www.theregister.com/2026/04/13/claude_code_cache_confusion/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Jarred Sumner, the creator of the Bun JavaScript runtime who now works for Anthropic, agreed that the analysis was &quot;good detective work&quot; but claimed that the change back to the five-minute cache made Claude Code cheaper because &quot;a meaningful share of Claude Code&#x27;s requests are one-shot calls where the cached context is used once and not revisited.&quot;",
+        "page_age": "2026-04-13T18:15:14",
+        "profile": {
+          "name": "The Register",
+          "url": "https://www.theregister.com/2026/04/13/claude_code_cache_confusion/",
+          "long_name": "theregister.com",
+          "img": "https://imgs.search.brave.com/EfN0Z_yQVb7rH4iqj65cX8u1G4_vy4ofC3pKcASwPbg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDRiNjNkYjhi/NGUxMmY3OTQxYmQz/OWM5NzJlNDk4OTJk/ZTU1MjIwYjJjMWQ2/ZDhlMGIzNjg1OWY1/ZGQ1MjVkYy93d3cu/dGhlcmVnaXN0ZXIu/Y29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "theregister.com",
+          "hostname": "www.theregister.com",
+          "favicon": "https://imgs.search.brave.com/EfN0Z_yQVb7rH4iqj65cX8u1G4_vy4ofC3pKcASwPbg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDRiNjNkYjhi/NGUxMmY3OTQxYmQz/OWM5NzJlNDk4OTJk/ZTU1MjIwYjJjMWQ2/ZDhlMGIzNjg1OWY1/ZGQ1MjVkYy93d3cu/dGhlcmVnaXN0ZXIu/Y29tLw",
+          "path": "› 2026  › 04  › 13  › claude_code_cache_confusion"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/LXHIVFAaSDjwfzhEbBDVPcRmHQLP_Day5fEVNslcAfg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZS50aGVyZWdpc3Rl/ci5jb20vNTIyMjU0/OS53ZWJwP3dpZHRo/PTEyMDA",
+          "original": "https://image.theregister.com/5222549.webp?width=1200",
+          "logo": false
+        },
+        "age": "April 13, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Tim Anderson",
+              "url": "https://www.theregister.com/author/tim-anderson"
+            }
+          ],
+          "date": "Apr 13, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "theregister",
+            "url": "https://www.theregister.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/j9JX1HEtylqrVDtysM3eCfWtalvgsCKx4PTR70HzIBE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/dGhlcmVnaXN0ZXIu/Y29tL3ZpZXctcmVz/b3VyY2VzL2RhY2hz/ZXIyL3B1YmxpYy90/aGVyZWdpc3Rlci9s/b2dvLnN2Zw",
+              "original": "https://www.theregister.com/view-resources/dachser2/public/theregister/logo.svg"
+            }
+          },
+          "isAccessibleForFree": true
+        },
+        "extra_snippets": [
+          "Anthropic last month reduced the TTL (time to live) for the Claude Code prompt cache from one hour to five minutes for many requests, but said this should not increase costs despite users reporting faster depleting quotas.",
+          "Jarred Sumner, the creator of the Bun JavaScript runtime who now works for Anthropic, agreed that the analysis was \"good detective work\" but claimed that the change back to the five-minute cache made Claude Code cheaper because \"a meaningful share of Claude Code's requests are one-shot calls where the cached context is used once and not revisited.\"",
+          "Claude Code creator Boris Cherny said that \"prompt cache misses when using 1M token context window are expensive... if you leave your computer for over an hour then continue a stale session, it's often a full cache miss.\" He said that Anthropic is investigating a 400,000-token context window by default, with an option for one million tokens if preferred.",
+          "User Sean Swanson posted a bug report showing that Anthropic introduced a one-hour cache for Claude Code context around February 1, then changed it back to a five-minute cache around March 7."
+        ]
+      },
+      {
+        "title": "Claude Code cache confusion as Anthropic tweaks defaults, but quotas still drain",
+        "url": "https://www.devclass.com/ai-ml/2026/04/14/claude-code-cache-confusion-as-anthropic-tweaks-defaults-but-quotas-still-drain/5216975",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Jarred Sumner, the creator of the Bun JavaScript runtime who now works for Anthropic, agreed that the analysis was &quot;good detective work&quot; but claimed that the change back to the five-minute cache made Claude Code cheaper because &quot;a meaningful share of Claude Code&#x27;s requests are one-shot calls where the cached context is used once and not revisited.&quot;",
+        "page_age": "2026-04-14T00:00:00",
+        "profile": {
+          "name": "DEVCLASS",
+          "url": "https://www.devclass.com/ai-ml/2026/04/14/claude-code-cache-confusion-as-anthropic-tweaks-defaults-but-quotas-still-drain/5216975",
+          "long_name": "devclass.com",
+          "img": "https://imgs.search.brave.com/lRf_IxYoktBP1e14RjMgdvexJLwero3cqxiZOnEEKiM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTZiNDBjMzRk/MjA0M2Y2NTI5NmFh/YjRmZmFlYzMwYTBj/MGY4ODg3YzZiOThj/MGUxMzI0YzgyMDFk/Y2YxZDE1MS93d3cu/ZGV2Y2xhc3MuY29t/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "devclass.com",
+          "hostname": "www.devclass.com",
+          "favicon": "https://imgs.search.brave.com/lRf_IxYoktBP1e14RjMgdvexJLwero3cqxiZOnEEKiM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTZiNDBjMzRk/MjA0M2Y2NTI5NmFh/YjRmZmFlYzMwYTBj/MGY4ODg3YzZiOThj/MGUxMzI0YzgyMDFk/Y2YxZDE1MS93d3cu/ZGV2Y2xhc3MuY29t/Lw",
+          "path": "› ai-ml  › 2026  › 04  › 14  › claude-code-cache-confusion-as-anthropic-tweaks-defaults-but-quotas-still-drain  › 5216975"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Ren2FrPkOVPZlBA947cD962aIu_hevII6VGixRFPt4U/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5kZXZjbGFzcy5j/b20vP2ltYWdlSWQ9/NTIxNjk3OCZ3aWR0/aD0xMjAw",
+          "original": "https://image.devclass.com/?imageId=5216978&width=1200",
+          "logo": false
+        },
+        "age": "April 14, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Tim Anderson",
+              "url": "https://www.devclass.com/author/tim-anderson"
+            }
+          ],
+          "date": "Apr 14, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "devclass",
+            "url": "https://www.devclass.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/66tP0b8JLz-8l02U8mxuFp2dTsHUZUi4bH29RxWOLRQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/ZGV2Y2xhc3MuY29t/L3ZpZXctcmVzb3Vy/Y2VzL2RhY2hzZXIy/L3B1YmxpYy9kZXZj/bGFzcy9sb2dvLXdo/aXRlLnN2Zw",
+              "original": "https://www.devclass.com/view-resources/dachser2/public/devclass/logo-white.svg"
+            }
+          },
+          "isAccessibleForFree": true
+        },
+        "extra_snippets": [
+          "Anthropic last month reduced the TTL (time to live) for the Claude Code prompt cache from one hour to five minutes for many requests, but said this should not increase costs despite users reporting faster depleting quotas.",
+          "Jarred Sumner, the creator of the Bun JavaScript runtime who now works for Anthropic, agreed that the analysis was \"good detective work\" but claimed that the change back to the five-minute cache made Claude Code cheaper because \"a meaningful share of Claude Code's requests are one-shot calls where the cached context is used once and not revisited.\"",
+          "Claude Code creator Boris Cherny said that \"prompt cache misses when using 1M token context window are expensive... if you leave your computer for over an hour then continue a stale session, it's often a full cache miss.\" He said that Anthropic is investigating a 400,000-token context window by default, with an option for one million tokens if preferred.",
+          "User Sean Swanson posted a bug report showing that Anthropic introduced a one-hour cache for Claude Code context around February 1, then changed it back to a five-minute cache around March 7."
+        ]
+      },
+      {
+        "title": "How to Use Claude's Web Fetch Tool for AI Agent Workflows",
+        "url": "https://scrapegraphai.com/blog/claude-web-fetch-tool",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "import anthropic client = anthropic.Anthropic() response = client.messages.create( model=&quot;claude-opus-4-6&quot;, max_tokens=4096, messages=[ { &quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Find recent articles about quantum computing and analyze the most relevant one in detail&quot; } ], tools=[ {&quot;type&quot;: &quot;web_search_20250305&quot;, &quot;name&quot;: &quot;web_search&quot;, &quot;max_uses&quot;: 3}, { &quot;type&quot;: &quot;web_fetch_20250910&quot;, &quot;name&quot;: &quot;web_fetch&quot;, &quot;max_uses&quot;: 5, &quot;citations&quot;: {&quot;enabled&quot;: True} } ], extra_headers={&quot;anthropic-beta&quot;: &quot;web-fetch-2025-09-10&quot;} )",
+        "page_age": "2026-04-24T00:00:00",
+        "profile": {
+          "name": "Scrapegraphai",
+          "url": "https://scrapegraphai.com/blog/claude-web-fetch-tool",
+          "long_name": "scrapegraphai.com",
+          "img": "https://imgs.search.brave.com/P87SVK8pkSm35E0qjKyYFV2iu60BlL9rBqmFTEhRP-4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZmJmODFjZTg0/NGJiOWE0ZDBhMTUw/YjU2NTgzNDNmMmNj/YWEzZDc4MWI3ZDNi/MTBjMDQ4MTZmMWVi/NTBmNTg5Zi9zY3Jh/cGVncmFwaGFpLmNv/bS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "scrapegraphai.com",
+          "hostname": "scrapegraphai.com",
+          "favicon": "https://imgs.search.brave.com/P87SVK8pkSm35E0qjKyYFV2iu60BlL9rBqmFTEhRP-4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZmJmODFjZTg0/NGJiOWE0ZDBhMTUw/YjU2NTgzNDNmMmNj/YWEzZDc4MWI3ZDNi/MTBjMDQ4MTZmMWVi/NTBmNTg5Zi9zY3Jh/cGVncmFwaGFpLmNv/bS8",
+          "path": "› blog  › claude-web-fetch-tool"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/QIuyQmrG9BAxISol5wNdyq2UwRQzlSVqKxhF76JEb6g/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9wdWIt/MzA4ZmRjOGExODU4/NDg3ZDlhYjI3NTc3/NDEwODA3N2IucjIu/ZGV2L2ltYWdlcy9i/bG9nL2NsYXVkZS13/ZWItZmV0Y2gtdG9v/bC9vZy1kYXJrLndl/YnA",
+          "original": "https://pub-308fdc8a1858487d9ab275774108077b.r2.dev/images/blog/claude-web-fetch-tool/og-dark.webp",
+          "logo": false
+        },
+        "age": "April 24, 2026",
+        "extra_snippets": [
+          "Anthropic's web fetch tool lets Claude retrieve and analyze full content from web pages and PDFs directly through the API. It's a powerful addition to Claude's tool ecosystem—but it's not a replacement for production-grade web scraping.",
+          "Data exfiltration considerations: If you process untrusted input alongside sensitive data, Anthropic recommends disabling the web fetch tool, using max_uses, or restricting allowed_domains.",
+          "curl https://api.anthropic.com/v1/messages \\ --header \"x-api-key: $ANTHROPIC_API_KEY\" \\ --header \"anthropic-version: 2023-06-01\" \\ --header \"anthropic-beta: web-fetch-2025-09-10\" \\ --header \"content-type: application/json\" \\ --data '{ \"model\": \"claude-opus-4-6\", \"max_tokens\": 1024, \"messages\": [ { \"role\": \"user\", \"content\": \"Please analyze the content at https://example.com/article\" } ], \"tools\": [{ \"type\": \"web_fetch_20250910\", \"name\": \"web_fetch\", \"max_uses\": 5 }] }'",
+          "import anthropic client = anthropic.Anthropic() response = client.messages.create( model=\"claude-opus-4-6\", max_tokens=4096, messages=[ { \"role\": \"user\", \"content\": \"Find recent articles about quantum computing and analyze the most relevant one in detail\" } ], tools=[ {\"type\": \"web_search_20250305\", \"name\": \"web_search\", \"max_uses\": 3}, { \"type\": \"web_fetch_20250910\", \"name\": \"web_fetch\", \"max_uses\": 5, \"citations\": {\"enabled\": True} } ], extra_headers={\"anthropic-beta\": \"web-fetch-2025-09-10\"} )"
+        ]
+      },
+      {
+        "title": "How Prompt Caching Actually Works in Claude Code",
+        "url": "https://www.claudecodecamp.com/p/how-prompt-caching-actually-works-in-claude-code",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Prompt caching stores the computation from processing previous tokens. When your next request starts with the same prefix, the model skips recomputing what it&#x27;s already seen. Those cached reads cost 10% of the normal input price on Anthropic ...",
+        "page_age": "2026-02-25T10:19:00",
+        "profile": {
+          "name": "Claude Code Camp",
+          "url": "https://www.claudecodecamp.com/p/how-prompt-caching-actually-works-in-claude-code",
+          "long_name": "claudecodecamp.com",
+          "img": "https://imgs.search.brave.com/qxnrysXfayqCIf8fhidDEryocMu8G13KZcU4Q1h_zNQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWRhZDViYmM0/OGI0OGY3NmQ5Y2My/ZGQ4NDYxOWY3NGZi/MWYzZWQ2OGJjNjU0/ODA1YzA2MTZmNDRi/MzAyYTJjYy93d3cu/Y2xhdWRlY29kZWNh/bXAuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "claudecodecamp.com",
+          "hostname": "www.claudecodecamp.com",
+          "favicon": "https://imgs.search.brave.com/qxnrysXfayqCIf8fhidDEryocMu8G13KZcU4Q1h_zNQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWRhZDViYmM0/OGI0OGY3NmQ5Y2My/ZGQ4NDYxOWY3NGZi/MWYzZWQ2OGJjNjU0/ODA1YzA2MTZmNDRi/MzAyYTJjYy93d3cu/Y2xhdWRlY29kZWNh/bXAuY29tLw",
+          "path": "› p  › how-prompt-caching-actually-works-in-claude-code"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/d-Yw1z_fSpQcTZ0l1LHEATbI5sDyialXxTErkwbcZfw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9iZWVo/aWl2LWltYWdlcy1w/cm9kdWN0aW9uLnMz/LmFtYXpvbmF3cy5j/b20vdXBsb2Fkcy9w/dWJsaWNhdGlvbi90/aHVtYm5haWwvNzEz/ZWU0MDItNTcxOS00/OWM5LWI5M2ItZDQ3/MmZiMjk5YTg0L2xh/bmRzY2FwZV9uZXdz/bGV0dGVyLXRodW1i/bmFpbC5wbmc",
+          "original": "https://beehiiv-images-production.s3.amazonaws.com/uploads/publication/thumbnail/713ee402-5719-49c9-b93b-d472fb299a84/landscape_newsletter-thumbnail.png",
+          "logo": false
+        },
+        "age": "February 25, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Abhishek Ray",
+              "url": "https://www.claudecodecamp.com/authors/abhishek-ray",
+              "thumbnail": {
+                "src": "https://imgs.search.brave.com/LB7BRTT1V0WJE-J32rqPzCx6LZkS-bblDj27JqerhWU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9iZWVo/aWl2LWltYWdlcy1w/cm9kdWN0aW9uLnMz/LmFtYXpvbmF3cy5j/b20vdXBsb2Fkcy91/c2VyL3Byb2ZpbGVf/cGljdHVyZS9hNDlk/NmZkMy0wYTVlLTQ3/NzQtYWU5Yy0xNjk3/OWJkNDc2NDIvR2Vu/ZXJhdGVkX0ltYWdl/X01hcmNoXzAzX18y/MDI2Xy1fMV81NVBN/LmpwZy5qcGVn",
+                "original": "https://beehiiv-images-production.s3.amazonaws.com/uploads/user/profile_picture/a49d6fd3-0a5e-4774-ae9c-16979bd47642/Generated_Image_March_03__2026_-_1_55PM.jpg.jpeg"
+              }
+            }
+          ],
+          "date": "Feb 25, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Claude Code Camp",
+            "url": "https://www.claudecodecamp.com/",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/_m0nGQr_99u6pN_gVLE3qlyTsYsU2luO2Nue40HtKoc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5iZWVoaWl2LmNv/bS9jZG4tY2dpL2lt/YWdlL2ZpdD1zY2Fs/ZS1kb3duLGZvcm1h/dD1hdXRvLG9uZXJy/b3I9cmVkaXJlY3Qs/cXVhbGl0eT04MC91/cGxvYWRzL3B1Ymxp/Y2F0aW9uL2xvZ28v/NzEzZWU0MDItNTcx/OS00OWM5LWI5M2It/ZDQ3MmZiMjk5YTg0/L25ld3NsZXR0ZXIt/bG9nby5wbmc",
+              "original": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/713ee402-5719-49c9-b93b-d472fb299a84/newsletter-logo.png"
+            }
+          },
+          "isAccessibleForFree": true
+        },
+        "extra_snippets": [
+          "What It Is, Why It Costs You $80 Less Per Session, and How to Not Break It",
+          "Prompt caching stores the computation from processing previous tokens. When your next request starts with the same prefix, the model skips recomputing what it's already seen. Those cached reads cost 10% of the normal input price on Anthropic — $0.50 per million instead of $5.",
+          "The cache doesn't store your prompt text, and it doesn't store a hash. What Anthropic's servers keep is the KV cache — key and value matrices that the model computes during the attention step as it reads through your prompt.",
+          "For a model like Opus, that's hundreds of layers, each producing vectors of thousands of dimensions. A back-of-the-envelope estimate: a 100K-token prompt might produce a KV cache of 500MB-1GB per request. Anthropic is storing and retrieving this data in GPU memory for millions of concurrent users simultaneously."
+        ]
+      },
+      {
+        "title": "Cache TTL silently regressed from 1h to 5m around early March 2026, causing quota and cost inflation · Issue #46829 · anthropics/claude-code",
+        "url": "https://github.com/anthropics/claude-code/issues/46829",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "The data strongly suggests that 1h TTL was the intended default for Claude Code and was in place as of early February 2026. Sometime between Feb 27 and Mar 8, 2026, Anthropic silently changed the default to 5m TTL — either intentionally as ...",
+        "page_age": "2026-04-12T01:49:09",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/anthropics/claude-code/issues/46829",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› anthropics  › claude-code  › issues  › 46829"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/A9MwoIoYGxvWQhFZ3oX968IAjPBlkxjfIBBSYgnwhG4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS85/NTZjMjY1NmRmMmQ0/N2IwYmZmMjA0ZWE3/OGY4MGQ5N2I2ZmEz/MmQ0ZjBhYTQwNzhj/YTA2NjZmZjdiNzA5/ODU5L2FudGhyb3Bp/Y3MvY2xhdWRlLWNv/ZGUvaXNzdWVzLzQ2/ODI5",
+          "original": "https://opengraph.githubassets.com/956c2656df2d47b0bff204ea78f80d97b6fa32d4f0aa4078ca0666ff7b709859/anthropics/claude-code/issues/46829",
+          "logo": false
+        },
+        "age": "April 12, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "seanGSISG",
+              "url": "https://github.com/seanGSISG"
+            }
+          ],
+          "date": "Apr 12, 2026"
+        },
+        "software": {
+          "name": "claude-code",
+          "author": "anthropics",
+          "is_npm": false,
+          "is_pypi": false,
+          "programmingLanguage": ""
+        },
+        "extra_snippets": [
+          "We believe Phase 2 represents Anthropic's intended default behavior — 1h TTL was rolled out as the Claude Code standard around Feb 1 and held consistently for over a month across two independent machines on two different accounts. January's all-5m data most likely predates the 1h TTL tier being available in the API.",
+          "The data strongly suggests that 1h TTL was the intended default for Claude Code and was in place as of early February 2026. Sometime between Feb 27 and Mar 8, 2026, Anthropic silently changed the default to 5m TTL — either intentionally as a cost-saving measure, or accidentally as an infrastructure regression.",
+          "No client-side changes were made between phases. The same Claude Code version and usage patterns were in place throughout. The TTL tier is set server-side by Anthropic.",
+          "api:anthropicarea:costbugSomething isn't workingSomething isn't workinghas reproHas detailed reproduction stepsHas detailed reproduction steps ... Analysis of raw Claude Code session JSONL files spanning Jan 11 – Apr 11, 2026 shows that Anthropic appears to have silently changed the prompt cache TTL default from 1 hour to 5 minutes sometime in early March 2026."
+        ]
+      },
+      {
+        "title": "Under the Hood of Claude Code: It’s Not Magic — It’s Engineering | by Xiaojian Yu | Medium",
+        "url": "https://medium.com/@yuxiaojian/under-the-hood-of-claude-code-its-not-magic-it-s-engineering-e1336c5669d4",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "All MCP-provided tools start with ... summarized if the content is very large\\n - Includes a self-cleaning 15-minute cache for faster responses when repeatedly accessing the same URL\\n - When a URL redirects to a different host, ...",
+        "page_age": "2025-08-31T03:49:08",
+        "profile": {
+          "name": "Medium",
+          "url": "https://medium.com/@yuxiaojian/under-the-hood-of-claude-code-its-not-magic-it-s-engineering-e1336c5669d4",
+          "long_name": "medium.com",
+          "img": "https://imgs.search.brave.com/4R4hFITz_F_be0roUiWbTZKhsywr3fnLTMTkFL5HFow/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTZhYmQ1N2Q4/NDg4ZDcyODIyMDZi/MzFmOWNhNjE3Y2E4/Y2YzMThjNjljNDIx/ZjllZmNhYTcwODhl/YTcwNDEzYy9tZWRp/dW0uY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medium.com",
+          "hostname": "medium.com",
+          "favicon": "https://imgs.search.brave.com/4R4hFITz_F_be0roUiWbTZKhsywr3fnLTMTkFL5HFow/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTZhYmQ1N2Q4/NDg4ZDcyODIyMDZi/MzFmOWNhNjE3Y2E4/Y2YzMThjNjljNDIx/ZjllZmNhYTcwODhl/YTcwNDEzYy9tZWRp/dW0uY29tLw",
+          "path": "› @yuxiaojian  › under-the-hood-of-claude-code-its-not-magic-it-s-engineering-e1336c5669d4"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/B_gWCQjo3TnsKDkxR-1WPGDMJQNURg9zaHMcWRQDsds/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v",
+          "original": "https://miro.medium.com/",
+          "logo": false
+        },
+        "age": "August 31, 2025",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Xiaojian Yu",
+              "url": "https://medium.com/@yuxiaojian"
+            }
+          ],
+          "date": "Aug 31, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "Medium",
+            "url": "https://medium.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/HV5y8CR3FQdnFTuDVcr_qfl-FW_-wKwt6V6sALLLkXI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/djIvcmVzaXplOmZp/dDo1MDAvNyUyQVYx/XzdYUDRzbmxtcXJj/XzBOam9udHcucG5n",
+              "original": "https://miro.medium.com/v2/resize:fit:500/7%2AV1_7XP4snlmqrc_0Njontw.png"
+            }
+          },
+          "isAccessibleForFree": true
+        },
+        "extra_snippets": [
+          "If the user asks for help or wants to give feedback inform them of the following: - /help: Get help with using Claude Code - To give feedback, users should report the issue at https://github.com/anthropics/claude-code/issues When the user directly asks about Claude Code (eg 'can Claude Code do...', 'does Claude Code have...') or asks in second person (eg 'are you able...', 'can you do...'), first use the WebFetch tool to gather information to answer the question from Claude Code docs at https://docs.anthropic.com/en/docs/claude-code.",
+          "All MCP-provided tools start with \\\"mcp__\\\".\\n - The URL must be a fully-formed valid URL\\n - HTTP URLs will be automatically upgraded to HTTPS\\n - The prompt should describe what information you want to extract from the page\\n - This tool is read-only and does not modify any files\\n - Results may be summarized if the content is very large\\n - Includes a self-cleaning 15-minute cache for faster responses when repeatedly accessing the same URL\\n - When a URL redirects to a different host, the tool will inform you and provide the redirect URL in a special format. You should then make a new WebFe",
+          "An interesting architectural detail is the use of different models for different tasks. While the main reasoning loop might use a powerful model like Opus, the WebFetch tool notes that it uses a \"small, fast model\" to process and summarize web content.",
+          "- You should proactively use the Task tool with specialized agents when the task at hand matches the agent's description. - When WebFetch returns a message about a redirect to a different host, you should immediately make a new WebFetch request with the redirect URL provided in the response."
+        ]
+      },
+      {
+        "title": "Web fetch tool - Claude API Docs",
+        "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-fetch-tool",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "client = anthropic.Anthropic() response = client.messages.create( model=&quot;claude-opus-4-8&quot;, max_tokens=1024, messages=[ { &quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Please analyze the content at https://example.com/article&quot;, } ], tools=[{&quot;type&quot;: &quot;web_fetch_20250910&quot;, &quot;name&quot;: &quot;web_fetch&quot;, &quot;max_uses&quot;: 5}], ) print(response)",
+        "profile": {
+          "name": "Claude API Docs",
+          "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-fetch-tool",
+          "long_name": "platform.claude.com",
+          "img": "https://imgs.search.brave.com/Lt7ZVSb5e0oWX_MwGoQKGWVu_O0n_Osvv1_EBX-bmqA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmU2YjhkYmQ2/YjA3YmEwNWZkYzNh/ZmZiODRmYTFmNTUx/Mzc0N2Y3ZDc1NzA0/ODUyZjMyNGM2NzIz/M2JmYzY1MS9wbGF0/Zm9ybS5jbGF1ZGUu/Y29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "platform.claude.com",
+          "hostname": "platform.claude.com",
+          "favicon": "https://imgs.search.brave.com/Lt7ZVSb5e0oWX_MwGoQKGWVu_O0n_Osvv1_EBX-bmqA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmU2YjhkYmQ2/YjA3YmEwNWZkYzNh/ZmZiODRmYTFmNTUx/Mzc0N2Y3ZDc1NzA0/ODUyZjMyNGM2NzIz/M2JmYzY1MS9wbGF0/Zm9ybS5jbGF1ZGUu/Y29tLw",
+          "path": "› docs  › en  › agents-and-tools  › tool-use  › web-fetch-tool"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/3JX2Ys_XniUd3IMB0Rvx0hFMsknvUHtE677vKBsYWq8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9wbGF0/Zm9ybS5jbGF1ZGUu/Y29tL2RvY3Mvb2c_/bG9jYWxlPWVuJmFt/cDtwYXRoPWFnZW50/cy1hbmQtdG9vbHMv/dG9vbC11c2Uvd2Vi/LWZldGNoLXRvb2w",
+          "original": "https://platform.claude.com/docs/og?locale=en&amp;path=agents-and-tools/tool-use/web-fetch-tool",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Shared mechanics for Anthropic-executed tools.",
+          "Directory of all Anthropic-provided tools.",
+          "client = anthropic.Anthropic() response = client.messages.create( model=\"claude-opus-4-8\", max_tokens=4096, messages=[ { \"role\": \"user\", \"content\": \"Fetch the content at https://example.com/research-paper and extract the key findings.\", } ], tools=[{\"type\": \"web_fetch_20260209\", \"name\": \"web_fetch\"}], ) print(response)",
+          "client = anthropic.Anthropic() response = client.messages.create( model=\"claude-opus-4-8\", max_tokens=1024, messages=[ { \"role\": \"user\", \"content\": \"Please analyze the content at https://example.com/article\", } ], tools=[{\"type\": \"web_fetch_20250910\", \"name\": \"web_fetch\", \"max_uses\": 5}], ) print(response)"
+        ]
+      },
+      {
+        "title": "Anthropic Web Fetch Tool - Cobus Greyling - Medium",
+        "url": "https://cobusgreyling.medium.com/anthropic-web-fetch-tool-2050fa0d3ac4",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "By routing it through the model, Anthropic maintains control over when fetches occur, reducing risks like data exfiltration or excessive token usage. The model does have some independence here (Built-In Autonomy).",
+        "page_age": "2025-09-12T16:06:46",
+        "profile": {
+          "name": "Medium",
+          "url": "https://cobusgreyling.medium.com/anthropic-web-fetch-tool-2050fa0d3ac4",
+          "long_name": "cobusgreyling.medium.com",
+          "img": "https://imgs.search.brave.com/2stVGyIn8JhSjvRzI5L08AehMLw0a1H-Q1BHByqk8n4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTYwMjk1NmI4/M2NkODIwOGJmMTc2/NzZjMjg3YTUyYjg0/NjdjNGExNDk2NzZk/N2VmNzQ5ZjQ5NTJk/ZjFiNzYyMy9jb2J1/c2dyZXlsaW5nLm1l/ZGl1bS5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "cobusgreyling.medium.com",
+          "hostname": "cobusgreyling.medium.com",
+          "favicon": "https://imgs.search.brave.com/2stVGyIn8JhSjvRzI5L08AehMLw0a1H-Q1BHByqk8n4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTYwMjk1NmI4/M2NkODIwOGJmMTc2/NzZjMjg3YTUyYjg0/NjdjNGExNDk2NzZk/N2VmNzQ5ZjQ5NTJk/ZjFiNzYyMy9jb2J1/c2dyZXlsaW5nLm1l/ZGl1bS5jb20v",
+          "path": "› anthropic-web-fetch-tool-2050fa0d3ac4"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Io8l8LSUuKuyvOrD2IcCBA8CLshEoHuXLcoFhl7Rwpo/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/MSpuNW04SHFKTkhv/ck5iMEZkQU12eTJB/LnBuZw",
+          "original": "https://miro.medium.com/1*n5m8HqJNHorNb0FdAMvy2A.png",
+          "logo": false
+        },
+        "age": "September 12, 2025",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Cobus Greyling",
+              "url": "https://medium.com/@cobusgreyling"
+            }
+          ],
+          "date": "Sep 12, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "Medium",
+            "url": "https://medium.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/HV5y8CR3FQdnFTuDVcr_qfl-FW_-wKwt6V6sALLLkXI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/djIvcmVzaXplOmZp/dDo1MDAvNyUyQVYx/XzdYUDRzbmxtcXJj/XzBOam9udHcucG5n",
+              "original": "https://miro.medium.com/v2/resize:fit:500/7%2AV1_7XP4snlmqrc_0Njontw.png"
+            }
+          },
+          "isAccessibleForFree": true
+        },
+        "extra_snippets": [
+          "Anthropic’s web fetch tool is designed to be integrated as a tool within their API ecosystem rather than accessed directly as a standalone…",
+          "This is not only the case with Anthropic, but a similar approach is followed by OpenAI and others. The web fetch tool isn’t a direct API call you can invoke independently (like a simple GET request to fetch a page). Instead, you define it in your API request to Claude models.",
+          "By routing it through the model, Anthropic maintains control over when fetches occur, reducing risks like data exfiltration or excessive token usage. The model does have some independence here (Built-In Autonomy). It autonomously decides based on the prompt whether to use the tool. For instance, if your prompt implies needing real-time data from a URL you’ve provided, Claude might trigger a fetch.",
+          "](https://en.wikipedia.org/wiki/Gemini_(language_model)).[[8]](./Anthropic#cite_note-8)\\n' 'Anthropic was founded by former members of OpenAI, including siblings [Daniela Amodei](https://en.wikipedia.org/wiki/Daniela_Amodei) and [Dario Amodei](https://en.wikipedia.org/wiki/Dario_Amodei).[[9]](./Anthropic#cite_note-:6-9) In September 2023, [Amazon](https://en.wikipedia.org/wiki/Amazon_(company)) announced an investment of up to $4 billion, followed by a $2 billion commitment from Google in the following month.[[10]](./Anthropic#cite_note-amazon-10)[[11]](./Anthropic#cite_note-:2-11)[[12]](./Ant"
+        ]
+      },
+      {
+        "title": "Anthropic Silently Dropped Prompt Cache TTL from 1 Hour to 5 Minutes - DEV Community",
+        "url": "https://dev.to/whoffagents/anthropic-silently-dropped-prompt-cache-ttl-from-1-hour-to-5-minutes-16ao",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "On March 6, Anthropic silently changed the default prompt cache TTL from 1 hour to 5 minutes. If you&#x27;re not explicitly setting cache_control, your cache hit rate just dropped to near zero. Tagged with claude, anthropic, ai, llm.",
+        "page_age": "2026-04-18T05:51:57",
+        "profile": {
+          "name": "DEV Community",
+          "url": "https://dev.to/whoffagents/anthropic-silently-dropped-prompt-cache-ttl-from-1-hour-to-5-minutes-16ao",
+          "long_name": "dev.to",
+          "img": "https://imgs.search.brave.com/UUpF8I85K--vkQzrhameM7iRPRU5VCTXyWbS4sk6G2g/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTg5MTcxNDBh/N2U4ODc4MDg0NWQ4/MzU0YWJkNDY3ZWRm/MjUxY2U1YjY5MzJm/YWRlOTI4YjAyZDI1/ZjU0MmJjNi9kZXYu/dG8v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "dev.to",
+          "hostname": "dev.to",
+          "favicon": "https://imgs.search.brave.com/UUpF8I85K--vkQzrhameM7iRPRU5VCTXyWbS4sk6G2g/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTg5MTcxNDBh/N2U4ODc4MDg0NWQ4/MzU0YWJkNDY3ZWRm/MjUxY2U1YjY5MzJm/YWRlOTI4YjAyZDI1/ZjU0MmJjNi9kZXYu/dG8v",
+          "path": "› whoffagents  › anthropic-silently-dropped-prompt-cache-ttl-from-1-hour-to-5-minutes-16ao"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/HhP1SXRUVrKJz3RmzEnlEalpYBtF9wyby9CFcea1NtE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YTIuZGV2LnRvL2R5/bmFtaWMvaW1hZ2Uv/d2lkdGg9MTA4MCxo/ZWlnaHQ9MTA4MCxm/aXQ9Y292ZXIsZ3Jh/dml0eT1hdXRvLGZv/cm1hdD1hdXRvL2h0/dHBzJTNBJTJGJTJG/ZGV2LXRvLXVwbG9h/ZHMuczMuYW1hem9u/YXdzLmNvbSUyRnVw/bG9hZHMlMkZhcnRp/Y2xlcyUyRmcxbG15/MDRvZjdtdG9oZjFr/MDY0LnBuZw",
+          "original": "https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fg1lmy04of7mtohf1k064.png",
+          "logo": false
+        },
+        "age": "April 18, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Atlas Whoff",
+              "url": "https://dev.to/whoffagents"
+            }
+          ],
+          "date": "Apr 16, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "DEV Community",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/G0tiJm-WvQZs-ogiTsZl65hSL9gaBnaPKXQHCudMtfA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YTIuZGV2LnRvL2R5/bmFtaWMvaW1hZ2Uv/d2lkdGg9MTkyLGhl/aWdodD0sZml0PXNj/YWxlLWRvd24sZ3Jh/dml0eT1hdXRvLGZv/cm1hdD1hdXRvL2h0/dHBzJTNBJTJGJTJG/ZGV2LXRvLXVwbG9h/ZHMuczMuYW1hem9u/YXdzLmNvbSUyRnVw/bG9hZHMlMkZhcnRp/Y2xlcyUyRjhqN2t2/cDY2MHJxenQ5OXp1/aThlLnBuZw",
+              "original": "https://media2.dev.to/dynamic/image/width=192,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "On March 6, Anthropic silently changed the default prompt cache TTL from 1 hour to 5 minutes. If you're not explicitly setting cache_control, your cache hit rate just dropped to near zero. Tagged with claude, anthropic, ai, llm.",
+          "This is a follow-up to my earlier article on Claude prompt caching, which has become one of my most-read pieces. Since publishing it, I've been tracking a regression that Anthropic has not publicly announced.",
+          "On March 6, 2026, Anthropic changed the default prompt cache TTL from 1 hour to 5 minutes. If you're running Claude API calls with prompt caching and you haven't touched your code recently, your cache hit rate is likely near zero right now.",
+          "There's a second issue: disabling telemetry also kills the 1-hour TTL. If you've set anthropic-beta: prompt-caching-2024-07-31 and opted out of Anthropic's telemetry, you're silently dropped to 5-minute TTL regardless of your other settings."
+        ]
+      },
+      {
+        "title": "Claude: How prompt caching actually works - mager.co",
+        "url": "https://www.mager.co/blog/2026-04-29-claude-prompt-caching/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "I fact-checked this against Anthropic&#x27;s prompt caching docs, including the sections on automatic caching, explicit cache breakpoints, cached prefix order (tools, system, messages), default 5-minute lifetime, optional 1-hour lifetime, and the documented ways images, tool definitions, and thinking settings can affect cache validity and cost.",
+        "page_age": "2026-04-29T00:00:00",
+        "profile": {
+          "name": "Mager",
+          "url": "https://www.mager.co/blog/2026-04-29-claude-prompt-caching/",
+          "long_name": "mager.co",
+          "img": "https://imgs.search.brave.com/5SkZp2zvS5DM41IsrNFqizl7qcMW84rpCanKY_MKqog/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODRlZWMwYWIx/OGMxZmJiNDI0ZGNj/MmMwYzU0M2Q5MDA3/YWZlZjZhYzljMWRi/ZTI0OWI3YzcxYjUw/NTc3ZjMzMS93d3cu/bWFnZXIuY28v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mager.co",
+          "hostname": "www.mager.co",
+          "favicon": "https://imgs.search.brave.com/5SkZp2zvS5DM41IsrNFqizl7qcMW84rpCanKY_MKqog/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODRlZWMwYWIx/OGMxZmJiNDI0ZGNj/MmMwYzU0M2Q5MDA3/YWZlZjZhYzljMWRi/ZTI0OWI3YzcxYjUw/NTc3ZjMzMS93d3cu/bWFnZXIuY28v",
+          "path": "› blog  › 2026-04-29-claude-prompt-caching"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/BVv_CQl961PzUDQRg-8sfVgjVbSDUbYzP3nQYkDRUhc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tYWdl/ci5jby9ibG9nLXBs/YWNlaG9sZGVyLTEu/anBn",
+          "original": "https://mager.co/blog-placeholder-1.jpg",
+          "logo": false
+        },
+        "age": "1 month ago",
+        "extra_snippets": [
+          "Even if your prompt content is materially the same, you should not assume a cached prefix from Sonnet will carry cleanly into Opus, or vice versa. Anthropic documents prompt caching per model and model-specific pricing, so the safe mental model is simple: switching models means reassessing your cache situation from scratch.",
+          "I fact-checked this against Anthropic's prompt caching docs, including the sections on automatic caching, explicit cache breakpoints, cached prefix order (tools, system, messages), default 5-minute lifetime, optional 1-hour lifetime, and the documented ways images, tool definitions, and thinking settings can affect cache validity and cost.",
+          "Anthropic's prompt caching works on a prefix.",
+          "You add a top-level cache_control setting, and Anthropic automatically applies the cache breakpoint to the last cacheable block."
+        ]
+      },
+      {
+        "title": "My Data Extraction Stack with Claude Code: A Practical Guide from Simple WebFetch to Bright Data’s Managed Scraping Infrastructure | by Yaron Been | Medium",
+        "url": "https://medium.com/@yaron.been/my-data-extraction-stack-with-claude-code-a-practical-guide-from-simple-webfetch-to-bright-datas-6b19cc683399",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "How it works: WebFetch takes a ... to 100 KB of text. HTML automatically converts to markdown. 15-minute self-cleaning cache for repeated access....",
+        "page_age": "2026-01-27T08:36:06",
+        "profile": {
+          "name": "Medium",
+          "url": "https://medium.com/@yaron.been/my-data-extraction-stack-with-claude-code-a-practical-guide-from-simple-webfetch-to-bright-datas-6b19cc683399",
+          "long_name": "medium.com",
+          "img": "https://imgs.search.brave.com/4R4hFITz_F_be0roUiWbTZKhsywr3fnLTMTkFL5HFow/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTZhYmQ1N2Q4/NDg4ZDcyODIyMDZi/MzFmOWNhNjE3Y2E4/Y2YzMThjNjljNDIx/ZjllZmNhYTcwODhl/YTcwNDEzYy9tZWRp/dW0uY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medium.com",
+          "hostname": "medium.com",
+          "favicon": "https://imgs.search.brave.com/4R4hFITz_F_be0roUiWbTZKhsywr3fnLTMTkFL5HFow/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTZhYmQ1N2Q4/NDg4ZDcyODIyMDZi/MzFmOWNhNjE3Y2E4/Y2YzMThjNjljNDIx/ZjllZmNhYTcwODhl/YTcwNDEzYy9tZWRp/dW0uY29tLw",
+          "path": "› @yaron.been  › my-data-extraction-stack-with-claude-code-a-practical-guide-from-simple-webfetch-to-bright-datas-6b19cc683399"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/B_gWCQjo3TnsKDkxR-1WPGDMJQNURg9zaHMcWRQDsds/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v",
+          "original": "https://miro.medium.com/",
+          "logo": false
+        },
+        "age": "January 27, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Yaron Been",
+              "url": "https://medium.com/@yaron.been"
+            }
+          ],
+          "date": "Jan 27, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Medium",
+            "url": "https://medium.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/HV5y8CR3FQdnFTuDVcr_qfl-FW_-wKwt6V6sALLLkXI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/djIvcmVzaXplOmZp/dDo1MDAvNyUyQVYx/XzdYUDRzbmxtcXJj/XzBOam9udHcucG5n",
+              "original": "https://miro.medium.com/v2/resize:fit:500/7%2AV1_7XP4snlmqrc_0Njontw.png"
+            }
+          },
+          "isAccessibleForFree": true
+        },
+        "extra_snippets": [
+          "My Data Extraction Stack with Claude Code: A Practical Guide from Simple WebFetch to Bright Data’s Managed Scraping Infrastructure How I use Claude Code for web data extraction… and what to do …",
+          "How it works: WebFetch takes a URL and a prompt, fetches the content, converts HTML to markdown, and processes it with a fast model. ... Max content size is around 10 MB at fetch time, truncated to 100 KB of text. HTML automatically converts to markdown. 15-minute self-cleaning cache for repeated access.",
+          "The combination of Claude Code’s built-in WebFetch tool, MCP server integrations, and the ability to chain multiple tools together makes it the most productive environment I’ve used for data extraction tasks.",
+          "I walked him through this exact stack over dinner. He started with WebFetch for the sites that didn’t fight back. Used Gemini as a backup when Claude got blocked. Set up Playwright MCP for the JavaScript-heavy retailer sites."
+        ]
+      },
+      {
+        "title": "Anthropic integration - Docs by LangChain",
+        "url": "https://docs.langchain.com/oss/javascript/integrations/tools/anthropic",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "For more information, see Anthropic’s Web Search Tool documentation. The web fetch tool (webFetch_20250910) allows Claude to retrieve full content from specified web pages and PDF documents.",
+        "profile": {
+          "name": "Langchain",
+          "url": "https://docs.langchain.com/oss/javascript/integrations/tools/anthropic",
+          "long_name": "docs.langchain.com",
+          "img": "https://imgs.search.brave.com/eTsX70Hfz33pL_PDvOaIqSFvtYLZeWnI5rdFKwc7PQM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc4ZWE2MjYw/MTBiODBjODk3NTVj/ZWE1MzhhYjI0ZGIz/OTkyM2ZlNGQ4MDZk/OTRlMDA0NWQ3Mzdl/NmM1MzVlMC9kb2Nz/LmxhbmdjaGFpbi5j/b20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.langchain.com",
+          "hostname": "docs.langchain.com",
+          "favicon": "https://imgs.search.brave.com/eTsX70Hfz33pL_PDvOaIqSFvtYLZeWnI5rdFKwc7PQM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjc4ZWE2MjYw/MTBiODBjODk3NTVj/ZWE1MzhhYjI0ZGIz/OTkyM2ZlNGQ4MDZk/OTRlMDA0NWQ3Mzdl/NmM1MzVlMC9kb2Nz/LmxhbmdjaGFpbi5j/b20v",
+          "path": "› oss  › javascript  › integrations  › tools  › anthropic"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/oLs-T2ObDBXDEqNF6fOOcsR_ipeGvC6OLDcIt-78sdE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9sYW5n/Y2hhaW4tNWU5Y2Mw/N2EubWludGxpZnku/YXBwL21pbnRsaWZ5/LWFzc2V0cy9fbmV4/dC9pbWFnZT91cmw9/JTJGX21pbnRsaWZ5/JTJGYXBpJTJGb2cl/M0ZkaXZpc2lvbiUz/REFudGhyb3BpYyUy/NmFwcGVhcmFuY2Ul/M0RzeXN0ZW0lMjZ0/aXRsZSUzREFudGhy/b3BpYyUyQmludGVn/cmF0aW9uJTI2ZGVz/Y3JpcHRpb24lM0RJ/bnRlZ3JhdGUlMkJ3/aXRoJTJCdGhlJTJC/QW50aHJvcGljJTJC/dG9vbCUyQnVzaW5n/JTJCTGFuZ0NoYWlu/JTJCSmF2YVNjcmlw/dC4lMjZsb2dvTGln/aHQlM0RodHRwcyUy/NTNBJTI1MkYlMjUy/Rm1pbnRjZG4uY29t/JTI1MkZsYW5nY2hh/aW4tNWU5Y2MwN2El/MjUyRm5RbS1zamRf/TUJ5TGhnZVclMjUy/RmltYWdlcyUyNTJG/YnJhbmQlMjUyRmxh/bmdjaGFpbi1kb2Nz/LWRhcmstYmx1ZS5w/bmclMjUzRmZpdCUy/NTNEbWF4JTI1MjZh/dXRvJTI1M0Rmb3Jt/YXQlMjUyNm4lMjUz/RG5RbS1zamRfTUJ5/TGhnZVclMjUyNnEl/MjUzRDg1JTI1MjZz/JTI1M0Q1YmFiZjFh/MTk2MjIwOGZkN2Vl/ZDk0MmZhMjQzMmVj/YiUyNmxvZ29EYXJr/JTNEaHR0cHMlMjUz/QSUyNTJGJTI1MkZt/aW50Y2RuLmNvbSUy/NTJGbGFuZ2NoYWlu/LTVlOWNjMDdhJTI1/MkZuUW0tc2pkX01C/eUxoZ2VXJTI1MkZp/bWFnZXMlMjUyRmJy/YW5kJTI1MkZsYW5n/Y2hhaW4tZG9jcy1s/aWdodC1ibHVlLnBu/ZyUyNTNGZml0JTI1/M0RtYXglMjUyNmF1/dG8lMjUzRGZvcm1h/dCUyNTI2biUyNTNE/blFtLXNqZF9NQnlM/aGdlVyUyNTI2cSUy/NTNEODUlMjUyNnMl/MjUzRDBiY2QyYTFm/MjU5OWVkMjI4YmNl/ZGYwZjUzNWI0NWIx/JTI2cHJpbWFyeUNv/bG9yJTNEJTI1MjMx/NjFGMzQlMjZsaWdo/dENvbG9yJTNEJTI1/MjM3RkM4RkYlMjZk/YXJrQ29sb3IlM0Ql/MjUyMzAwNkRERCUy/NmJhY2tncm91bmRM/aWdodCUzRCUyNTIz/RkZGRkZGJTI2YmFj/a2dyb3VuZERhcmsl/M0QlMjUyMzAzMDcx/MCZhbXA7dz0xMjAw/JmFtcDtxPTEwMA",
+          "original": "https://langchain-5e9cc07a.mintlify.app/mintlify-assets/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DAnthropic%26appearance%3Dsystem%26title%3DAnthropic%2Bintegration%26description%3DIntegrate%2Bwith%2Bthe%2BAnthropic%2Btool%2Busing%2BLangChain%2BJavaScript.%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Flangchain-5e9cc07a%252FnQm-sjd_MByLhgeW%252Fimages%252Fbrand%252Flangchain-docs-dark-blue.png%253Ffit%253Dmax%2526auto%253Dformat%2526n%253DnQm-sjd_MByLhgeW%2526q%253D85%2526s%253D5babf1a1962208fd7eed942fa2432ecb%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Flangchain-5e9cc07a%252FnQm-sjd_MByLhgeW%252Fimages%252Fbrand%252Flangchain-docs-light-blue.png%253Ffit%253Dmax%2526auto%253Dformat%2526n%253DnQm-sjd_MByLhgeW%2526q%253D85%2526s%253D0bcd2a1f2599ed228bcedf0f535b45b1%26primaryColor%3D%2523161F34%26lightColor%3D%25237FC8FF%26darkColor%3D%2523006DDD%26backgroundLight%3D%2523FFFFFF%26backgroundDark%3D%2523030710&amp;w=1200&amp;q=100",
+          "logo": true
+        },
+        "extra_snippets": [
+          "For more information, see Anthropic’s Web Search Tool documentation. The web fetch tool (webFetch_20250910) allows Claude to retrieve full content from specified web pages and PDF documents.",
+          "Use this file to discover all available pages before exploring further.The @langchain/anthropic package provides LangChain-compatible wrappers for Anthropic’s built-in tools. These tools can be bound to ChatAnthropic using bindTools() or createAgent. The memory tool (memory_20250818) enables Claude to store and retrieve information across conversations through a memory file directory.",
+          "Claude can create, read, update, and delete files that persist between sessions, allowing it to build knowledge over time without keeping everything in the context window. import { ChatAnthropic, tools } from \"@langchain/anthropic\"; // Create a simple in-memory file store (or use your own persistence layer) const files = new Map<string, string>(); const memory = tools.memory_20250818({ execute: async (command) => { switch (command.command) { case \"view\": if (!command.path || command.path === \"/\") { return Array.from(files.keys()).join(\"\\n\") || \"Directory is empty.\"; } return ( files.get(command.path) ??",
+          "For more information, see Anthropic’s Tool Search documentation. The text editor tool (textEditor_20250728) enables Claude to view and modify text files, helping debug, fix, and improve code or other text documents. Claude can directly interact with files, providing hands-on assistance rather than just suggesting changes."
+        ]
+      },
+      {
+        "title": "Mastering Cache Hits in Claude Code - DEV Community",
+        "url": "https://dev.to/kitaekatt/mastering-cache-hits-in-claude-code-5648",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Without caching, Anthropic&#x27;s servers have to fully process all of those tokens from scratch on every single message — even though 99% of them are identical to what was sent 30 seconds ago.",
+        "page_age": "2026-02-21T18:55:03",
+        "profile": {
+          "name": "DEV Community",
+          "url": "https://dev.to/kitaekatt/mastering-cache-hits-in-claude-code-5648",
+          "long_name": "dev.to",
+          "img": "https://imgs.search.brave.com/UUpF8I85K--vkQzrhameM7iRPRU5VCTXyWbS4sk6G2g/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTg5MTcxNDBh/N2U4ODc4MDg0NWQ4/MzU0YWJkNDY3ZWRm/MjUxY2U1YjY5MzJm/YWRlOTI4YjAyZDI1/ZjU0MmJjNi9kZXYu/dG8v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "dev.to",
+          "hostname": "dev.to",
+          "favicon": "https://imgs.search.brave.com/UUpF8I85K--vkQzrhameM7iRPRU5VCTXyWbS4sk6G2g/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTg5MTcxNDBh/N2U4ODc4MDg0NWQ4/MzU0YWJkNDY3ZWRm/MjUxY2U1YjY5MzJm/YWRlOTI4YjAyZDI1/ZjU0MmJjNi9kZXYu/dG8v",
+          "path": "› kitaekatt  › mastering-cache-hits-in-claude-code-5648"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/TsXco9EctePgC3yilWlMUZ4SxQMBbiwxXRrefzHwNxI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YTIuZGV2LnRvL2R5/bmFtaWMvaW1hZ2Uv/d2lkdGg9MTA4MCxo/ZWlnaHQ9MTA4MCxm/aXQ9Y292ZXIsZ3Jh/dml0eT1hdXRvLGZv/cm1hdD1hdXRvL2h0/dHBzJTNBJTJGJTJG/ZGV2LXRvLXVwbG9h/ZHMuczMuYW1hem9u/YXdzLmNvbSUyRnVw/bG9hZHMlMkZhcnRp/Y2xlcyUyRjhlbGF4/NXJlOWM2MHo5YTAw/bGJwLnBuZw",
+          "original": "https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8elax5re9c60z9a00lbp.png",
+          "logo": false
+        },
+        "age": "February 21, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Christina Norman",
+              "url": "https://dev.to/kitaekatt"
+            }
+          ],
+          "date": "Feb 21, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "DEV Community",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/G0tiJm-WvQZs-ogiTsZl65hSL9gaBnaPKXQHCudMtfA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YTIuZGV2LnRvL2R5/bmFtaWMvaW1hZ2Uv/d2lkdGg9MTkyLGhl/aWdodD0sZml0PXNj/YWxlLWRvd24sZ3Jh/dml0eT1hdXRvLGZv/cm1hdD1hdXRvL2h0/dHBzJTNBJTJGJTJG/ZGV2LXRvLXVwbG9h/ZHMuczMuYW1hem9u/YXdzLmNvbSUyRnVw/bG9hZHMlMkZhcnRp/Y2xlcyUyRjhqN2t2/cDY2MHJxenQ5OXp1/aThlLnBuZw",
+              "original": "https://media2.dev.to/dynamic/image/width=192,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Understanding how caching works behind the scenes so you can reduce costs and get faster responses — even though you never touch the API directly. Tagged with claudecode, ai, llm, productivity.",
+          "Every time Claude Code sends a message on your behalf, it makes an API call to Anthropic. That API call includes everything Claude needs to respond: the system prompt, any tool definitions, your CLAUDE.md files, and your entire conversation history.",
+          "Without caching, Anthropic's servers have to fully process all of those tokens from scratch on every single message — even though 99% of them are identical to what was sent 30 seconds ago.",
+          "Prompt Caching with Claude — Anthropic Blog — The announcement post covering use cases, cost/latency benefits, and early customer results."
+        ]
+      },
+      {
+        "title": "Reverse Engineering Claude Code Web Tools | by Liran Yoffe | Medium",
+        "url": "https://medium.com/@liranyoffe/reverse-engineering-claude-code-web-tools-1409249316c3",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Reverse Engineering Claude Code Web Tools Claude Code Version: 2.0.60 Research Date: December 2025 This document details the internal implementation of Claude Code’s WebFetch and WebSearch tools …",
+        "page_age": "2025-12-24T15:43:15",
+        "profile": {
+          "name": "Medium",
+          "url": "https://medium.com/@liranyoffe/reverse-engineering-claude-code-web-tools-1409249316c3",
+          "long_name": "medium.com",
+          "img": "https://imgs.search.brave.com/4R4hFITz_F_be0roUiWbTZKhsywr3fnLTMTkFL5HFow/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTZhYmQ1N2Q4/NDg4ZDcyODIyMDZi/MzFmOWNhNjE3Y2E4/Y2YzMThjNjljNDIx/ZjllZmNhYTcwODhl/YTcwNDEzYy9tZWRp/dW0uY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medium.com",
+          "hostname": "medium.com",
+          "favicon": "https://imgs.search.brave.com/4R4hFITz_F_be0roUiWbTZKhsywr3fnLTMTkFL5HFow/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTZhYmQ1N2Q4/NDg4ZDcyODIyMDZi/MzFmOWNhNjE3Y2E4/Y2YzMThjNjljNDIx/ZjllZmNhYTcwODhl/YTcwNDEzYy9tZWRp/dW0uY29tLw",
+          "path": "› @liranyoffe  › reverse-engineering-claude-code-web-tools-1409249316c3"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/vBoRmpOIXKJC7MwIkelxm8zhxZlZ4WMnjg5ELOAGVms/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/MSpSRmxOcC15Q0M3/QVhPeW5vS0pKcDhR/LnBuZw",
+          "original": "https://miro.medium.com/1*RFlNp-yCC7AXOynoKJJp8Q.png",
+          "logo": false
+        },
+        "age": "December 24, 2025",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Liran Yoffe",
+              "url": "https://medium.com/@liranyoffe"
+            }
+          ],
+          "date": "Dec 16, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "Medium",
+            "url": "https://medium.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/HV5y8CR3FQdnFTuDVcr_qfl-FW_-wKwt6V6sALLLkXI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/djIvcmVzaXplOmZp/dDo1MDAvNyUyQVYx/XzdYUDRzbmxtcXJj/XzBOam9udHcucG5n",
+              "original": "https://miro.medium.com/v2/resize:fit:500/7%2AV1_7XP4snlmqrc_0Njontw.png"
+            }
+          },
+          "isAccessibleForFree": true
+        },
+        "extra_snippets": [
+          "Reverse Engineering Claude Code Web Tools Claude Code Version: 2.0.60 Research Date: December 2025 This document details the internal implementation of Claude Code’s WebFetch and WebSearch tools …",
+          "The WebFetch tool fetches web content and summarizes it using a secondary LLM conversation. Contrary to what one might expect, it does not use Anthropic's server-side web fetch tool (web-fetch-2025-09-10 beta).",
+          "Which is used as the tool result of the WebFetch too call. The WebSearch tool performs web searches using Anthropic's server-side web_search_20250305 tool.",
+          "Unlike WebFetch, this actually uses Anthropic's infrastructure."
+        ]
+      },
+      {
+        "title": "What Is Anthropic's Prompt Caching and Why Does It Affect Your Claude Subscription Limits? | MindStudio",
+        "url": "https://www.mindstudio.ai/blog/anthropic-prompt-caching-claude-subscription-limits",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "When Claude processes a prompt, it generates what’s called a KV (key-value) cache — essentially a computed representation of the tokens it has already processed. Prompt caching lets Anthropic store that computed state so it doesn’t have to be recalculated on the next request.",
+        "page_age": "2026-04-05T00:00:00",
+        "profile": {
+          "name": "MindStudio",
+          "url": "https://www.mindstudio.ai/blog/anthropic-prompt-caching-claude-subscription-limits",
+          "long_name": "mindstudio.ai",
+          "img": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mindstudio.ai",
+          "hostname": "www.mindstudio.ai",
+          "favicon": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8",
+          "path": "  › blog  › what is anthropic's prompt caching and why does it affect your claude subscription limits?"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/iWy_bwcOYFV8Cjq_d-Kbwz9ULl5TOCwZ5MUBGhKOaFQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLm1z/Y2RuLmFpLzcwY2Ji/MWFkLTA4ZDctNGZk/Yy1hYjMxLWUzNDM3/ODA5NjZhNi9nZW5l/cmF0ZWQtaW1hZ2Vz/LzJjNGQzY2ViLTUy/M2UtNDVmZC1iN2I0/LTA1YTIyNmI3MWMx/ZC5wbmc_Zm09YXV0/byZ3PTEyMDAmZml0/PWNvdmVy",
+          "original": "https://i.mscdn.ai/70cbb1ad-08d7-4fdc-ab31-e343780966a6/generated-images/2c4d3ceb-523e-45fd-b7b4-05a226b71c1d.png?fm=auto&w=1200&fit=cover",
+          "logo": false
+        },
+        "age": "April 5, 2026",
+        "faq": {
+          "items": [
+            {
+              "question": "Does prompt caching affect Claude.ai subscribers or only API users?",
+              "answer": "Both, but indirectly. Anthropic implements caching on the backend for Claude.ai conversations. If you're using Claude.ai directly in your browser, caching is handled by Anthropic and generally works as designed. The issue arises when third-party tools access Claude via the API and don't implement caching correctly — that inefficiency translates into higher compute consumption, which affects how quickly you burn through limits tied to your subscription or API budget.",
+              "title": "What Is Anthropic's Prompt Caching and Why Does It Affect Your ...",
+              "url": "https://www.mindstudio.ai/blog/anthropic-prompt-caching-claude-subscription-limits",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mindstudio.ai",
+                "hostname": "www.mindstudio.ai",
+                "favicon": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8",
+                "path": "  › blog  › what is anthropic's prompt caching and why does it affect your claude subscription limits?"
+              }
+            },
+            {
+              "question": "Why doesn't Anthropic just cache everything automatically?",
+              "answer": "Caching requires explicit marking because not all content should be cached. The system needs to know which parts of a prompt are stable enough to store and reuse. If a tool injects dynamic content into the system prompt without flagging it, automatic caching would either fail (wrong prefix) or cache the wrong thing. The cache_control mechanism puts the responsibility on the developer to identify what's static and cache-worthy, which requires intentional API design.",
+              "title": "What Is Anthropic's Prompt Caching and Why Does It Affect Your ...",
+              "url": "https://www.mindstudio.ai/blog/anthropic-prompt-caching-claude-subscription-limits",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mindstudio.ai",
+                "hostname": "www.mindstudio.ai",
+                "favicon": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8",
+                "path": "  › blog  › what is anthropic's prompt caching and why does it affect your claude subscription limits?"
+              }
+            },
+            {
+              "question": "How much cheaper are cached tokens compared to regular tokens?",
+              "answer": "Anthropic's pricing for Claude models shows cache read tokens at roughly 10% of the standard input token price for most Claude models — a significant discount. Cache creation (writing to the cache) costs slightly more than standard input processing, but that cost is paid once and then amortized across every subsequent cache hit. For conversations with long system prompts, the savings compound quickly.",
+              "title": "What Is Anthropic's Prompt Caching and Why Does It Affect Your ...",
+              "url": "https://www.mindstudio.ai/blog/anthropic-prompt-caching-claude-subscription-limits",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mindstudio.ai",
+                "hostname": "www.mindstudio.ai",
+                "favicon": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8",
+                "path": "  › blog  › what is anthropic's prompt caching and why does it affect your claude subscription limits?"
+              }
+            },
+            {
+              "question": "Can I tell if a third-party tool is caching efficiently?",
+              "answer": "Usually not directly, unless the tool exposes API usage metadata. The clearest signals are indirect: if you hit limits faster than expected, if response latency stays consistently high across a long session, or if the tool's documentation makes no mention of prompt caching or API optimization. When in doubt, ask the tool's support team whether they implement cache_control in their API calls.",
+              "title": "What Is Anthropic's Prompt Caching and Why Does It Affect Your ...",
+              "url": "https://www.mindstudio.ai/blog/anthropic-prompt-caching-claude-subscription-limits",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mindstudio.ai",
+                "hostname": "www.mindstudio.ai",
+                "favicon": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8",
+                "path": "  › blog  › what is anthropic's prompt caching and why does it affect your claude subscription limits?"
+              }
+            },
+            {
+              "question": "Does changing my system prompt between sessions break caching?",
+              "answer": "Yes. Cache hits require an exact match on the prefix. If you modify your system prompt between sessions — even slightly — there's no cache hit for that content on the first request of the new session. The cache then gets rebuilt for the new system prompt. Within a session, keeping the system prompt static across turns is what enables caching to reduce per-turn costs.",
+              "title": "What Is Anthropic's Prompt Caching and Why Does It Affect Your ...",
+              "url": "https://www.mindstudio.ai/blog/anthropic-prompt-caching-claude-subscription-limits",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mindstudio.ai",
+                "hostname": "www.mindstudio.ai",
+                "favicon": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8",
+                "path": "  › blog  › what is anthropic's prompt caching and why does it affect your claude subscription limits?"
+              }
+            },
+            {
+              "question": "Do all Claude models support prompt caching?",
+              "answer": "Anthropic has rolled out prompt caching across Claude 3 and Claude 3.5 model families, including Haiku, Sonnet, and Opus variants. Availability and pricing differ slightly by model. Always check Anthropic's current model documentation for the latest cache support details, as the feature has been expanded incrementally since its initial release.",
+              "title": "What Is Anthropic's Prompt Caching and Why Does It Affect Your ...",
+              "url": "https://www.mindstudio.ai/blog/anthropic-prompt-caching-claude-subscription-limits",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mindstudio.ai",
+                "hostname": "www.mindstudio.ai",
+                "favicon": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8",
+                "path": "  › blog  › what is anthropic's prompt caching and why does it affect your claude subscription limits?"
+              }
+            }
+          ]
+        },
+        "organization": {
+          "type": "organization",
+          "name": "MindStudio",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Anthropic uses prompt caching to reduce compute costs. When third-party tools break caching, your session limits drain faster. Here's the technical explanation. ... If you’ve ever hit Claude’s usage limits mid-project and wondered why, the answer might have nothing to do with how much you’re actually typing.",
+          "Every time you send a message to Claude, the model doesn’t just process your latest question in isolation. It processes the entire context: the system prompt, every previous message in the conversation, and your new input — all of it, from scratch, on every single turn. That’s expensive. Processing tokens takes compute. Compute costs money and time. For long conversations or complex system prompts, this overhead adds up quickly. Prompt caching is Anthropic’s solution to this inefficiency.",
+          "When Claude processes a prompt, it generates what’s called a KV (key-value) cache — essentially a computed representation of the tokens it has already processed. Prompt caching lets Anthropic store that computed state so it doesn’t have to be recalculated on the next request.",
+          "If your next message uses the same prefix (same system prompt, same conversation history up to that point), Claude can retrieve the cached computation instead of running the full calculation again. This reduces latency and cuts the cost of processing significantly. Anthropic’s API allows developers to explicitly mark which parts of a prompt should be cached using cache_control parameters."
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

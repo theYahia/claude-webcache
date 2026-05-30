@@ -1,0 +1,1710 @@
+{
+  "type": "search",
+  "query": {
+    "original": "persistent full page markdown cache MCP server claude code reader",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "faq": {
+    "type": "faq",
+    "results": [
+      {
+        "question": "Which web search MCP server works with Claude Code?",
+        "answer": "All four servers listed here work with Claude Code. Firecrawl, Tavily, and Exa all support remote MCP via HTTP, so you can add them with a single claude mcp add command. WebSearch-MCP uses stdio transport and requires the local crawler service to be running first.",
+        "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+        "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › best-web-search-mcp"
+        }
+      },
+      {
+        "question": "Where is the Claude Desktop MCP config file?",
+        "answer": "The Claude Desktop MCP configuration file is located at ~/Library/Application Support/Claude/claude_desktop_config.json.",
+        "title": "How to Add MCP Servers to Claude Desktop — MCP.Directory",
+        "url": "https://mcp.directory/clients/claude-desktop",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mcp.directory",
+          "hostname": "mcp.directory",
+          "favicon": "https://imgs.search.brave.com/iCbG3fp9wPEq_E1N-9nHNRdDbuFSOGQ1brv3qeRIN6w/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTFkMDNmODNk/YzJjYjc0NDhjYzRk/N2MxOTE5NDFhYzIz/NjQ0YWZlNWNhNmI1/YmVlOWI0ZDcxNzU5/ZjQwZDAyYi9tY3Au/ZGlyZWN0b3J5Lw",
+          "path": "  › home  › clients  › claude desktop"
+        }
+      },
+      {
+        "question": "Do web search MCP servers require an API key?",
+        "answer": "Most require one. Firecrawl, Tavily, and Exa all use API keys tied to their respective services. WebSearch-MCP is the exception: it is self-hosted and does not require an external API key, but it does require you to run your own Docker-based crawler service.",
+        "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+        "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › best-web-search-mcp"
+        }
+      },
+      {
+        "question": "Can I use these MCP servers with Cursor or VS Code?",
+        "answer": "Yes. Firecrawl, Tavily, and Exa all support Cursor and VS Code. Exa also works with Windsurf, Zed, Gemini CLI, v0 by Vercel, Warp, and more. WebSearch-MCP works with Cursor, Claude Desktop, and Cline.",
+        "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+        "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › best-web-search-mcp"
+        }
+      },
+      {
+        "question": "How do I add MCP servers to Claude Desktop?",
+        "answer": "Open your Claude Desktop config file at ~/Library/Application Support/Claude/claude_desktop_config.json, add the server configuration in JSON format, then restart Claude Desktop.",
+        "title": "How to Add MCP Servers to Claude Desktop — MCP.Directory",
+        "url": "https://mcp.directory/clients/claude-desktop",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mcp.directory",
+          "hostname": "mcp.directory",
+          "favicon": "https://imgs.search.brave.com/iCbG3fp9wPEq_E1N-9nHNRdDbuFSOGQ1brv3qeRIN6w/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTFkMDNmODNk/YzJjYjc0NDhjYzRk/N2MxOTE5NDFhYzIz/NjQ0YWZlNWNhNmI1/YmVlOWI0ZDcxNzU5/ZjQwZDAyYi9tY3Au/ZGlyZWN0b3J5Lw",
+          "path": "  › home  › clients  › claude desktop"
+        }
+      },
+      {
+        "question": "How many MCP servers work with Claude Desktop?",
+        "answer": "1976 MCP servers are compatible with Claude Desktop on MCP.Directory.",
+        "title": "How to Add MCP Servers to Claude Desktop — MCP.Directory",
+        "url": "https://mcp.directory/clients/claude-desktop",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mcp.directory",
+          "hostname": "mcp.directory",
+          "favicon": "https://imgs.search.brave.com/iCbG3fp9wPEq_E1N-9nHNRdDbuFSOGQ1brv3qeRIN6w/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTFkMDNmODNk/YzJjYjc0NDhjYzRk/N2MxOTE5NDFhYzIz/NjQ0YWZlNWNhNmI1/YmVlOWI0ZDcxNzU5/ZjQwZDAyYi9tY3Au/ZGlyZWN0b3J5Lw",
+          "path": "  › home  › clients  › claude desktop"
+        }
+      },
+      {
+        "question": "Is there a free web search MCP server?",
+        "answer": "Exa offers a generous free plan that lets you use the MCP without an API key (the rate limits are lower on the free plan). WebSearch-MCP is entirely free and self-hosted. Firecrawl and Tavily have free tiers but require account registration.",
+        "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+        "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › best-web-search-mcp"
+        }
+      },
+      {
+        "question": "What is a web search MCP server?",
+        "answer": "A web search MCP server is a Model Context Protocol server that gives AI assistants like Claude real-time access to the web. Instead of relying on training data, the AI can query live web pages, news, and search results directly during a conversation or agentic task.",
+        "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+        "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › best-web-search-mcp"
+        }
+      },
+      {
+        "question": "Can I self-host a web search MCP server?",
+        "answer": "Yes. WebSearch-MCP is fully self-hosted using Docker Compose. Firecrawl also supports self-hosted deployments for both the MCP server and the underlying scraping infrastructure.",
+        "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+        "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › best-web-search-mcp"
+        }
+      },
+      {
+        "question": "Are most web search MCP servers just wrappers around Google or Bing?",
+        "answer": "Many are, which is worth knowing before you choose. If your agent already has a Google tool configured, calling a Google-wrapped MCP server will return the same results. Exa uses its own neural search index optimized for AI agents, and Firecrawl retrieves full page content rather than re-ranking standard search results. WebSearch-MCP runs its own crawler infrastructure. Tavily crawls independently across multiple sources rather than proxying a single engine.",
+        "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+        "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › best-web-search-mcp"
+        }
+      },
+      {
+        "question": "What is the difference between Tavily MCP and Exa MCP?",
+        "answer": "Tavily MCP provides two tools: web search and content extraction, with a focus on real-time information for AI agents and strong integrations with LangChain, LlamaIndex, and enterprise platforms. Exa MCP offers three tools including an advanced search mode with category filters, date ranges, and domain restrictions, and is available as a native Claude Connector requiring no config file changes.",
+        "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+        "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › best-web-search-mcp"
+        }
+      },
+      {
+        "question": "What is the Firecrawl MCP server?",
+        "answer": "The Firecrawl MCP server exposes 13 tools covering web search, scraping, crawling, browser session management, and an autonomous research agent. It supports both a remote hosted URL and local npx installation, and works with Claude Code, Cursor, VS Code, Windsurf, and n8n.",
+        "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+        "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › best-web-search-mcp"
+        }
+      },
+      {
+        "question": "Does the choice of web search MCP server affect my agent's output quality?",
+        "answer": "Yes, significantly. Research on agentic information retrieval has found that standard LLMs using basic keyword search score below 10% on complex multi-hop research benchmarks, while systems built around iterative retrieval — where the agent searches, reasons over results, and searches again — score dramatically higher. The search tool is the foundation your agent reasons on, so shallow snippets or stale results flow directly into lower-quality output.",
+        "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+        "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › best-web-search-mcp"
+        }
+      },
+      {
+        "question": "Which web search MCP server is best for deep research versus quick lookups?",
+        "answer": "For quick lookups — answering a question, finding documentation, pulling recent news — Exa or Tavily are the fastest options with minimal setup. For deep research tasks involving multiple unknowns, uncertain starting points, or synthesis across many sources, Firecrawl's autonomous research agent (firecrawl_agent) is the better fit. It follows links, reasons over what it finds, and iterates until it has a complete answer — closer to the agentic deep research paradigm than a single-pass search tool.",
+        "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+        "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › best-web-search-mcp"
+        }
+      }
+    ]
+  },
+  "infobox": {
+    "type": "graph",
+    "results": [
+      {
+        "title": "All the Markdown files - what do you do with them?",
+        "url": "https://www.reddit.com/r/ClaudeCode/comments/1t8fwqw/all_the_markdown_files_what_do_you_do_with_them/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "",
+        "family_friendly": true,
+        "type": "infobox",
+        "position": 6,
+        "attributes": [],
+        "providers": [
+          {
+            "type": "external",
+            "name": "reddit.com",
+            "url": "https://www.reddit.com/r/ClaudeCode/comments/1t8fwqw/all_the_markdown_files_what_do_you_do_with_them/",
+            "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+          }
+        ],
+        "subtype": "code",
+        "data": {
+          "question": "All the Markdown files - what do you do with them?",
+          "answer": {
+            "text": "Any excess docs i just vectorize them into a searcable db. Done. I archive old code.",
+            "author": "Input-X",
+            "upvoteCount": 6
+          }
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ClaudeCode  › comments  › 1t8fwqw  › all_the_markdown_files_what_do_you_do_with_them"
+        }
+      }
+    ]
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "infobox",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "videos",
+        "all": true
+      },
+      {
+        "type": "faq",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 19,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "videos": {
+    "type": "videos",
+    "results": [
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=pBHKTojO1YY",
+        "title": "Better With This Setup (CLAUDE.md + Skills + MCPs) - YouTube",
+        "description": "📢 Don’t miss the Claude Code Workshop — register here: https://go.vcinc.ai/claudecodeWatch the full Claude Code course we built to go deeper and start build",
+        "age": "March 3, 2026",
+        "page_age": "2026-03-03T17:01:22",
+        "fetched_content_timestamp": 1780020343,
+        "video": {
+          "duration": "51:19",
+          "creator": "Nuno Tavares | Automated Marketer",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/w0c2ViQiD5R9LPfhD8-VsjhfVVXOhFetCysMfdEl8lg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9w/QkhLVG9qTzFZWS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/pBHKTojO1YY/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=i_OHQH4-M2Y",
+        "title": "Claude Code Tutorial #2 - CLAUDE.md Files & /init - YouTube",
+        "description": "In this course, you'll learn how to harness the power of Claude Code within your development workflow, including how to install, setup a new project, add con...",
+        "age": "August 22, 2025",
+        "page_age": "2025-08-22T08:17:33",
+        "fetched_content_timestamp": 1779981096,
+        "video": {
+          "duration": "12:18",
+          "creator": "Net Ninja",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/aj0BGCoPCQ3IX6GFYl6y1OvAtJL7XJeY39dJAaD8Wxk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9p/X09IUUg0LU0yWS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/i_OHQH4-M2Y/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=n0wCO0Z44IM",
+        "title": "Build Local MCP Server for Cursor/VSCode/Claude Code | Convert ...",
+        "description": "Learn how to build your own Model Context Protocol (MCP) server that converts local PDF files to Markdown using Docling and Python. We'll integrate it with C...",
+        "age": "August 4, 2025",
+        "page_age": "2025-08-04T15:30:06",
+        "fetched_content_timestamp": 1779460112,
+        "video": {
+          "duration": "10:13",
+          "creator": "Venelin Valkov",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/cZqJaga6B1ZzlIufnOwEvbNmcRLAIlNOWCxxWNGqtw8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9u/MHdDTzBaNDRJTS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/n0wCO0Z44IM/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=ueWmwzVEtDY",
+        "title": "Create the perfect CLAUDE.md file - YouTube",
+        "description": "Check my website: https://bergdaniel.com.br/Claude Code documentation: https://docs.anthropic.com/en/docs/claude-codeNext.js CLAUDE.md: https://github.com/da",
+        "age": "June 17, 2025",
+        "page_age": "2025-06-17T17:01:10",
+        "fetched_content_timestamp": 1779880179,
+        "video": {
+          "duration": "09:53",
+          "creator": "Daniel Bergholz",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/kqJrHUfr81a-GFRDLR_Mfk0Z4tuFVFyyN0D7PY9e_q4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS91/ZVdtd3pWRXREWS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/ueWmwzVEtDY/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.reddit.com/r/ClaudeCode/comments/1qwnay2/i_built_a_virtual_filesystem_to_replace_mcp_for/",
+        "title": "r/ClaudeCode on Reddit: I built a virtual filesystem to replace ...",
+        "description": "One of the reasons Claude Code is so good at coding is because all the context it needs is just sitting there as files on your computer. But that’s…",
+        "age": "February 5, 2026",
+        "page_age": "2026-02-05T14:51:34",
+        "fetched_content_timestamp": 1777019561,
+        "video": {},
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › ClaudeCode  › comments  › 1qwnay2  › i_built_a_virtual_filesystem_to_replace_mcp_for"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Xcyatukp6PB52THcCQZAoQ2x_KnRQFfiP4YWgWCzUSQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9leHRl/cm5hbC1wcmV2aWV3/LnJlZGQuaXQvaS1i/dWlsdC1hLXZpcnR1/YWwtZmlsZXN5c3Rl/bS10by1yZXBsYWNl/LW1jcC1mb3ItY2xh/dWRlLWNvZGUtdjAt/TUhOdU5USnFiV1Iy/YjJobk1SellMOGwy/ekFFVHJ2SzBDb1dr/cThDbEptaUs2MGVB/R0NRbjBiemt3bnRB/LnBuZz93aWR0aD0x/MDgwJmFtcDtjcm9w/PXNtYXJ0JmFtcDtm/b3JtYXQ9cGpwZyZh/bXA7YXV0bz13ZWJw/JmFtcDtzPTE3NzI2/NGJkYmRlNTk3ODBl/OWYwOTkxNGE1OTYw/ZGZhOTNhNTMyYzQ",
+          "original": "https://external-preview.redd.it/i-built-a-virtual-filesystem-to-replace-mcp-for-claude-code-v0-MHNuNTJqbWR2b2hnMRzYL8l2zAETrvK0CoWkq8ClJmiK60eAGCQn0bzkwntA.png?width=1080&amp;crop=smart&amp;format=pjpg&amp;auto=webp&amp;s=177264bdbde59780e9f09914a5960dfa93a532c4"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=DfWHX7kszQI",
+        "title": "Claude Code MCP: How to Add MCP Servers (Complete Guide) - YouTube",
+        "description": "🚀 Access ALL video resources & get personalized help in my community:https://www.skool.com/agentic-labs/about?ref=3fd61190e13d426dbf4f3b38adc7de69Learn how ...",
+        "age": "July 21, 2025",
+        "page_age": "2025-07-21T13:22:25",
+        "fetched_content_timestamp": 1779809608,
+        "video": {
+          "duration": "17:58",
+          "creator": "Leon van Zyl",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/9FEvhvzZvRH07bIRwJzEEmlQn0BalbYSd0M0bHNVCko/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9E/ZldIWDdrc3pRSS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/DfWHX7kszQI/maxresdefault.jpg"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "r/ClaudeAI on Reddit: I tested an MCP server that lets Claude pull live web data including HTML, Markdown, and screenshots and here is what I learned",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1ox4c6d/i_tested_an_mcp_server_that_lets_claude_pull_live/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Built an MCP server that turns Claude Code into a full agent operating system with persistent memory, loop detection, and audit trails",
+        "page_age": "2025-11-14T18:24:43",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1ox4c6d/i_tested_an_mcp_server_that_lets_claude_pull_live/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/claudeai  › i tested an mcp server that lets claude pull live web data including html, markdown, and screenshots and here is what i learned"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/A5H_aQiEBuUODR0lNeU8iDfhrWUvO8oEmRGE_mcS_gM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9pY29uLnBu/Zw",
+          "original": "https://www.redditstatic.com/icon.png",
+          "logo": true
+        },
+        "age": "November 14, 2025",
+        "qa": {
+          "question": "<p dir=\"auto\">\n      I have been experimenting with MCP plugins to see how much more useful Claude becomes when it can pull fresh information instead of relying only on what it already knows.\n    </p><p dir=\"auto\">\n      One MCP server I tested is here: <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/crawlbase/crawlbase-mcp\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://github.com/crawlbase/crawlbase-mcp</a>\n    </p><p dir=\"auto\">\n      It connects through the MCP standard and allows Claude to request live web content in three useful formats\n    </p><p dir=\"auto\">\n      • Raw HTML\n    </p><p dir=\"auto\">\n      • Clean Markdown\n    </p><p dir=\"auto\">\n      • Browser style screenshots\n    </p><p dir=\"auto\">\n      After trying it across Claude Desktop, Claude Code, Cursor and Windsurf, these were the most noticeable improvements.\n    </p><p dir=\"auto\">\n      ⭐ Claude becomes more accurate when dealing with anything time sensitive\n    </p><p dir=\"auto\">\n      Claude’s reasoning is strong but it sometimes fills in the gaps with guesses when something changed recently. Being able to fetch the current page helps remove that guesswork.\n    </p><p dir=\"auto\">\n      ⭐ Research becomes much smoother\n    </p><p dir=\"auto\">\n      Instead of hopping between tabs or manually copying content Claude can pull what it needs and work with it directly inside the conversation.\n    </p><p dir=\"auto\">\n      ⭐ The workflow feels surprisingly natural\n    </p><p dir=\"auto\">\n      Claude requests the content and the MCP server returns a clean structured result. Everything stays inside the chat.\n    </p><p dir=\"auto\">\n      ⭐ JavaScript heavy sites actually load\n    </p><p dir=\"auto\">\n      The MCP server handles the rendering step first so Claude receives a proper response without breaking.\n    </p><p dir=\"auto\">\n      ⭐ Screenshots open new possibilities\n    </p><p dir=\"auto\">\n      Claude can describe layout differences, UI changes, or compare two versions of a page visually.\n    </p><p dir=\"auto\">\n      ⭐ Real tasks where it worked well\n    </p><p dir=\"auto\">\n      • Monitoring changes on frequently updated pages\n    </p><p dir=\"auto\">\n      • Comparing product information across sites\n    </p><p dir=\"auto\">\n      • Summarizing news sections on demand\n    </p><p dir=\"auto\">\n      • Collecting material for research or competitive analysis\n    </p><p dir=\"auto\">\n      • Checking documentation updates between releases\n    </p><p dir=\"auto\">\n      Has anyone else been experimenting with MCP integrations for Claude\n    </p><p dir=\"auto\">\n      What workflows have you built? I would love to hear how others are combining MCP tools with Claude’s reasoning abilities.\n    </p>",
+          "answer": {
+            "text": "<span>Did you test this against firecrawl and tavily? How does it compare? This feels like an ad without comparisons to other established projects.</span>\n",
+            "upvoteCount": 3
+          }
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Bartrader",
+              "url": "https://www.reddit.com/user/Bartrader/"
+            }
+          ],
+          "date": "Nov 14, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "Reddit",
+            "url": "https://www.reddit.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/vwRCTZCyS3UsCGj7HsYLzWpcOMhAEqq9hhxBK8tt7Dw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9zaHJlZGRp/dC9hc3NldHMvZmF2/aWNvbi82NHg2NC5w/bmc",
+              "original": "https://www.redditstatic.com/shreddit/assets/favicon/64x64.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Built an MCP server that turns Claude Code into a full agent operating system with persistent memory, loop detection, and audit trails",
+          "Claude can describe layout differences, UI changes, or compare two versions of a page visually. ... What workflows have you built? I would love to hear how others are combining MCP tools with Claude’s reasoning abilities.",
+          "I have been experimenting with MCP plugins to see how much more useful Claude becomes when it can pull fresh information instead of relying only on what it already knows.",
+          "Claude requests the content and the MCP server returns a clean structured result."
+        ]
+      },
+      {
+        "title": "r/ClaudeAI on Reddit: PullMD - gave Claude Code an MCP server so it stops burning tokens parsing HTML",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1sxzlh6/pullmd_gave_claude_code_an_mcp_server_so_it_stops/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Useful if you don&#x27;t want to add another MCP server but still want a nudge for Claude to use PullMD over raw fetch. ... Reddit-aware path - auto-detects threads, pulls post + nested comment tree, indents replies with spaces instead of &gt; blockquotes (those turn unreadable past depth 4 in copy-paste) Every response carries headers - X-Source (which extractor won), X-Quality (0.0–1.0 confidence), X-Share-Id (8-hex permalink). Refreshable share links: every conversion gets a share ID. /s/&lt;id&gt; returns cached Markdown and re-fetches from source if older than 1h.",
+        "page_age": "2026-04-28T14:43:08",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1sxzlh6/pullmd_gave_claude_code_an_mcp_server_so_it_stops/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/claudeai  › pullmd - gave claude code an mcp server so it stops burning tokens parsing html"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ueQSssGDqo0gWeGSupd0Lr3y7_UNCUB_uFCL5BILmKg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/cHVsbG1kLWdhdmUt/Y2xhdWRlLWNvZGUt/YW4tbWNwLXNlcnZl/ci1zby1pdC1zdG9w/cy1idXJuaW5nLXYw/LXZ1MGpkdG1zM3h4/ZzEucG5nP2F1dG89/d2VicCZzPTZkMTFm/MjYxZmRmNDVjNjNi/YWNhNDM1MjdjYTZm/MzA0ZDFkMDhiMDg",
+          "original": "https://preview.redd.it/pullmd-gave-claude-code-an-mcp-server-so-it-stops-burning-v0-vu0jdtms3xxg1.png?auto=webp&s=6d11f261fdf45c63baca43527ca6f304d1d08b08",
+          "logo": false
+        },
+        "age": "April 28, 2026",
+        "qa": {
+          "question": "<p>\n      Hey all,\n    </p><p>\n      Built this over the past few weeks because I got tired of two things:\n    </p><p>\n      <strong>1. Mobile copy-paste is awful.</strong> Long Reddit thread or blog post on my phone, want to ask Claude about it. Long-press, drag selection handles past nav/sidebar/footer, copy, switch app, paste. None of that is hard, but it&#39;s annoying enough that I wanted to fix it.\n    </p><p>\n      <strong>2. Claude Code burns tokens on HTML boilerplate.</strong> Letting it fetch raw HTML and parse the chrome out is wildly inefficient. A typical article is 80% navigation/cookie banners/footers, 20% content. The agent shouldn&#39;t have to wrestle with a cookie banner before answering my question.\n    </p><p>\n      So I built <strong>PullMD</strong> - a fully self-hosted Docker stack that turns any URL into clean Markdown, with first-class MCP support so Claude Code (and Desktop, Cursor, anything MCP-compatible) gets pre-cleaned content directly. Runs on your own box, no third-party service in the loop.\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\">Self-host in three commands</h1><p>\n      Multi-arch images (<code>linux/amd64</code>, <code>linux/arm64</code>) on Docker Hub. Zero-config compose:\n    </p><pre>\nmkdir pullmd &amp;&amp; cd pullmd\ncurl -O https://raw.githubusercontent.com/AeternaLabsHQ/pullmd/main/docker-compose.yml\ndocker compose up -d\n# → http://localhost:3000</pre><p>\n      Three services in the stack: main app (Node.js), Trafilatura sidecar (Python), Playwright sidecar (optional ~3.7GB Chromium bundle for JS-heavy pages - leave it off and PullMD silently degrades to static extraction). Sensible defaults, Traefik example included, GHCR mirror available.\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\">How it works for Claude users</h1><p>\n      <strong>MCP server</strong> at <code>/mcp</code> (Streamable HTTP, stateless), three tools:\n    </p><ul>\n        <li>\n      <p>\n      <code>read_url</code> - fetch + convert any URL\n    </p>\n    </li><li>\n      <p>\n      <code>get_share</code> - retrieve a previously-fetched conversion by share ID\n    </p>\n    </li><li>\n      <p>\n      <code>list_recent</code> - list recent conversions\n    </p>\n    </li>\n      </ul><p>\n      Add to Claude Code in one line:\n    </p><pre>\nclaude mcp add --transport http pullmd https://your-instance.example.com/mcp</pre><p>\n      For Claude Desktop, drop into the JSON config:\n    </p><pre>\n{\n  &quot;mcpServers&quot;: {\n    &quot;pullmd&quot;: {\n      &quot;type&quot;: &quot;http&quot;,\n      &quot;url&quot;: &quot;https://your-instance.example.com/mcp&quot;\n    }\n  }\n}</pre><p>\n      <strong>Claude Code skill bundle</strong> - the running instance generates a <code>web-reader.zip</code> with your URL baked in. Drop into <code>~/.claude/skills/</code>, restart Claude Code, the skill activates on web-reading requests. Useful if you don&#39;t want to add another MCP server but still want a nudge for Claude to use PullMD over raw fetch.\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\">How extraction actually works</h1><p>\n      Multi-strategy waterfall:\n    </p><ol>\n        <li>\n      <p>\n      <strong>Cloudflare&#39;s native Markdown endpoint</strong> if the site supports it\n    </p>\n    </li><li>\n      <p>\n      <strong>Mozilla Readability + Trafilatura in parallel</strong>, both scored, winner picked\n    </p>\n    </li><li>\n      <p>\n      <strong>Headless Chromium</strong> (Playwright sidecar) for JS-heavy pages as last resort\n    </p>\n    </li><li>\n      <p>\n      <strong>Reddit-aware path</strong> - auto-detects threads, pulls post + nested comment tree, indents replies with spaces instead of <code>&gt;</code> blockquotes (those turn unreadable past depth 4 in copy-paste)\n    </p>\n    </li>\n      </ol><p>\n      Every response carries headers - <code>X-Source</code> (which extractor won), <code>X-Quality</code> (0.0–1.0 confidence), <code>X-Share-Id</code> (8-hex permalink).\n    </p><p>\n      <strong>Refreshable share links:</strong> every conversion gets a share ID. <code>/s/&lt;id&gt;</code> returns cached Markdown and re-fetches from source if older than 1h. So a share link is also a live endpoint that stays fresh. If the source dies, last good snapshot keeps working.\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\">Built with Claude Code</h1><p>\n      Claude Code wrote essentially all of the code. I did the planning, made the architectural decisions, steered the implementation, tested every iteration, and integrated everything into something I actually use daily.\n    </p><p>\n      The architecture went through a planning phase in claude.ai <em>before</em> a line of code was written - including dual-strategy Reddit (<code>.json</code> trick first, old.reddit HTML as fallback), the share-id-as-live- endpoint trick, the indented comment formatting, the Playwright fallback heuristic based on quality scoring. Those decisions are mine, the code that implements them came from Claude Code.\n    </p><p>\n      Without it, this project wouldn&#39;t exist in this scope or this fast. With it, my role shifted from typing code to deciding what should exist and whether what came back was right. That&#39;s the part I take responsibility for.\n    </p><p>\n      It&#39;s a v1.1.2 - works well, I use it every day, but corners exist.\n    </p><p>\n      The MCP integration in particular was rewarding to build - the Streamable HTTP transport just works, and watching Claude Code use <code>read_url</code> natively once the schema descriptions are good is one of those &quot;yeah, this is the right abstraction&quot; moments.\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\">Links</h1><ul>\n        <li>\n      <p>\n      GitHub: <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/AeternaLabsHQ/pullmd\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://github.com/AeternaLabsHQ/pullmd</a>\n    </p>\n    </li><li>\n      <p>\n      Docker Hub: <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://hub.docker.com/r/aeternalabshq/pullmd\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://hub.docker.com/r/aeternalabshq/pullmd</a>\n    </p>\n    </li><li>\n      <p>\n      License: AGPLv3 (free to self-host, modify, share modifications if you run a modified version as a service)\n    </p>\n    </li>\n      </ul><p>\n      Happy to answer questions about the Docker setup, the MCP integration, the extraction scoring logic, or anything else.\n    </p><p>\n      <strong>EDIT:</strong> Since some of you asked about real numbers - I ran a quick benchmark on my homelab instance. Token-Counts are tiktoken cl100k_base approximations, not exact Claude tokens, but the orders of magnitude hold.\n    </p><p>\n      <strong>Token reduction (raw HTML → PullMD markdown):</strong>\n    </p><table class=\"overflow-x-auto\">\n      <thead>\n        <tr>\n          <th class=\"align-left\">\n              Source\n            </th><th class=\"align-left\">\n              raw\n            </th><th class=\"align-left\">\n              PullMD\n            </th><th class=\"align-left\">\n              reduction\n            </th><th class=\"align-left\">\n              path\n            </th>\n        </tr>\n        <tr></tr>\n      </thead>\n\n      <tbody>\n        <tr>\n            <td class=\"align-left\">\n                GitHub README\n              </td><td class=\"align-left\">\n                141,599\n              </td><td class=\"align-left\">\n                3,125\n              </td><td class=\"align-left\">\n                97.8%\n              </td><td class=\"align-left\">\n                readability\n              </td>\n          </tr><tr>\n            <td class=\"align-left\">\n                MDN reference\n              </td><td class=\"align-left\">\n                63,979\n              </td><td class=\"align-left\">\n                16,093\n              </td><td class=\"align-left\">\n                74.8%\n              </td><td class=\"align-left\">\n                readability\n              </td>\n          </tr><tr>\n            <td class=\"align-left\">\n                LinkedIn News (EN)\n              </td><td class=\"align-left\">\n                54,534\n              </td><td class=\"align-left\">\n                3,194\n              </td><td class=\"align-left\">\n                94.1%\n              </td><td class=\"align-left\">\n                readability\n              </td>\n          </tr><tr>\n            <td class=\"align-left\">\n                Reddit thread\n              </td><td class=\"align-left\">\n                3,264\n              </td><td class=\"align-left\">\n                320\n              </td><td class=\"align-left\">\n                90.2%\n              </td><td class=\"align-left\">\n                reddit\n              </td>\n          </tr><tr>\n            <td class=\"align-left\">\n                Medium article\n              </td><td class=\"align-left\">\n                3,046\n              </td><td class=\"align-left\">\n                449\n              </td><td class=\"align-left\">\n                85.3%\n              </td><td class=\"align-left\">\n                playwright\n              </td>\n          </tr>\n      </tbody>\n    </table><p>\n      <strong>Other observations:</strong>\n    </p><ul>\n        <li>\n      <p>\n      Cache hits: 6–13ms warm vs 0.3–6s cold (up to ~850× speedup)\n    </p>\n    </li><li>\n      <p>\n      Concurrency: 20 parallel requests against a mixed URL pool, 0 errors\n    </p>\n    </li><li>\n      <p>\n      Playwright sidecar: ~215MB idle, ~360MB single SPA render, ~500MB under 20× load\n    </p>\n    </li>\n      </ul>",
+          "answer": {
+            "text": "<span>What is this!? A useful and novel tool on an AI sub? Amazing! Clever idea.</span>\n",
+            "upvoteCount": 83
+          }
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "SYSWAVE",
+              "url": "https://www.reddit.com/user/SYSWAVE/"
+            }
+          ],
+          "date": "Apr 28, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Reddit",
+            "url": "https://www.reddit.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/vwRCTZCyS3UsCGj7HsYLzWpcOMhAEqq9hhxBK8tt7Dw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9zaHJlZGRp/dC9hc3NldHMvZmF2/aWNvbi82NHg2NC5w/bmc",
+              "original": "https://www.redditstatic.com/shreddit/assets/favicon/64x64.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Isn't that just like firecrawl? https://github.com/firecrawl/firecrawl I'm running that locally and it is giving agents a markdown version of every webpage, works very good and bypass most bot detections. ... this is clever. i've burned so many tokens on claude just having it parse messy html from random sites. having a dedicated mcp server that handles the extraction before it hits the context window is one of those \"obvious in hindsight\" solutions.",
+          "Useful if you don't want to add another MCP server but still want a nudge for Claude to use PullMD over raw fetch. ... Reddit-aware path - auto-detects threads, pulls post + nested comment tree, indents replies with spaces instead of > blockquotes (those turn unreadable past depth 4 in copy-paste) Every response carries headers - X-Source (which extractor won), X-Quality (0.0–1.0 confidence), X-Share-Id (8-hex permalink). Refreshable share links: every conversion gets a share ID. /s/<id> returns cached Markdown and re-fetches from source if older than 1h.",
+          "MCP server at /mcp (Streamable HTTP, stateless), three tools: ... Claude Code skill bundle - the running instance generates a web-reader.zip with your URL baked in. Drop into ~/.claude/skills/, restart Claude Code, the skill activates on web-reading requests.",
+          "2. Claude Code burns tokens on HTML boilerplate. Letting it fetch raw HTML and parse the chrome out is wildly inefficient. A typical article is 80% navigation/cookie banners/footers, 20% content. The agent shouldn't have to wrestle with a cookie banner before answering my question. So I built PullMD - a fully self-hosted Docker stack that turns any URL into clean Markdown, with first-class MCP support so Claude Code (and Desktop, Cursor, anything MCP-compatible) gets pre-cleaned content directly."
+        ]
+      },
+      {
+        "title": "GitHub - jztan/pdf-mcp: MCP server that lets Claude Code and other AI agents read large PDFs without hitting context limits. Chunked reading, hybrid search, OCR, table and image extraction, SQLite cache. · GitHub",
+        "url": "https://github.com/jztan/pdf-mcp",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "A Model Context Protocol (MCP) server that enables AI agents to read, search, and extract content from PDF files. Built with Python and PyMuPDF, with SQLite-based caching for persistence across server restarts.",
+        "page_age": "2026-05-24T09:23:55",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/jztan/pdf-mcp",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› jztan  › pdf-mcp"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ioZ1amV-nJZSyR50exMZ22ZoJ6yD36Yle6mH3h3fZKY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS9l/M2M3NWU5YjNmODFj/MWI1NjA3N2NjM2Nh/Yjg5NTg2Y2M5OTE5/YzJkMTVhNzA2NmQ2/NjIyNjU0ZGIyZGY2/MmZmL2p6dGFuL3Bk/Zi1tY3A",
+          "original": "https://opengraph.githubassets.com/e3c75e9b3f81c1b56077cc3cab89586cc9919c2d15a7066d6622654db2df62ff/jztan/pdf-mcp",
+          "logo": false
+        },
+        "age": "5 days ago",
+        "software": {
+          "name": "pdf-mcp",
+          "author": "jztan",
+          "is_npm": false,
+          "is_pypi": false,
+          "stars": 40,
+          "forks": 6,
+          "programmingLanguage": "Python 91.5% | HTML 8.4% | Shell 0.1%"
+        },
+        "extra_snippets": [
+          "A Model Context Protocol (MCP) server that enables AI agents to read, search, and extract content from PDF files. Built with Python and PyMuPDF, with SQLite-based caching for persistence across server restarts.",
+          "The server uses SQLite for persistent caching. This is necessary because MCP servers using STDIO transport are spawned as a new process for each conversation.",
+          "# Cache directory (default: ~/.cache/pdf-mcp) PDF_MCP_CACHE_DIR=/path/to/cache # Cache TTL in hours (default: 24) PDF_MCP_CACHE_TTL=48",
+          "MCP Server Security: 8 Vulnerabilities — What we found when we audited an MCP server for security holes · How Claude Code Actually Reads PDFs — How AI agents use pdf-mcp tools to read and navigate PDF documents"
+        ]
+      },
+      {
+        "title": "Creating the Perfect CLAUDE.md for Claude Code - Dometrain - Dometrain",
+        "url": "https://dometrain.com/blog/creating-the-perfect-claudemd-for-claude-code/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "The CLAUDE.md file acts as persistent memory for Claude Code agents. The markdown file is typically stored in your project’s root directory, although there are other locations you can store it as well.",
+        "page_age": "2026-01-18T22:46:09",
+        "profile": {
+          "name": "Dometrain",
+          "url": "https://dometrain.com/blog/creating-the-perfect-claudemd-for-claude-code/",
+          "long_name": "dometrain.com",
+          "img": "https://imgs.search.brave.com/ELTS794kmtqMMOAUdI1LrdrpyOHZK22M_-wj1temtFI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzFjZmE0Yzk1/MGRmOTRjYzNhNTM2/MjViMzk0ZGQ1MDE4/ZWJhZjcxYjZjMTk1/MDM5MzhiZTcwMDU4/ZjJiMTc4NS9kb21l/dHJhaW4uY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "dometrain.com",
+          "hostname": "dometrain.com",
+          "favicon": "https://imgs.search.brave.com/ELTS794kmtqMMOAUdI1LrdrpyOHZK22M_-wj1temtFI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzFjZmE0Yzk1/MGRmOTRjYzNhNTM2/MjViMzk0ZGQ1MDE4/ZWJhZjcxYjZjMTk1/MDM5MzhiZTcwMDU4/ZjJiMTc4NS9kb21l/dHJhaW4uY29tLw",
+          "path": "› blog  › creating-the-perfect-claudemd-for-claude-code"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Uc1Zi-UY1SNMuTAfwEwYyUKgRu5ljIkint_3MbDkfnY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuZG9tZXRyYWlu/LmNvbS9ibG9ncy9j/cmVhdGluZy10aGUt/cGVyZmVjdC1jbGF1/ZGVtZC1mb3ItY2xh/dWRlLWNvZGUvMmYz/NWFkZmVlYTg0NDg3/MThlNzdlMWVmMjM3/MTA1M2IuanBlZz9x/dWFsaXR5PTcw",
+          "original": "https://assets.dometrain.com/blogs/creating-the-perfect-claudemd-for-claude-code/2f35adfeea8448718e77e1ef2371053b.jpeg?quality=70",
+          "logo": false
+        },
+        "age": "January 18, 2026",
+        "extra_snippets": [
+          "These agents use Claude’s proprietary models to modify files in your workspace, interact with external MCP tools, and even create subagents to handle tasks in parallel. However, without proper context, you may find yourself repeatedly correcting the agent or rewriting the code it generates. The CLAUDE.md file solves this problem by providing persistent, project-specific memory for your agents.",
+          "The CLAUDE.md file acts as persistent memory for Claude Code agents. The markdown file is typically stored in your project’s root directory, although there are other locations you can store it as well. It contains key project information like terminal commands, development workflows, domain-specific terminology, and the coding and architectural standards your team follows.",
+          "The Model Context Protocol (MCP) lets AI agents call third-party tools and retrieve information from databases and documentation. Several MCP tools are available to developers. Some run on your local machine, like Playwright MCP, which lets the agent control a web browser instance.",
+          "For example, the fitness application uses Shadcn for the user interface and uses components from a third-party registry. The agent should be aware of the configured registries so it can also search there for components. Fortunately, Shadcn has a local MCP server that lets an agent browse and install components from predefined registries."
+        ]
+      },
+      {
+        "title": "Github",
+        "url": "https://b33eep.github.io/claude-code-setup/features/mcp-servers/pdf-reader",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Claude Code Setup - Persistent memory for Claude Code via Markdown files",
+        "profile": {
+          "name": "B33eep",
+          "url": "https://b33eep.github.io/claude-code-setup/features/mcp-servers/pdf-reader",
+          "long_name": "b33eep.github.io",
+          "img": "https://imgs.search.brave.com/A5FCqgZ9A-HTxXdmMyvPbHh8qLj3XVziduqazzP-JDo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTNjZTNiZWQ3/Y2EyYmUyOWUzNmUw/MDgyMGNhYTI4Mzkx/NTVmYzRkNDUwMGUw/YWEwM2MwMTFhZmE5/ZGNjOTU0NC9iMzNl/ZXAuZ2l0aHViLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "b33eep.github.io",
+          "hostname": "b33eep.github.io",
+          "favicon": "https://imgs.search.brave.com/A5FCqgZ9A-HTxXdmMyvPbHh8qLj3XVziduqazzP-JDo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTNjZTNiZWQ3/Y2EyYmUyOWUzNmUw/MDgyMGNhYTI4Mzkx/NTVmYzRkNDUwMGUw/YWEwM2MwMTFhZmE5/ZGNjOTU0NC9iMzNl/ZXAuZ2l0aHViLmlv/Lw",
+          "path": "› claude-code-setup  › features  › mcp-servers  › pdf-reader"
+        },
+        "extra_snippets": [
+          "Read and analyze PDF documents directly in Claude Code. ... { \"mcpServers\": { \"pdf-reader\": { \"type\": \"stdio\", \"command\": \"npx\", \"args\": [\"-y\", \"@sylphx/pdf-reader-mcp\"] } } }"
+        ]
+      },
+      {
+        "title": "How to Add MCP Servers to Claude Desktop — MCP.Directory",
+        "url": "https://mcp.directory/clients/claude-desktop",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Extract web content and convert to clean Markdown. Fast data extraction from web pages with caching, robots.txt support,",
+        "profile": {
+          "name": "Mcp",
+          "url": "https://mcp.directory/clients/claude-desktop",
+          "long_name": "mcp.directory",
+          "img": "https://imgs.search.brave.com/iCbG3fp9wPEq_E1N-9nHNRdDbuFSOGQ1brv3qeRIN6w/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTFkMDNmODNk/YzJjYjc0NDhjYzRk/N2MxOTE5NDFhYzIz/NjQ0YWZlNWNhNmI1/YmVlOWI0ZDcxNzU5/ZjQwZDAyYi9tY3Au/ZGlyZWN0b3J5Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mcp.directory",
+          "hostname": "mcp.directory",
+          "favicon": "https://imgs.search.brave.com/iCbG3fp9wPEq_E1N-9nHNRdDbuFSOGQ1brv3qeRIN6w/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTFkMDNmODNk/YzJjYjc0NDhjYzRk/N2MxOTE5NDFhYzIz/NjQ0YWZlNWNhNmI1/YmVlOWI0ZDcxNzU5/ZjQwZDAyYi9tY3Au/ZGlyZWN0b3J5Lw",
+          "path": "  › home  › clients  › claude desktop"
+        },
+        "faq": {
+          "items": [
+            {
+              "question": "How do I add MCP servers to Claude Desktop?",
+              "answer": "Open your Claude Desktop config file at ~/Library/Application Support/Claude/claude_desktop_config.json, add the server configuration in JSON format, then restart Claude Desktop.",
+              "title": "How to Add MCP Servers to Claude Desktop — MCP.Directory",
+              "url": "https://mcp.directory/clients/claude-desktop",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mcp.directory",
+                "hostname": "mcp.directory",
+                "favicon": "https://imgs.search.brave.com/iCbG3fp9wPEq_E1N-9nHNRdDbuFSOGQ1brv3qeRIN6w/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTFkMDNmODNk/YzJjYjc0NDhjYzRk/N2MxOTE5NDFhYzIz/NjQ0YWZlNWNhNmI1/YmVlOWI0ZDcxNzU5/ZjQwZDAyYi9tY3Au/ZGlyZWN0b3J5Lw",
+                "path": "  › home  › clients  › claude desktop"
+              }
+            },
+            {
+              "question": "Where is the Claude Desktop MCP config file?",
+              "answer": "The Claude Desktop MCP configuration file is located at ~/Library/Application Support/Claude/claude_desktop_config.json.",
+              "title": "How to Add MCP Servers to Claude Desktop — MCP.Directory",
+              "url": "https://mcp.directory/clients/claude-desktop",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mcp.directory",
+                "hostname": "mcp.directory",
+                "favicon": "https://imgs.search.brave.com/iCbG3fp9wPEq_E1N-9nHNRdDbuFSOGQ1brv3qeRIN6w/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTFkMDNmODNk/YzJjYjc0NDhjYzRk/N2MxOTE5NDFhYzIz/NjQ0YWZlNWNhNmI1/YmVlOWI0ZDcxNzU5/ZjQwZDAyYi9tY3Au/ZGlyZWN0b3J5Lw",
+                "path": "  › home  › clients  › claude desktop"
+              }
+            },
+            {
+              "question": "How many MCP servers work with Claude Desktop?",
+              "answer": "1976 MCP servers are compatible with Claude Desktop on MCP.Directory.",
+              "title": "How to Add MCP Servers to Claude Desktop — MCP.Directory",
+              "url": "https://mcp.directory/clients/claude-desktop",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mcp.directory",
+                "hostname": "mcp.directory",
+                "favicon": "https://imgs.search.brave.com/iCbG3fp9wPEq_E1N-9nHNRdDbuFSOGQ1brv3qeRIN6w/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTFkMDNmODNk/YzJjYjc0NDhjYzRk/N2MxOTE5NDFhYzIz/NjQ0YWZlNWNhNmI1/YmVlOWI0ZDcxNzU5/ZjQwZDAyYi9tY3Au/ZGlyZWN0b3J5Lw",
+                "path": "  › home  › clients  › claude desktop"
+              }
+            }
+          ]
+        },
+        "organization": {
+          "type": "organization",
+          "name": "MCP.Directory",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Supports HTTP, STDIO, and SSE for fast converting markdown t ... Unlock AI-ready web data with Firecrawl: scrape any website, handle dynamic content, and automate web scraping for resea ... Break down complex problems with Sequential Thinking, a structured tool and step by step math solver for dynamic, reflec ... Build persistent semantic networks for enterprise & engineering data management.",
+          "Fetch is a web scraping tool that extracts web content and YouTube transcripts, converting HTML to Markdown with accurat ... In Memoria delivers persistent code analysis via hybrid Rust-TypeScript, using Tree-sitter for abstract syntax tree Pyth",
+          "Extract web content and convert to clean Markdown. Fast data extraction from web pages with caching, robots.txt support,",
+          "Basic Memory is a knowledge management system that builds a persistent semantic graph in markdown, locally and securely."
+        ]
+      },
+      {
+        "title": "r/ClaudeCode on Reddit: All the Markdown files - what do you do with them?",
+        "url": "https://www.reddit.com/r/ClaudeCode/comments/1t8fwqw/all_the_markdown_files_what_do_you_do_with_them/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "It is a self-hosted MCP/REST memory backend, so instead of dumping every old md file back into the prompt, you can store compact facts/project state with TTLs, deduplication, contradiction handling, and longer artifacts attached behind them.",
+        "page_age": "2026-05-09T19:25:51",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeCode/comments/1t8fwqw/all_the_markdown_files_what_do_you_do_with_them/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/claudecode  › all the markdown files - what do you do with them?"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/-Jy7byDyDfTxAw64m5pUZRPC8q7HWI95hUn7_hJpxqc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zaGFy/ZS5yZWRkLml0L3By/ZXZpZXcvcG9zdC8x/dDhmd3F3",
+          "original": "https://share.redd.it/preview/post/1t8fwqw",
+          "logo": false
+        },
+        "age": "3 weeks ago",
+        "qa": {
+          "question": "<p dir=\"auto\">\n      So frameworks/skills like GSD and Compound engineering create a shit ton of md files.\n    </p><p dir=\"auto\">\n      What is everyone doing with them after they have been implemented?\n    </p><p dir=\"auto\">\n      Really not sure what the best practice is.  Do you delete files for features you completed months ago to reduce the potential of context poisoning/bloat for new work? Keep them for relevant context about past work/discussions that led to the current implementation? Summarize them into new files?\n    </p><p dir=\"auto\">\n      TELL ME! IM DROWING IN MARKDOWN\n    </p>",
+          "answer": {
+            "text": "<span>Any excess docs i just vectorize them into a searcable db. Done. I archive old code.</span>\n",
+            "upvoteCount": 6
+          }
+        },
+        "extra_snippets": [
+          "Posted by u/the_wizard23 - 6 votes and 28 comments",
+          "It's open source, you can self host it on a vps or home server, or it can run as a local webapp. Or you can use my hosted version and connect to the remote mcp server so there's nothing to install. There are probably too many options but I wanted to make it accessible to anyone. Both Claude code and codex are naturally amazing at using it..",
+          "It is a self-hosted MCP/REST memory backend, so instead of dumping every old md file back into the prompt, you can store compact facts/project state with TTLs, deduplication, contradiction handling, and longer artifacts attached behind them. You could do the same manually with Obsidian or a repo /docs/archive, but I would still make the live context intentionally small. Old docs should be evidence, not default instructions. ... I put in my Claude.md that it needs to use a particular folder and structure for them outside the repos.",
+          "I built and open source project called SmallDocs which is a cli driven markdown reader I get CC to invoke for me. The cli lets you sdoc file.md to render it, so I tell Claude, “sdoc me the plan” and it knows what to do."
+        ]
+      },
+      {
+        "title": "r/ClaudeAI on Reddit: Claude Code: MCP PDF Reader?",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1m8l7dj/claude_code_mcp_pdf_reader/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Built an MCP server that turns Claude Code into a full agent operating system with persistent memory, loop detection, and audit trails",
+        "page_age": "2025-07-25T00:37:49",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1m8l7dj/claude_code_mcp_pdf_reader/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/claudeai  › claude code: mcp pdf reader?"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/EtfbVvDSO79OAlTmhFkoHY3GfP9HtIZsDMxsZcDvwdw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zaGFy/ZS5yZWRkLml0L3By/ZXZpZXcvcG9zdC8x/bThsN2Rq",
+          "original": "https://share.redd.it/preview/post/1m8l7dj",
+          "logo": false
+        },
+        "age": "July 25, 2025",
+        "qa": {
+          "question": "<p dir=\"auto\">\n      Title. Or are you all just using gemini-2.5-pro or gemini-2.5-flash to read PDFs?\n    </p><p dir=\"auto\">\n      Looking into precisely PDF to Markdown with OCR/Table Reading capability.\n    </p><p dir=\"auto\">\n      It doesn&#39;t seem that Claude Code can read PDF despite: <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://docs.anthropic.com/en/docs/build-with-claude/pdf-support\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://docs.anthropic.com/en/docs/build-with-claude/pdf-support</a>\n    </p>",
+          "answer": {
+            "text": "<span>v1.0.58 adds support for reading PDFs, so just do it natively. Source: https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</span>\n",
+            "upvoteCount": 5
+          }
+        },
+        "extra_snippets": [
+          "Posted by u/InappropriateCanuck - 8 votes and 11 comments",
+          "Built an MCP server that turns Claude Code into a full agent operating system with persistent memory, loop detection, and audit trails",
+          "Looking into precisely PDF to Markdown with OCR/Table Reading capability. It doesn't seem that Claude Code can read PDF despite: https://docs.anthropic.com/en/docs/build-with-claude/pdf-support",
+          "Pro Tip - If you need Claude to access a reference (documentation, etc.) more than once, have Claude set up a local MCP server for it."
+        ]
+      },
+      {
+        "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+        "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "firecrawl_browser_create, firecrawl_browser_execute, firecrawl_browser_delete, firecrawl_browser_list: Persistent browser session management with full CDP (Chrome DevTools Protocol) access. Run Python, JavaScript, or bash in the live browser. Supports agent-browser commands for navigation, screenshots, clicking, and typing. ... # Claude Code: remote hosted URL (recommended) claude mcp add firecrawl --url https://mcp.firecrawl.dev/your-api-key/v2/mcp # Claude Code: local via npx claude mcp add firecrawl -e FIRECRAWL_API_KEY=your-api-key -- npx -y firecrawl-mcp",
+        "page_age": "2026-05-22T08:20:02",
+        "profile": {
+          "name": "Firecrawl",
+          "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+          "long_name": "firecrawl.dev",
+          "img": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › best-web-search-mcp"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/QQJwVseBgNrVvXXIXuXOnsRyLk2WM5G0D_5enywgcX8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/ZmlyZWNyYXdsLmRl/di9pbWFnZXMvYmxv/Zy9iZXN0LXdlYi1z/ZWFyY2gtbWNwL2Jl/c3Qtd2ViLXNlYXJj/aC1tY3Aud2VicA",
+          "original": "https://www.firecrawl.dev/images/blog/best-web-search-mcp/best-web-search-mcp.webp",
+          "logo": false
+        },
+        "age": "1 week ago",
+        "faq": {
+          "items": [
+            {
+              "question": "What is a web search MCP server?",
+              "answer": "A web search MCP server is a Model Context Protocol server that gives AI assistants like Claude real-time access to the web. Instead of relying on training data, the AI can query live web pages, news, and search results directly during a conversation or agentic task.",
+              "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+              "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › best-web-search-mcp"
+              }
+            },
+            {
+              "question": "Do web search MCP servers require an API key?",
+              "answer": "Most require one. Firecrawl, Tavily, and Exa all use API keys tied to their respective services. WebSearch-MCP is the exception: it is self-hosted and does not require an external API key, but it does require you to run your own Docker-based crawler service.",
+              "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+              "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › best-web-search-mcp"
+              }
+            },
+            {
+              "question": "Which web search MCP server works with Claude Code?",
+              "answer": "All four servers listed here work with Claude Code. Firecrawl, Tavily, and Exa all support remote MCP via HTTP, so you can add them with a single claude mcp add command. WebSearch-MCP uses stdio transport and requires the local crawler service to be running first.",
+              "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+              "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › best-web-search-mcp"
+              }
+            },
+            {
+              "question": "Can I use these MCP servers with Cursor or VS Code?",
+              "answer": "Yes. Firecrawl, Tavily, and Exa all support Cursor and VS Code. Exa also works with Windsurf, Zed, Gemini CLI, v0 by Vercel, Warp, and more. WebSearch-MCP works with Cursor, Claude Desktop, and Cline.",
+              "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+              "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › best-web-search-mcp"
+              }
+            },
+            {
+              "question": "What is the Firecrawl MCP server?",
+              "answer": "The Firecrawl MCP server exposes 13 tools covering web search, scraping, crawling, browser session management, and an autonomous research agent. It supports both a remote hosted URL and local npx installation, and works with Claude Code, Cursor, VS Code, Windsurf, and n8n.",
+              "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+              "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › best-web-search-mcp"
+              }
+            },
+            {
+              "question": "Is there a free web search MCP server?",
+              "answer": "Exa offers a generous free plan that lets you use the MCP without an API key (the rate limits are lower on the free plan). WebSearch-MCP is entirely free and self-hosted. Firecrawl and Tavily have free tiers but require account registration.",
+              "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+              "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › best-web-search-mcp"
+              }
+            },
+            {
+              "question": "What is the difference between Tavily MCP and Exa MCP?",
+              "answer": "Tavily MCP provides two tools: web search and content extraction, with a focus on real-time information for AI agents and strong integrations with LangChain, LlamaIndex, and enterprise platforms. Exa MCP offers three tools including an advanced search mode with category filters, date ranges, and domain restrictions, and is available as a native Claude Connector requiring no config file changes.",
+              "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+              "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › best-web-search-mcp"
+              }
+            },
+            {
+              "question": "Can I self-host a web search MCP server?",
+              "answer": "Yes. WebSearch-MCP is fully self-hosted using Docker Compose. Firecrawl also supports self-hosted deployments for both the MCP server and the underlying scraping infrastructure.",
+              "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+              "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › best-web-search-mcp"
+              }
+            },
+            {
+              "question": "Does the choice of web search MCP server affect my agent's output quality?",
+              "answer": "Yes, significantly. Research on agentic information retrieval has found that standard LLMs using basic keyword search score below 10% on complex multi-hop research benchmarks, while systems built around iterative retrieval — where the agent searches, reasons over results, and searches again — score dramatically higher. The search tool is the foundation your agent reasons on, so shallow snippets or stale results flow directly into lower-quality output.",
+              "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+              "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › best-web-search-mcp"
+              }
+            },
+            {
+              "question": "Are most web search MCP servers just wrappers around Google or Bing?",
+              "answer": "Many are, which is worth knowing before you choose. If your agent already has a Google tool configured, calling a Google-wrapped MCP server will return the same results. Exa uses its own neural search index optimized for AI agents, and Firecrawl retrieves full page content rather than re-ranking standard search results. WebSearch-MCP runs its own crawler infrastructure. Tavily crawls independently across multiple sources rather than proxying a single engine.",
+              "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+              "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › best-web-search-mcp"
+              }
+            },
+            {
+              "question": "Which web search MCP server is best for deep research versus quick lookups?",
+              "answer": "For quick lookups — answering a question, finding documentation, pulling recent news — Exa or Tavily are the fastest options with minimal setup. For deep research tasks involving multiple unknowns, uncertain starting points, or synthesis across many sources, Firecrawl's autonomous research agent (firecrawl_agent) is the better fit. It follows links, reasons over what it finds, and iterates until it has a complete answer — closer to the agentic deep research paradigm than a single-pass search tool.",
+              "title": "Top Web Search MCP Servers for Claude, Cursor and More",
+              "url": "https://www.firecrawl.dev/blog/best-web-search-mcp",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "firecrawl.dev",
+                "hostname": "www.firecrawl.dev",
+                "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+                "path": "› blog  › best-web-search-mcp"
+              }
+            }
+          ]
+        },
+        "extra_snippets": [
+          "firecrawl_browser_create, firecrawl_browser_execute, firecrawl_browser_delete, firecrawl_browser_list: Persistent browser session management with full CDP (Chrome DevTools Protocol) access. Run Python, JavaScript, or bash in the live browser. Supports agent-browser commands for navigation, screenshots, clicking, and typing. ... # Claude Code: remote hosted URL (recommended) claude mcp add firecrawl --url https://mcp.firecrawl.dev/your-api-key/v2/mcp # Claude Code: local via npx claude mcp add firecrawl -e FIRECRAWL_API_KEY=your-api-key -- npx -y firecrawl-mcp",
+          "With Firecrawl, the agent can search, then scrape a result page into clean markdown, then crawl deeper into the site if it needs more context, run an autonomous research agent to follow links and synthesize findings, and interact with a login form or dynamic interface if the data is behind a click. That chain runs end to end inside a single MCP session, without switching servers.",
+          "I have been using MCP servers for web access across Claude Code, Cursor, and other tools. The ecosystem has grown fast. There are now dedicated servers covering everything from basic Google-style search to full browser automation and autonomous research agents.",
+          "MCP (Model Context Protocol) is the open standard developed by Anthropic for connecting AI assistants to external tools and data sources. Any MCP client (Claude Code, Claude Desktop, Cursor, VS Code, Windsurf, and more) can connect to these servers without custom integration work."
+        ]
+      },
+      {
+        "title": "Connect Claude Code to tools via MCP - Claude Code Docs",
+        "url": "https://code.claude.com/docs/en/mcp",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "If you’re building an MCP server, you can allow individual tools to return results larger than the default persist-to-disk threshold by setting _meta[&quot;anthropic/maxResultSizeChars&quot;] in the tool’s tools/list response entry. Claude Code raises that tool’s threshold to the annotated value, up to a hard ceiling of 500,000 characters.",
+        "page_age": "2026-04-10T10:45:03",
+        "profile": {
+          "name": "Claude",
+          "url": "https://code.claude.com/docs/en/mcp",
+          "long_name": "code.claude.com",
+          "img": "https://imgs.search.brave.com/4338_Tk2DZ84UcnpBp0G71TyXhdZejsFEQ2p0hRMMDA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTgzODJmMTIz/MTE3ZjJjOGJkOTMy/NGFmZDgzZmRkZmE1/Y2VkY2E0NmNmOTE2/NjE0NTNjOTRhMTQx/Y2Q3YWNkOS9jb2Rl/LmNsYXVkZS5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "code.claude.com",
+          "hostname": "code.claude.com",
+          "favicon": "https://imgs.search.brave.com/4338_Tk2DZ84UcnpBp0G71TyXhdZejsFEQ2p0hRMMDA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTgzODJmMTIz/MTE3ZjJjOGJkOTMy/NGFmZDgzZmRkZmE1/Y2VkY2E0NmNmOTE2/NjE0NTNjOTRhMTQx/Y2Q3YWNkOS9jb2Rl/LmNsYXVkZS5jb20v",
+          "path": "› docs  › en  › mcp"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/qU-DSVyy3MwTRceIXou88pjEUs-frMv25s4wtXYfWQM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jbGF1/ZGUtY29kZS5taW50/bGlmeS5hcHAvX25l/eHQvaW1hZ2U_dXJs/PSUyRl9taW50bGlm/eSUyRmFwaSUyRm9n/JTNGZGl2aXNpb24l/M0RUb29scyUyQmFu/ZCUyQnBsdWdpbnMl/MjZhcHBlYXJhbmNl/JTNEc3lzdGVtJTI2/dGl0bGUlM0RDb25u/ZWN0JTJCQ2xhdWRl/JTJCQ29kZSUyQnRv/JTJCdG9vbHMlMkJ2/aWElMkJNQ1AlMjZk/ZXNjcmlwdGlvbiUz/RExlYXJuJTJCaG93/JTJCdG8lMkJjb25u/ZWN0JTJCQ2xhdWRl/JTJCQ29kZSUyQnRv/JTJCeW91ciUyQnRv/b2xzJTJCd2l0aCUy/QnRoZSUyQk1vZGVs/JTJCQ29udGV4dCUy/QlByb3RvY29sLiUy/NmxvZ29MaWdodCUz/RGh0dHBzJTI1M0El/MjUyRiUyNTJGbWlu/dGNkbi5jb20lMjUy/RmNsYXVkZS1jb2Rl/JTI1MkZjNXI5XzZ0/alBNekZkRERUJTI1/MkZsb2dvJTI1MkZs/aWdodC5zdmclMjUz/RmZpdCUyNTNEbWF4/JTI1MjZhdXRvJTI1/M0Rmb3JtYXQlMjUy/Nm4lMjUzRGM1cjlf/NnRqUE16RmRERFQl/MjUyNnElMjUzRDg1/JTI1MjZzJTI1M0Q3/OGZkMDFmZjRmNDM0/MDI5NWE0ZjY2ZTJl/YTU0OTAzYyUyNmxv/Z29EYXJrJTNEaHR0/cHMlMjUzQSUyNTJG/JTI1MkZtaW50Y2Ru/LmNvbSUyNTJGY2xh/dWRlLWNvZGUlMjUy/RmM1cjlfNnRqUE16/RmRERFQlMjUyRmxv/Z28lMjUyRmRhcmsu/c3ZnJTI1M0ZmaXQl/MjUzRG1heCUyNTI2/YXV0byUyNTNEZm9y/bWF0JTI1MjZuJTI1/M0RjNXI5XzZ0alBN/ekZkRERUJTI1MjZx/JTI1M0Q4NSUyNTI2/cyUyNTNEMTI5OGEw/YzNiM2ExZGE2MDNi/MTkwZDBkZTBlMzE3/MTIlMjZwcmltYXJ5/Q29sb3IlM0QlMjUy/MzBFMEUwRSUyNmxp/Z2h0Q29sb3IlM0Ql/MjUyM0Q0QTI3RiUy/NmRhcmtDb2xvciUz/RCUyNTIzMEUwRTBF/JTI2YmFja2dyb3Vu/ZExpZ2h0JTNEJTI1/MjNGREZERjclMjZi/YWNrZ3JvdW5kRGFy/ayUzRCUyNTIzMDkw/OTBCJmFtcDt3PTEy/MDAmYW1wO3E9MTAw",
+          "original": "https://claude-code.mintlify.app/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DTools%2Band%2Bplugins%26appearance%3Dsystem%26title%3DConnect%2BClaude%2BCode%2Bto%2Btools%2Bvia%2BMCP%26description%3DLearn%2Bhow%2Bto%2Bconnect%2BClaude%2BCode%2Bto%2Byour%2Btools%2Bwith%2Bthe%2BModel%2BContext%2BProtocol.%26logoLight%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Flight.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D78fd01ff4f4340295a4f66e2ea54903c%26logoDark%3Dhttps%253A%252F%252Fmintcdn.com%252Fclaude-code%252Fc5r9_6tjPMzFdDDT%252Flogo%252Fdark.svg%253Ffit%253Dmax%2526auto%253Dformat%2526n%253Dc5r9_6tjPMzFdDDT%2526q%253D85%2526s%253D1298a0c3b3a1da603b190d0de0e31712%26primaryColor%3D%25230E0E0E%26lightColor%3D%2523D4A27F%26darkColor%3D%25230E0E0E%26backgroundLight%3D%2523FDFDF7%26backgroundDark%3D%252309090B&amp;w=1200&amp;q=100",
+          "logo": true
+        },
+        "age": "April 10, 2026",
+        "extra_snippets": [
+          "If you’re building an MCP server, you can allow individual tools to return results larger than the default persist-to-disk threshold by setting _meta[\"anthropic/maxResultSizeChars\"] in the tool’s tools/list response entry. Claude Code raises that tool’s threshold to the annotated value, up to a hard ceiling of 500,000 characters.",
+          "Use this file to discover all available pages before exploring further.Claude Code can connect to hundreds of external tools and data sources through the Model Context Protocol (MCP), an open source standard for AI-tool integrations. MCP servers give Claude Code access to your tools, databases, and APIs.",
+          "Verify you trust each server before connecting it. Servers that fetch external content can expose you to prompt injection risk. To build your own server, see the MCP server guide for protocol fundamentals and the Claude connector building docs for authentication, testing, and Directory submission.",
+          "React to external events: An MCP server can also act as a channel that pushes messages into your session, so Claude reacts to Telegram messages, Discord chats, or webhook events while you’re away."
+        ]
+      },
+      {
+        "title": "r/ClaudeAI on Reddit: I built a free MCP-connected markdown editor so Claude can write directly into a live document instead of artifacts",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1rpev36/i_built_a_free_mcpconnected_markdown_editor_so/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Used Claude Code to write, edit, and deploy a 123K-word hard sci-fi novel — full pipeline from markdown to production ... I built an mcp server that gives claude code access to chatgpt, gemini and perplexity all running together, no api keys",
+        "page_age": "2026-03-09T22:23:55",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1rpev36/i_built_a_free_mcpconnected_markdown_editor_so/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/claudeai  › i built a free mcp-connected markdown editor so claude can write directly into a live document instead of artifacts"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/A5H_aQiEBuUODR0lNeU8iDfhrWUvO8oEmRGE_mcS_gM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9pY29uLnBu/Zw",
+          "original": "https://www.redditstatic.com/icon.png",
+          "logo": true
+        },
+        "age": "March 9, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "pstryder",
+              "url": "https://www.reddit.com/user/pstryder/"
+            }
+          ],
+          "date": "Mar 09, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Reddit",
+            "url": "https://www.reddit.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/vwRCTZCyS3UsCGj7HsYLzWpcOMhAEqq9hhxBK8tt7Dw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9zaHJlZGRp/dC9hc3NldHMvZmF2/aWNvbi82NHg2NC5w/bmc",
+              "original": "https://www.redditstatic.com/shreddit/assets/favicon/64x64.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "So I worked with Claude and Claude Code to build TablaCognita — an MCP-connected markdown editor that sits in a browser tab. Claude writes directly into the document. You can see it happening in real time. You can edit alongside. No copy-paste. No artifacts.",
+          "I started by asking Claude Code what its dream co-writing tool would look like — what would make documents a first-class output surface instead of an afterthought. CC designed the MCP tool schema, the section-locking architecture, and the annotation system.",
+          "I built a markdown file system that helps stop Claude from going off the rails on long (huge) projects Open Source, no apps, no dependencies ... BAD-ASS-MCP! Let Claude etc.",
+          "Used Claude Code to write, edit, and deploy a 123K-word hard sci-fi novel — full pipeline from markdown to production ... I built an mcp server that gives claude code access to chatgpt, gemini and perplexity all running together, no api keys"
+        ]
+      },
+      {
+        "title": "Find MCP Servers for Claude, Cursor & Cline | MCP Index",
+        "url": "https://mcpindex.net/en/mcpserver/just-every-mcp-read-website-fast",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "# Markdown only (default) npm run dev fetch https://example.com # JSON output with metadata npm run dev fetch https://example.com --output json # Both URL and markdown npm run dev fetch https://example.com --output both · -p, --pages &lt;number&gt; - Maximum number of pages to crawl (default: 1) -c, --concurrency &lt;number&gt; - Max concurrent requests (default: 3) ... mcp/ ├── src/ │ ├── crawler/ # URL fetching, queue management, robots.txt │ ├── parser/ # DOM parsing, Readability, Turndown conversion │ ├── cache/ # Disk-based caching with SHA-256 keys │ ├── utils/ # Logger, chunker utilities │ ├── index.ts # CLI entry point │ ├── serve.ts # MCP server entry point │ └── serve-restart.ts # Auto-restart wrapper",
+        "profile": {
+          "name": "Mcpindex",
+          "url": "https://mcpindex.net/en/mcpserver/just-every-mcp-read-website-fast",
+          "long_name": "mcpindex.net",
+          "img": "https://imgs.search.brave.com/MoixDprUPuKM0yZvs5SzW2LzttU5lqwtk7hqbVr9Vv0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTg2MWM3ZjQw/YzA4NzEyMThkOThh/YjY0OTA0NWRjZTM0/NWQ5NDU4ZDM3Mzlj/NjY0OWRiMzJmMGIw/YWY1MjYzOS9tY3Bp/bmRleC5uZXQv"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mcpindex.net",
+          "hostname": "mcpindex.net",
+          "favicon": "https://imgs.search.brave.com/MoixDprUPuKM0yZvs5SzW2LzttU5lqwtk7hqbVr9Vv0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTg2MWM3ZjQw/YzA4NzEyMThkOThh/YjY0OTA0NWRjZTM0/NWQ5NDU4ZDM3Mzlj/NjY0OWRiMzJmMGIw/YWY1MjYzOS9tY3Bp/bmRleC5uZXQv",
+          "path": "› en  › mcpserver  › just-every-mcp-read-website-fast"
+        },
+        "extra_snippets": [
+          "Designed for Claude Code, IDEs and LLM pipelines with minimal token footprint. Crawl sites locally with minimal dependencies. Note: This package now uses @just-every/crawl for its core crawling and markdown conversion functionality. Fast startup using official MCP SDK with lazy loading for optimal performance · Content extraction using Mozilla Readability (same as Firefox Reader View)",
+          "Features Mozilla Readability, smart caching, polite crawling with robots.txt support, and concurrent fetching. ... Fast, token-efficient web content extraction for AI agents - converts websites to clean Markdown. Existing MCP web crawlers are slow and consume large quantities of tokens.",
+          "# Markdown only (default) npm run dev fetch https://example.com # JSON output with metadata npm run dev fetch https://example.com --output json # Both URL and markdown npm run dev fetch https://example.com --output both · -p, --pages <number> - Maximum number of pages to crawl (default: 1) -c, --concurrency <number> - Max concurrent requests (default: 3) ... mcp/ ├── src/ │ ├── crawler/ # URL fetching, queue management, robots.txt │ ├── parser/ # DOM parsing, Readability, Turndown conversion │ ├── cache/ # Disk-based caching with SHA-256 keys │ ├── utils/ # Logger, chunker utilities │ ├── index.ts # CLI entry point │ ├── serve.ts # MCP server entry point │ └── serve-restart.ts # Auto-restart wrapper",
+          "Drop this into your client’s mcp.json (e.g. .vscode/mcp.json, ~/.cursor/mcp.json, or .mcp.json for Claude). Fast startup using official MCP SDK with lazy loading for optimal performance · Content extraction using Mozilla Readability (same as Firefox Reader View) HTML to Markdown conversion with Turndown + GFM support"
+        ]
+      },
+      {
+        "title": "r/ClaudeAI on Reddit: What's the best most reliable MCP to let Claude Code scrape a website?",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1m8giwj/whats_the_best_most_reliable_mcp_to_let_claude/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "https://github.com/mendableai/firecrawl-mcp-server?tab=readme-ov-file#6-crawl-tool-firecrawl_crawl · The &quot;map&quot; tool just finds URLs on the page. It only takes a URL. The &quot;crawl&quot; tool on the other hand takes much more arguments. A capable tool has many knobs you can turn, so you do kind of have to know how to tune it. I generally tell Claude exactly how I want it to use the specific tool (I save this in a prompt template markdown file):",
+        "page_age": "2025-07-24T21:14:08",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1m8giwj/whats_the_best_most_reliable_mcp_to_let_claude/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/claudeai  › what's the best most reliable mcp to let claude code scrape a website?"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/7SAUDupMNF9O8QGc_cENoMM8W2VMzQi758RETqEX4ds/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zaGFy/ZS5yZWRkLml0L3By/ZXZpZXcvcG9zdC8x/bThnaXdq",
+          "original": "https://share.redd.it/preview/post/1m8giwj",
+          "logo": false
+        },
+        "age": "July 24, 2025",
+        "qa": {
+          "question": "<p dir=\"auto\">\n      I am doing a website migration from one CMS to the other, and have started using Claude to automate a lot of it.\n    </p><p dir=\"auto\">\n      However, I&#39;m looking for a browser agent that lets Claude explore a website I give it.\n    </p><p dir=\"auto\">\n      Any recommendations? I largely just need content. I know Playwright is widely recommended but not too sure if its overkill, since it eats up a lot of tokens.\n    </p>",
+          "answer": {
+            "text": "<span>My opinion:  the Firecrawl MCP server https://github.com/mendableai/firecrawl-mcp-server I admittedly only used it for searching (firecrawl_search) tool than anything else, but I saw that it also has other tools such as \"crawl\", \"scrape\", \"map\", and \"extract\". You need an account to create an API key,  There is a free tier of 500 credits (per month I think). It caught my attention because I was trying to use Claude to help me run a job search against job boards.  I found this MCP Server to be a huge improvement over the native web search function since the \"search\" tool allowed me to simultaneously search and scrape content with one tool, which eases token usage. For my own practical usage though, I did eventually run out of credits and paid $19 to try it for a month (3000 credits, 1 scraped result = 1 credit).  You might have to pay either way, but if you intend to keep crawling sites, it might be worth the price for efficiency. There is some jank though.  They document a \"batch_scrape\", but I found no such tool in the code.</span>\n",
+            "upvoteCount": 7
+          }
+        },
+        "extra_snippets": [
+          "Posted by u/HumanityFirstTheory - 10 votes and 17 comments",
+          "From our experiments, all the available MCPs get the job done so far you can prompt Claude well. Can’t name names due to ethical reasons. ... If you mostly need content, don’t default to a full browser MCP. An HTTP fetch + clean HTML to markdown tool is usually enough and much cheaper on tokens.",
+          "https://github.com/mendableai/firecrawl-mcp-server?tab=readme-ov-file#6-crawl-tool-firecrawl_crawl · The \"map\" tool just finds URLs on the page. It only takes a URL. The \"crawl\" tool on the other hand takes much more arguments. A capable tool has many knobs you can turn, so you do kind of have to know how to tune it. I generally tell Claude exactly how I want it to use the specific tool (I save this in a prompt template markdown file):",
+          "Built an MCP server that turns Claude Code into a full agent operating system with persistent memory, loop detection, and audit trails"
+        ]
+      },
+      {
+        "title": "r/ClaudeAI on Reddit: I built an MCP server that lets Claude Code read pages behind login walls (Notion, Google Docs, etc.)",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1s3xn9l/i_built_an_mcp_server_that_lets_claude_code_read/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Built an MCP server that turns Claude Code into a full agent operating system with persistent memory, loop detection, and audit trails",
+        "page_age": "2026-03-26T04:25:48",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1s3xn9l/i_built_an_mcp_server_that_lets_claude_code_read/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/claudeai  › i built an mcp server that lets claude code read pages behind login walls (notion, google docs, etc.)"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/A5H_aQiEBuUODR0lNeU8iDfhrWUvO8oEmRGE_mcS_gM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9pY29uLnBu/Zw",
+          "original": "https://www.redditstatic.com/icon.png",
+          "logo": true
+        },
+        "age": "March 26, 2026",
+        "qa": {
+          "question": "<p>\n      I kept running into the same problem: I&#39;d paste a Notion or Google Docs URL into Claude Code, and it would just return a login page or empty HTML. web_fetch can&#39;t handle authenticated content.\n    </p><p>\n      So I built auth-fetch-mcp — an MCP server with one simple flow:\n    </p><ol>\n        <li>\n      <p>\n      You give Claude a URL\n    </p>\n    </li><li>\n      <p>\n      It calls <code>auth_fetch</code> → a Chromium window opens on your machine\n    </p>\n    </li><li>\n      <p>\n      You log in however you need to (SSO, 2FA, CAPTCHA — doesn&#39;t matter)\n    </p>\n    </li><li>\n      <p>\n      You click a 📸 Capture button that appears on the page\n    </p>\n    </li><li>\n      <p>\n      Claude gets the full page content as Markdown\n    </p>\n    </li>\n      </ol><p>\n      The key thing: sessions are saved locally, so you only log in once per service. Next time you ask Claude to read from the same site, it just works — no browser popup.\n    </p><p>\n      <strong>How it&#39;s different from Browser MCP / Playwright MCP:</strong> Those are browser automation tools with dozens of tools (click, fill, screenshot, etc.). This does exactly one thing: fetch authenticated page content. Think of it as <code>web_fetch</code> but it can handle login walls.\n    </p><p>\n      <strong>Install (one line):</strong>\n    </p><p>\n      I kept running into the same problem: I&#39;d paste a Notion or Google Docs URL into Claude Code, and it would just return a login page or empty HTML. web_fetch can&#39;t handle authenticated content.\n    </p><p>\n      So I built auth-fetch-mcp — an MCP server with one simple flow:\n    </p><ol>\n        <li>\n      <p>\n      You give Claude a URL\n    </p>\n    </li><li>\n      <p>\n      It calls <code>auth_fetch</code> → a Chromium window opens on your machine\n    </p>\n    </li><li>\n      <p>\n      You log in however you need to (SSO, 2FA, CAPTCHA — doesn&#39;t matter)\n    </p>\n    </li><li>\n      <p>\n      You click a 📸 Capture button that appears on the page\n    </p>\n    </li><li>\n      <p>\n      Claude gets the full page content as Markdown\n    </p>\n    </li>\n      </ol><p>\n      The key thing: sessions are saved locally, so you only log in once per service. Next time you ask Claude to read from the same site, it just works — no browser popup.\n    </p><p>\n      <strong>How it&#39;s different from Browser MCP / Playwright MCP:</strong> Those are browser automation tools with dozens of tools (click, fill, screenshot, etc.). This does exactly one thing: fetch authenticated page content. Think of it as <code>web_fetch</code> but it can handle login walls.\n    </p><p>\n      <strong>Install (one line):</strong>\n    </p><pre>\nclaude mcp add auth-fetch -- npx auth-fetch-mcp@latest</pre><ul>\n        <li>\n      <p>\n      All data stays local — nothing sent to external servers\n    </p>\n    </li><li>\n      <p>\n      No proxy setup, no TLS interception, no CA certificates\n    </p>\n    </li><li>\n      <p>\n      Works with any website (Notion, Google Docs, Jira, internal tools, etc.)\n    </p>\n    </li>\n      </ul><p>\n      GitHub: <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/ymw0407/auth-fetch-mcp\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://github.com/ymw0407/auth-fetch-mcp</a> \n    </p><p>\n      npm: <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://www.npmjs.com/package/auth-fetch-mcp\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://www.npmjs.com/package/auth-fetch-mcp</a>\n    </p><p>\n      Would love feedback — especially on edge cases you&#39;d want this to handle.\n    </p>",
+          "answer": {
+            "text": "<span>So it remembers login creds? I understand it works for pages, but how about subdomains?</span>\n",
+            "upvoteCount": 1
+          }
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "ymw0407",
+              "url": "https://www.reddit.com/user/ymw0407/"
+            }
+          ],
+          "date": "Mar 26, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Reddit",
+            "url": "https://www.reddit.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/vwRCTZCyS3UsCGj7HsYLzWpcOMhAEqq9hhxBK8tt7Dw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9zaHJlZGRp/dC9hc3NldHMvZmF2/aWNvbi82NHg2NC5w/bmc",
+              "original": "https://www.redditstatic.com/shreddit/assets/favicon/64x64.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "I built a self-hosted LLM web interface because I wanted Claude Code's workflow in a browser on my phone (another one) ... I built an open-source MCP platform that adds persistent memory, structured research, and P2P sharing to any LLM client — here's the architecture and what I learned",
+          "Built an MCP server that turns Claude Code into a full agent operating system with persistent memory, loop detection, and audit trails",
+          "I kept running into the same problem: I'd paste a Notion or Google Docs URL into Claude Code, and it would just return a login page or empty HTML. web_fetch can't handle authenticated content. So I built auth-fetch-mcp — an MCP server with one simple flow:",
+          "The key thing: sessions are saved locally, so you only log in once per service. Next time you ask Claude to read from the same site, it just works — no browser popup. How it's different from Browser MCP / Playwright MCP: Those are browser automation tools with dozens of tools (click, fill, screenshot, etc.)."
+        ]
+      },
+      {
+        "title": "Basic Memory: AI Markdown Knowledge Graph & Project Memory Server | MCPlane",
+        "url": "https://mcplane.com/mcp_servers/basic-memory",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Connect Claude and AI tools to persistent, project-aware Markdown memory and knowledge graph. Local-first, Obsidian-native, full MCP tools suite.",
+        "page_age": "2025-07-22T00:00:00",
+        "profile": {
+          "name": "Mcplane",
+          "url": "https://mcplane.com/mcp_servers/basic-memory",
+          "long_name": "mcplane.com",
+          "img": "https://imgs.search.brave.com/8VaKbEEB0Jbx0VYJdvKrlUDIHCTUOacjdHGxU-suu_8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2VjOTVhYWEx/NTJiZmU1MGU3MzIy/YzlkMTM5N2VkOTBi/NTg0ZTU2NGU1ZDBh/MWQwODRjYmI1YjVi/ZTZlYzU5OS9tY3Bs/YW5lLmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mcplane.com",
+          "hostname": "mcplane.com",
+          "favicon": "https://imgs.search.brave.com/8VaKbEEB0Jbx0VYJdvKrlUDIHCTUOacjdHGxU-suu_8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2VjOTVhYWEx/NTJiZmU1MGU3MzIy/YzlkMTM5N2VkOTBi/NTg0ZTU2NGU1ZDBh/MWQwODRjYmI1YjVi/ZTZlYzU5OS9tY3Bs/YW5lLmNvbS8",
+          "path": "› mcp_servers  › basic-memory"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ewkKj-erxG49QsdeB-5_zgEzjIv-Dh8xfIybcHwMDFY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tY3Bs/YW5lLmNvbS9hc3Nl/dHMvbG9nby1mMTcz/NWI4MS5zdmc",
+          "original": "https://mcplane.com/assets/logo-f1735b81.svg",
+          "logo": true
+        },
+        "age": "July 22, 2025",
+        "extra_snippets": [
+          "Enable persistent project and personal memory for Claude, Cursor, VS Code, and similar AI tools · Organize, edit, and traverse knowledge graphs from natural LLM conversations · Automate note management: create, move, update, and relate notes without manual effort · Cross-project knowledge work: switch or merge contexts seamlessly via MCP commands",
+          "By storing knowledge in markdown and integrating through the Model Context Protocol (MCP), it allows both AI and users to read, write, query, edit, and visualize their knowledge graph. Unlike regular vector databases or static chat histories, it enables multi-project workflows, semantic graph traversal, powerful search, and file automation—all while giving users total control and transparency over their data. It deeply integrates with tools like Obsidian, Claude Desktop, Cursor, and Smithery, powering human-AI workflows that truly 'remember' everything important.",
+          "Multi-project context awareness/switching is uncommon among MCP servers and highly relevant. ... Automates creation, editing, moving, and searching of notes, driving workflows for personal knowledge management. ... LLMs can traverse, build, and enrich the semantic knowledge graph that connects concepts and notes. ... Has official and documented integration with Claude Desktop.",
+          "Add this block to claude_desktop_config.json (or equivalent MCP config) to expose Basic Memory via MCP tools"
+        ]
+      },
+      {
+        "title": "claude-code-ultimate-guide/mcp-server/README.md at main · FlorianBruniaux/claude-code-ultimate-guide",
+        "url": "https://github.com/FlorianBruniaux/claude-code-ultimate-guide/blob/main/mcp-server/README.md",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "{ &quot;mcpServers&quot;: { &quot;claude-code-guide&quot;: { &quot;type&quot;: &quot;stdio&quot;, &quot;command&quot;: &quot;node&quot;, &quot;args&quot;: [&quot;/path/to/claude-code-ultimate-guide/mcp-server/dist/index.js&quot;], &quot;env&quot;: { &quot;GUIDE_ROOT&quot;: &quot;/path/to/claude-code-ultimate-guide&quot; } } } } ... Guide markdown files (3.5MB) are not bundled — they&#x27;re fetched from GitHub on demand and cached at ~/.cache/claude-code-guide/{version}/.",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/FlorianBruniaux/claude-code-ultimate-guide/blob/main/mcp-server/README.md",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› FlorianBruniaux  › claude-code-ultimate-guide  › blob  › main  › mcp-server  › README.md"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/FoaO8xKcL3_mIzL2r_GCtjZYYXMAwzRnkIG_7m_iI0U/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS9m/ZmRiMGUwYjY1MjRm/YjEzYzgwMTBhMTM3/YTIwNWE2NmU5YWEy/NjZhZGQ4YzEwYWRk/Yjg0YzZiYWU2NjMx/ZjA4L0Zsb3JpYW5C/cnVuaWF1eC9jbGF1/ZGUtY29kZS11bHRp/bWF0ZS1ndWlkZQ",
+          "original": "https://opengraph.githubassets.com/ffdb0e0b6524fb13c8010a137a205a66e9aa266add8c10addb84c6bae6631f08/FlorianBruniaux/claude-code-ultimate-guide",
+          "logo": false
+        },
+        "software": {
+          "name": "claude-code-ultimate-guide",
+          "author": "FlorianBruniaux",
+          "is_npm": false,
+          "is_pypi": false,
+          "programmingLanguage": ""
+        },
+        "extra_snippets": [
+          "MCP server for the Claude Code Ultimate Guide — search, read, and explore 20,000+ lines of documentation directly from Claude Code or any MCP-compatible client. No need to clone the repo. The guide's structured index is bundled in the package (~130KB compressed), and file content is fetched from GitHub on demand with 24h local cache.",
+          "{ \"mcpServers\": { \"claude-code-guide\": { \"type\": \"stdio\", \"command\": \"node\", \"args\": [\"/path/to/claude-code-ultimate-guide/mcp-server/dist/index.js\"], \"env\": { \"GUIDE_ROOT\": \"/path/to/claude-code-ultimate-guide\" } } } } ... Guide markdown files (3.5MB) are not bundled — they're fetched from GitHub on demand and cached at ~/.cache/claude-code-guide/{version}/.",
+          "After installing the MCP server, run this in any Claude Code session for a personalized guided tour:",
+          "claude \"Use the claude-code-guide MCP server."
+        ]
+      },
+      {
+        "title": "r/softwarearchitecture on Reddit: I built an MCP server that feeds my architecture decisions to Claude Code, and it made Claude mass-produce code that actually follows the rules",
+        "url": "https://www.reddit.com/r/softwarearchitecture/comments/1rkealt/i_built_an_mcp_server_that_feeds_my_architecture/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "You can put this in CLAUDE.md (maybe you shouldn&#x27;t), but CLAUDE.md is a flat file. It doesn&#x27;t scale. It can&#x27;t enforce anything. And it gets stale. Archgate stores decisions as markdown files with YAML frontmatter and pairs each with a .rules.ts file containing executable checks. When you connect Archgate&#x27;s MCP server to Claude Code, it gains access to tools like:",
+        "page_age": "2026-03-04T07:17:32",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/softwarearchitecture/comments/1rkealt/i_built_an_mcp_server_that_feeds_my_architecture/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/softwarearchitecture  › i built an mcp server that feeds my architecture decisions to claude code, and it made claude mass-produce code that actually follows the rules"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/A5H_aQiEBuUODR0lNeU8iDfhrWUvO8oEmRGE_mcS_gM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9pY29uLnBu/Zw",
+          "original": "https://www.redditstatic.com/icon.png",
+          "logo": true
+        },
+        "age": "March 4, 2026",
+        "qa": {
+          "question": "<p dir=\"auto\">\n      I&#39;ve been using Claude Code heavily for the past few months, and I kept running into the same frustration: Claude writes *great* code, but it doesn&#39;t know about the decisions my team has already made. It would import from barrel files we banned. Use `chalk` when we standardized on `styleText()`. Throw raw errors instead of using our exit code conventions. Every PR needed the same corrections.\n    </p><p dir=\"auto\">\n      So I built <strong>Archgate,</strong> a CLI that turns Architecture Decision Records (ADRs) into machine-checkable rules, with a built-in MCP server so Claude Code can read your decisions *before* it writes a single line.\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">The problem: Claude is smart but context-blind</h1><p dir=\"auto\">\n      Claude Code reads your files, sure. But it doesn&#39;t understand the *why* behind your codebase patterns. It doesn&#39;t know your team decided &quot;no barrel files&quot; for a reason (ARCH-004), or that you allow exactly 4 production dependencies (ARCH-006), or that every CLI command must export a `register*Command()` function (ARCH-001).\n    </p><p dir=\"auto\">\n      You can put this in CLAUDE.md (maybe you shouldn&#39;t), but CLAUDE.md is a flat file. It doesn&#39;t scale. It can&#39;t enforce anything. And it gets stale.\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">The solution: ADRs that Claude Code can query via MCP</h1><p dir=\"auto\">\n      Archgate stores decisions as markdown files with YAML frontmatter and pairs each with a <code>.rules.ts</code> file containing executable checks. When you connect Archgate&#39;s MCP server to Claude Code, it gains access to tools like:\n    </p><p dir=\"auto\">\n      <code>review_context</code> — Claude calls this before writing code. It returns which ADRs apply to the files being changed, including the actual decision text and the do&#39;s/don&#39;ts:\n    </p><pre>\nClaude: &quot;I&#39;m about to modify src/commands/check.ts — let me check what rules apply&quot;\n→ calls review_context({ staged: true })\n→ gets back: ARCH-001 (command structure), ARCH-002 (error handling), ARCH-003 (output formatting)\n→ reads the decisions and adjusts its approach accordingly</pre><p dir=\"auto\">\n      <code>check</code> - Claude validates its own output against your rules during the conversation:\n    </p><pre>\nClaude: &quot;Let me verify my changes pass the architecture checks&quot;\n→ calls check({ staged: true })\n→ &quot;1 violation: ARCH-003 — use styleText() not chalk for terminal output&quot;\n→ fixes it immediately, re-checks, passes</pre><p dir=\"auto\">\n      <code>list_adrs</code> - discovery tool so Claude can scan all your decisions up front, filtered by domain.\n    </p><p dir=\"auto\">\n      <code>adr://{id}</code> resources - Claude reads the full ADR markdown for detailed guidance when needed.\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">What changed in practice</h1><p dir=\"auto\">\n      The difference was immediate. Before Archgate, I&#39;d review Claude&#39;s PRs and leave 3-5 comments about convention violations. Now Claude asks the MCP server first, adjusts, and self-validates. The code it produces follows our rules from the start.\n    </p><p dir=\"auto\">\n      A few concrete improvements:\n    </p><ul>\n        <li>\n      <p dir=\"auto\">\n      Claude stopped suggesting new dependencies because there&#39;s an ADR asking to approve dependencies first\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      It started using our <code>logError()</code> helper instead of raw <code>console.error()</code> after reading the ARCH-002 ADR\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Every new command file it generates matches the exact <code>register*Command()</code> pattern from ARCH-001\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      It uses <code>styleText()</code> for terminal output instead of reaching for chalk\n    </p>\n    </li>\n      </ul><p dir=\"auto\">\n      It&#39;s not just about enforcement. It&#39;s about giving Claude the right context so it makes better decisions in the first place.\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">How it works under the hood</h1><ol>\n        <li>\n      <p dir=\"auto\">\n      ADRs live in <code>.archgate/adrs/</code> as markdown with frontmatter (id, title, domain, rules, files glob patterns)\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      Rules are companion <code>.rules.ts</code> files that export checks via <code>defineRules()</code> . Plain TypeScript, no DSL, no extra dependencies\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <code>archgate check</code> runs all rules and reports violations with file paths, line numbers, and suggested fixes (exit 0 = clean, 1 = violations)\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      <code>archgate mcp</code> starts the MCP server that Claude Code connects to as a plugin\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      CI runs <code>archgate check</code> to block merges. Same rules apply to humans and AI\n    </p>\n    </li>\n      </ol><p dir=\"auto\">\n      The MCP server is designed for agent reliability: graceful degradation if no <code>.archgate/</code> exists, structured error responses, no <code>process.exit()</code> in tool handlers (so the agent connection stays alive), and session context recovery.\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">It dogfoods itself</h1><p dir=\"auto\">\n      Archgate&#39;s own codebase is governed by the ADRs it defines. ARCH-005 enforces testing standards on the tests. ARCH-002 enforces error handling on the error handler. If we violate our own rules, <code>archgate check</code> catches it before CI does. Claude Code, working on Archgate itself, calls the MCP server to check the very rules it&#39;s helping us build.\n    </p><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">Links</h1><ul>\n        <li>\n      <p dir=\"auto\">\n      Website: <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://archgate.dev\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://archgate.dev</a>\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      GitHub: <a rpl class=\"relative pointer-events-auto a cursor-pointer\n  \n  \n  \n  \n  underline\n  \" href=\"https://github.com/archgate/cli\" rel=\"noopener nofollow ugc\" target=\"_blank\">https://github.com/archgate/cli</a>\n    </p>\n    </li><li>\n      <p dir=\"auto\">\n      npm: <code>npm install -g archgate</code>\n    </p>\n    </li>\n      </ul><h1 class=\"text-24-scalable xs:text-20-scalable\" dir=\"auto\">Getting started</h1><p dir=\"auto\">\n      <code>archgate init</code> in any project, then <code>archgate adr create</code> to write your first decision\n    </p><p dir=\"auto\">\n      It&#39;s open source, built on Bun and TypeScript. Would love feedback from other Claude Code users, especially on what MCP tools you&#39;d want an architecture governance server to expose. What kinds of decisions do you wish Claude Code understood about your codebase?\n    </p>",
+          "answer": {
+            "text": "<span>Can this not just be achieved with a skill that tells claude to look at some adrs? Genuine question, trying to understand the value.</span>\n",
+            "upvoteCount": 28
+          }
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "rhuanbarreto",
+              "url": "https://www.reddit.com/user/rhuanbarreto/"
+            }
+          ],
+          "date": "Mar 04, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Reddit",
+            "url": "https://www.reddit.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/vwRCTZCyS3UsCGj7HsYLzWpcOMhAEqq9hhxBK8tt7Dw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9zaHJlZGRp/dC9hc3NldHMvZmF2/aWNvbi82NHg2NC5w/bmc",
+              "original": "https://www.redditstatic.com/shreddit/assets/favicon/64x64.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Posted by u/rhuanbarreto - 40 votes and 24 comments",
+          "You can put this in CLAUDE.md (maybe you shouldn't), but CLAUDE.md is a flat file. It doesn't scale. It can't enforce anything. And it gets stale. Archgate stores decisions as markdown files with YAML frontmatter and pairs each with a .rules.ts file containing executable checks. When you connect Archgate's MCP server to Claude Code, it gains access to tools like:",
+          "adr://{id} resources - Claude reads the full ADR markdown for detailed guidance when needed. The difference was immediate. Before Archgate, I'd review Claude's PRs and leave 3-5 comments about convention violations. Now Claude asks the MCP server first, adjusts, and self-validates.",
+          "in the moment i just write ADRs as markdown and claude code finds the documents by its own when needed. Do you tested the token usage? I've often made a bad experience with mcp tools about using a lot of tokens at session start, even when not used."
+        ]
+      },
+      {
+        "title": "GitHub - adaptivekind/markdown-reader-mcp: Markdown MCP Reader",
+        "url": "https://github.com/adaptivekind/markdown-reader-mcp",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "A Model Context Protocol (MCP) server finds and reads Markdown files in configured directories. This server guarantees READ-ONLY access to ONLY MARKDOWN documents, i.e.",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/adaptivekind/markdown-reader-mcp",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› adaptivekind  › markdown-reader-mcp"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/D-98ZEjlxF1MHuTayABR7njsqdvWShQ_RiSeBGUNQLE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS9k/OGQ5YThkNDgxOWJi/NTAwOTlkNjY1MTA0/NDg5NmJhNGViMWUz/MjJkNTM1NGY3NDcz/NzY0NzVjMDNkNDE5/YTMwL2FkYXB0aXZl/a2luZC9tYXJrZG93/bi1yZWFkZXItbWNw",
+          "original": "https://opengraph.githubassets.com/d8d9a8d4819bb50099d6651044896ba4eb1e322d5354f747376475c03d419a30/adaptivekind/markdown-reader-mcp",
+          "logo": false
+        },
+        "software": {
+          "name": "markdown-reader-mcp",
+          "author": "adaptivekind",
+          "is_npm": false,
+          "is_pypi": false,
+          "forks": 0,
+          "programmingLanguage": "Go 97.4% | Makefile 2.3% | Shell 0.3% | Go 97.4% | Makefile 2.3% | Shell 0.3%"
+        },
+        "extra_snippets": [
+          "Look for the server in the MCP section of Claude Desktop settings, or check the logs for startup messages.",
+          "mkdir -p ~/.claude/commands echo \"Apply precepts.md from MCP Reader\" > ~/.claude/commands/precepts.md",
+          "# Check MCP server status claude mcp list # Test MCP tools in Claude Code /mcp",
+          "A Model Context Protocol (MCP) server finds and reads Markdown files in configured directories. This server guarantees READ-ONLY access to ONLY MARKDOWN documents, i.e."
+        ]
+      },
+      {
+        "title": "claude.md - Google Docs MCP Server",
+        "url": "https://github.com/a-bonus/google-docs-mcp/blob/main/claude.md",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "The Ultimate Google Docs, Sheets, Drive, Gmail, &amp; Google Calendar MCP Server. This MCP (primarily for use in Claude Desktop) gains full access to your google suite and lets claude do its thing. - google-docs-mcp/claude.md at main · a-bonus/google-docs-mcp",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/a-bonus/google-docs-mcp/blob/main/claude.md",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› a-bonus  › google-docs-mcp  › blob  › main  › claude.md"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/EHXwmph10cARDsz7pTtEuq-mKT2lfJHj_6_5XSSJ65A/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS9m/ODJhMmM1OWQ2NzVm/NWVmYzlkYmZhNmM3/ZGY1NDA1MGJmMDQ0/YzMxOWM4MjUxZTQ3/NGRkZDU4MmFmNzE5/YTUyL2EtYm9udXMv/Z29vZ2xlLWRvY3Mt/bWNw",
+          "original": "https://opengraph.githubassets.com/f82a2c59d675f5efc9dbfa6c7df54050bf044c319c8251e474ddd582af719a52/a-bonus/google-docs-mcp",
+          "logo": false
+        },
+        "software": {
+          "name": "google-docs-mcp",
+          "author": "a-bonus",
+          "is_npm": false,
+          "is_pypi": false,
+          "programmingLanguage": ""
+        },
+        "extra_snippets": [
+          "The Ultimate Google Docs, Sheets, Drive, Gmail, & Google Calendar MCP Server. This MCP (primarily for use in Claude Desktop) gains full access to your google suite and lets claude do its thing. - google-docs-mcp/claude.md at main · a-bonus/google-docs-mcp",
+          "Replaces entire document content with markdown-formatted content.",
+          "Appends markdown content to the end of a document with full formatting.",
+          "Resolved status: May not persist in Google Docs UI (Drive API limitation)"
+        ]
+      },
+      {
+        "title": "How to Use MCP Servers with Claude Code to Read and Write Data in Your Apps | MindStudio",
+        "url": "https://www.mindstudio.ai/blog/how-to-use-mcp-servers-with-claude-code",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "MCP servers are great for connecting Claude Code to live data. But once you’re building applications that need to store, retrieve, and act on data persistently — that’s where Remy comes in.",
+        "page_age": "2026-04-15T00:00:00",
+        "profile": {
+          "name": "MindStudio",
+          "url": "https://www.mindstudio.ai/blog/how-to-use-mcp-servers-with-claude-code",
+          "long_name": "mindstudio.ai",
+          "img": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mindstudio.ai",
+          "hostname": "www.mindstudio.ai",
+          "favicon": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8",
+          "path": "  › blog  › how to use mcp servers with claude code to read and write data in your apps"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ANMRGmIf4e7C3PYA6tAudzlcej3NQ0MTJiIywVf3tuE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLm1z/Y2RuLmFpLzcwY2Ji/MWFkLTA4ZDctNGZk/Yy1hYjMxLWUzNDM3/ODA5NjZhNi9nZW5l/cmF0ZWQtaW1hZ2Vz/LzQ0YjAzMzNkLWVl/OGEtNDIzZi04MzU2/LTFmNjIzZDQ3Nzk2/Ny5wbmc_Zm09YXV0/byZ3PTEyMDAmZml0/PWNvdmVy",
+          "original": "https://i.mscdn.ai/70cbb1ad-08d7-4fdc-ab31-e343780966a6/generated-images/44b0333d-ee8a-423f-8356-1f623d477967.png?fm=auto&w=1200&fit=cover",
+          "logo": false
+        },
+        "age": "April 15, 2026",
+        "faq": {
+          "items": [
+            {
+              "question": "How do I know which MCP servers are available?",
+              "answer": "There's no single authoritative registry yet, but the best places to look are: The MCP GitHub organization maintained by Anthropic, which includes official reference servers for common tools npm, where most community MCP servers are published as packages Smithery and Glama, which are emerging directories for MCP servers For major SaaS platforms (HubSpot, Notion, Atlassian, GitHub), check the vendor's own GitHub or developer documentation — several have published or are actively building official MCP servers.",
+              "title": "How to Use MCP Servers with Claude Code to Read and Write Data ...",
+              "url": "https://www.mindstudio.ai/blog/how-to-use-mcp-servers-with-claude-code",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mindstudio.ai",
+                "hostname": "www.mindstudio.ai",
+                "favicon": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8",
+                "path": "  › blog  › how to use mcp servers with claude code to read and write data in your apps"
+              }
+            },
+            {
+              "question": "Can Claude Code use MCP servers without me being present?",
+              "answer": "Yes. Claude Code supports a headless mode (--headless flag) that lets it run non-interactively, which is how you'd schedule automated workflows via cron or a CI system. In headless mode, MCP servers still initialize and function the same way. You'll want to make sure any required credentials are available as environment variables in the execution environment.",
+              "title": "How to Use MCP Servers with Claude Code to Read and Write Data ...",
+              "url": "https://www.mindstudio.ai/blog/how-to-use-mcp-servers-with-claude-code",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mindstudio.ai",
+                "hostname": "www.mindstudio.ai",
+                "favicon": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8",
+                "path": "  › blog  › how to use mcp servers with claude code to read and write data in your apps"
+              }
+            },
+            {
+              "question": "What's the difference between MCP servers and direct API calls in Claude Code?",
+              "answer": "You can have Claude Code write and execute code that calls APIs directly — that works too. The difference is that MCP servers give Claude a structured, declared interface it can reason about without writing new code each time. With a direct API call, Claude needs to know the API shape from its training data or from documentation you provide. With an MCP server, the tool schema is right there in the session context. MCP is more reliable and repeatable for established workflows.",
+              "title": "How to Use MCP Servers with Claude Code to Read and Write Data ...",
+              "url": "https://www.mindstudio.ai/blog/how-to-use-mcp-servers-with-claude-code",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mindstudio.ai",
+                "hostname": "www.mindstudio.ai",
+                "favicon": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8",
+                "path": "  › blog  › how to use mcp servers with claude code to read and write data in your apps"
+              }
+            },
+            {
+              "question": "Do MCP servers have access to my credentials?",
+              "answer": "MCP servers run as separate processes on your machine (or wherever you deploy them). They only have access to what you pass them — typically API keys or tokens via environment variables. They don't automatically get access to your filesystem or other credentials. That said, you should treat MCP servers with the same scrutiny you'd give any dependency: review what they're doing, use least-privilege credentials (read-only tokens where possible), and don't install servers from untrusted sources.",
+              "title": "How to Use MCP Servers with Claude Code to Read and Write Data ...",
+              "url": "https://www.mindstudio.ai/blog/how-to-use-mcp-servers-with-claude-code",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mindstudio.ai",
+                "hostname": "www.mindstudio.ai",
+                "favicon": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8",
+                "path": "  › blog  › how to use mcp servers with claude code to read and write data in your apps"
+              }
+            },
+            {
+              "question": "How do I debug an MCP server that isn't working?",
+              "answer": "Start with claude mcp list to confirm the server is registered. Then run Claude Code with --debug or check the logs (usually in ~/.claude/logs/). Common failures: The server command can't be found (check that the npm package is installed globally or use npx) Credentials are missing or malformed (check your env variables) The server itself is erroring on startup (run the command directly in your terminal to see the raw output) If Claude is connected to the server but not using its tools, the issue is usually that the tool descriptions don't clearly signal when they should be used. You may need to prompt Claude more explicitly about which tool to reach for.",
+              "title": "How to Use MCP Servers with Claude Code to Read and Write Data ...",
+              "url": "https://www.mindstudio.ai/blog/how-to-use-mcp-servers-with-claude-code",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mindstudio.ai",
+                "hostname": "www.mindstudio.ai",
+                "favicon": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8",
+                "path": "  › blog  › how to use mcp servers with claude code to read and write data in your apps"
+              }
+            },
+            {
+              "question": "Can I build my own MCP server for a custom internal tool?",
+              "answer": "Yes, and it's not complicated. The MCP SDK (available for TypeScript and Python) handles the protocol layer. You define your tools — each with a name, description, and input schema — and implement the handler logic. Build in an afternoon for a simple tool, a day or two for something more complex. This is worth doing if you have internal APIs or databases that no existing MCP server covers. Understanding the N×M integration problem helps explain why building one well-structured internal MCP server is often better than patching together multiple workarounds.",
+              "title": "How to Use MCP Servers with Claude Code to Read and Write Data ...",
+              "url": "https://www.mindstudio.ai/blog/how-to-use-mcp-servers-with-claude-code",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "mindstudio.ai",
+                "hostname": "www.mindstudio.ai",
+                "favicon": "https://imgs.search.brave.com/xtnP1LFf_XIKAjJTmduzYiJfgBIiluJTgPVxDEfO0nU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzUzMDU2N2Jk/YTgxOWE0MzQ4YTY5/MzBkMGRjNzRmNmUw/NmMwZGY5MzRiNTRi/NDBkZmFkZDRlZjJm/OGY3NzA1Ni93d3cu/bWluZHN0dWRpby5h/aS8",
+                "path": "  › blog  › how to use mcp servers with claude code to read and write data in your apps"
+              }
+            }
+          ]
+        },
+        "organization": {
+          "type": "organization",
+          "name": "MindStudio",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "MCP servers are great for connecting Claude Code to live data. But once you’re building applications that need to store, retrieve, and act on data persistently — that’s where Remy comes in.",
+          "Claude Code is a capable coding agent on its own. But without connections to external tools, it’s working in isolation — reading and writing files on your local machine and that’s mostly it. MCP servers change that. The Model Context Protocol is an open standard that lets Claude Code interact with external services: databases, SaaS tools, APIs, file systems, and more.",
+          "If you’re new to the underlying standard, a deeper look at how MCP servers work covers the protocol mechanics well. This article focuses on the practical side: how to connect MCP servers to Claude Code and what you can actually do with them in real workflows.",
+          "The short version: with the right MCPs configured, Claude Code can read from your Notion workspace, query your HubSpot contacts, pull Gmail threads, update Airtable rows, and push changes back — all as part of an agentic task you’ve described."
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}
