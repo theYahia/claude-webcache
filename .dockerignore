@@ -3,10 +3,6 @@ node_modules
 .github
 docs
 *.md
-TWEET.md
-E2E_TEST.md
-CHANGELOG.md
-CONTRIBUTING.md
 .gitignore
 .dockerignore
 Dockerfile
