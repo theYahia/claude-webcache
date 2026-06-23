@@ -1,5 +1,62 @@
 # Changelog
 
+## 0.7.0 — 2026-06-23
+
+**Federation MVP — opt-in multi-instance cache sharing.** Closes the long-deferred "Not
+multi-machine" non-goal in `ARCHITECTURE.md`. Disabled by default; zero behavior change
+unless you set `WEBCACHE_PEERS`.
+
+### Added
+
+- **`plugin/src/federation.js`** — pure-logic federation client (Node stdlib only:
+  `node:http`/`node:https`). `parsePeers(env)` normalizes a comma/whitespace-separated
+  peer list (drops junk, de-dupes, strips trailing slashes). `fetchFromPeers(url, prompt,
+  peers, {token, timeoutMs, namespace})` queries peers in order and returns
+  `{output, fromPeer}` on the first hit, else `null`. Per-peer timeout (default **2s**).
+- **`plugin/scripts/federation-server.cjs`** — a **separate** read-only HTTP process
+  (launched by the CLI, **not** loaded inside the stdio MCP server) exposing
+  `GET /federation/get?ns=&key=` (→ `{output}` 200 / 404) and `GET /federation/health`
+  (→ `{ok, entries}`). Binds **127.0.0.1** by default. Optional shared secret: when
+  `WEBCACHE_FEDERATION_TOKEN` is set, every request must carry a matching
+  `X-Federation-Token` header (timing-safe compare) or it's `401`.
+- **`plugin/src/cache.js`** reintroduced as a **minimal** local SQLite store
+  (`node:sqlite`) — the substrate federation reads from and writes peer hits into. Uses
+  the original v0.4.0 key scheme `SHA256(namespace + '|' + canonUrl(url) + '|' + prompt)`,
+  so two independent instances derive the **same key** for the same `(namespace, url,
+  prompt)` and cross-instance lookups line up. (This is a narrow revival — not the full
+  v0.4.0 eviction/TTL/gzip stack.)
+- **MCP wiring** — on a `cached_fetch` **local + qsearch miss**, if `WEBCACHE_PEERS` is
+  set, webcache queries peers; a peer hit is **written into the local cache** (`cache.set`)
+  and returned (marked `fromPeer`). New MCP tool **`cache_federation_stats`** reports peer
+  config, namespace, token-enabled flag, session hit/miss counts, last peer, and per-peer
+  health. Tool count 3 → 4.
+- **CLI reintroduced** (`plugin/scripts/cli.cjs`) with `federation` (launch the server in
+  its own process) and `federation-status` (health-check `WEBCACHE_PEERS`) subcommands.
+- **New env:** `WEBCACHE_PEERS`, `WEBCACHE_FEDERATION_TOKEN`, `WEBCACHE_FEDERATION_HOST`
+  (default `127.0.0.1`), `WEBCACHE_FEDERATION_PORT` (default `37779`),
+  `WEBCACHE_FEDERATION_TIMEOUT_MS` (default `2000`). All read once at module load.
+- **Tests** — `plugin/test/federation.test.js` (16 tests, pure stdlib, no qsearch): peer
+  parsing, the FAIL-OPEN contract (no peers / connection-refused / 500 / timeout all → no
+  throw, `null`), peer-hit-pulled-into-local-cache, token auth (401 without, 200 with),
+  and cross-instance key agreement (value set on instance A found by instance B via a real
+  federation-server, with namespace isolation). Full suite 5 → 21 tests, green.
+
+### Fail-open contract
+
+Any peer/network error — no peers, malformed URL, connection refused, timeout, non-200,
+bad JSON, missing field, `401`, even `node:sqlite` being unavailable — behaves **exactly**
+like "no peers configured": the federation path returns `null` and `cached_fetch` falls
+through to its normal `[CACHE_MISS]`. Federation never throws and never blocks a fetch.
+
+### Notes
+
+- `node:sqlite` requires Node **≥22** (the `engines` field still says `>=20` for the
+  qsearch-companion hooks, which don't need sqlite). On older runtimes the local cache and
+  federation-server fail-open to empty; the hooks + qsearch path are unaffected.
+- Federation binds loopback by default. To share across machines, set
+  `WEBCACHE_FEDERATION_HOST=0.0.0.0` **and** `WEBCACHE_FEDERATION_TOKEN` (and firewall the
+  port). The cache may contain fetched page content — treat the token as a secret.
+
 ## 0.6.0 — 2026-05-29
 
 **Pivot: qsearch companion. The local SQLite cache is retired — qsearch is now the backend.**

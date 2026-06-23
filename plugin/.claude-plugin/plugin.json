@@ -1,6 +1,6 @@
 {
   "name": "claude-webcache",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "qsearch companion for Claude Code: hooks intercept native WebFetch/WebSearch and serve them from a running qsearch (url-keyed full-page cache + query cache).",
   "author": {
     "name": "theYahia"

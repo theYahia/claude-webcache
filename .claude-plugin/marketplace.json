@@ -10,9 +10,9 @@
   "plugins": [
     {
       "name": "claude-webcache",
-      "version": "0.6.0",
+      "version": "0.7.0",
       "source": "./plugin",
-      "description": "qsearch companion: hooks cache native WebFetch/WebSearch via a running qsearch"
+      "description": "qsearch companion: hooks cache native WebFetch/WebSearch via a running qsearch; optional multi-instance federation"
     }
   ]
 }

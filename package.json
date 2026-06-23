@@ -1,6 +1,6 @@
 {
   "name": "@theyahia/claude-webcache",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Claude Code companion for qsearch: hooks that intercept native WebFetch/WebSearch and serve them from a running qsearch instance (url-keyed full-page cache + query cache). Not published to npm — local qsearch companion.",
   "license": "MIT",
   "private": true,
@@ -30,6 +30,9 @@
     "LICENSE"
   ],
   "main": "plugin/scripts/mcp-server.cjs",
+  "bin": {
+    "claude-webcache": "plugin/scripts/cli.cjs"
+  },
   "engines": {
     "node": ">=20"
   },
