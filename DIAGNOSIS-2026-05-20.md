@@ -8,7 +8,7 @@
 
 - **Root cause confirmed:** `${CLAUDE_PLUGIN_ROOT}` в `hooks.json` не разрешался в Claude Code 2.1.x → PostToolUse hook silent-failed → cache.db stale c 2026-04-30 (rows write) / 2026-05-14 (file mtime, последний successful открытие/touch).
 - **Fix #1 confirmed applied:** commit `2bd5855` (2026-05-15) — `plugin/hooks/hooks.json` теперь использует `node ./scripts/hook-stats.cjs` и `node ./scripts/hook-webfetch-cache.cjs` (relative paths).
-- **Hook firing now:** **unknown** — local v0.4.0 fix живёт только в `D:/Yahia/active/claude-webcache/plugin/`, плагин в `~/.claude/plugins/cache/theyahia/claude-webcache/0.1.5/` всё ещё broken-версия. Без v0.4.0 publish + reinstall hook не fires.
+- **Hook firing now:** **unknown** — local v0.4.0 fix живёт только в `D:/Yahia/experiments/claude-webcache/plugin/`, плагин в `~/.claude/plugins/cache/theyahia/claude-webcache/0.1.5/` всё ещё broken-версия. Без v0.4.0 publish + reinstall hook не fires.
 
 ---
 
@@ -16,7 +16,7 @@
 
 ### Fix #1: hooks.json relative paths
 
-`D:/Yahia/active/claude-webcache/plugin/hooks/hooks.json` (current):
+`D:/Yahia/experiments/claude-webcache/plugin/hooks/hooks.json` (current):
 
 ```json
 {
@@ -92,7 +92,7 @@ npm whoami                              # проверить — залогин�
 npm login                               # если нет — browser-based login flow
 
 # Шаг 2 — sanity check package
-cd D:/Yahia/active/claude-webcache
+cd D:/Yahia/experiments/claude-webcache
 npm view @theyahia/claude-webcache version   # должно показать 0.1.5 (текущий публичный)
 cat package.json | grep version              # должно показать "0.4.0"
 
@@ -122,7 +122,7 @@ npm view @theyahia/claude-webcache version   # должно теперь пок�
 **Commands:**
 
 ```powershell
-cd D:/Yahia/active/claude-webcache
+cd D:/Yahia/experiments/claude-webcache
 
 # Шаг 1 — sanity check server.json
 cat server.json                         # должен содержать version: 0.4.0
