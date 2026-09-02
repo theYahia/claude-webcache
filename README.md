@@ -215,8 +215,12 @@ WebFetch over the network typically takes 1-5 seconds — a cached hit is **~15,
 ## Related
 
 - [claude-mem](https://github.com/thedotmack/claude-mem) — persistent memory across sessions (complements claude-webcache: memory vs. web cache)
-- [WWmcp](https://github.com/theYahia/WWmcp) — catalog of 120+ MCP servers for non-Western APIs
+- [WWmcp](https://github.com/theYahia/WWmcp) — catalog of 46 MCP servers for non-Western APIs
 
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+Часть [WWmcp](https://github.com/theYahia/WWmcp) · Telegram: [@vhodvai](https://t.me/vhodvai)
